@@ -20,8 +20,8 @@ The `wxPlot` library make its data visualization once `plot->Refresh();` is call
 wxPlot* plot = new wxPlot(this, WXPLOT_FIGURE_2D, WXPLOT_TYPE_SPLINE_SCATTER);
 
 // Create data
-std::vector<std::vector<double>> data = { {0, 100, 200, 300, 400, 500}, {-10, -15 , -30, 20, 25, 30},       // Temperature (X, Y)
-                                          { 0, 200, 300, 400, 500, 600 }, {0, 20 , 30, 35, 40, 42} };       // Speed (X, Y)
+std::vector<std::vector<double>> data = { {0, 100, 200, 300, 400, 500}, {-10, -15 , -30, 20, 25, 30}, // Temperature (X, Y)
+                                          { 0, 200, 300, 400, 500, 600 }, {0, 20 , 30, 35, 40, 42} }; // Speed (X, Y)
 
 // Legend
 std::vector<wxString> legend = { "Temperature", "Speed" };
