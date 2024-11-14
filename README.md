@@ -1,2 +1,90 @@
-# wxPlot
-Real time plotting in wxWidgets - No dependencies
+# wxPlot V1.0
+
+This project is called `wxPlot`. The project was created due to the lack of visualization tools that can be used in real time. Historically, there have been older libraries for wxWidgets at SourceForge that can offer graphical visualization of data. I made the decision to create an additional data visualization tool - `wxPlot`. But with a different starting point. The goal of this project is to be able to offer a visualization tool together with a proper documentation for further development. The visualization tool for the data must not have any dependencies on other libraries and the visualization tool must always be able to run in real time. The code is written in the latest standard of C++.
+
+# Usage
+
+The `wxPlot` library make its data visualization once `plot->Refresh();` is called.
+
+```cpp
+// Create plot
+wxPlot* plot = new wxPlot(this, WXPLOT_FIGURE_2D, WXPLOT_TYPE_SPLINE_SCATTER);
+
+// Create data
+std::vector<std::vector<double>> data = { {0, 100, 200, 300, 400, 500}, {-10, -15 , -30, 20, 25, 30},       // Temperature (X, Y)
+                                          { 0, 200, 300, 400, 500, 600 }, {0, 20 , 30, 35, 40, 42} };       // Speed (X, Y)
+
+// Legend
+std::vector<wxString> legend = { "Temperature", "Speed" };
+
+// Settings
+plot->setFontSize(13);
+plot->setTitle("Measurement");
+plot->setYlabel("Placement for units e.g [m/s]");
+plot->setXlabel("Time e.g [s] or [h]");
+plot->setTicks(5);
+plot->legendOn(true);
+plot->gridOn(true);
+plot->setRadius(5);
+plot->fillCircles(true);
+
+// Set data
+plot->setData(data);
+
+// Set legend
+plot->setLegend(legend, PLACEMENT_NORTH_EAST);
+
+// Set sizes
+plot->setPlotStartWidth(5);     // x1
+plot->setPlotStartHeight(5);    // y1
+plot->setPlotEndWidth(500);     // x2
+plot->setPlotEndHeight(500);    // y2
+
+// Render the plot
+plot->Refresh();
+```
+
+To render the plot on size:
+
+```cpp
+void MainFrame::OnSize(wxSizeEvent& event) {
+    // If we don't use this, then refresh won't work
+    event.Skip();
+
+    // Get window size
+    wxCoord startWidth = 0, startHeight = 0, endWidth, endHeight;
+    GetClientSize(&endWidth, &endHeight);
+
+    // Redraw figure
+    plot->setPlotStartWidth(startWidth);
+    plot->setPlotStartHeight(startHeight);
+    plot->setPlotEndWidth(endWidth);
+    plot->setPlotEndHeight(endHeight);
+    plot->Refresh();
+
+}
+```
+
+To render the plot on command:
+
+```cpp
+void MainFrame::OnHello(wxCommandEvent& event){
+    // If we don't use this, then refresh won't work
+    event.Skip();
+
+    // Get window size
+    wxCoord startWidth = 0, startHeight = 0, endWidth, endHeight;
+    GetClientSize(&endWidth, &endHeight);
+
+    // Redraw figure
+    plot->setPlotStartWidth(startWidth);
+    plot->setPlotStartHeight(startHeight);
+    plot->setPlotEndWidth(endWidth);
+    plot->setPlotEndHeight(endHeight);
+    plot->Refresh();
+}
+```
+
+# Pictures
+
+

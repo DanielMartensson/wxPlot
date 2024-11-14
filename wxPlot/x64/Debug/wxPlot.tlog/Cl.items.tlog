@@ -1,0 +1,13 @@
+C:\Users\danie\Documents\GitHub\wxPlot\wxPlot\Main.cpp;C:\Users\danie\Documents\GitHub\wxPlot\wxPlot\x64\Debug\Main.obj
+C:\Users\danie\Documents\GitHub\wxPlot\wxPlot\src\frames\mainframe\mainframe.cpp;C:\Users\danie\Documents\GitHub\wxPlot\wxPlot\x64\Debug\mainframe.obj
+C:\Users\danie\Documents\GitHub\wxPlot\wxPlot\src\plots\plotfigures\2D\2Dfigure.cpp;C:\Users\danie\Documents\GitHub\wxPlot\wxPlot\x64\Debug\2Dfigure.obj
+C:\Users\danie\Documents\GitHub\wxPlot\wxPlot\src\plots\plotfigures\2D\proportional\proportional.cpp;C:\Users\danie\Documents\GitHub\wxPlot\wxPlot\x64\Debug\proportional.obj
+C:\Users\danie\Documents\GitHub\wxPlot\wxPlot\src\plots\plotfigures\plotfigures.cpp;C:\Users\danie\Documents\GitHub\wxPlot\wxPlot\x64\Debug\plotfigures.obj
+C:\Users\danie\Documents\GitHub\wxPlot\wxPlot\src\plots\plots.cpp;C:\Users\danie\Documents\GitHub\wxPlot\wxPlot\x64\Debug\plots.obj
+C:\Users\danie\Documents\GitHub\wxPlot\wxPlot\src\plots\plottools\functions\functions.cpp;C:\Users\danie\Documents\GitHub\wxPlot\wxPlot\x64\Debug\functions.obj
+C:\Users\danie\Documents\GitHub\wxPlot\wxPlot\src\plots\plottypes\2D\2Dtype.cpp;C:\Users\danie\Documents\GitHub\wxPlot\wxPlot\x64\Debug\2Dtype.obj
+C:\Users\danie\Documents\GitHub\wxPlot\wxPlot\src\plots\plottypes\2D\line\line.cpp;C:\Users\danie\Documents\GitHub\wxPlot\wxPlot\x64\Debug\line.obj
+C:\Users\danie\Documents\GitHub\wxPlot\wxPlot\src\plots\plottypes\2D\scatter\scatter.cpp;C:\Users\danie\Documents\GitHub\wxPlot\wxPlot\x64\Debug\scatter.obj
+C:\Users\danie\Documents\GitHub\wxPlot\wxPlot\src\plots\plottypes\2D\spline\spline.cpp;C:\Users\danie\Documents\GitHub\wxPlot\wxPlot\x64\Debug\spline.obj
+C:\Users\danie\Documents\GitHub\wxPlot\wxPlot\src\plots\plottypes\plottypes.cpp;C:\Users\danie\Documents\GitHub\wxPlot\wxPlot\x64\Debug\plottypes.obj
+C:\Users\danie\Documents\GitHub\wxPlot\wxPlot\src\wxplot.cpp;C:\Users\danie\Documents\GitHub\wxPlot\wxPlot\x64\Debug\wxplot.obj
