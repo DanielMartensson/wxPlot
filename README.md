@@ -76,7 +76,7 @@ void MainFrame::OnSize(wxSizeEvent& event) {
 To render the plot on command:
 
 ```cpp
-void MainFrame::OnHello(wxCommandEvent& event){
+void MainFrame::OnCommand(wxCommandEvent& event){
     // If we don't use this, then refresh won't work
     event.Skip();
 
