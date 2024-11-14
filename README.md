@@ -1,6 +1,15 @@
 # wxPlot V1.0
 
-This project is called `wxPlot`. The project was created due to the lack of visualization tools that can be used in real time. Historically, there have been older libraries for wxWidgets at SourceForge that can offer graphical visualization of data. I made the decision to create an additional data visualization tool - `wxPlot`. But with a different starting point. The goal of this project is to be able to offer a visualization tool together with a proper documentation for further development. The visualization tool for the data must not have any dependencies on other libraries and the visualization tool must always be able to run in real time. The code is written in the latest standard of C++.
+This project is called `wxPlot`. The project was created due to the lack of visualization tools that can be used in real time. Historically, there have been older libraries for wxWidgets at SourceForge that can offer graphical visualization of data. I made the decision to create an additional data visualization tool - `wxPlot`. But with a different starting point. The goal of this project is to be able to offer a visualization tool together with a proper documentation for further development. The visualization tool for the data must not have any dependencies on other libraries and the visualization tool must always be able to run in real time. The code is written in the latest standard of modern C++.
+
+# Features and goals
+
+- Dynamic resizing
+- No dependencies
+- Real-time plotting
+- 2D plots and 3D plots
+- MATLAB inspired
+- Documentation about how to add your own plot into the library
 
 # Usage
 
@@ -87,4 +96,27 @@ void MainFrame::OnHello(wxCommandEvent& event){
 
 # Pictures
 
+Line plot with no filled scatters
+
+![a](https://github.com/DanielMartensson/wxPlot/blob/main/pictures/2D_line_scatter_no_fill.png?raw=true)
+
+Line plot with filled scatters
+
+![a](https://github.com/DanielMartensson/wxPlot/blob/main/pictures/2d_line_scatter_fill_large.png?raw=true)
+
+Spline plot
+
+![a](https://github.com/DanielMartensson/wxPlot/blob/main/pictures/2D_spline_no_scatter.png?raw=true)
+
+Spline plot with filled scatters
+
+![a](https://github.com/DanielMartensson/wxPlot/blob/main/pictures/2D_spline_with_scatter_fill.png?raw=true)
+
+
+# TODO
+
+- Bar plot
+- Histogram plot
+- 3D plot
+- More MATLAB inspired use
 
