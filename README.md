@@ -64,13 +64,12 @@ void MainFrame::OnSize(wxSizeEvent& event) {
     wxCoord startWidth = 0, startHeight = 0, endWidth, endHeight;
     GetClientSize(&endWidth, &endHeight);
 
-    // Redraw figure
+    // Redraw plot
     plot->setPlotStartWidth(startWidth);
     plot->setPlotStartHeight(startHeight);
     plot->setPlotEndWidth(endWidth);
     plot->setPlotEndHeight(endHeight);
     plot->Refresh();
-
 }
 ```
 
@@ -85,7 +84,7 @@ void MainFrame::OnHello(wxCommandEvent& event){
     wxCoord startWidth = 0, startHeight = 0, endWidth, endHeight;
     GetClientSize(&endWidth, &endHeight);
 
-    // Redraw figure
+    // Redraw plot
     plot->setPlotStartWidth(startWidth);
     plot->setPlotStartHeight(startHeight);
     plot->setPlotEndWidth(endWidth);
