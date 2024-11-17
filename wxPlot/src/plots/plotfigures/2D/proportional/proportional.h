@@ -22,6 +22,7 @@ protected:
 	std::vector<wxString> legend;
 	PLACEMENT legendPosition = PLACEMENT_NORTH_WEST;
 	std::vector<std::vector<double>> data;
+	WXPLOT_TYPE wxPlotType = WXPLOT_TYPE_LINE;
 
 public:
 	// Constructor
@@ -41,6 +42,7 @@ public:
 	void legendOn(const bool useLegend) { this->useLegend = useLegend; }
 	void setLegend(const std::vector<wxString>& legend, const PLACEMENT legendPosition) { this->legend = legend; this->legendPosition = legendPosition; }
 	void setData(const std::vector<std::vector<double>>& data) { this->data = data; }
+	void setWxPlotType(const WXPLOT_TYPE wxPlotType) { this->wxPlotType = wxPlotType; }
 
 	// Getters
 	wxCoord getPlotStartWidth() const { return plotStartWidth; }

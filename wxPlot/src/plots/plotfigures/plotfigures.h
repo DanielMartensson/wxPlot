@@ -8,7 +8,7 @@ private:
 	WXPLOT_FIGURE wxPlotFigure = WXPLOT_FIGURE_2D;
 	
 	// 2D figure
-	_2D_Figure _2d;
+	_2DFigure _2d;
 
 public:
 	// Constructor

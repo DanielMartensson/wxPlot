@@ -112,6 +112,15 @@ void Proportional::drawTicks(wxDC& dc) {
 		double minX, maxX, minY, maxY;
 		findMaxMin2Ddata(data, minX, maxX, minY, maxY);
 
+		// Only for column charts such as bar, histogram etc.
+		switch (wxPlotType) {
+		case WXPLOT_TYPE_BAR:
+			if (minY > 0) {
+				minY = 0;
+			}
+			break;
+		}
+
 		// Compute steps
 		const unsigned int stepsX = (xStartRectangle + widthRectangle) / (ticks-1);
 		const unsigned int stepsY = (yStartRectangle + heightRectangle) / (ticks-1);
@@ -127,12 +136,12 @@ void Proportional::drawTicks(wxDC& dc) {
 		wxCoord textWidth, textHeight;
 		char value[100];
 		for (wxCoord x = xStartRectangle; x <= xStartRectangle + widthRectangle; x += stepsX) {
-			std::snprintf(value, sizeof(value), "%0.2f", maxX + scalarX * counter);
+			std::snprintf(value, sizeof(value), "%0.2f", minX + scalarX * counter);
 			dc.GetTextExtent(value, &textWidth, &textHeight);
 			dc.DrawText(value, x - textWidth / 2, yStartRectangle + heightRectangle);
 			counter++;
 		}
-		std::snprintf(value, sizeof(value), "%0.2f", maxX + scalarX * counter);
+		std::snprintf(value, sizeof(value), "%0.2f", minX + scalarX * counter);
 		dc.GetTextExtent(value, &textWidth, &textHeight);
 		dc.DrawText(value, xStartRectangle + widthRectangle - textWidth, yStartRectangle + heightRectangle);
 

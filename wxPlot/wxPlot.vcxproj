@@ -143,6 +143,7 @@
     <ClCompile Include="src\plots\plots.cpp" />
     <ClCompile Include="src\plots\plottools\functions\functions.cpp" />
     <ClCompile Include="src\plots\plottypes\2D\2Dtype.cpp" />
+    <ClCompile Include="src\plots\plottypes\2D\bar\bar.cpp" />
     <ClCompile Include="src\plots\plottypes\2D\line\line.cpp" />
     <ClCompile Include="src\plots\plottypes\2D\scatter\scatter.cpp" />
     <ClCompile Include="src\plots\plottypes\2D\spline\spline.cpp" />
@@ -163,6 +164,7 @@
     <ClInclude Include="src\plots\plottools\lists\colours.h" />
     <ClInclude Include="src\plots\plottools\plottools.h" />
     <ClInclude Include="src\plots\plottypes\2D\2Dtype.h" />
+    <ClInclude Include="src\plots\plottypes\2D\bar\bar.h" />
     <ClInclude Include="src\plots\plottypes\2D\line\line.h" />
     <ClInclude Include="src\plots\plottypes\2D\scatter\scatter.h" />
     <ClInclude Include="src\plots\plottypes\2D\spline\spline.h" />

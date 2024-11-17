@@ -9,7 +9,7 @@ private:
 	WXPLOT_FIGURE wxPlotFigure = WXPLOT_FIGURE_2D;
 
 	// Plot types
-	_2D_Type _2d;
+	_2DType _2d;
 
 public:
 	// Constructor

@@ -3,7 +3,7 @@
 #include "proportional/proportional.h"
 #include "../../plottools/plottools.h"
 
-class _2D_Figure {
+class _2DFigure {
 private:
 	// Type select
 	WXPLOT_TYPE wxPlotType = WXPLOT_TYPE_LINE;
@@ -13,7 +13,7 @@ private:
 
 public:
 	// Constructor
-	_2D_Figure() {}
+	_2DFigure() {}
 
 	// Setters
 	void setWxPlotType(const WXPLOT_TYPE wxPlotType);

@@ -1,62 +1,63 @@
 #include "2Dfigure.h"
 
-void _2D_Figure::setWxPlotType(const WXPLOT_TYPE wxPlotType) {
+void _2DFigure::setWxPlotType(const WXPLOT_TYPE wxPlotType) {
 	this->wxPlotType = wxPlotType;
+	proportional.setWxPlotType(wxPlotType);
 }
 
-void _2D_Figure::setTitle(const wxString& title) {
+void _2DFigure::setTitle(const wxString& title) {
 	proportional.setTitle(title);
 }
 
-void _2D_Figure::setXlabel(const wxString& xLabel) {
+void _2DFigure::setXlabel(const wxString& xLabel) {
 	proportional.setXlabel(xLabel);
 }
 
-void _2D_Figure::setYlabel(const wxString& yLabel) {
+void _2DFigure::setYlabel(const wxString& yLabel) {
 	proportional.setYlabel(yLabel);
 }
 
-void _2D_Figure::setTicks(const unsigned int ticks) {
+void _2DFigure::setTicks(const unsigned int ticks) {
 	proportional.setTicks(ticks);
 }
 
-void _2D_Figure::gridOn(const bool useGrid) {
+void _2DFigure::gridOn(const bool useGrid) {
 	proportional.gridOn(useGrid);
 }
 
-void _2D_Figure::setPlotStartWidth(const wxCoord plotStartWidth) {
+void _2DFigure::setPlotStartWidth(const wxCoord plotStartWidth) {
 	proportional.setPlotStartWidth(plotStartWidth);
 }
 
-void _2D_Figure::setPlotStartHeight(const wxCoord plotStartHeight) {
+void _2DFigure::setPlotStartHeight(const wxCoord plotStartHeight) {
 	proportional.setPlotStartHeight(plotStartHeight);
 }
 
-void _2D_Figure::setPlotEndWidth(const wxCoord plotEndWidth) {
+void _2DFigure::setPlotEndWidth(const wxCoord plotEndWidth) {
 	proportional.setPlotEndWidth(plotEndWidth);
 }
 
-void _2D_Figure::setPlotEndHeight(const wxCoord plotEndHeight) {
+void _2DFigure::setPlotEndHeight(const wxCoord plotEndHeight) {
 	proportional.setPlotEndHeight(plotEndHeight);
 }
 
-void _2D_Figure::setData(const std::vector<std::vector<double>>& data) {
+void _2DFigure::setData(const std::vector<std::vector<double>>& data) {
 	proportional.setData(data);
 }
 
-void _2D_Figure::legendOn(const bool useLegend) {
+void _2DFigure::legendOn(const bool useLegend) {
 	proportional.legendOn(useLegend);
 }
 
-void _2D_Figure::setLegend(const std::vector<wxString>& legend, const PLACEMENT legendPosition) {
+void _2DFigure::setLegend(const std::vector<wxString>& legend, const PLACEMENT legendPosition) {
 	proportional.setLegend(legend, legendPosition);
 }
 
-void _2D_Figure::setFontSize(const unsigned int fontSize) {
+void _2DFigure::setFontSize(const unsigned int fontSize) {
 	proportional.setFontSize(fontSize);
 }
 
-wxCoord _2D_Figure::getPlotStartWidth() const {
+wxCoord _2DFigure::getPlotStartWidth() const {
 	switch (wxPlotType) {
 	case WXPLOT_TYPE_LINE:
 		return proportional.getPlotStartWidth();
@@ -67,6 +68,8 @@ wxCoord _2D_Figure::getPlotStartWidth() const {
 	case WXPLOT_TYPE_SPLINE:
 		return proportional.getPlotStartWidth();
 	case WXPLOT_TYPE_SPLINE_SCATTER:
+		return proportional.getPlotStartWidth();
+	case WXPLOT_TYPE_BAR:
 		return proportional.getPlotStartWidth();
 	default:
 		return 0;
@@ -74,7 +77,7 @@ wxCoord _2D_Figure::getPlotStartWidth() const {
 	}
 }
 
-wxCoord _2D_Figure::getPlotEndWidth() const {
+wxCoord _2DFigure::getPlotEndWidth() const {
 	switch (wxPlotType) {
 	case WXPLOT_TYPE_LINE:
 		return proportional.getPlotEndWidth();
@@ -85,6 +88,8 @@ wxCoord _2D_Figure::getPlotEndWidth() const {
 	case WXPLOT_TYPE_SPLINE:
 		return proportional.getPlotEndWidth();
 	case WXPLOT_TYPE_SPLINE_SCATTER:
+		return proportional.getPlotEndWidth();
+	case WXPLOT_TYPE_BAR:
 		return proportional.getPlotEndWidth();
 	default:
 		return 0;
@@ -92,7 +97,7 @@ wxCoord _2D_Figure::getPlotEndWidth() const {
 	}
 }
 
-wxCoord _2D_Figure::getPlotStartHeight() const {
+wxCoord _2DFigure::getPlotStartHeight() const {
 	switch (wxPlotType) {
 	case WXPLOT_TYPE_LINE:
 		return proportional.getPlotStartHeight();
@@ -103,6 +108,8 @@ wxCoord _2D_Figure::getPlotStartHeight() const {
 	case WXPLOT_TYPE_SPLINE:
 		return proportional.getPlotStartHeight();
 	case WXPLOT_TYPE_SPLINE_SCATTER:
+		return proportional.getPlotStartHeight();
+	case WXPLOT_TYPE_BAR:
 		return proportional.getPlotStartHeight();
 	default:
 		return 0;
@@ -110,7 +117,7 @@ wxCoord _2D_Figure::getPlotStartHeight() const {
 	}
 }
 
-wxCoord _2D_Figure::getPlotEndHeight() const {
+wxCoord _2DFigure::getPlotEndHeight() const {
 	switch (wxPlotType) {
 	case WXPLOT_TYPE_LINE:
 		return proportional.getPlotEndHeight();
@@ -121,6 +128,8 @@ wxCoord _2D_Figure::getPlotEndHeight() const {
 	case WXPLOT_TYPE_SPLINE:
 		return proportional.getPlotEndHeight();
 	case WXPLOT_TYPE_SPLINE_SCATTER:
+		return proportional.getPlotEndHeight();
+	case WXPLOT_TYPE_BAR:
 		return proportional.getPlotEndHeight();
 	default:
 		return 0;
@@ -128,7 +137,7 @@ wxCoord _2D_Figure::getPlotEndHeight() const {
 	}
 }
 
-void _2D_Figure::drawFigure(wxDC& dc) {
+void _2DFigure::drawFigure(wxDC& dc) {
 	switch (wxPlotType) {
 	case WXPLOT_TYPE_LINE:
 		proportional.drawFigure(dc);
@@ -145,13 +154,16 @@ void _2D_Figure::drawFigure(wxDC& dc) {
 	case WXPLOT_TYPE_SPLINE_SCATTER:
 		proportional.drawFigure(dc);
 		break;
+	case WXPLOT_TYPE_BAR:
+		proportional.drawFigure(dc);
+		break;
 	default:
 		proportional.drawFigure(dc);
 		break;
 	}
 }
 
-void _2D_Figure::drawTicks(wxDC& dc) {
+void _2DFigure::drawTicks(wxDC& dc) {
 	switch (wxPlotType) {
 	case WXPLOT_TYPE_LINE:
 		proportional.drawTicks(dc);
@@ -174,7 +186,7 @@ void _2D_Figure::drawTicks(wxDC& dc) {
 	}
 }
 
-void _2D_Figure::drawGrid(wxDC& dc) {
+void _2DFigure::drawGrid(wxDC& dc) {
 	switch (wxPlotType) {
 	case WXPLOT_TYPE_LINE:
 		proportional.drawGrid(dc);
@@ -197,7 +209,7 @@ void _2D_Figure::drawGrid(wxDC& dc) {
 	}
 }
 
-void _2D_Figure::drawLegend(wxDC& dc) {
+void _2DFigure::drawLegend(wxDC& dc) {
 	switch (wxPlotType) {
 	case WXPLOT_TYPE_LINE:
 		proportional.drawLegend(dc);

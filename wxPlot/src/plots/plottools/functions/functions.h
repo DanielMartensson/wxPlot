@@ -3,7 +3,7 @@
 #include "../lists/colours.h"
 #include <vector>
 
-void maxMinData(const std::vector<double>& data, double& minLimit, double& maxLimit);
+void findMaxMin1Ddata(const std::vector<double>& data, double& minLimit, double& maxLimit);
 void setColourPen(wxDC& dc, const int penColour);
 void setColourBrush(wxDC& dc, const int brushColour);
 void setColourText(wxDC& dc, const int textColour, const int backgroundColour);

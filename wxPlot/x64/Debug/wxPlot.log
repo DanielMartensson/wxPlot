@@ -2,9 +2,7 @@
   mainframe.cpp
   plots.cpp
   2Dtype.cpp
-  line.cpp
-  scatter.cpp
-  spline.cpp
+  bar.cpp
   plottypes.cpp
   wxplot.cpp
   Generating Code...

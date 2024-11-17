@@ -3,9 +3,10 @@
 #include "line/line.h"
 #include "scatter/scatter.h"
 #include "spline/spline.h"
+#include "bar/bar.h"
 #include "../../plottools/plottools.h"
 
-class _2D_Type {
+class _2DType {
 
 private:
 	// Type select
@@ -18,10 +19,11 @@ private:
 	Line line;
 	Scatter scatter;
 	Spline spline;
+	Bar bar;
 
 public:
 	// Constructor
-	_2D_Type() { }
+	_2DType() { }
 
 	// Setters
 	void setWxPlotType(const WXPLOT_TYPE wxPlotType);

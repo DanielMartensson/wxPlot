@@ -6,6 +6,7 @@ C:\Users\danie\Documents\GitHub\wxPlot\wxPlot\src\plots\plotfigures\plotfigures.
 C:\Users\danie\Documents\GitHub\wxPlot\wxPlot\src\plots\plots.cpp;C:\Users\danie\Documents\GitHub\wxPlot\wxPlot\x64\Debug\plots.obj
 C:\Users\danie\Documents\GitHub\wxPlot\wxPlot\src\plots\plottools\functions\functions.cpp;C:\Users\danie\Documents\GitHub\wxPlot\wxPlot\x64\Debug\functions.obj
 C:\Users\danie\Documents\GitHub\wxPlot\wxPlot\src\plots\plottypes\2D\2Dtype.cpp;C:\Users\danie\Documents\GitHub\wxPlot\wxPlot\x64\Debug\2Dtype.obj
+C:\Users\danie\Documents\GitHub\wxPlot\wxPlot\src\plots\plottypes\2D\bar\bar.cpp;C:\Users\danie\Documents\GitHub\wxPlot\wxPlot\x64\Debug\bar.obj
 C:\Users\danie\Documents\GitHub\wxPlot\wxPlot\src\plots\plottypes\2D\line\line.cpp;C:\Users\danie\Documents\GitHub\wxPlot\wxPlot\x64\Debug\line.obj
 C:\Users\danie\Documents\GitHub\wxPlot\wxPlot\src\plots\plottypes\2D\scatter\scatter.cpp;C:\Users\danie\Documents\GitHub\wxPlot\wxPlot\x64\Debug\scatter.obj
 C:\Users\danie\Documents\GitHub\wxPlot\wxPlot\src\plots\plottypes\2D\spline\spline.cpp;C:\Users\danie\Documents\GitHub\wxPlot\wxPlot\x64\Debug\spline.obj
