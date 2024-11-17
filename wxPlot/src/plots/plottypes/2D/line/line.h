@@ -11,19 +11,23 @@ protected:
 	wxCoord plotStartWidth = 0;
 	wxCoord plotStartHeight = 0;
 
-	// Plotting data
-	std::vector<std::vector<double>> data;
+	// Limits for the data 
+	double minX = 0;
+	double maxX = 0;
+	double minY = 0;
+	double maxY = 0;
+
 public:
 	// Constructor
 	Line() {}
 
 	// Setters
-	void setData(const std::vector<std::vector<double>>& data) { this->data = data; };
+	void setLimits(const double minX, const double maxX, const double minY, const double maxY) { this->minX = minX; this->maxX = maxX; this->minY = minY; this->maxY = maxY; }
 	void setPlotStartWidth(const wxCoord plotStartWidth) { this->plotStartWidth = plotStartWidth; }
 	void setPlotStartHeight(const wxCoord plotStartHeight) { this->plotStartHeight = plotStartHeight; }
 	void setPlotEndWidth(const wxCoord plotEndWidth) { this->plotEndWidth = plotEndWidth; }
 	void setPlotEndHeight(const wxCoord plotEndHeight) { this->plotEndHeight = plotEndHeight; }
 
 	// Functions
-	virtual bool draw(wxDC& dc);
+	virtual bool draw(wxDC& dc, const std::vector<double>& xData, const std::vector<double>& yData, const int colourIndex);
 };

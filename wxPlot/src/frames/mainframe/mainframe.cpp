@@ -58,7 +58,6 @@ MainFrame::MainFrame() : wxFrame(nullptr, wxID_ANY, "wxPlot")
     // Render the plot
     plot->Refresh();
 
-
     // Events
     Bind(wxEVT_MENU, &MainFrame::OnHello, this, wxID_FILE);
     Bind(wxEVT_MENU, &MainFrame::OnExit, this, wxID_EXIT);
@@ -100,6 +99,6 @@ void MainFrame::OnSize(wxSizeEvent& event) {
     plot->setPlotStartHeight(startHeight);
     plot->setPlotEndWidth(endWidth);
     plot->setPlotEndHeight(endHeight);
-    //plot->Refresh();
+    plot->Refresh();
 
 }

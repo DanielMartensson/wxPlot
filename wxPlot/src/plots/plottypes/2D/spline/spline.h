@@ -9,5 +9,5 @@ private:
 
 public:
 	// Functions
-	bool draw(wxDC& dc) override;
+	bool draw(wxDC& dc, const std::vector<double>& xData, const std::vector<double>& yData, const int colourIndex) override;
 };

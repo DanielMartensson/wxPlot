@@ -1,2 +1,11 @@
-﻿  mainframe.cpp
+﻿  Main.cpp
+  mainframe.cpp
+  plots.cpp
+  2Dtype.cpp
+  line.cpp
+  scatter.cpp
+  spline.cpp
+  plottypes.cpp
+  wxplot.cpp
+  Generating Code...
   wxPlot.vcxproj -> C:\Users\danie\Documents\GitHub\wxPlot\x64\Debug\wxPlot.exe

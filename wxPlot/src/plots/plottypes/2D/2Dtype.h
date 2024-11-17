@@ -11,6 +11,9 @@ private:
 	// Type select
 	WXPLOT_TYPE wxPlotType = WXPLOT_TYPE_LINE;
 
+	// The data
+	std::vector<std::vector<double>> data;
+
 	// Charts
 	Line line;
 	Scatter scatter;
@@ -31,5 +34,5 @@ public:
 	void setPlotEndHeight(const wxCoord plotEndHeight);
 
 	// Functions
-	void drawType(wxDC& dc);
+	bool drawType(wxDC& dc);
 };
