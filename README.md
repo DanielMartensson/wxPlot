@@ -1,4 +1,4 @@
-# wxPlot V1.0
+# wxPlot V1.1
 
 This project is called `wxPlot`. The project was created due to the lack of visualization tools that can be used in real time. Historically, there have been older libraries for wxWidgets at SourceForge that can offer graphical visualization of data. I made the decision to create an additional data visualization tool - `wxPlot`. But with a different starting point. The goal of this project is to be able to offer a visualization tool together with a proper documentation for further development. The visualization tool for the data must not have any dependencies on other libraries and the visualization tool must always be able to run in real time. The code is written in the latest standard of modern C++.
 
@@ -114,7 +114,6 @@ Spline plot with filled scatters
 
 # TODO
 
-- Bar plot
 - Histogram plot
 - 3D plot
 - More MATLAB inspired use
@@ -228,7 +227,7 @@ Most of the time, you can just inherit most of the code from the class `Proporti
 After you have done the configuration for the `figure`. Now it's time for add code for the actuall plot - drawing on the rectangle!
 In this case, we are focusing on `2D` plots. Head over to the `2Dtype.h` file and add new new object `Bar bar;` under private. Don't forget to add `#include "bar/bar.h"` as well!
 
-```
+```cpp
 #pragma once
 
 #include "line/line.h"
@@ -422,7 +421,7 @@ plot->setData(data);
 To solve this issue, we need to change the `minY` so the `Y`-ticks are displayed correctly. One good option is to head over
 to `proportional.cpp` and add this. So if `minY` is positive, turn it to `0`, only for `bar` or other column charts.
 
-```
+```cpp
 /*
  * This function draw the ticks.
  * Call this function after you have drawn the plot type.

@@ -112,15 +112,6 @@ void Proportional::drawTicks(wxDC& dc) {
 		double minX, maxX, minY, maxY;
 		findMaxMin2Ddata(data, minX, maxX, minY, maxY);
 
-		// Only for column charts such as bar, histogram etc.
-		switch (wxPlotType) {
-		case WXPLOT_TYPE_BAR:
-			if (minY > 0) {
-				minY = 0;
-			}
-			break;
-		}
-
 		// Compute steps
 		const unsigned int stepsX = (xStartRectangle + widthRectangle) / (ticks-1);
 		const unsigned int stepsY = (yStartRectangle + heightRectangle) / (ticks-1);

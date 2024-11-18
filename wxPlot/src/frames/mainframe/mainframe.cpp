@@ -30,13 +30,13 @@ MainFrame::MainFrame() : wxFrame(nullptr, wxID_ANY, "wxPlot")
                                               { 0, 200, 300, 400, 500, 600 }, {0, 20 , 30, 35, 40, 42} };   // Speed (X, Y)
 
     // Create data for bar
-    std::vector<std::vector<double>> data2 = { {0}, {15}, 
+    std::vector<std::vector<double>> data2 = { {0}, {15.6}, 
                                                 {0.5}, {20}, 
                                                 {1}, {10}, 
                                                 {2}, {50}, 
                                                 {3}, {10}, 
-                                                {4}, {-10},
-    {5}, {-20} };
+                                                {4}, {80},
+    {5}, {20} };
 
     // Legend
     std::vector<wxString> legend = { "Temperature", "Speed" };
