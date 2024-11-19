@@ -54,6 +54,7 @@ MainFrame::MainFrame() : wxFrame(nullptr, wxID_ANY, "wxPlot")
 
     // Set data
     plot->setData(data2);
+    plot->setYlim(0, 100);
 
     // Set legend
     plot->setLegend(legend, PLACEMENT_NORTH_EAST);

@@ -37,8 +37,6 @@ bool Proportional::drawFigure(wxDC& dc) {
 	// Compute the width and height of the ticks
 	wxCoord ticksWidth = 0, ticksHeight = 0;
 	if (ticks > 0) {
-		double minX, maxX, minY, maxY;
-		findMaxMin2Ddata(data, minX, maxX, minY, maxY);
 		char value[100];
 		std::snprintf(value, sizeof(value), "%0.2f", maxY > std::abs(minY) ? maxY : minY); // Sometimes a negative number can be longer than a positive number
 		dc.GetTextExtent(value, &ticksWidth, &ticksHeight);
@@ -107,10 +105,6 @@ void Proportional::drawTicks(wxDC& dc) {
 		// Set color - Black
 		wxPen pen(plotColours.at(PLOT_COLOUR_BLACK));
 		dc.SetPen(pen);
-
-		// Compute the minimum and maximum value from the data for correct scaling
-		double minX, maxX, minY, maxY;
-		findMaxMin2Ddata(data, minX, maxX, minY, maxY);
 
 		// Compute steps
 		const unsigned int stepsX = (xStartRectangle + widthRectangle) / (ticks-1);

@@ -29,6 +29,7 @@ public:
 	void setData(const std::vector<std::vector<double>>& data);
 	void legendOn(const bool useLegend);
 	void setFontSize(const unsigned int fontSize);
+	void setYlim(const double minY, const double maxY);
 
 	// Getters
 	wxCoord getPlotStartWidth() const;

@@ -16,7 +16,6 @@ void _2DType::setData(const std::vector<std::vector<double>>& data) {
 	this->data = data;
 
 	// Find max and min for the complete data, or else, we will get very weird scaling inside the plot
-	double minX, maxX, minY, maxY;
 	findMaxMin2Ddata(data, minX, maxX, minY, maxY);
 
 	// Set the limits
@@ -52,6 +51,18 @@ void _2DType::setPlotEndHeight(const wxCoord plotEndHeight) {
 	scatter.setPlotEndHeight(plotEndHeight);
 	spline.setPlotEndHeight(plotEndHeight);
 	bar.setPlotEndHeight(plotEndHeight);
+}
+
+void _2DType::setYlim(const double minY, const double maxY) {
+
+	// Find max and min for the complete data, or else, we will get very weird scaling inside the plot
+	findMaxMin2Ddata(data, minX, maxX, this->minY, this->maxY);
+
+	// Set the limits, by using minY and maxY
+	line.setLimits(minX, maxX, minY, maxY);
+	scatter.setLimits(minX, maxX, minY, maxY);
+	spline.setLimits(minX, maxX, minY, maxY);
+	bar.setLimits(minX, maxX, minY, maxY);
 }
 
 bool _2DType::drawType(wxDC& dc) {

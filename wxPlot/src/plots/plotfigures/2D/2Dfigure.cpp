@@ -57,6 +57,10 @@ void _2DFigure::setFontSize(const unsigned int fontSize) {
 	proportional.setFontSize(fontSize);
 }
 
+void _2DFigure::setYlim(const double minY, const double maxY) {
+	proportional.setYlim(minY, maxY);
+}
+
 wxCoord _2DFigure::getPlotStartWidth() const {
 	switch (wxPlotType) {
 	case WXPLOT_TYPE_LINE:

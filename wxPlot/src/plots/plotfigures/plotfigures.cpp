@@ -58,6 +58,10 @@ void PlotFigure::setFontSize(const unsigned int fontSize) {
 	_2d.setFontSize(fontSize);
 }
 
+void PlotFigure::setYlim(const double minY, const double maxY) {
+	_2d.setYlim(minY, maxY);
+}
+
 wxCoord PlotFigure::getPlotStartWidth() const {
 	switch (wxPlotFigure) {
 	case WXPLOT_FIGURE_2D:

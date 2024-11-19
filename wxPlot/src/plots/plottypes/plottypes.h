@@ -24,6 +24,7 @@ public:
 	void setPlotStartHeight(const wxCoord plotStartHeight);
 	void setPlotEndWidth(const wxCoord plotEndWidth);
 	void setPlotEndHeight(const wxCoord plotEndHeight);
+	void setYlim(const double minY, const double maxY);
 
 	// Functions
 	void drawType(wxDC& dc);
