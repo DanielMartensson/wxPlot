@@ -6,9 +6,10 @@ bool Bar::draw(wxDC& dc, const double yData, const int colourIndex, const size_t
 	setColourPen(dc, colourIndex);
 	setColourBrush(dc, colourIndex);
 
-	// Some parameter
-	const wxCoord width = (plotEndWidth - plotStartWidth) / dataSize;	
-	const wxCoord x = plotStartWidth + width * i;
+	// Some parameters
+	const unsigned int gap = 5;
+	const wxCoord width = (plotEndWidth - plotStartWidth) / dataSize - gap;
+	const wxCoord x = plotStartWidth + (width + gap) * i;
 	wxCoord y = linearScalarYaxis(yData, minY, plotStartHeight, maxY, plotEndHeight);
 	const wxCoord y0 = linearScalarYaxis(0, minY, plotStartHeight, maxY, plotEndHeight);
 	const wxCoord yMin = linearScalarYaxis(minY, minY, plotStartHeight, maxY, plotEndHeight);
@@ -25,7 +26,7 @@ bool Bar::draw(wxDC& dc, const double yData, const int colourIndex, const size_t
 	}
 
 	// Draw the rectangle now
-	dc.DrawRectangle(x, y, width, height);
+	dc.DrawRectangle(x + gap, y, width, height);
 
 	// Nothing went wrong
 	return true;
