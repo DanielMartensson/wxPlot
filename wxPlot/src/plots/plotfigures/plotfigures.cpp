@@ -42,8 +42,12 @@ void PlotFigure::setPlotEndHeight(const wxCoord plotEndHeight) {
 	_2d.setPlotEndHeight(plotEndHeight);
 }
 
-void PlotFigure::setData(const std::vector<std::vector<double>>& data) {
-	_2d.setData(data);
+void PlotFigure::setData(const std::vector<std::vector<double>>& data2D) {
+	_2d.setData(data2D);
+}
+
+void PlotFigure::setData(const std::vector<double>& data1D) {
+	_2d.setData(data1D);
 }
 
 void PlotFigure::legendOn(const bool useLegend) {

@@ -13,8 +13,12 @@ void PlotTypes::fillCircles(const bool fillCircle) {
 	_2d.fillCircles(fillCircle);
 }
 
-void PlotTypes::setData(const std::vector<std::vector<double>>& data) {
-	_2d.setData(data);
+void PlotTypes::setData(const std::vector<std::vector<double>>& data2D) {
+	_2d.setData(data2D);
+}
+
+void PlotTypes::setData(const std::vector<double>& data1D) {
+	_2d.setData(data1D);
 }
 
 void PlotTypes::setPlotStartWidth(const wxCoord plotStartWidth) {

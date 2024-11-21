@@ -12,13 +12,49 @@ void _2DType::fillCircles(const bool fillCircle) {
 	scatter.fillCircles(fillCircle);
 }
 
-void _2DType::setData(const std::vector<std::vector<double>>& data) {
-	this->data = data;
+void _2DType::setData(const std::vector<std::vector<double>>& data2D) {
+	this->data2D = data2D;
+	this->isUsed2D = true;
 
 	// Find max and min for the complete data, or else, we will get very weird scaling inside the plot
-	findMaxMin2Ddata(data, minX, maxX, minY, maxY);
+	findMaxMin2Ddata(data2D, minX, maxX, minY, maxY);
 
 	// Set the limits
+	line.setLimits(minX, maxX, minY, maxY);
+	scatter.setLimits(minX, maxX, minY, maxY);
+	spline.setLimits(minX, maxX, minY, maxY);
+	bar.setLimits(minX, maxX, minY, maxY);
+}
+
+void _2DType::setData(const std::vector<double>& data1D) {
+	this->data1D = data1D;
+	this->isUsed2D = false;
+
+	// Find max and min for the complete data, or else, we will get very weird scaling inside the plot
+	minX = 0;
+	maxX = data1D.size();
+	findMaxMin1Ddata(data1D, minY, maxY);
+
+	// Set the limits
+	line.setLimits(minX, maxX, minY, maxY);
+	scatter.setLimits(minX, maxX, minY, maxY);
+	spline.setLimits(minX, maxX, minY, maxY);
+	bar.setLimits(minX, maxX, minY, maxY);
+}
+
+void _2DType::setYlim(const double minY, const double maxY) {
+
+	// Find max and min for the complete data, or else, we will get very weird scaling inside the plot
+	if (isUsed2D) {
+		findMaxMin2Ddata(data2D, minX, maxX, this->minY, this->maxY);
+	}
+	else {
+		minX = 0;
+		maxX = data1D.size();
+		findMaxMin1Ddata(data1D, this->minY, this->maxY);
+	}
+
+	// Set the limits, by using minY and maxY
 	line.setLimits(minX, maxX, minY, maxY);
 	scatter.setLimits(minX, maxX, minY, maxY);
 	spline.setLimits(minX, maxX, minY, maxY);
@@ -53,33 +89,25 @@ void _2DType::setPlotEndHeight(const wxCoord plotEndHeight) {
 	bar.setPlotEndHeight(plotEndHeight);
 }
 
-void _2DType::setYlim(const double minY, const double maxY) {
-
-	// Find max and min for the complete data, or else, we will get very weird scaling inside the plot
-	findMaxMin2Ddata(data, minX, maxX, this->minY, this->maxY);
-
-	// Set the limits, by using minY and maxY
-	line.setLimits(minX, maxX, minY, maxY);
-	scatter.setLimits(minX, maxX, minY, maxY);
-	spline.setLimits(minX, maxX, minY, maxY);
-	bar.setLimits(minX, maxX, minY, maxY);
-}
-
 bool _2DType::drawType(wxDC& dc) {
-	// Get the size of the data
-	const size_t dataSize = data.size();
 
 	// We must have at least double(2). One for X-axis and one for Y-axis
-	if (check2DdataSize(data)) {
-		// Create a line plot
+	if (isUsed2D) {
+		// Check
+		if (!check2DdataSize(data2D)) {
+			return false;
+		}
+
+		// Create counter for colour
 		int colourIndex = 0;
+
+		// Get the size of the data
+		const size_t dataSize = data2D.size();
+
 		for (size_t i = 0; i < dataSize; i += 2) {
 			// Get data
-			const std::vector<double> xData = data.at(i);
-			const std::vector<double> yData = data.at(i + 1);
-
-			// Get length of one of them both
-			const size_t xDataLength = xData.size();
+			const std::vector<double> xData = data2D.at(i);
+			const std::vector<double> yData = data2D.at(i + 1);
 
 			// Draw type now
 			switch (wxPlotType) {
@@ -100,9 +128,6 @@ bool _2DType::drawType(wxDC& dc) {
 				spline.draw(dc, xData, yData, colourIndex);
 				scatter.draw(dc, xData, yData, colourIndex);
 				break;
-			case WXPLOT_TYPE_BAR:
-				bar.draw(dc, yData.at(0), colourIndex, dataSize / 2, i / 2);
-				break;
 			default:
 				break;
 			}
@@ -111,8 +136,16 @@ bool _2DType::drawType(wxDC& dc) {
 			colourIndex++;
 		}
 	}
-	else {
-		return false;
+	else{
+
+		// Draw type now
+		switch (wxPlotType) {
+		case WXPLOT_TYPE_BAR:
+			bar.draw(dc, data1D);
+			break;
+		default:
+			break;
+		}
 	}
 
 	return true;

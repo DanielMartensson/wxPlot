@@ -23,7 +23,9 @@ public:
 	void setPlotStartHeight(const wxCoord plotStartHeight) { plots.getPlotFigures().setPlotStartHeight(plotStartHeight); }
 	void setPlotEndWidth(const wxCoord plotEndWidth) { plots.getPlotFigures().setPlotEndWidth(plotEndWidth); }
 	void setPlotEndHeight(const wxCoord plotEndHeight) { plots.getPlotFigures().setPlotEndHeight(plotEndHeight); }
-	void setData(const std::vector<std::vector<double>>& data) { plots.setData(data); }
+	void setData(const std::vector<std::vector<double>>& data2D) { plots.setData(data2D); }
+	void setData(const std::vector<double>& data1D) { plots.setData(data1D); }
+
 	void setRadius(const wxCoord radius) { plots.getPlotTypes().setRadius(radius); }
 	void legendOn(const bool useLegend) { plots.getPlotFigures().legendOn(useLegend); }
 	void setLegend(const std::vector<wxString>& legend, const PLACEMENT legendPosition = PLACEMENT_NORTH_EAST) { plots.getPlotFigures().setLegend(legend, legendPosition); }

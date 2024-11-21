@@ -4,16 +4,16 @@
 /*
  * This function finds the least minimum value and most maximum value from the 1D data vector
  */
-void findMaxMin1Ddata(const std::vector<double>& data, double& minLimit, double& maxLimit) {
-	minLimit = data.at(0);
-	maxLimit = data.at(0);
-	const size_t dataLength = data.size();
+void findMaxMin1Ddata(const std::vector<double>& data1D, double& minLimit, double& maxLimit) {
+	minLimit = data1D.at(0);
+	maxLimit = data1D.at(0);
+	const size_t dataLength = data1D.size();
 	for (size_t i = 1; i < dataLength; i++) {
-		if (data.at(i) < minLimit) {
-			minLimit = data.at(i);
+		if (data1D.at(i) < minLimit) {
+			minLimit = data1D.at(i);
 		}
-		if (data.at(i) > maxLimit) {
-			maxLimit = data.at(i);
+		if (data1D.at(i) > maxLimit) {
+			maxLimit = data1D.at(i);
 		}
 	}
 }
@@ -36,9 +36,9 @@ double linearScalarYaxis(const double value, const double oldMinLimit, const dou
 /*
  * This function check if we have both X-axis and Y-axis by checking modulus 2
  */
-bool check2DdataSize(const std::vector<std::vector<double>>& data) {
+bool check2DdataSize(const std::vector<std::vector<double>>& data2D) {
 	// Check the size
-	const size_t dataSize = data.size();
+	const size_t dataSize = data2D.size();
 	if (dataSize % 2 != 0) {
 		return false; // Missing an axis
 	}
@@ -46,8 +46,8 @@ bool check2DdataSize(const std::vector<std::vector<double>>& data) {
 	// Check if X-axis and Y-axis have the same length
 	for (size_t i = 0; i < dataSize; i += 2) {
 		// Get data
-		const std::vector<double> xData = data.at(i);
-		const std::vector<double> yData = data.at(i + 1);
+		const std::vector<double> xData = data2D.at(i);
+		const std::vector<double> yData = data2D.at(i + 1);
 
 		// Get length of them both
 		const size_t xDataLength = xData.size();
@@ -65,10 +65,10 @@ bool check2DdataSize(const std::vector<std::vector<double>>& data) {
 /*
  * This function finds the least minimum value and most maximum value from the 2D data vector
  */
-void findMaxMin2Ddata(const std::vector<std::vector<double>>& data, double& minX, double& maxX, double& minY, double& maxY) {
-	const size_t dataSize = data.size();
+void findMaxMin2Ddata(const std::vector<std::vector<double>>& data2D, double& minX, double& maxX, double& minY, double& maxY) {
+	const size_t dataSize = data2D.size();
 	for (size_t i = 0; i < dataSize; i += 2) {
-		const std::vector<double> xData = data.at(i);
+		const std::vector<double> xData = data2D.at(i);
 		double minLimit, maxLimit;
 		findMaxMin1Ddata(xData, minLimit, maxLimit);
 		if (i == 0) {
@@ -84,7 +84,7 @@ void findMaxMin2Ddata(const std::vector<std::vector<double>>& data, double& minX
 			}
 		}
 
-		const std::vector<double> yData = data.at(i + 1);
+		const std::vector<double> yData = data2D.at(i + 1);
 		findMaxMin1Ddata(yData, minLimit, maxLimit);
 		if (i == 0) {
 			minY = minLimit;

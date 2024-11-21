@@ -23,4 +23,6 @@ public:
 	// Setters 
 	void setWxPlotFigureType(const WXPLOT_FIGURE wxPlotFigure, const WXPLOT_TYPE wxPlotType);
 	void setData(const std::vector<std::vector<double>>& data);
+	void setData(const std::vector<double>& data);
+
 };

@@ -19,7 +19,8 @@ public:
 	void setWxPlotFigureType(const WXPLOT_FIGURE wxPlotFigure, const WXPLOT_TYPE wxPlotType);
 	void setRadius(const wxCoord radius);
 	void fillCircles(const bool fillCircle);
-	void setData(const std::vector<std::vector<double>>& data);
+	void setData(const std::vector<std::vector<double>>& data2D);
+	void setData(const std::vector<double>& data1D);
 	void setPlotStartWidth(const wxCoord plotStartWidth);
 	void setPlotStartHeight(const wxCoord plotStartHeight);
 	void setPlotEndWidth(const wxCoord plotEndWidth);

@@ -21,7 +21,6 @@ protected:
 	wxString yLabel;
 	std::vector<wxString> legend;
 	PLACEMENT legendPosition = PLACEMENT_NORTH_WEST;
-	std::vector<std::vector<double>> data;
 	WXPLOT_TYPE wxPlotType = WXPLOT_TYPE_LINE;
 	double minX = 0, maxX = 0, minY = 0, maxY = 0;
 
@@ -42,7 +41,8 @@ public:
 	void setYlabel(const wxString& yLabel) { this->yLabel = yLabel; }
 	void legendOn(const bool useLegend) { this->useLegend = useLegend; }
 	void setLegend(const std::vector<wxString>& legend, const PLACEMENT legendPosition) { this->legend = legend; this->legendPosition = legendPosition; }
-	void setData(const std::vector<std::vector<double>>& data) { this->data = data; findMaxMin2Ddata(data, minX, maxX, minY, maxY); }
+	void setData(const std::vector<std::vector<double>>& data);
+	void setData(const std::vector<double>& data);
 	void setWxPlotType(const WXPLOT_TYPE wxPlotType) { this->wxPlotType = wxPlotType; }
 	void setYlim(const double minY, const double maxY) { this->minY = minY; this->maxY = maxY; }
 

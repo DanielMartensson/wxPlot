@@ -4,7 +4,12 @@ void Plots::setWxPlotFigureType(const WXPLOT_FIGURE wxPlotFigure, const WXPLOT_T
 	plotTypes.setWxPlotFigureType(wxPlotFigure, wxPlotType);
 	plotFigures.setWxPlotFigureType(wxPlotFigure, wxPlotType);
 }
-void Plots::setData(const std::vector<std::vector<double>>& data) {
-	plotTypes.setData(data);
-	plotFigures.setData(data);
+void Plots::setData(const std::vector<std::vector<double>>& data2D) {
+	plotTypes.setData(data2D);
+	plotFigures.setData(data2D);
+}
+
+void Plots::setData(const std::vector<double>& data1D) {
+	plotTypes.setData(data1D);
+	plotFigures.setData(data1D);
 }

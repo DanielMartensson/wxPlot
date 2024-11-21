@@ -41,8 +41,12 @@ void _2DFigure::setPlotEndHeight(const wxCoord plotEndHeight) {
 	proportional.setPlotEndHeight(plotEndHeight);
 }
 
-void _2DFigure::setData(const std::vector<std::vector<double>>& data) {
-	proportional.setData(data);
+void _2DFigure::setData(const std::vector<std::vector<double>>& data2D) {
+	proportional.setData(data2D);
+}
+
+void _2DFigure::setData(const std::vector<double>& data1D) {
+	proportional.setData(data1D);
 }
 
 void _2DFigure::legendOn(const bool useLegend) {

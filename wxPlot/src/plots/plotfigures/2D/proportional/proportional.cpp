@@ -1,6 +1,16 @@
 #include "proportional.h"
 #include <cmath>
 
+void Proportional::setData(const std::vector<std::vector<double>>& data2D) { 
+	findMaxMin2Ddata(data2D, minX, maxX, minY, maxY); 
+}
+
+void Proportional::setData(const std::vector<double>& data1D) {
+	minX = 0;
+	maxX = data1D.size();
+	findMaxMin1Ddata(data1D, minY, maxY);
+}
+
 /*
  * This function will do the following:
  * - Set the font

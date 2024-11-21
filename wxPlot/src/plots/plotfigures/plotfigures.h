@@ -26,7 +26,8 @@ public:
 	void setPlotEndWidth(const wxCoord plotEndWidth);
 	void setPlotEndHeight(const wxCoord plotEndHeight);
 	void setLegend(const std::vector<wxString>& legend, const PLACEMENT legendPosition);
-	void setData(const std::vector<std::vector<double>>& data);
+	void setData(const std::vector<std::vector<double>>& data2D);
+	void setData(const std::vector<double>& data2D);
 	void legendOn(const bool useLegend);
 	void setFontSize(const unsigned int fontSize);
 	void setYlim(const double minY, const double maxY);

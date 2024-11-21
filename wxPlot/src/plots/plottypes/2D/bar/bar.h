@@ -9,5 +9,5 @@ private:
 
 public:
 	// Functions
-	bool draw(wxDC& dc, const double yData, const int colourIndex, const size_t dataSize, const size_t i);
+	bool draw(wxDC& dc, const std::vector<double>& data);
 };
