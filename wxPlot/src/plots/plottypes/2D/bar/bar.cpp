@@ -9,23 +9,27 @@ bool Bar::draw(wxDC& dc, const std::vector<double>& data) {
 	// Get the size of the data
 	const size_t dataSize = data.size();
 
+	// Some parameters
+	const unsigned int gap = 5;
+	const wxCoord width = (plotEndWidth - plotStartWidth) / dataSize - gap;
+	wxCoord y0 = linearScalarYaxis(0, minY, plotStartHeight, maxY, plotEndHeight) - 1;
+
+	// Limit on y0
+	if (y0 > plotEndHeight) {
+		y0 = plotEndHeight;
+	}
+	if (y0 < plotStartHeight) {
+		y0 = plotStartHeight;
+	}
+
 	// Iterate all
 	for (size_t i = 0; i < dataSize; i++) {
 
-		// Some parameters
-		const unsigned int gap = 5;
-		const wxCoord width = (plotEndWidth - plotStartWidth) / dataSize - gap;
-		const wxCoord x = plotStartWidth + (width + gap) * i;
+		// Head of the column
 		wxCoord y = linearScalarYaxis(data.at(i), minY, plotStartHeight, maxY, plotEndHeight);
-		wxCoord y0 = linearScalarYaxis(0, minY, plotStartHeight, maxY, plotEndHeight) - 1;
 
-		// Limit on y0
-		if (y0 > plotEndHeight) {
-			y0 = plotEndHeight;
-		}
-		if (y0 < plotStartHeight) {
-			y0 = plotStartHeight;
-		}
+		// Position of the column
+		const wxCoord x = plotStartWidth + (width + gap) * i;
 
 		// If we are under the data
 		if (y <= plotStartHeight && y0 < plotStartHeight) {
