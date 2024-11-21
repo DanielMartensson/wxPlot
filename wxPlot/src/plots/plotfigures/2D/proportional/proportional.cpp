@@ -12,11 +12,6 @@
  */
 bool Proportional::drawFigure(wxDC& dc) {
 
-	// Check the size
-	if (!check2DdataSize(data)) {
-		return false; // Missing an axis
-	}
-
 	// Set the font, or get the font size
 	if (fontSize) {
 		dc.SetFont(wxFont(fontSize, wxFONTFAMILY_DEFAULT, wxFONTSTYLE_NORMAL, wxFONTWEIGHT_NORMAL));
