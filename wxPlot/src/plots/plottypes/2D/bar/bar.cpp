@@ -11,22 +11,41 @@ bool Bar::draw(wxDC& dc, const double yData, const int colourIndex, const size_t
 	const wxCoord width = (plotEndWidth - plotStartWidth) / dataSize - gap;
 	const wxCoord x = plotStartWidth + (width + gap) * i;
 	wxCoord y = linearScalarYaxis(yData, minY, plotStartHeight, maxY, plotEndHeight);
-	const wxCoord y0 = linearScalarYaxis(0, minY, plotStartHeight, maxY, plotEndHeight);
-	const wxCoord yMin = linearScalarYaxis(minY, minY, plotStartHeight, maxY, plotEndHeight);
-	wxCoord height = 0;
-	if (minY < 0 && yData < 0) {
-		y = y0;
-		height = yMin - y;
+	wxCoord y0 = linearScalarYaxis(0, minY, plotStartHeight, maxY, plotEndHeight) - 1;
+
+	// Limit on y0
+	if (y0 > plotEndHeight) {
+		y0 = plotEndHeight;
 	}
-	else if(minY < 0 && yData >= 0){
-		height = y0 - y;
-	}
-	else if (minY >= 0 && yData >= 0) {
-		height = yMin - y;
+	if (y0 < plotStartHeight) {
+		y0 = plotStartHeight;
 	}
 
+	// If we are under the data
+	if (y <= plotStartHeight && y0 < plotStartHeight) {
+		return true;
+	}
+
+	// If we cut inside the data
+	if (y < plotStartHeight) {
+		y = plotStartHeight;
+	}
+
+	// If we are above the data
+	if (y >= plotEndHeight && y0 > plotEndHeight) {
+		return true;
+	}
+
+	// If we cut inside the data
+	if (y >= plotEndHeight) {
+		y = plotEndHeight - 1;
+	}
+
+	// Create the height
+	const wxCoord height = y0 - y;
+
 	// Draw the rectangle now
-	dc.DrawRectangle(x + gap, y, width, height);
+	dc.DrawRectangle(x + gap, y, width, height); 
 
 	// Nothing went wrong
 	return true;
