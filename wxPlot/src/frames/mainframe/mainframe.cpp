@@ -23,7 +23,7 @@ MainFrame::MainFrame() : wxFrame(nullptr, wxID_ANY, "wxPlot")
     SetStatusText("Welcome to wxPlot!");
 
     // Create plot
-    plot = new wxPlot(this, WXPLOT_FIGURE_2D, WXPLOT_TYPE_BAR);
+    plot = new wxPlot(this, WXPLOT_FIGURE_2D, WXPLOT_TYPE_LINE);
 
     // Create data for line, scatter and spline - 2D
     std::vector<std::vector<double>> data1 = { {0, 100, 200, 300, 400, 500}, {-10, -15 , -30, 20, 25, 30},  // Temperature (X, Y)
@@ -47,8 +47,8 @@ MainFrame::MainFrame() : wxFrame(nullptr, wxID_ANY, "wxPlot")
     plot->fillCircles(true);
 
     // Set data
-    plot->setData(data2);
-    plot->setYlim(-80, 100);
+    plot->setData(data1);
+    plot->setYlim(-10, 20);
 
     // Set legend
     plot->setLegend(legend, PLACEMENT_NORTH_EAST);
