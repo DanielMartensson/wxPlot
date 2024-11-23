@@ -14,7 +14,7 @@ bool Bar::draw(wxDC& dc, const std::vector<double>& data) {
 	const wxCoord width = (plotEndWidth - plotStartWidth) / dataSize - gap;
 	wxCoord y0 = linearScalarYaxis(0, minY, plotStartHeight, maxY, plotEndHeight) - 1;
 
-	// Limit on y0
+	// Saturation on y0
 	if (y0 > plotEndHeight) {
 		y0 = plotEndHeight;
 	}
@@ -31,22 +31,22 @@ bool Bar::draw(wxDC& dc, const std::vector<double>& data) {
 		// Position of the column
 		const wxCoord x = plotStartWidth + (width + gap) * i;
 
-		// If we are under the data
+		// Out of rectangle
 		if (y <= plotStartHeight && y0 < plotStartHeight) {
 			return true;
 		}
 
-		// If we cut inside the data
+		// Saturation
 		if (y < plotStartHeight) {
 			y = plotStartHeight;
 		}
 
-		// If we are above the data
+		// Out of rectangle
 		if (y >= plotEndHeight && y0 > plotEndHeight) {
 			return true;
 		}
 
-		// If we cut inside the data
+		// Saturation
 		if (y >= plotEndHeight) {
 			y = plotEndHeight - 1;
 		}
