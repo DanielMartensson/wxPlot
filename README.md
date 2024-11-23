@@ -114,7 +114,7 @@ Spline plot with filled scatters
 
 Bar plot
 
-![a](https://github.com/DanielMartensson/wxPlot/blob/main/pictures/bar_plot_best.png?raw=true)
+![a](https://github.com/DanielMartensson/wxPlot/blob/main/pictures/bar_plot_ready.png?raw=true)
 
 # TODO
 
