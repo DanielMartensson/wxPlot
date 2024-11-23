@@ -112,6 +112,9 @@ Spline plot with filled scatters
 
 ![a](https://github.com/DanielMartensson/wxPlot/blob/main/pictures/2D_spline_with_scatter_fill.png?raw=true)
 
+Bar plot
+
+![a](https://github.com/DanielMartensson/wxPlot/blob/main/pictures/bar_plot_done.png?raw=true)
 
 # TODO
 
