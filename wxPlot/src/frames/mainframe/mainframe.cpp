@@ -23,7 +23,7 @@ MainFrame::MainFrame() : wxFrame(nullptr, wxID_ANY, "wxPlot")
     SetStatusText("Welcome to wxPlot!");
 
     // Create plot
-    plot = new wxPlot(this, WXPLOT_FIGURE_2D, WXPLOT_TYPE_HIST);
+    plot = new wxPlot(this, WXPLOT_FIGURE_2D, WXPLOT_TYPE_LINE_SCATTER);
 
     // Create data for line, scatter and spline - 2D
     std::vector<std::vector<double>> data1 = { {0, 100, 200, 300, 400, 500}, {-10, -15 , -30, 20, 25, 30},  // Temperature (X, Y)
@@ -36,7 +36,7 @@ MainFrame::MainFrame() : wxFrame(nullptr, wxID_ANY, "wxPlot")
     std::vector<double> data3 = { 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 20, 20, 20, 30, 30, 30, 40, 50, 50, 50, 50, 50, 50, 5, 5, 5, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1};
 
     // Legend
-    std::vector<wxString> legend = { "Temperature", "Speed", "Velocity", "Pressure", "Acceleration", "Lumination", "Distance"};
+    std::vector<wxString> legend = { "Temperature", "Speed"};
 
     // Settings
     plot->setFontSize(13);
@@ -44,15 +44,15 @@ MainFrame::MainFrame() : wxFrame(nullptr, wxID_ANY, "wxPlot")
     plot->setYlabel("Placement for units e.g [m/s]");
     plot->setXlabel("Time e.g [s] or [h]");
     plot->setTicks(5);
-    plot->legendOn(false);
+    plot->legendOn(true);
     plot->gridOn(true);
     plot->setRadius(5);
     plot->fillCircles(true);
     plot->setBinCount(8);
 
     // Set data
-    plot->setData(data3);
-    plot->setYlim(0, 15);
+    plot->setData(data1);
+    plot->setYlim(-90, 80); // Put this directly after setData() for tuning the Y-axis
 
     // Set legend
     plot->setLegend(legend, PLACEMENT_SOUTH_WEST);

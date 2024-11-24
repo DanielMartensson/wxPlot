@@ -2,6 +2,8 @@
 
 This project is called `wxPlot`. The project was created due to the lack of visualization tools that can be used in real time. Historically, there have been older libraries for wxWidgets at SourceForge that can offer graphical visualization of data. I made the decision to create an additional data visualization tool - `wxPlot`. But with a different starting point. The goal of this project is to be able to offer a visualization tool together with a proper documentation for further development. The visualization tool for the data must not have any dependencies on other libraries and the visualization tool must always be able to run in real time. The code is written in the latest standard of modern C++.
 
+wxPlot does not require any use of GPU.
+
 # Features and goals
 
 - Dynamic resizing
