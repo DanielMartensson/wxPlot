@@ -36,6 +36,7 @@ void PlotTypes::setPlotEndWidth(const wxCoord plotEndWidth) {
 void PlotTypes::setPlotEndHeight(const wxCoord plotEndHeight) {
 	_2d.setPlotEndHeight(plotEndHeight);
 }
+
 void PlotTypes::setYlim(const double minY, const double maxY) {
 	_2d.setYlim(minY, maxY);
 }
