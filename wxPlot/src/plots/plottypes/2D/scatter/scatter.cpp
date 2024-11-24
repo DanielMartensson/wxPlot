@@ -2,6 +2,13 @@
 #include "scatter.h"
 #include "../../../plottools/plottools.h"
 
+void Scatter::setRadius(const wxCoord radius) { 
+	this->radius = radius; 
+}
+void Scatter::fillCircles(const bool fillCircle) { 
+	this->fillCircle = fillCircle; 
+}
+
 bool Scatter::draw(wxDC& dc, const std::vector<double>& xData, const std::vector<double>& yData, const unsigned int colourIndex) {
 	// Fill circles
 	if (fillCircle) {

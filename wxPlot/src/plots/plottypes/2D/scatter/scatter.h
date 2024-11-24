@@ -12,8 +12,8 @@ private:
 
 public:
 	// Setters
-	void setRadius(const wxCoord radius) { this->radius = radius; }
-	void fillCircles(const bool fillCircle) { this->fillCircle = fillCircle; }
+	void setRadius(const wxCoord radius);
+	void fillCircles(const bool fillCircle);
 
 	// Functions
 	bool draw(wxDC& dc, const std::vector<double>& xData, const std::vector<double>& yData, const unsigned int colourIndex) override;

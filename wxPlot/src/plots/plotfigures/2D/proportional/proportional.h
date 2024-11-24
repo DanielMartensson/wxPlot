@@ -29,28 +29,28 @@ public:
 	Proportional() {}
 
 	// Setters
-	void setPlotStartWidth(const wxCoord plotStartWidth) { this->plotStartWidth = plotStartWidth; }
-	void setPlotStartHeight(const wxCoord plotStartHeight) { this->plotStartHeight = plotStartHeight; }
-	void setPlotEndWidth(const wxCoord plotEndWidth) { this->plotEndWidth = plotEndWidth; }
-	void setPlotEndHeight(const wxCoord plotEndHeight) { this->plotEndHeight = plotEndHeight; }
-	void setFontSize(const unsigned int fontSize) { this->fontSize = fontSize; }
-	void setTicks(const unsigned int ticks) { this->ticks = ticks; }
-	void gridOn(const bool useGrid) { this->useGrid = useGrid; }
-	void setTitle(const wxString& title) { this->title = title; }
-	void setXlabel(const wxString& xLabel) { this->xLabel = xLabel; }
-	void setYlabel(const wxString& yLabel) { this->yLabel = yLabel; }
-	void legendOn(const bool useLegend) { this->useLegend = useLegend; }
-	void setLegend(const std::vector<wxString>& legend, const PLACEMENT legendPosition) { this->legend = legend; this->legendPosition = legendPosition; }
+	void setPlotStartWidth(const wxCoord plotStartWidth);
+	void setPlotStartHeight(const wxCoord plotStartHeight);
+	void setPlotEndWidth(const wxCoord plotEndWidth);
+	void setPlotEndHeight(const wxCoord plotEndHeight);
+	void setFontSize(const unsigned int fontSize);
+	void setTicks(const unsigned int ticks);
+	void gridOn(const bool useGrid);
+	void setTitle(const wxString& title);
+	void setXlabel(const wxString& xLabel);
+	void setYlabel(const wxString& yLabel);
+	void legendOn(const bool useLegend);
+	void setLegend(const std::vector<wxString>& legend, const PLACEMENT legendPosition);
 	void setData(const std::vector<std::vector<double>>& data);
 	void setData(const std::vector<double>& data);
-	void setWxPlotType(const WXPLOT_TYPE wxPlotType) { this->wxPlotType = wxPlotType; }
-	void setYlim(const double minY, const double maxY) { this->minY = minY; this->maxY = maxY; }
+	void setWxPlotType(const WXPLOT_TYPE wxPlotType);
+	void setYlim(const double minY, const double maxY);
 
 	// Getters
-	wxCoord getPlotStartWidth() const { return plotStartWidth; }
-	wxCoord getPlotStartHeight() const { return plotStartHeight; }
-	wxCoord getPlotEndWidth() const { return plotEndWidth; }
-	wxCoord getPlotEndHeight() const { return plotEndHeight; }
+	wxCoord getPlotStartWidth() const;
+	wxCoord getPlotStartHeight() const;
+	wxCoord getPlotEndWidth() const;
+	wxCoord getPlotEndHeight() const;
 
 	// Functions
 	bool drawFigure(wxDC& dc);

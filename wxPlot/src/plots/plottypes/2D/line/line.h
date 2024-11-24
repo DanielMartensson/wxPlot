@@ -22,11 +22,11 @@ public:
 	Line() {}
 
 	// Setters
-	void setLimits(const double minX, const double maxX, const double minY, const double maxY) { this->minX = minX; this->maxX = maxX; this->minY = minY; this->maxY = maxY; }
-	void setPlotStartWidth(const wxCoord plotStartWidth) { this->plotStartWidth = plotStartWidth; }
-	void setPlotStartHeight(const wxCoord plotStartHeight) { this->plotStartHeight = plotStartHeight; }
-	void setPlotEndWidth(const wxCoord plotEndWidth) { this->plotEndWidth = plotEndWidth; }
-	void setPlotEndHeight(const wxCoord plotEndHeight) { this->plotEndHeight = plotEndHeight; }
+	void setLimits(const double minX, const double maxX, const double minY, const double maxY);
+	void setPlotStartWidth(const wxCoord plotStartWidth);
+	void setPlotStartHeight(const wxCoord plotStartHeight);
+	void setPlotEndWidth(const wxCoord plotEndWidth);
+	void setPlotEndHeight(const wxCoord plotEndHeight);
 
 	// Functions
 	virtual bool draw(wxDC& dc, const std::vector<double>& xData, const std::vector<double>& yData, const unsigned int colourIndex);

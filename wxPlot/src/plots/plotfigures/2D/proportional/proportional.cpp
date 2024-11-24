@@ -1,6 +1,55 @@
 #include "proportional.h"
 #include <cmath>
 
+void Proportional::setPlotStartWidth(const wxCoord plotStartWidth) { 
+	this->plotStartWidth = plotStartWidth;
+}
+
+void Proportional::setPlotStartHeight(const wxCoord plotStartHeight) { 
+	this->plotStartHeight = plotStartHeight; 
+}
+
+void Proportional::setPlotEndWidth(const wxCoord plotEndWidth) { 
+	this->plotEndWidth = plotEndWidth; 
+}
+
+void Proportional::setPlotEndHeight(const wxCoord plotEndHeight) { 
+	this->plotEndHeight = plotEndHeight; 
+}
+
+void Proportional:: setFontSize(const unsigned int fontSize) { 
+	this->fontSize = fontSize; 
+}
+
+void Proportional::setTicks(const unsigned int ticks) { 
+	this->ticks = ticks; 
+}
+
+void Proportional::gridOn(const bool useGrid) { 
+	this->useGrid = useGrid; 
+}
+
+void Proportional::setTitle(const wxString& title) {
+	this->title = title; 
+}
+
+void Proportional::setXlabel(const wxString& xLabel) {
+	this->xLabel = xLabel; 
+}
+
+void Proportional::setYlabel(const wxString& yLabel) { 
+	this->yLabel = yLabel;
+}
+
+void Proportional::legendOn(const bool useLegend) { 
+	this->useLegend = useLegend; 
+}
+
+void Proportional::setLegend(const std::vector<wxString>& legend, const PLACEMENT legendPosition) { 
+	this->legend = legend; 
+	this->legendPosition = legendPosition;
+}
+
 void Proportional::setData(const std::vector<std::vector<double>>& data2D) { 
 	findMaxMin2Ddata(data2D, minX, maxX, minY, maxY); 
 }
@@ -9,6 +58,31 @@ void Proportional::setData(const std::vector<double>& data1D) {
 	minX = 0;
 	maxX = data1D.size();
 	findMaxMin1Ddata(data1D, minY, maxY);
+}
+
+void Proportional::setWxPlotType(const WXPLOT_TYPE wxPlotType) { 
+	this->wxPlotType = wxPlotType; 
+}
+
+void Proportional::setYlim(const double minY, const double maxY) {
+	this->minY = minY; 
+	this->maxY = maxY; 
+}
+
+wxCoord Proportional::getPlotStartWidth() const {
+	return plotStartWidth; 
+}
+
+wxCoord Proportional::getPlotStartHeight() const { 
+	return plotStartHeight; 
+}
+
+wxCoord Proportional::getPlotEndWidth() const { 
+	return plotEndWidth; 
+}
+
+wxCoord Proportional::getPlotEndHeight() const { 
+	return plotEndHeight; 
 }
 
 /*

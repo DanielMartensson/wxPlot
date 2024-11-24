@@ -16,9 +16,9 @@ public:
 	// Constructor
 	Plots() {}
 
-	// Classes
-	PlotTypes& getPlotTypes() { return plotTypes; }
-	PlotFigure& getPlotFigures() { return plotFigures; }
+	// Getters
+	PlotTypes& getPlotTypes();
+	PlotFigure& getPlotFigures();
 
 	// Setters 
 	void setWxPlotFigureType(const WXPLOT_FIGURE wxPlotFigure, const WXPLOT_TYPE wxPlotType);

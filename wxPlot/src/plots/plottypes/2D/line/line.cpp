@@ -2,6 +2,29 @@
 #include "line.h"
 #include "../../../plottools/plottools.h"
 
+void Line::setLimits(const double minX, const double maxX, const double minY, const double maxY) { 
+	this->minX = minX; 
+	this->maxX = maxX; 
+	this->minY = minY; 
+	this->maxY = maxY; 
+}
+
+void Line::setPlotStartWidth(const wxCoord plotStartWidth) { 
+	this->plotStartWidth = plotStartWidth;
+}
+
+void Line::setPlotStartHeight(const wxCoord plotStartHeight) { 
+	this->plotStartHeight = plotStartHeight; 
+}
+
+void Line::setPlotEndWidth(const wxCoord plotEndWidth) { 
+	this->plotEndWidth = plotEndWidth; 
+}
+
+void Line::setPlotEndHeight(const wxCoord plotEndHeight) { 
+	this->plotEndHeight = plotEndHeight; 
+}
+
 bool Line::draw(wxDC& dc, const std::vector<double>& xData, const std::vector<double>& yData, const unsigned int colourIndex) {
 	// Set line colour
 	setColourPen(dc, colourIndex);
