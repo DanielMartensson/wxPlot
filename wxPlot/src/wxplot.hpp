@@ -19,7 +19,7 @@ public:
 	 * @param wxPlotFigure Selection of plot figure e.g 2D or 3D or custom.
 	 * @param wxPlotType Selection of plot type e.g line, bar, histogram, scatter, spline etc. 
 	 */
-	wxPlot(wxFrame* parent, const WXPLOT_FIGURE wxPlotFigure = WXPLOT_FIGURE_2D, const WXPLOT_TYPE wxPlotType = WXPLOT_TYPE_LINE);
+	wxPlot(wxWindow* parent, const WXPLOT_FIGURE wxPlotFigure = WXPLOT_FIGURE_2D, const WXPLOT_TYPE wxPlotType = WXPLOT_TYPE_LINE);
 
 	/**
 	 * @brief Set the size of the fonts.

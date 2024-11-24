@@ -1,6 +1,6 @@
 #include "wxplot.hpp"
 
-wxPlot::wxPlot(wxFrame* parent, const WXPLOT_FIGURE wxPlotFigure, const WXPLOT_TYPE wxPlotType) : wxPanel(parent) {
+wxPlot::wxPlot(wxWindow* parent, const WXPLOT_FIGURE wxPlotFigure, const WXPLOT_TYPE wxPlotType) : wxPanel(parent) {
 	// Set type
 	plots.setWxPlotFigureType(wxPlotFigure, wxPlotType);
 
