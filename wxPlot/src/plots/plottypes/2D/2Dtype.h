@@ -16,7 +16,8 @@ private:
 	double minX = 0, maxX = 0, minY = 0, maxY = 0;
 	std::vector<std::vector<double>> data2D;
 	std::vector<double> data1D;
-	bool isUsed2D = false;
+	bool is2Dused = false;
+	unsigned int binCount = 10;
 
 	// Charts
 	Line line;
@@ -31,6 +32,7 @@ public:
 	// Setters
 	void setWxPlotType(const WXPLOT_TYPE wxPlotType);
 	void setRadius(const wxCoord radius);
+	void setBinCount(const unsigned int binCount);
 	void fillCircles(const bool fillCircle);
 	void setData(const std::vector<std::vector<double>>& data2D);
 	void setData(const std::vector<double>& data1D);

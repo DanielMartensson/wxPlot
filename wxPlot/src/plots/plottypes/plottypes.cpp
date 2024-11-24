@@ -40,6 +40,10 @@ void PlotTypes::setYlim(const double minY, const double maxY) {
 	_2d.setYlim(minY, maxY);
 }
 
+void PlotTypes::setBinCount(const unsigned int binCount) {
+	_2d.setBinCount(binCount);
+}
+
 void PlotTypes::drawType(wxDC& dc) {
 	switch (wxPlotFigure) {
 	case WXPLOT_FIGURE_2D:

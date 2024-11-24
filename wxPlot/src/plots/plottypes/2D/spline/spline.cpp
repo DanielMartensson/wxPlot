@@ -2,7 +2,7 @@
 #include "spline.h"
 #include "../../../plottools/plottools.h"
 
-bool Spline::draw(wxDC& dc, const std::vector<double>& xData, const std::vector<double>& yData, const int colourIndex) {
+bool Spline::draw(wxDC& dc, const std::vector<double>& xData, const std::vector<double>& yData, const unsigned int colourIndex) {
 	// Set line colour
 	setColourPen(dc, colourIndex);
 

@@ -1,5 +1,6 @@
 #include "functions.h"
 #include <wx/wx.h>
+#include <cmath>
 
 /*
  * This function finds the least minimum value and most maximum value from the 1D data vector
@@ -99,6 +100,15 @@ void findMaxMin2Ddata(const std::vector<std::vector<double>>& data2D, double& mi
 			}
 		}
 	}
+}
+
+std::vector<double> createHistogramData(const std::vector<double>& data1D, const double minY, const double maxY, const unsigned int binCount) {
+	std::vector<double> yData(binCount + 1, 0.0);
+	for (const auto& value : data1D) {
+		const unsigned int index = std::round(linearScalarXaxis(value, minY, 0, maxY, binCount));
+		yData.at(index) += 1.0;
+	}
+	return yData;
 }
 
 void setColourPen(wxDC& dc, const int penColour) {

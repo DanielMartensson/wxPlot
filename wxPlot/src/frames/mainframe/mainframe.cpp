@@ -23,7 +23,7 @@ MainFrame::MainFrame() : wxFrame(nullptr, wxID_ANY, "wxPlot")
     SetStatusText("Welcome to wxPlot!");
 
     // Create plot
-    plot = new wxPlot(this, WXPLOT_FIGURE_2D, WXPLOT_TYPE_BAR);
+    plot = new wxPlot(this, WXPLOT_FIGURE_2D, WXPLOT_TYPE_HIST);
 
     // Create data for line, scatter and spline - 2D
     std::vector<std::vector<double>> data1 = { {0, 100, 200, 300, 400, 500}, {-10, -15 , -30, 20, 25, 30},  // Temperature (X, Y)
@@ -31,6 +31,9 @@ MainFrame::MainFrame() : wxFrame(nullptr, wxID_ANY, "wxPlot")
 
     // Create data for bar - 1D
     std::vector<double> data2 = {-15.6, 20, 10, 50, 10, -80, 20 };
+
+    // Create data for hist - 1D
+    std::vector<double> data3 = { 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 20, 20, 20, 30, 30, 30, 40, 50, 50, 50, 50, 50, 50, 5, 5, 5, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1};
 
     // Legend
     std::vector<wxString> legend = { "Temperature", "Speed", "Velocity", "Pressure", "Acceleration", "Lumination", "Distance"};
@@ -41,14 +44,15 @@ MainFrame::MainFrame() : wxFrame(nullptr, wxID_ANY, "wxPlot")
     plot->setYlabel("Placement for units e.g [m/s]");
     plot->setXlabel("Time e.g [s] or [h]");
     plot->setTicks(5);
-    plot->legendOn(true);
+    plot->legendOn(false);
     plot->gridOn(true);
     plot->setRadius(5);
     plot->fillCircles(true);
+    plot->setBinCount(8);
 
     // Set data
-    plot->setData(data2);
-    plot->setYlim(-100, 70);
+    plot->setData(data3);
+    plot->setYlim(0, 15);
 
     // Set legend
     plot->setLegend(legend, PLACEMENT_SOUTH_WEST);

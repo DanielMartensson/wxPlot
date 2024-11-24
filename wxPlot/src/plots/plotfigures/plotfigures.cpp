@@ -66,6 +66,10 @@ void PlotFigure::setYlim(const double minY, const double maxY) {
 	_2d.setYlim(minY, maxY);
 }
 
+void PlotFigure::setBinCount(const unsigned int binCount) {
+	_2d.setBinCount(binCount);
+}
+
 wxCoord PlotFigure::getPlotStartWidth() const {
 	switch (wxPlotFigure) {
 	case WXPLOT_FIGURE_2D:

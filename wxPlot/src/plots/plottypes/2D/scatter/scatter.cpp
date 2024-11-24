@@ -2,7 +2,7 @@
 #include "scatter.h"
 #include "../../../plottools/plottools.h"
 
-bool Scatter::draw(wxDC& dc, const std::vector<double>& xData, const std::vector<double>& yData, const int colourIndex) {
+bool Scatter::draw(wxDC& dc, const std::vector<double>& xData, const std::vector<double>& yData, const unsigned int colourIndex) {
 	// Fill circles
 	if (fillCircle) {
 		setColourBrush(dc, colourIndex);

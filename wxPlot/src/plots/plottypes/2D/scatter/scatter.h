@@ -16,5 +16,5 @@ public:
 	void fillCircles(const bool fillCircle) { this->fillCircle = fillCircle; }
 
 	// Functions
-	bool draw(wxDC& dc, const std::vector<double>& xData, const std::vector<double>& yData, const int colourIndex) override;
+	bool draw(wxDC& dc, const std::vector<double>& xData, const std::vector<double>& yData, const unsigned int colourIndex) override;
 };

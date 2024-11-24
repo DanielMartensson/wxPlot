@@ -138,6 +138,7 @@
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="src\frames\mainframe\mainframe.cpp" />
     <ClCompile Include="src\plots\plotfigures\2D\2Dfigure.cpp" />
+    <ClCompile Include="src\plots\plotfigures\2D\histogram\histogram.cpp" />
     <ClCompile Include="src\plots\plotfigures\2D\proportional\proportional.cpp" />
     <ClCompile Include="src\plots\plotfigures\plotfigures.cpp" />
     <ClCompile Include="src\plots\plots.cpp" />
@@ -154,6 +155,7 @@
     <ClInclude Include="Main.h" />
     <ClInclude Include="src\frames\mainframe\mainframe.h" />
     <ClInclude Include="src\plots\plotfigures\2D\2Dfigure.h" />
+    <ClInclude Include="src\plots\plotfigures\2D\histogram\histogram.h" />
     <ClInclude Include="src\plots\plotfigures\2D\proportional\proportional.h" />
     <ClInclude Include="src\plots\plotfigures\plotfigures.h" />
     <ClInclude Include="src\plots\plots.h" />

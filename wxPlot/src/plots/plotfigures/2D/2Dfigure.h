@@ -1,6 +1,7 @@
 #pragma once
 
 #include "proportional/proportional.h"
+#include "histogram/histogram.h"
 #include "../../plottools/plottools.h"
 
 class _2DFigure {
@@ -10,6 +11,9 @@ private:
 
 	// Proportional figure
 	Proportional proportional;
+
+	// Histogram figure
+	Histogram histogram;
 
 public:
 	// Constructor
@@ -32,6 +36,7 @@ public:
 	void legendOn(const bool useLegend);
 	void setFontSize(const unsigned int fontSize);
 	void setYlim(const double minY, const double maxY);
+	void setBinCount(const unsigned int binCount);
 
 	// Getters
 	wxCoord getPlotStartWidth() const;

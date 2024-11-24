@@ -29,5 +29,5 @@ public:
 	void setPlotEndHeight(const wxCoord plotEndHeight) { this->plotEndHeight = plotEndHeight; }
 
 	// Functions
-	virtual bool draw(wxDC& dc, const std::vector<double>& xData, const std::vector<double>& yData, const int colourIndex);
+	virtual bool draw(wxDC& dc, const std::vector<double>& xData, const std::vector<double>& yData, const unsigned int colourIndex);
 };

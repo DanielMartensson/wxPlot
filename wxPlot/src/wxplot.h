@@ -30,6 +30,7 @@ public:
 	void legendOn(const bool useLegend) { plots.getPlotFigures().legendOn(useLegend); }
 	void setLegend(const std::vector<wxString>& legend, const PLACEMENT legendPosition = PLACEMENT_NORTH_EAST) { plots.getPlotFigures().setLegend(legend, legendPosition); }
 	void fillCircles(const bool fillCircle) { plots.getPlotTypes().fillCircles(fillCircle); }
+	void setBinCount(const unsigned int binCount) { plots.getPlotFigures().setBinCount(binCount); plots.getPlotTypes().setBinCount(binCount); }
 	void setYlim(const double minY, const double maxY) { plots.getPlotTypes().setYlim(minY, maxY);  plots.getPlotFigures().setYlim(minY, maxY); }
 
 	// This function renders the complete plot when the refresh function is called

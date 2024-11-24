@@ -4,6 +4,7 @@
 #include <vector>
 
 void findMaxMin1Ddata(const std::vector<double>& data1D, double& minLimit, double& maxLimit);
+std::vector<double> createHistogramData(const std::vector<double>& data1D, const double minY, const double maxY, const unsigned int binCount);
 void setColourPen(wxDC& dc, const int penColour);
 void setColourBrush(wxDC& dc, const int brushColour);
 void setColourText(wxDC& dc, const int textColour, const int backgroundColour);

@@ -1,6 +1,7 @@
 C:\Users\danie\Documents\GitHub\wxPlot\wxPlot\Main.cpp;C:\Users\danie\Documents\GitHub\wxPlot\wxPlot\x64\Debug\Main.obj
 C:\Users\danie\Documents\GitHub\wxPlot\wxPlot\src\frames\mainframe\mainframe.cpp;C:\Users\danie\Documents\GitHub\wxPlot\wxPlot\x64\Debug\mainframe.obj
 C:\Users\danie\Documents\GitHub\wxPlot\wxPlot\src\plots\plotfigures\2D\2Dfigure.cpp;C:\Users\danie\Documents\GitHub\wxPlot\wxPlot\x64\Debug\2Dfigure.obj
+C:\Users\danie\Documents\GitHub\wxPlot\wxPlot\src\plots\plotfigures\2D\histogram\histogram.cpp;C:\Users\danie\Documents\GitHub\wxPlot\wxPlot\x64\Debug\histogram.obj
 C:\Users\danie\Documents\GitHub\wxPlot\wxPlot\src\plots\plotfigures\2D\proportional\proportional.cpp;C:\Users\danie\Documents\GitHub\wxPlot\wxPlot\x64\Debug\proportional.obj
 C:\Users\danie\Documents\GitHub\wxPlot\wxPlot\src\plots\plotfigures\plotfigures.cpp;C:\Users\danie\Documents\GitHub\wxPlot\wxPlot\x64\Debug\plotfigures.obj
 C:\Users\danie\Documents\GitHub\wxPlot\wxPlot\src\plots\plots.cpp;C:\Users\danie\Documents\GitHub\wxPlot\wxPlot\x64\Debug\plots.obj

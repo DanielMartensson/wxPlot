@@ -1,13 +1,7 @@
 #include "bar.h"
 #include "../../../plottools/plottools.h"
 
-bool Bar::draw(wxDC& dc, const std::vector<double>& data) {
-
-	// Create counter for colour
-	int colourIndex = 0;
-
-	// Get the size of the data
-	const size_t dataSize = data.size();
+bool Bar::draw(wxDC& dc, const double data, const unsigned int dataSize, const unsigned int colourIndex, const size_t i) {
 
 	// Some parameters
 	const unsigned int gap = 5;
@@ -22,48 +16,41 @@ bool Bar::draw(wxDC& dc, const std::vector<double>& data) {
 		y0 = plotStartHeight;
 	}
 
-	// Iterate all
-	for (size_t i = 0; i < dataSize; i++) {
+	// Head of the column
+	wxCoord y = linearScalarYaxis(data, minY, plotStartHeight, maxY, plotEndHeight);
 
-		// Head of the column
-		wxCoord y = linearScalarYaxis(data.at(i), minY, plotStartHeight, maxY, plotEndHeight);
+	// Position of the column
+	const wxCoord x = plotStartWidth + (width + gap) * i;
 
-		// Position of the column
-		const wxCoord x = plotStartWidth + (width + gap) * i;
-
-		// Out of rectangle
-		if (y <= plotStartHeight && y0 < plotStartHeight) {
-			return true;
-		}
-
-		// Saturation
-		if (y < plotStartHeight) {
-			y = plotStartHeight;
-		}
-
-		// Out of rectangle
-		if (y >= plotEndHeight && y0 > plotEndHeight) {
-			return true;
-		}
-
-		// Saturation
-		if (y >= plotEndHeight) {
-			y = plotEndHeight - 1;
-		}
-
-		// Create the height
-		const wxCoord height = y0 - y;
-
-		// Set rectangle colour
-		setColourPen(dc, colourIndex);
-		setColourBrush(dc, colourIndex);
-
-		// Draw the rectangle now
-		dc.DrawRectangle(x + gap, y, width, height);
-
-		// Next colour
-		colourIndex++;
+	// Out of rectangle
+	if (y <= plotStartHeight && y0 < plotStartHeight) {
+		return true;
 	}
+
+	// Saturation
+	if (y < plotStartHeight) {
+		y = plotStartHeight;
+	}
+
+	// Out of rectangle
+	if (y >= plotEndHeight && y0 > plotEndHeight) {
+		return true;
+	}
+
+	// Saturation
+	if (y >= plotEndHeight) {
+		y = plotEndHeight - 1;
+	}
+
+	// Create the height
+	const wxCoord height = y0 - y;
+
+	// Set rectangle colour
+	setColourPen(dc, colourIndex);
+	setColourBrush(dc, colourIndex);
+
+	// Draw the rectangle now
+	dc.DrawRectangle(x + gap, y, width, height);
 
 	// Nothing went wrong
 	return true;

@@ -57,6 +57,9 @@
     <ClCompile Include="src\plots\plottypes\2D\bar\bar.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\plots\plotfigures\2D\histogram\histogram.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Main.h">
@@ -114,6 +117,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="src\plots\plottypes\2D\bar\bar.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\plots\plotfigures\2D\histogram\histogram.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

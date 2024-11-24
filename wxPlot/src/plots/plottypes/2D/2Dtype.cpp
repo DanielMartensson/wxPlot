@@ -8,13 +8,17 @@ void _2DType::setRadius(const wxCoord radius) {
 	scatter.setRadius(radius);
 }
 
+void _2DType::setBinCount(const unsigned int binCount) {
+	this->binCount = binCount;
+}
+
 void _2DType::fillCircles(const bool fillCircle) {
 	scatter.fillCircles(fillCircle);
 }
 
 void _2DType::setData(const std::vector<std::vector<double>>& data2D) {
 	this->data2D = data2D;
-	this->isUsed2D = true;
+	this->is2Dused = true;
 
 	// Find max and min for the complete data, or else, we will get very weird scaling inside the plot
 	findMaxMin2Ddata(data2D, minX, maxX, minY, maxY);
@@ -23,42 +27,48 @@ void _2DType::setData(const std::vector<std::vector<double>>& data2D) {
 	line.setLimits(minX, maxX, minY, maxY);
 	scatter.setLimits(minX, maxX, minY, maxY);
 	spline.setLimits(minX, maxX, minY, maxY);
-	bar.setLimits(minX, maxX, minY, maxY);
 }
 
 void _2DType::setData(const std::vector<double>& data1D) {
-	this->data1D = data1D;
-	this->isUsed2D = false;
-
 	// Find max and min for the complete data, or else, we will get very weird scaling inside the plot
 	minX = 0;
 	maxX = data1D.size();
 	findMaxMin1Ddata(data1D, minY, maxY);
 
+	// Special plots requrie different maximum and minimum values
+	switch (wxPlotType) {
+	case WXPLOT_TYPE_HIST:
+		this->data1D = createHistogramData(data1D, minY, maxY, binCount);
+		minY = 0;
+		maxY = this->data1D.size();
+		findMaxMin1Ddata(this->data1D, minX, maxX);
+		break;
+	default:
+		this->data1D = data1D;
+	}
+	
+	// This data is 1D
+	this->is2Dused = false;
+
 	// Set the limits
-	line.setLimits(minX, maxX, minY, maxY);
-	scatter.setLimits(minX, maxX, minY, maxY);
-	spline.setLimits(minX, maxX, minY, maxY);
 	bar.setLimits(minX, maxX, minY, maxY);
 }
 
 void _2DType::setYlim(const double minY, const double maxY) {
 
 	// Find max and min for the complete data, or else, we will get very weird scaling inside the plot
-	if (isUsed2D) {
+	if (is2Dused) {
 		findMaxMin2Ddata(data2D, minX, maxX, this->minY, this->maxY);
+		line.setLimits(minX, maxX, minY, maxY);
+		scatter.setLimits(minX, maxX, minY, maxY);
+		spline.setLimits(minX, maxX, minY, maxY);
 	}
 	else {
 		minX = 0;
 		maxX = data1D.size();
 		findMaxMin1Ddata(data1D, this->minY, this->maxY);
+		bar.setLimits(minX, maxX, minY, maxY);
 	}
-
-	// Set the limits, by using minY and maxY
-	line.setLimits(minX, maxX, minY, maxY);
-	scatter.setLimits(minX, maxX, minY, maxY);
-	spline.setLimits(minX, maxX, minY, maxY);
-	bar.setLimits(minX, maxX, minY, maxY);
 }
 
 void _2DType::setPlotStartWidth(const wxCoord plotStartWidth) {
@@ -92,14 +102,14 @@ void _2DType::setPlotEndHeight(const wxCoord plotEndHeight) {
 bool _2DType::drawType(wxDC& dc) {
 
 	// We must have at least double(2). One for X-axis and one for Y-axis
-	if (isUsed2D) {
+	if (is2Dused) {
 		// Check
 		if (!check2DdataSize(data2D)) {
 			return false;
 		}
 
 		// Create counter for colour
-		int colourIndex = 0;
+		unsigned int colourIndex = 0;
 
 		// Get the size of the data
 		const size_t dataSize = data2D.size();
@@ -138,13 +148,25 @@ bool _2DType::drawType(wxDC& dc) {
 	}
 	else{
 
-		// Draw type now
-		switch (wxPlotType) {
-		case WXPLOT_TYPE_BAR:
-			bar.draw(dc, data1D);
-			break;
-		default:
-			break;
+		// Get the size of the data
+		const size_t dataSize = data1D.size();
+
+		// Create counter for colour
+		unsigned int colourIndex = 0;
+
+		for (size_t i = 0; i < dataSize; i++) {
+			// Draw type now
+			switch (wxPlotType) {
+			case WXPLOT_TYPE_BAR:
+				bar.draw(dc, data1D.at(i), dataSize, colourIndex, i);
+				colourIndex++;
+				break;
+			case WXPLOT_TYPE_HIST:
+				bar.draw(dc, data1D.at(i), dataSize, colourIndex, i);
+				break;
+			default:
+				break;
+			}
 		}
 	}
 

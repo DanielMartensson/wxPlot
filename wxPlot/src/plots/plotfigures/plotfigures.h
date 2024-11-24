@@ -31,6 +31,7 @@ public:
 	void legendOn(const bool useLegend);
 	void setFontSize(const unsigned int fontSize);
 	void setYlim(const double minY, const double maxY);
+	void setBinCount(const unsigned int binCount);
 
 	// Getters
 	wxCoord getPlotStartWidth() const;
