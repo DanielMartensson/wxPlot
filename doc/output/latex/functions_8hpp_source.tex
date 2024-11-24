@@ -1,0 +1,20 @@
+\doxysection{functions.\+hpp}
+\hypertarget{functions_8hpp_source}{}\label{functions_8hpp_source}\index{C:/Users/danie/Documents/GitHub/wxPlot/wxPlot/src/plots/plottools/functions/functions.hpp@{C:/Users/danie/Documents/GitHub/wxPlot/wxPlot/src/plots/plottools/functions/functions.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}../lists/colours.hpp"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{keywordtype}{void}\ findMaxMin1Ddata(\textcolor{keyword}{const}\ std::vector<double>\&\ data1D,\ \textcolor{keywordtype}{double}\&\ minLimit,\ \textcolor{keywordtype}{double}\&\ maxLimit);}
+\DoxyCodeLine{00007\ std::vector<double>\ createHistogramData(\textcolor{keyword}{const}\ std::vector<double>\&\ data1D,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ minY,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ maxY,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ binCount);}
+\DoxyCodeLine{00008\ \textcolor{keywordtype}{void}\ setColourPen(wxDC\&\ dc,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ penColour);}
+\DoxyCodeLine{00009\ \textcolor{keywordtype}{void}\ setColourBrush(wxDC\&\ dc,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ brushColour);}
+\DoxyCodeLine{00010\ \textcolor{keywordtype}{void}\ setColourText(wxDC\&\ dc,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ textColour,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ backgroundColour);}
+\DoxyCodeLine{00011\ \textcolor{keywordtype}{double}\ linearScalarXaxis(\textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ value,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ oldMinLimit,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ newMinLimit,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ oldMaxLimit,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ newMaxLimit);}
+\DoxyCodeLine{00012\ \textcolor{keywordtype}{double}\ linearScalarYaxis(\textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ value,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ oldMinLimit,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ newMinLimit,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ oldMaxLimit,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ newMaxLimit);}
+\DoxyCodeLine{00013\ \textcolor{keywordtype}{bool}\ check2DdataSize(\textcolor{keyword}{const}\ std::vector<std::vector<double>>\&\ data2D);}
+\DoxyCodeLine{00014\ \textcolor{keywordtype}{void}\ findMaxMin2Ddata(\textcolor{keyword}{const}\ std::vector<std::vector<double>>\&\ data2D,\ \textcolor{keywordtype}{double}\&\ minX,\ \textcolor{keywordtype}{double}\&\ maxX,\ \textcolor{keywordtype}{double}\&\ minY,\ \textcolor{keywordtype}{double}\&\ maxY);}
+
+\end{DoxyCode}

@@ -1,0 +1,26 @@
+\doxysection{histogram.\+hpp}
+\hypertarget{histogram_8hpp_source}{}\label{histogram_8hpp_source}\index{C:/Users/danie/Documents/GitHub/wxPlot/wxPlot/src/plots/plotfigures/2D/histogram/histogram.hpp@{C:/Users/danie/Documents/GitHub/wxPlot/wxPlot/src/plots/plotfigures/2D/histogram/histogram.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <wx/wx.h>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}../proportional/proportional.hpp"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}../../../plottools/plottools.hpp"{}}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_histogram}{Histogram}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_proportional}{Proportional}}\ \{}
+\DoxyCodeLine{00010\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00011\ \ \ \ \ \textcolor{comment}{//\ For\ the\ histogram}}
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ binCount\ =\ 10;}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{comment}{//\ Setters}}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keywordtype}{void}\ setBinCount(\textcolor{keyword}{const}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ binCount);}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keywordtype}{void}\ setData(\textcolor{keyword}{const}\ std::vector<double>\&\ data);}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \};}
+
+\end{DoxyCode}

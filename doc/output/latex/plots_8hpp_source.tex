@@ -1,0 +1,34 @@
+\doxysection{plots.\+hpp}
+\hypertarget{plots_8hpp_source}{}\label{plots_8hpp_source}\index{C:/Users/danie/Documents/GitHub/wxPlot/wxPlot/src/plots/plots.hpp@{C:/Users/danie/Documents/GitHub/wxPlot/wxPlot/src/plots/plots.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}plotfigures/plotfigures.hpp"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}plottypes/plottypes.hpp"{}}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_plots}{Plots}}\ \{}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00009\ \ \ \ \ \textcolor{comment}{//\ Plot\ types\ are\ the\ type\ of\ the\ plot\ e.g\ line,\ bar,\ histogram,\ bubble,\ scatter\ etc.}}
+\DoxyCodeLine{00010\ \ \ \ \ \mbox{\hyperlink{class_plot_types}{PlotTypes}}\ plotTypes;}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{comment}{//\ Plot\ frames\ are\ figures\ of\ the\ frame\ e.g\ 2D,\ 3D,\ custom\ etc.}}
+\DoxyCodeLine{00013\ \ \ \ \ \mbox{\hyperlink{class_plot_figure}{PlotFigure}}\ plotFigures;}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{comment}{//\ Constructor}}
+\DoxyCodeLine{00017\ \ \ \ \ \mbox{\hyperlink{class_plots}{Plots}}()\ \{\}}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{comment}{//\ Getters}}
+\DoxyCodeLine{00020\ \ \ \ \ \mbox{\hyperlink{class_plot_types}{PlotTypes}}\&\ getPlotTypes();}
+\DoxyCodeLine{00021\ \ \ \ \ \mbox{\hyperlink{class_plot_figure}{PlotFigure}}\&\ getPlotFigures();}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{comment}{//\ Setters\ }}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{void}\ setWxPlotFigureType(\textcolor{keyword}{const}\ WXPLOT\_FIGURE\ wxPlotFigure,\ \textcolor{keyword}{const}\ WXPLOT\_TYPE\ wxPlotType);}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{void}\ setData(\textcolor{keyword}{const}\ std::vector<std::vector<double>>\&\ data);}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{void}\ setData(\textcolor{keyword}{const}\ std::vector<double>\&\ data);}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \};}
+
+\end{DoxyCode}

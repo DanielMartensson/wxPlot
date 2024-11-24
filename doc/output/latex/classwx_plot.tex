@@ -1,0 +1,523 @@
+\doxysection{wx\+Plot Class Reference}
+\hypertarget{classwx_plot}{}\label{classwx_plot}\index{wxPlot@{wxPlot}}
+
+
+\doxylink{class_main}{Main} class for \doxylink{classwx_plot}{wx\+Plot}. This is the only class the user going to work with.  
+
+
+
+
+{\ttfamily \#include $<$wxplot.\+hpp$>$}
+
+Inheritance diagram for wx\+Plot\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classwx_plot}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classwx_plot_a068b1a775ea5df21d27128c576b0e0ab}{wx\+Plot}} (wx\+Frame \texorpdfstring{$\ast$}{*}parent, const WXPLOT\+\_\+\+FIGURE wx\+Plot\+Figure=WXPLOT\+\_\+\+FIGURE\+\_\+2D, const WXPLOT\+\_\+\+TYPE wx\+Plot\+Type=WXPLOT\+\_\+\+TYPE\+\_\+\+LINE)
+\begin{DoxyCompactList}\small\item\em Constructor of \doxylink{classwx_plot}{wx\+Plot}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classwx_plot_abebf3986a130ebd2bbbedeca7b7bb78b}{set\+Font\+Size}} (const unsigned int font\+Size)
+\begin{DoxyCompactList}\small\item\em Set the size of the fonts. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classwx_plot_a98247239cd13c410e4bf61840c142d71}{set\+Title}} (const wx\+String title)
+\begin{DoxyCompactList}\small\item\em Set the title of the plot. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classwx_plot_a98d0259ac281d1930a2658227af469de}{set\+Xlabel}} (const wx\+String x\+Label)
+\begin{DoxyCompactList}\small\item\em Set the name of the X-\/label. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classwx_plot_a16bfc5eca3367141c85a20c21ff64c18}{set\+Ylabel}} (const wx\+String y\+Label)
+\begin{DoxyCompactList}\small\item\em Set the name of the Y-\/label. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classwx_plot_a1f9335bfd017a4eb45af5074460f5d4f}{set\+Ticks}} (const unsigned int ticks)
+\begin{DoxyCompactList}\small\item\em Set the number of ticks at the figure in all axis. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classwx_plot_ab50bdc7c75524540edad23ace02e2388}{grid\+On}} (const bool use\+Grid)
+\begin{DoxyCompactList}\small\item\em Enable grid on the figure. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classwx_plot_adf00c4f9f034eef082a653479bbb3330}{set\+Plot\+Start\+Width}} (const wx\+Coord plot\+Start\+Width)
+\begin{DoxyCompactList}\small\item\em Set the left upper corner corner in X-\/axis. Inside this rectangle, the plot is drawn. (plot\+Start\+Width, plot\+Start\+Height) -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/--- (plot\+End\+Width, plot\+Start\+Height) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classwx_plot_a818b7a7962c10260645184da44d951ce}{set\+Plot\+Start\+Height}} (const wx\+Coord plot\+Start\+Height)
+\begin{DoxyCompactList}\small\item\em Set the left upper corner corner in Y-\/axis. Inside this rectangle, the plot is drawn (plot\+Start\+Width, plot\+Start\+Height) -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/--- (plot\+End\+Width, plot\+Start\+Height) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classwx_plot_a963ac3e047c05a09b08bd5d50f70af5d}{set\+Plot\+End\+Width}} (const wx\+Coord plot\+End\+Width)
+\begin{DoxyCompactList}\small\item\em Set the right upper corner corner in X-\/axis. Inside this rectangle, the plot is drawn (plot\+Start\+Width, plot\+Start\+Height) -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/--- (plot\+End\+Width, plot\+Start\+Height) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classwx_plot_a6cf2f14d464b3d1795fd798705c76e2d}{set\+Plot\+End\+Height}} (const wx\+Coord plot\+End\+Height)
+\begin{DoxyCompactList}\small\item\em Set the right bottom corner corner in Y-\/axis. Inside this rectangle, the plot is drawn (plot\+Start\+Width, plot\+Start\+Height) -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/--- (plot\+End\+Width, plot\+Start\+Height) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classwx_plot_a25770bdbf505c2889d23543513219688}{set\+Data}} (const std\+::vector$<$ std\+::vector$<$ double $>$ $>$ \&data2D)
+\begin{DoxyCompactList}\small\item\em Set 2D data. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classwx_plot_aaa4a9bb4b5451c48d0f291092c7e1bee}{set\+Data}} (const std\+::vector$<$ double $>$ \&data1D)
+\begin{DoxyCompactList}\small\item\em Set 1D data. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classwx_plot_a742044a351f0d119ffc45ac8f4b630ac}{set\+Radius}} (const wx\+Coord radius)
+\begin{DoxyCompactList}\small\item\em Set radius. Most used for circles e.\+g filling scatter plots. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classwx_plot_a3bd6304676fe5bcc591c4999a536ef46}{legend\+On}} (const bool use\+Legend)
+\begin{DoxyCompactList}\small\item\em Activate the legend. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classwx_plot_aefe61461de1aad5a1c845c7f8919ee20}{set\+Legend}} (const std\+::vector$<$ wx\+String $>$ \&legend, const PLACEMENT legend\+Position=PLACEMENT\+\_\+\+NORTH\+\_\+\+EAST)
+\begin{DoxyCompactList}\small\item\em Set the labels and placement for the legend. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classwx_plot_a51c25ee1952cb3fc1bf130f303020f0d}{fill\+Circles}} (const bool fill\+Circle)
+\begin{DoxyCompactList}\small\item\em Fill circles if radius is applied if circiles are going to be filled with the same colour as they are drawn. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classwx_plot_af968425f34a659e446639e89ee58d9a5}{set\+Bin\+Count}} (const unsigned int bin\+Count)
+\begin{DoxyCompactList}\small\item\em Set the bin count for e.\+g. histogram. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classwx_plot_a782f9a4d482f3f4eb4a958a0fd518da0}{set\+Ylim}} (const double minY, const double maxY)
+\begin{DoxyCompactList}\small\item\em Set the plot zoom limit in Y-\/axis. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classwx_plot_a2b8a01aceae754fcf8bef9adcd1a411c}{draw\+Plot}} (wx\+Paint\+Event \&event)
+\begin{DoxyCompactList}\small\item\em Important event function for draw the whole plot. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\doxylink{class_main}{Main} class for \doxylink{classwx_plot}{wx\+Plot}. This is the only class the user going to work with. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classwx_plot_a068b1a775ea5df21d27128c576b0e0ab}\index{wxPlot@{wxPlot}!wxPlot@{wxPlot}}
+\index{wxPlot@{wxPlot}!wxPlot@{wxPlot}}
+\doxysubsubsection{\texorpdfstring{wxPlot()}{wxPlot()}}
+{\footnotesize\ttfamily \label{classwx_plot_a068b1a775ea5df21d27128c576b0e0ab} 
+wx\+Plot\+::wx\+Plot (\begin{DoxyParamCaption}\item[{wx\+Frame \texorpdfstring{$\ast$}{*}}]{parent}{, }\item[{const WXPLOT\+\_\+\+FIGURE}]{wx\+Plot\+Figure}{ = {\ttfamily WXPLOT\+\_\+FIGURE\+\_\+2D}, }\item[{const WXPLOT\+\_\+\+TYPE}]{wx\+Plot\+Type}{ = {\ttfamily WXPLOT\+\_\+TYPE\+\_\+LINE}}\end{DoxyParamCaption})}
+
+
+
+Constructor of \doxylink{classwx_plot}{wx\+Plot}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em parent} & The frame which holds the plot. \\
+\hline
+{\em wx\+Plot\+Figure} & The figure frame e.\+g 2D or 3D or custom. \\
+\hline
+{\em wx\+Plot\+Type} & The type of the plot e.\+g line, bar, histogram, scatter, spline etc. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classwx_plot_a2b8a01aceae754fcf8bef9adcd1a411c}\index{wxPlot@{wxPlot}!drawPlot@{drawPlot}}
+\index{drawPlot@{drawPlot}!wxPlot@{wxPlot}}
+\doxysubsubsection{\texorpdfstring{drawPlot()}{drawPlot()}}
+{\footnotesize\ttfamily \label{classwx_plot_a2b8a01aceae754fcf8bef9adcd1a411c} 
+void wx\+Plot\+::draw\+Plot (\begin{DoxyParamCaption}\item[{wx\+Paint\+Event \&}]{event}{}\end{DoxyParamCaption})}
+
+
+
+Important event function for draw the whole plot. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em event} & This even parameter is not used. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\Hypertarget{classwx_plot_a51c25ee1952cb3fc1bf130f303020f0d}\index{wxPlot@{wxPlot}!fillCircles@{fillCircles}}
+\index{fillCircles@{fillCircles}!wxPlot@{wxPlot}}
+\doxysubsubsection{\texorpdfstring{fillCircles()}{fillCircles()}}
+{\footnotesize\ttfamily \label{classwx_plot_a51c25ee1952cb3fc1bf130f303020f0d} 
+void wx\+Plot\+::fill\+Circles (\begin{DoxyParamCaption}\item[{const bool}]{fill\+Circle}{}\end{DoxyParamCaption})}
+
+
+
+Fill circles if radius is applied if circiles are going to be filled with the same colour as they are drawn. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em fill\+Circle} & Set true if filled. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\Hypertarget{classwx_plot_ab50bdc7c75524540edad23ace02e2388}\index{wxPlot@{wxPlot}!gridOn@{gridOn}}
+\index{gridOn@{gridOn}!wxPlot@{wxPlot}}
+\doxysubsubsection{\texorpdfstring{gridOn()}{gridOn()}}
+{\footnotesize\ttfamily \label{classwx_plot_ab50bdc7c75524540edad23ace02e2388} 
+void wx\+Plot\+::grid\+On (\begin{DoxyParamCaption}\item[{const bool}]{use\+Grid}{}\end{DoxyParamCaption})}
+
+
+
+Enable grid on the figure. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em use\+Grid} & Set true for enabling grid. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\Hypertarget{classwx_plot_a3bd6304676fe5bcc591c4999a536ef46}\index{wxPlot@{wxPlot}!legendOn@{legendOn}}
+\index{legendOn@{legendOn}!wxPlot@{wxPlot}}
+\doxysubsubsection{\texorpdfstring{legendOn()}{legendOn()}}
+{\footnotesize\ttfamily \label{classwx_plot_a3bd6304676fe5bcc591c4999a536ef46} 
+void wx\+Plot\+::legend\+On (\begin{DoxyParamCaption}\item[{const bool}]{use\+Legend}{}\end{DoxyParamCaption})}
+
+
+
+Activate the legend. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em use\+Legend} & The radius of the circle. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\Hypertarget{classwx_plot_af968425f34a659e446639e89ee58d9a5}\index{wxPlot@{wxPlot}!setBinCount@{setBinCount}}
+\index{setBinCount@{setBinCount}!wxPlot@{wxPlot}}
+\doxysubsubsection{\texorpdfstring{setBinCount()}{setBinCount()}}
+{\footnotesize\ttfamily \label{classwx_plot_af968425f34a659e446639e89ee58d9a5} 
+void wx\+Plot\+::set\+Bin\+Count (\begin{DoxyParamCaption}\item[{const unsigned int}]{bin\+Count}{}\end{DoxyParamCaption})}
+
+
+
+Set the bin count for e.\+g. histogram. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bin\+Count} & Bin count is total columns inside a e.\+g historam chart. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\Hypertarget{classwx_plot_aaa4a9bb4b5451c48d0f291092c7e1bee}\index{wxPlot@{wxPlot}!setData@{setData}}
+\index{setData@{setData}!wxPlot@{wxPlot}}
+\doxysubsubsection{\texorpdfstring{setData()}{setData()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{classwx_plot_aaa4a9bb4b5451c48d0f291092c7e1bee} 
+void wx\+Plot\+::set\+Data (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ double $>$ \&}]{data1D}{}\end{DoxyParamCaption})}
+
+
+
+Set 1D data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data1D} & 1D data in form of 1D vector. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\Hypertarget{classwx_plot_a25770bdbf505c2889d23543513219688}\index{wxPlot@{wxPlot}!setData@{setData}}
+\index{setData@{setData}!wxPlot@{wxPlot}}
+\doxysubsubsection{\texorpdfstring{setData()}{setData()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{classwx_plot_a25770bdbf505c2889d23543513219688} 
+void wx\+Plot\+::set\+Data (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::vector$<$ double $>$ $>$ \&}]{data2D}{}\end{DoxyParamCaption})}
+
+
+
+Set 2D data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data2D} & 2D data in form of 2D vector. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\Hypertarget{classwx_plot_abebf3986a130ebd2bbbedeca7b7bb78b}\index{wxPlot@{wxPlot}!setFontSize@{setFontSize}}
+\index{setFontSize@{setFontSize}!wxPlot@{wxPlot}}
+\doxysubsubsection{\texorpdfstring{setFontSize()}{setFontSize()}}
+{\footnotesize\ttfamily \label{classwx_plot_abebf3986a130ebd2bbbedeca7b7bb78b} 
+void wx\+Plot\+::set\+Font\+Size (\begin{DoxyParamCaption}\item[{const unsigned int}]{font\+Size}{}\end{DoxyParamCaption})}
+
+
+
+Set the size of the fonts. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em font\+Size} & The size of the fonts. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\Hypertarget{classwx_plot_aefe61461de1aad5a1c845c7f8919ee20}\index{wxPlot@{wxPlot}!setLegend@{setLegend}}
+\index{setLegend@{setLegend}!wxPlot@{wxPlot}}
+\doxysubsubsection{\texorpdfstring{setLegend()}{setLegend()}}
+{\footnotesize\ttfamily \label{classwx_plot_aefe61461de1aad5a1c845c7f8919ee20} 
+void wx\+Plot\+::set\+Legend (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ wx\+String $>$ \&}]{legend}{, }\item[{const PLACEMENT}]{legend\+Position}{ = {\ttfamily PLACEMENT\+\_\+NORTH\+\_\+EAST}}\end{DoxyParamCaption})}
+
+
+
+Set the labels and placement for the legend. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em legend} & Vector of strings for the legend. \\
+\hline
+{\em legend\+Position} & Position where the legend should be placed. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\Hypertarget{classwx_plot_a6cf2f14d464b3d1795fd798705c76e2d}\index{wxPlot@{wxPlot}!setPlotEndHeight@{setPlotEndHeight}}
+\index{setPlotEndHeight@{setPlotEndHeight}!wxPlot@{wxPlot}}
+\doxysubsubsection{\texorpdfstring{setPlotEndHeight()}{setPlotEndHeight()}}
+{\footnotesize\ttfamily \label{classwx_plot_a6cf2f14d464b3d1795fd798705c76e2d} 
+void wx\+Plot\+::set\+Plot\+End\+Height (\begin{DoxyParamCaption}\item[{const wx\+Coord}]{plot\+End\+Height}{}\end{DoxyParamCaption})}
+
+
+
+Set the right bottom corner corner in Y-\/axis. Inside this rectangle, the plot is drawn (plot\+Start\+Width, plot\+Start\+Height) -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/--- (plot\+End\+Width, plot\+Start\+Height) 
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{1}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ }\\\cline{1-1}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ }\\\cline{1-1}
+\endhead
+\\\cline{1-1}
+\\\cline{1-1}
+\\\cline{1-1}
+\\\cline{1-1}
+\\\cline{1-1}
+\\\cline{1-1}
+\\\cline{1-1}
+\\\cline{1-1}
+\\\cline{1-1}
+\end{longtabu}
+(plot\+Start\+Width, plot\+End\+Height) -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/--- (plot\+End\+Width, plot\+End\+Height) 
+\begin{DoxyParams}{Parameters}
+{\em plot\+End\+Height} & End height is at the end of Y-\/axis. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\Hypertarget{classwx_plot_a963ac3e047c05a09b08bd5d50f70af5d}\index{wxPlot@{wxPlot}!setPlotEndWidth@{setPlotEndWidth}}
+\index{setPlotEndWidth@{setPlotEndWidth}!wxPlot@{wxPlot}}
+\doxysubsubsection{\texorpdfstring{setPlotEndWidth()}{setPlotEndWidth()}}
+{\footnotesize\ttfamily \label{classwx_plot_a963ac3e047c05a09b08bd5d50f70af5d} 
+void wx\+Plot\+::set\+Plot\+End\+Width (\begin{DoxyParamCaption}\item[{const wx\+Coord}]{plot\+End\+Width}{}\end{DoxyParamCaption})}
+
+
+
+Set the right upper corner corner in X-\/axis. Inside this rectangle, the plot is drawn (plot\+Start\+Width, plot\+Start\+Height) -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/--- (plot\+End\+Width, plot\+Start\+Height) 
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{1}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ }\\\cline{1-1}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ }\\\cline{1-1}
+\endhead
+\\\cline{1-1}
+\\\cline{1-1}
+\\\cline{1-1}
+\\\cline{1-1}
+\\\cline{1-1}
+\\\cline{1-1}
+\\\cline{1-1}
+\\\cline{1-1}
+\\\cline{1-1}
+\end{longtabu}
+(plot\+Start\+Width, plot\+End\+Height) -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/--- (plot\+End\+Width, plot\+End\+Height) 
+\begin{DoxyParams}{Parameters}
+{\em plot\+End\+Width} & End width is at the end of X-\/axis. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\Hypertarget{classwx_plot_a818b7a7962c10260645184da44d951ce}\index{wxPlot@{wxPlot}!setPlotStartHeight@{setPlotStartHeight}}
+\index{setPlotStartHeight@{setPlotStartHeight}!wxPlot@{wxPlot}}
+\doxysubsubsection{\texorpdfstring{setPlotStartHeight()}{setPlotStartHeight()}}
+{\footnotesize\ttfamily \label{classwx_plot_a818b7a7962c10260645184da44d951ce} 
+void wx\+Plot\+::set\+Plot\+Start\+Height (\begin{DoxyParamCaption}\item[{const wx\+Coord}]{plot\+Start\+Height}{}\end{DoxyParamCaption})}
+
+
+
+Set the left upper corner corner in Y-\/axis. Inside this rectangle, the plot is drawn (plot\+Start\+Width, plot\+Start\+Height) -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/--- (plot\+End\+Width, plot\+Start\+Height) 
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{1}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ }\\\cline{1-1}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ }\\\cline{1-1}
+\endhead
+\\\cline{1-1}
+\\\cline{1-1}
+\\\cline{1-1}
+\\\cline{1-1}
+\\\cline{1-1}
+\\\cline{1-1}
+\\\cline{1-1}
+\\\cline{1-1}
+\\\cline{1-1}
+\end{longtabu}
+(plot\+Start\+Width, plot\+End\+Height) -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/--- (plot\+End\+Width, plot\+End\+Height) 
+\begin{DoxyParams}{Parameters}
+{\em plot\+Start\+Height} & Start height is at the start of Y-\/axis. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\Hypertarget{classwx_plot_adf00c4f9f034eef082a653479bbb3330}\index{wxPlot@{wxPlot}!setPlotStartWidth@{setPlotStartWidth}}
+\index{setPlotStartWidth@{setPlotStartWidth}!wxPlot@{wxPlot}}
+\doxysubsubsection{\texorpdfstring{setPlotStartWidth()}{setPlotStartWidth()}}
+{\footnotesize\ttfamily \label{classwx_plot_adf00c4f9f034eef082a653479bbb3330} 
+void wx\+Plot\+::set\+Plot\+Start\+Width (\begin{DoxyParamCaption}\item[{const wx\+Coord}]{plot\+Start\+Width}{}\end{DoxyParamCaption})}
+
+
+
+Set the left upper corner corner in X-\/axis. Inside this rectangle, the plot is drawn. (plot\+Start\+Width, plot\+Start\+Height) -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/--- (plot\+End\+Width, plot\+Start\+Height) 
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{1}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ }\\\cline{1-1}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ }\\\cline{1-1}
+\endhead
+\\\cline{1-1}
+\\\cline{1-1}
+\\\cline{1-1}
+\\\cline{1-1}
+\\\cline{1-1}
+\\\cline{1-1}
+\\\cline{1-1}
+\\\cline{1-1}
+\\\cline{1-1}
+\end{longtabu}
+(plot\+Start\+Width, plot\+End\+Height) -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/--- (plot\+End\+Width, plot\+End\+Height) 
+\begin{DoxyParams}{Parameters}
+{\em plot\+Start\+Width} & Start width is at the start of X-\/axis. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\Hypertarget{classwx_plot_a742044a351f0d119ffc45ac8f4b630ac}\index{wxPlot@{wxPlot}!setRadius@{setRadius}}
+\index{setRadius@{setRadius}!wxPlot@{wxPlot}}
+\doxysubsubsection{\texorpdfstring{setRadius()}{setRadius()}}
+{\footnotesize\ttfamily \label{classwx_plot_a742044a351f0d119ffc45ac8f4b630ac} 
+void wx\+Plot\+::set\+Radius (\begin{DoxyParamCaption}\item[{const wx\+Coord}]{radius}{}\end{DoxyParamCaption})}
+
+
+
+Set radius. Most used for circles e.\+g filling scatter plots. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em radius} & The radius of the circle. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\Hypertarget{classwx_plot_a1f9335bfd017a4eb45af5074460f5d4f}\index{wxPlot@{wxPlot}!setTicks@{setTicks}}
+\index{setTicks@{setTicks}!wxPlot@{wxPlot}}
+\doxysubsubsection{\texorpdfstring{setTicks()}{setTicks()}}
+{\footnotesize\ttfamily \label{classwx_plot_a1f9335bfd017a4eb45af5074460f5d4f} 
+void wx\+Plot\+::set\+Ticks (\begin{DoxyParamCaption}\item[{const unsigned int}]{ticks}{}\end{DoxyParamCaption})}
+
+
+
+Set the number of ticks at the figure in all axis. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ticks} & Number of ticks. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\Hypertarget{classwx_plot_a98247239cd13c410e4bf61840c142d71}\index{wxPlot@{wxPlot}!setTitle@{setTitle}}
+\index{setTitle@{setTitle}!wxPlot@{wxPlot}}
+\doxysubsubsection{\texorpdfstring{setTitle()}{setTitle()}}
+{\footnotesize\ttfamily \label{classwx_plot_a98247239cd13c410e4bf61840c142d71} 
+void wx\+Plot\+::set\+Title (\begin{DoxyParamCaption}\item[{const wx\+String}]{title}{}\end{DoxyParamCaption})}
+
+
+
+Set the title of the plot. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em title} & Name of the title. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\Hypertarget{classwx_plot_a98d0259ac281d1930a2658227af469de}\index{wxPlot@{wxPlot}!setXlabel@{setXlabel}}
+\index{setXlabel@{setXlabel}!wxPlot@{wxPlot}}
+\doxysubsubsection{\texorpdfstring{setXlabel()}{setXlabel()}}
+{\footnotesize\ttfamily \label{classwx_plot_a98d0259ac281d1930a2658227af469de} 
+void wx\+Plot\+::set\+Xlabel (\begin{DoxyParamCaption}\item[{const wx\+String}]{x\+Label}{}\end{DoxyParamCaption})}
+
+
+
+Set the name of the X-\/label. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x\+Label} & Name of the X-\/label. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\Hypertarget{classwx_plot_a16bfc5eca3367141c85a20c21ff64c18}\index{wxPlot@{wxPlot}!setYlabel@{setYlabel}}
+\index{setYlabel@{setYlabel}!wxPlot@{wxPlot}}
+\doxysubsubsection{\texorpdfstring{setYlabel()}{setYlabel()}}
+{\footnotesize\ttfamily \label{classwx_plot_a16bfc5eca3367141c85a20c21ff64c18} 
+void wx\+Plot\+::set\+Ylabel (\begin{DoxyParamCaption}\item[{const wx\+String}]{y\+Label}{}\end{DoxyParamCaption})}
+
+
+
+Set the name of the Y-\/label. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em y\+Label} & Name of the Y-\/label. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\Hypertarget{classwx_plot_a782f9a4d482f3f4eb4a958a0fd518da0}\index{wxPlot@{wxPlot}!setYlim@{setYlim}}
+\index{setYlim@{setYlim}!wxPlot@{wxPlot}}
+\doxysubsubsection{\texorpdfstring{setYlim()}{setYlim()}}
+{\footnotesize\ttfamily \label{classwx_plot_a782f9a4d482f3f4eb4a958a0fd518da0} 
+void wx\+Plot\+::set\+Ylim (\begin{DoxyParamCaption}\item[{const double}]{minY}{, }\item[{const double}]{maxY}{}\end{DoxyParamCaption})}
+
+
+
+Set the plot zoom limit in Y-\/axis. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em minY} & Minimum limit in Y-\/axis. \\
+\hline
+{\em maxY} & Maximum limit in Y-\/axis. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/danie/\+Documents/\+Git\+Hub/wx\+Plot/wx\+Plot/src/wxplot.\+hpp\item 
+C\+:/\+Users/danie/\+Documents/\+Git\+Hub/wx\+Plot/wx\+Plot/src/wxplot.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,39 @@
+\doxysection{plottypes.\+hpp}
+\hypertarget{plottypes_2plottypes_8hpp_source}{}\label{plottypes_2plottypes_8hpp_source}\index{C:/Users/danie/Documents/GitHub/wxPlot/wxPlot/src/plots/plottypes/plottypes.hpp@{C:/Users/danie/Documents/GitHub/wxPlot/wxPlot/src/plots/plottypes/plottypes.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}2D/2Dtype.hpp"{}}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_plot_types}{PlotTypes}}\ \{}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00008\ \ \ \ \ \textcolor{comment}{//\ Figure\ select}}
+\DoxyCodeLine{00009\ \ \ \ \ WXPLOT\_FIGURE\ wxPlotFigure\ =\ WXPLOT\_FIGURE\_2D;}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \ \ \ \ \textcolor{comment}{//\ Plot\ types}}
+\DoxyCodeLine{00012\ \ \ \ \ \mbox{\hyperlink{class__2_d_type}{\_2DType}}\ \_2d;}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{comment}{//\ Constructor}}
+\DoxyCodeLine{00016\ \ \ \ \ \mbox{\hyperlink{class_plot_types}{PlotTypes}}()\ \{\ \}}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{comment}{//\ Setters}}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordtype}{void}\ setWxPlotFigureType(\textcolor{keyword}{const}\ WXPLOT\_FIGURE\ wxPlotFigure,\ \textcolor{keyword}{const}\ WXPLOT\_TYPE\ wxPlotType);}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keywordtype}{void}\ setRadius(\textcolor{keyword}{const}\ wxCoord\ radius);}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordtype}{void}\ fillCircles(\textcolor{keyword}{const}\ \textcolor{keywordtype}{bool}\ fillCircle);}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordtype}{void}\ setData(\textcolor{keyword}{const}\ std::vector<std::vector<double>>\&\ data2D);}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordtype}{void}\ setData(\textcolor{keyword}{const}\ std::vector<double>\&\ data1D);}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{void}\ setPlotStartWidth(\textcolor{keyword}{const}\ wxCoord\ plotStartWidth);}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{void}\ setPlotStartHeight(\textcolor{keyword}{const}\ wxCoord\ plotStartHeight);}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{void}\ setPlotEndWidth(\textcolor{keyword}{const}\ wxCoord\ plotEndWidth);}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordtype}{void}\ setPlotEndHeight(\textcolor{keyword}{const}\ wxCoord\ plotEndHeight);}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordtype}{void}\ setYlim(\textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ minY,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ maxY);}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordtype}{void}\ setBinCount(\textcolor{keyword}{const}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ binCount);}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{comment}{//\ Functions}}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{void}\ drawType(wxDC\&\ dc);}
+\DoxyCodeLine{00033\ \};}
+
+\end{DoxyCode}

@@ -1,0 +1,53 @@
+\doxysection{2Dtype.\+hpp}
+\hypertarget{2_dtype_8hpp_source}{}\label{2_dtype_8hpp_source}\index{C:/Users/danie/Documents/GitHub/wxPlot/wxPlot/src/plots/plottypes/2D/2Dtype.hpp@{C:/Users/danie/Documents/GitHub/wxPlot/wxPlot/src/plots/plottypes/2D/2Dtype.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}line/line.hpp"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}scatter/scatter.hpp"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}spline/spline.hpp"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}bar/bar.hpp"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}../../plottools/plottools.hpp"{}}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class__2_d_type}{\_2DType}}\ \{}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{comment}{//\ Type\ select}}
+\DoxyCodeLine{00013\ \ \ \ \ WXPLOT\_TYPE\ wxPlotType\ =\ WXPLOT\_TYPE\_LINE;}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{comment}{//\ The\ data}}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keywordtype}{double}\ minX\ =\ 0,\ maxX\ =\ 0,\ minY\ =\ 0,\ maxY\ =\ 0;}
+\DoxyCodeLine{00017\ \ \ \ \ std::vector<std::vector<double>>\ data2D;}
+\DoxyCodeLine{00018\ \ \ \ \ std::vector<double>\ data1D;}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordtype}{bool}\ is2Dused\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ binCount\ =\ 10;}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{comment}{//\ Charts}}
+\DoxyCodeLine{00023\ \ \ \ \ \mbox{\hyperlink{class_line}{Line}}\ line;}
+\DoxyCodeLine{00024\ \ \ \ \ \mbox{\hyperlink{class_scatter}{Scatter}}\ scatter;}
+\DoxyCodeLine{00025\ \ \ \ \ \mbox{\hyperlink{class_spline}{Spline}}\ spline;}
+\DoxyCodeLine{00026\ \ \ \ \ \mbox{\hyperlink{class_bar}{Bar}}\ bar;}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{comment}{//\ Constructor}}
+\DoxyCodeLine{00030\ \ \ \ \ \mbox{\hyperlink{class__2_d_type}{\_2DType}}()\ \{\ \}}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{comment}{//\ Setters}}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{void}\ setWxPlotType(\textcolor{keyword}{const}\ WXPLOT\_TYPE\ wxPlotType);}
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keywordtype}{void}\ setRadius(\textcolor{keyword}{const}\ wxCoord\ radius);}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{void}\ setBinCount(\textcolor{keyword}{const}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ binCount);}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordtype}{void}\ fillCircles(\textcolor{keyword}{const}\ \textcolor{keywordtype}{bool}\ fillCircle);}
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keywordtype}{void}\ setData(\textcolor{keyword}{const}\ std::vector<std::vector<double>>\&\ data2D);}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordtype}{void}\ setData(\textcolor{keyword}{const}\ std::vector<double>\&\ data1D);}
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keywordtype}{void}\ setPlotStartWidth(\textcolor{keyword}{const}\ wxCoord\ plotStartWidth);}
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keywordtype}{void}\ setPlotStartHeight(\textcolor{keyword}{const}\ wxCoord\ plotStartHeight);}
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordtype}{void}\ setPlotEndWidth(\textcolor{keyword}{const}\ wxCoord\ plotEndWidth);}
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordtype}{void}\ setPlotEndHeight(\textcolor{keyword}{const}\ wxCoord\ plotEndHeight);}
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordtype}{void}\ setYlim(\textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ minY,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ maxY);}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{comment}{//\ Functions}}
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keywordtype}{bool}\ drawType(wxDC\&\ dc);}
+\DoxyCodeLine{00047\ \};}
+
+\end{DoxyCode}

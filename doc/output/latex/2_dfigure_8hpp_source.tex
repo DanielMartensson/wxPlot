@@ -1,0 +1,58 @@
+\doxysection{2Dfigure.\+hpp}
+\hypertarget{2_dfigure_8hpp_source}{}\label{2_dfigure_8hpp_source}\index{C:/Users/danie/Documents/GitHub/wxPlot/wxPlot/src/plots/plotfigures/2D/2Dfigure.hpp@{C:/Users/danie/Documents/GitHub/wxPlot/wxPlot/src/plots/plotfigures/2D/2Dfigure.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}proportional/proportional.hpp"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}histogram/histogram.hpp"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}../../plottools/plottools.hpp"{}}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class__2_d_figure}{\_2DFigure}}\ \{}
+\DoxyCodeLine{00008\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00009\ \ \ \ \ \textcolor{comment}{//\ Type\ select}}
+\DoxyCodeLine{00010\ \ \ \ \ WXPLOT\_TYPE\ wxPlotType\ =\ WXPLOT\_TYPE\_LINE;}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{comment}{//\ Proportional\ figure}}
+\DoxyCodeLine{00013\ \ \ \ \ \mbox{\hyperlink{class_proportional}{Proportional}}\ proportional;}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{comment}{//\ Histogram\ figure}}
+\DoxyCodeLine{00016\ \ \ \ \ \mbox{\hyperlink{class_histogram}{Histogram}}\ histogram;}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{comment}{//\ Constructor}}
+\DoxyCodeLine{00020\ \ \ \ \ \mbox{\hyperlink{class__2_d_figure}{\_2DFigure}}()\ \{\}}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{comment}{//\ Setters}}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordtype}{void}\ setWxPlotType(\textcolor{keyword}{const}\ WXPLOT\_TYPE\ wxPlotType);}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{void}\ setTitle(\textcolor{keyword}{const}\ wxString\&\ title);}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{void}\ setXlabel(\textcolor{keyword}{const}\ wxString\&\ xLabel);}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{void}\ setYlabel(\textcolor{keyword}{const}\ wxString\&\ yLabel);}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordtype}{void}\ setTicks(\textcolor{keyword}{const}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ gridSize);}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordtype}{void}\ gridOn(\textcolor{keyword}{const}\ \textcolor{keywordtype}{bool}\ grid);}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordtype}{void}\ setPlotStartWidth(\textcolor{keyword}{const}\ wxCoord\ plotStartWidth);}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordtype}{void}\ setPlotStartHeight(\textcolor{keyword}{const}\ wxCoord\ plotStartHeight);}
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keywordtype}{void}\ setPlotEndWidth(\textcolor{keyword}{const}\ wxCoord\ plotEndWidth);}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{void}\ setPlotEndHeight(\textcolor{keyword}{const}\ wxCoord\ plotEndHeight);}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{void}\ setLegend(\textcolor{keyword}{const}\ std::vector<wxString>\&\ legend,\ \textcolor{keyword}{const}\ PLACEMENT\ legendPosition);}
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keywordtype}{void}\ setData(\textcolor{keyword}{const}\ std::vector<std::vector<double>>\&\ data);}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{void}\ setData(\textcolor{keyword}{const}\ std::vector<double>\&\ data);}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordtype}{void}\ legendOn(\textcolor{keyword}{const}\ \textcolor{keywordtype}{bool}\ useLegend);}
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keywordtype}{void}\ setFontSize(\textcolor{keyword}{const}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ fontSize);}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordtype}{void}\ setYlim(\textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ minY,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ maxY);}
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keywordtype}{void}\ setBinCount(\textcolor{keyword}{const}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ binCount);}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{comment}{//\ Getters}}
+\DoxyCodeLine{00042\ \ \ \ \ wxCoord\ getPlotStartWidth()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00043\ \ \ \ \ wxCoord\ getPlotEndWidth()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00044\ \ \ \ \ wxCoord\ getPlotStartHeight()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00045\ \ \ \ \ wxCoord\ getPlotEndHeight()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{comment}{//\ Functions}}
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keywordtype}{void}\ drawFigure(wxDC\&\ dc);}
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keywordtype}{void}\ drawGrid(wxDC\&\ dc);}
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keywordtype}{void}\ drawTicks(wxDC\&\ dc);}
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keywordtype}{void}\ drawLegend(wxDC\&\ dc);}
+\DoxyCodeLine{00052\ \};}
+
+\end{DoxyCode}

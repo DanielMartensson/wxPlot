@@ -1,0 +1,39 @@
+\doxysection{line.\+hpp}
+\hypertarget{line_8hpp_source}{}\label{line_8hpp_source}\index{C:/Users/danie/Documents/GitHub/wxPlot/wxPlot/src/plots/plottypes/2D/line/line.hpp@{C:/Users/danie/Documents/GitHub/wxPlot/wxPlot/src/plots/plottypes/2D/line/line.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <wx/wx.h>}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_line}{Line}}\ \{}
+\DoxyCodeLine{00007\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00008\ \ \ \ \ \textcolor{comment}{//\ Size\ for\ the\ rectangle}}
+\DoxyCodeLine{00009\ \ \ \ \ wxCoord\ plotEndWidth\ =\ 0;}
+\DoxyCodeLine{00010\ \ \ \ \ wxCoord\ plotEndHeight\ =\ 0;}
+\DoxyCodeLine{00011\ \ \ \ \ wxCoord\ plotStartWidth\ =\ 0;}
+\DoxyCodeLine{00012\ \ \ \ \ wxCoord\ plotStartHeight\ =\ 0;}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{comment}{//\ Limits\ for\ the\ data\ }}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keywordtype}{double}\ minX\ =\ 0;}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keywordtype}{double}\ maxX\ =\ 0;}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keywordtype}{double}\ minY\ =\ 0;}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keywordtype}{double}\ maxY\ =\ 0;}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{comment}{//\ Constructor}}
+\DoxyCodeLine{00022\ \ \ \ \ \mbox{\hyperlink{class_line}{Line}}()\ \{\}}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{comment}{//\ Setters}}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{void}\ setLimits(\textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ minX,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ maxX,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ minY,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ maxY);}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{void}\ setPlotStartWidth(\textcolor{keyword}{const}\ wxCoord\ plotStartWidth);}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordtype}{void}\ setPlotStartHeight(\textcolor{keyword}{const}\ wxCoord\ plotStartHeight);}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordtype}{void}\ setPlotEndWidth(\textcolor{keyword}{const}\ wxCoord\ plotEndWidth);}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordtype}{void}\ setPlotEndHeight(\textcolor{keyword}{const}\ wxCoord\ plotEndHeight);}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{comment}{//\ Functions}}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ draw(wxDC\&\ dc,\ \textcolor{keyword}{const}\ std::vector<double>\&\ xData,\ \textcolor{keyword}{const}\ std::vector<double>\&\ yData,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ colourIndex);}
+\DoxyCodeLine{00033\ \};}
+
+\end{DoxyCode}

@@ -1,0 +1,114 @@
+\doxysection{Histogram Class Reference}
+\hypertarget{class_histogram}{}\label{class_histogram}\index{Histogram@{Histogram}}
+Inheritance diagram for Histogram\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_histogram}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_histogram_a7c392205ea07cb1b13a95e8d6f03c686}\label{class_histogram_a7c392205ea07cb1b13a95e8d6f03c686} 
+void {\bfseries set\+Bin\+Count} (const unsigned int bin\+Count)
+\item 
+\Hypertarget{class_histogram_a64400c9457e86e6e0a68f8ab989a93af}\label{class_histogram_a64400c9457e86e6e0a68f8ab989a93af} 
+void {\bfseries set\+Data} (const std\+::vector$<$ double $>$ \&data)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_proportional}{Proportional}}}
+\begin{DoxyCompactItemize}
+\item 
+void {\bfseries set\+Plot\+Start\+Width} (const wx\+Coord plot\+Start\+Width)
+\item 
+void {\bfseries set\+Plot\+Start\+Height} (const wx\+Coord plot\+Start\+Height)
+\item 
+void {\bfseries set\+Plot\+End\+Width} (const wx\+Coord plot\+End\+Width)
+\item 
+void {\bfseries set\+Plot\+End\+Height} (const wx\+Coord plot\+End\+Height)
+\item 
+void {\bfseries set\+Font\+Size} (const unsigned int font\+Size)
+\item 
+void {\bfseries set\+Ticks} (const unsigned int ticks)
+\item 
+void {\bfseries grid\+On} (const bool use\+Grid)
+\item 
+void {\bfseries set\+Title} (const wx\+String \&title)
+\item 
+void {\bfseries set\+Xlabel} (const wx\+String \&x\+Label)
+\item 
+void {\bfseries set\+Ylabel} (const wx\+String \&y\+Label)
+\item 
+void {\bfseries legend\+On} (const bool use\+Legend)
+\item 
+void {\bfseries set\+Legend} (const std\+::vector$<$ wx\+String $>$ \&legend, const PLACEMENT legend\+Position)
+\item 
+void {\bfseries set\+Data} (const std\+::vector$<$ std\+::vector$<$ double $>$ $>$ \&data)
+\item 
+void {\bfseries set\+Data} (const std\+::vector$<$ double $>$ \&data)
+\item 
+void {\bfseries set\+Wx\+Plot\+Type} (const WXPLOT\+\_\+\+TYPE wx\+Plot\+Type)
+\item 
+void {\bfseries set\+Ylim} (const double minY, const double maxY)
+\item 
+wx\+Coord {\bfseries get\+Plot\+Start\+Width} () const
+\item 
+wx\+Coord {\bfseries get\+Plot\+Start\+Height} () const
+\item 
+wx\+Coord {\bfseries get\+Plot\+End\+Width} () const
+\item 
+wx\+Coord {\bfseries get\+Plot\+End\+Height} () const
+\item 
+bool {\bfseries draw\+Figure} (wx\+DC \&dc)
+\item 
+void {\bfseries draw\+Grid} (wx\+DC \&dc)
+\item 
+void {\bfseries draw\+Ticks} (wx\+DC \&dc)
+\item 
+void {\bfseries draw\+Legend} (wx\+DC \&dc)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_proportional}{Proportional}}}
+\begin{DoxyCompactItemize}
+\item 
+wx\+Coord {\bfseries plot\+End\+Width} = 0
+\item 
+wx\+Coord {\bfseries plot\+End\+Height} = 0
+\item 
+wx\+Coord {\bfseries plot\+Start\+Width} = 0
+\item 
+wx\+Coord {\bfseries plot\+Start\+Height} = 0
+\item 
+unsigned int {\bfseries font\+Size} = 0
+\item 
+unsigned int {\bfseries ticks} = 0
+\item 
+bool {\bfseries use\+Grid} = false
+\item 
+bool {\bfseries use\+Legend} = false
+\item 
+wx\+String {\bfseries title}
+\item 
+wx\+String {\bfseries x\+Label}
+\item 
+wx\+String {\bfseries y\+Label}
+\item 
+std\+::vector$<$ wx\+String $>$ {\bfseries legend}
+\item 
+PLACEMENT {\bfseries legend\+Position} = PLACEMENT\+\_\+\+NORTH\+\_\+\+WEST
+\item 
+WXPLOT\+\_\+\+TYPE {\bfseries wx\+Plot\+Type} = WXPLOT\+\_\+\+TYPE\+\_\+\+LINE
+\item 
+double {\bfseries minX} = 0
+\item 
+double {\bfseries maxX} = 0
+\item 
+double {\bfseries minY} = 0
+\item 
+double {\bfseries maxY} = 0
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/danie/\+Documents/\+Git\+Hub/wx\+Plot/wx\+Plot/src/plots/plotfigures/2\+D/histogram/histogram.\+hpp\item 
+C\+:/\+Users/danie/\+Documents/\+Git\+Hub/wx\+Plot/wx\+Plot/src/plots/plotfigures/2\+D/histogram/histogram.\+cpp\end{DoxyCompactItemize}

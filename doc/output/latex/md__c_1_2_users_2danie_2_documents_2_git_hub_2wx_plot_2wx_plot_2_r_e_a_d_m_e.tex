@@ -1,0 +1,405 @@
+\chapter{Tutorial -\/ Add your own plot}
+\hypertarget{md__c_1_2_users_2danie_2_documents_2_git_hub_2wx_plot_2wx_plot_2_r_e_a_d_m_e}{}\label{md__c_1_2_users_2danie_2_documents_2_git_hub_2wx_plot_2wx_plot_2_r_e_a_d_m_e}\index{Tutorial -\/ Add your own plot@{Tutorial -\/ Add your own plot}}
+\label{md__c_1_2_users_2danie_2_documents_2_git_hub_2wx_plot_2wx_plot_2_r_e_a_d_m_e_autotoc_md0}%
+\Hypertarget{md__c_1_2_users_2danie_2_documents_2_git_hub_2wx_plot_2wx_plot_2_r_e_a_d_m_e_autotoc_md0}%
+
+
+To make an own plot you need to first make sure that type of figure you want to use. Head over to the {\ttfamily plotfigures.\+h} file. In this case we can se that {\ttfamily WXPLOT\+\_\+\+FIGURE\+\_\+2D} is available at this moment. It\textquotesingle{}s planned for 3D as well. We decided to use 2D in this tutorial.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ \{}
+\DoxyCodeLine{\ \ \ \ WXPLOT\_FIGURE\_2D}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ Add\ more\ here}}
+\DoxyCodeLine{\}WXPLOT\_FIGURE;}
+
+\end{DoxyCode}
+
+
+The next step is to go to the file {\ttfamily plottypes.\+h} and see what it can offer. Let\textquotesingle{}s say we want to add a {\ttfamily bar} plot to {\ttfamily \doxylink{classwx_plot}{wx\+Plot}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ \{}
+\DoxyCodeLine{\ \ \ \ WXPLOT\_TYPE\_LINE,}
+\DoxyCodeLine{\ \ \ \ WXPLOT\_TYPE\_SCATTER,}
+\DoxyCodeLine{\ \ \ \ WXPLOT\_TYPE\_LINE\_SCATTER,}
+\DoxyCodeLine{\ \ \ \ WXPLOT\_TYPE\_SPLINE,}
+\DoxyCodeLine{\ \ \ \ WXPLOT\_TYPE\_SPLINE\_SCATTER}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ Add\ more\ here}}
+\DoxyCodeLine{\}WXPLOT\_TYPE;}
+
+\end{DoxyCode}
+ Just add in {\ttfamily WXPLOT\+\_\+\+TYPE\+\_\+\+BAR}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ \{}
+\DoxyCodeLine{\ \ \ \ WXPLOT\_TYPE\_LINE,}
+\DoxyCodeLine{\ \ \ \ WXPLOT\_TYPE\_SCATTER,}
+\DoxyCodeLine{\ \ \ \ WXPLOT\_TYPE\_LINE\_SCATTER,}
+\DoxyCodeLine{\ \ \ \ WXPLOT\_TYPE\_SPLINE,}
+\DoxyCodeLine{\ \ \ \ WXPLOT\_TYPE\_SPLINE\_SCATTER,}
+\DoxyCodeLine{\ \ \ \ WXPLOT\_TYPE\_BAR}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ Add\ more\ here}}
+\DoxyCodeLine{\}WXPLOT\_TYPE;}
+
+\end{DoxyCode}
+
+
+Further, go to the {\ttfamily 2\+Dfigure.\+cpp} and add new code to all {\ttfamily draw}-\/functions and {\ttfamily get}-\/functions, e.\+g this.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{wxCoord\ \_2D\_Figure::getPlotEndWidth()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{switch}\ (wxPlotType)\ \{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{case}\ WXPLOT\_TYPE\_LINE:}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ proportional.getPlotEndWidth();}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{case}\ WXPLOT\_TYPE\_SCATTER:}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ proportional.getPlotEndWidth();}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{case}\ WXPLOT\_TYPE\_LINE\_SCATTER:}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ proportional.getPlotEndWidth();}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{case}\ WXPLOT\_TYPE\_SPLINE:}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ proportional.getPlotEndWidth();}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{case}\ WXPLOT\_TYPE\_SPLINE\_SCATTER:}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ proportional.getPlotEndWidth();}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{case}\ WXPLOT\_TYPE\_BAR:}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ proportional.getPlotEndWidth();\ <-\/-\/-\/\ NEW}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keywordtype}{void}\ \_2D\_Figure::drawFigure(wxDC\&\ dc)\ \{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{switch}\ (wxPlotType)\ \{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{case}\ WXPLOT\_TYPE\_LINE:}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ proportional.drawFigure(dc);}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{case}\ WXPLOT\_TYPE\_SCATTER:}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ proportional.drawFigure(dc);}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{case}\ WXPLOT\_TYPE\_LINE\_SCATTER:}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ proportional.drawFigure(dc);}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{case}\ WXPLOT\_TYPE\_SPLINE:}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ proportional.drawFigure(dc);}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{case}\ WXPLOT\_TYPE\_SPLINE\_SCATTER:}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ proportional.drawFigure(dc);}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{case}\ WXPLOT\_TYPE\_BAR:}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ proportional.drawFigure(dc);\ <-\/-\/-\/\ NEW}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ proportional.drawFigure(dc);}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+The object {\ttfamily proportional} is from the class {\ttfamily \doxylink{class_proportional}{Proportional}} inside the class {\ttfamily \doxylink{class__2_d_figure}{\+\_\+2\+DFigure}}. That class writes the following\+:
+
+
+\begin{DoxyItemize}
+\item Rectangle
+\item Grid
+\item Legend
+\item Ticks
+\item X, Y, title labels
+\item Fonts
+\end{DoxyItemize}
+
+Consider the use of {\ttfamily proportional} when you want to have a proportional plot in both X-\/axis and Y-\/axis. If you want to use a logarithmic plot, then you need to use another object rather than {\ttfamily proportional}, that can draw the rectangle, grid, legend, ticks, labels and fonts. Most of the time, you can just inherit most of the code from the class {\ttfamily \doxylink{class_proportional}{Proportional}}. The rectangle, legend, labels, fonts would be the same for a logarithmic plot. Only the grid and the ticks would differ.
+
+After you have done the configuration for the {\ttfamily figure}. Now it\textquotesingle{}s time for add code for the actuall plot -\/ drawing on the rectangle! In this case, we are focusing on {\ttfamily 2D} plots. Head over to the {\ttfamily 2\+Dtype.\+h} file and add new new object {\ttfamily \doxylink{class_bar}{Bar} bar;} under private. Don\textquotesingle{}t forget to add {\ttfamily \#include "{}bar/bar.\+h"{}} as well!
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{preprocessor}{\#include\ "{}line/line.h"{}}}
+\DoxyCodeLine{\textcolor{preprocessor}{\#include\ "{}scatter/scatter.h"{}}}
+\DoxyCodeLine{\textcolor{preprocessor}{\#include\ "{}spline/spline.h"{}}}
+\DoxyCodeLine{\textcolor{preprocessor}{\#include\ "{}bar/bar.h"{}}\ <-\/-\/-\/\ NEW}
+\DoxyCodeLine{\textcolor{preprocessor}{\#include\ "{}../../plottools/plottools.h"{}}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keyword}{class\ }\mbox{\hyperlink{class__2_d_type}{\_2DType}}\ \{}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keyword}{private}:}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ Type\ select}}
+\DoxyCodeLine{\ \ \ \ WXPLOT\_TYPE\ wxPlotType\ =\ WXPLOT\_TYPE\_LINE;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ The\ data}}
+\DoxyCodeLine{\ \ \ \ std::vector<std::vector<double>>\ data;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ Charts}}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{class_line}{Line}}\ line;}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{class_scatter}{Scatter}}\ scatter;}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{class_spline}{Spline}}\ spline;}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \mbox{\hyperlink{class_bar}{Bar}}\ bar;\ <-\/-\/-\/\ NEW}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keyword}{public}:}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ Constructor}}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{class__2_d_type}{\_2DType}}()\ \{\ \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ Setters}}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordtype}{void}\ setWxPlotType(\textcolor{keyword}{const}\ WXPLOT\_TYPE\ wxPlotType);}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordtype}{void}\ setRadius(\textcolor{keyword}{const}\ wxCoord\ radius);}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordtype}{void}\ fillCircles(\textcolor{keyword}{const}\ \textcolor{keywordtype}{bool}\ fillCircle);}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordtype}{void}\ setData(\textcolor{keyword}{const}\ std::vector<std::vector<double>>\&\ data);}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordtype}{void}\ setPlotStartWidth(\textcolor{keyword}{const}\ wxCoord\ plotStartWidth);}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordtype}{void}\ setPlotStartHeight(\textcolor{keyword}{const}\ wxCoord\ plotStartHeight);}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordtype}{void}\ setPlotEndWidth(\textcolor{keyword}{const}\ wxCoord\ plotEndWidth);}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordtype}{void}\ setPlotEndHeight(\textcolor{keyword}{const}\ wxCoord\ plotEndHeight);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ Functions}}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordtype}{bool}\ drawType(wxDC\&\ dc);}
+\DoxyCodeLine{\};}
+
+\end{DoxyCode}
+
+
+Create a folder called {\ttfamily bar} inside {\ttfamily plots/plottypes/2D} where {\ttfamily line}, {\ttfamily scatter} and {\ttfamily spline} are. Inside the {\ttfamily bar} folder. Add {\ttfamily bar.\+h} and {\ttfamily bar.\+cpp}
+
+Inside {\ttfamily bar.\+h}, paste this. Here we are inherit most of the protected fields and public functions from the {\ttfamily \doxylink{class_line}{Line}} class. You don\textquotesingle{}t need to do anything more here.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{\textcolor{preprocessor}{\#include\ <wx/wx.h>}}
+\DoxyCodeLine{\textcolor{preprocessor}{\#include\ "{}../line/line.h"{}}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keyword}{class\ }\mbox{\hyperlink{class_bar}{Bar}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_line}{Line}}\ \{}
+\DoxyCodeLine{\textcolor{keyword}{private}:}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keyword}{public}:}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ Functions}}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordtype}{bool}\ draw(wxDC\&\ dc,\ \textcolor{keyword}{const}\ std::vector<double>\&\ xData,\ \textcolor{keyword}{const}\ std::vector<double>\&\ yData,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ colourIndex)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{\};}
+
+\end{DoxyCode}
+
+
+Head over to {\ttfamily 2\+Dtype.\+cpp} file and add code to all {\ttfamily set}-\/functions.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{void}\ \_2DType::setData(\textcolor{keyword}{const}\ std::vector<std::vector<double>>\&\ data)\ \{}
+\DoxyCodeLine{\ \ \ \ this-\/>data\ =\ data;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ Find\ max\ and\ min\ for\ the\ complete\ data,\ or\ else,\ we\ will\ get\ very\ weird\ scaling\ inside\ the\ plot}}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordtype}{double}\ minX,\ maxX,\ minY,\ maxY;}
+\DoxyCodeLine{\ \ \ \ findMaxMin2Ddata(data,\ minX,\ maxX,\ minY,\ maxY);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ Set\ the\ limits}}
+\DoxyCodeLine{\ \ \ \ line.setLimits(minX,\ maxX,\ minY,\ maxY);}
+\DoxyCodeLine{\ \ \ \ scatter.setLimits(minX,\ maxX,\ minY,\ maxY);}
+\DoxyCodeLine{\ \ \ \ spline.setLimits(minX,\ maxX,\ minY,\ maxY);}
+\DoxyCodeLine{\ \ \ \ bar.setLimits(minX,\ maxX,\ minY,\ maxY);\ <-\/-\/-\/\ NEW}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keywordtype}{void}\ \_2DType::setPlotStartWidth(\textcolor{keyword}{const}\ wxCoord\ plotStartWidth)\ \{}
+\DoxyCodeLine{\ \ \ \ line.setPlotStartWidth(plotStartWidth);}
+\DoxyCodeLine{\ \ \ \ scatter.setPlotStartWidth(plotStartWidth);}
+\DoxyCodeLine{\ \ \ \ spline.setPlotStartWidth(plotStartWidth);}
+\DoxyCodeLine{\ \ \ \ bar.setPlotStartWidth(plotStartWidth);\ <-\/-\/-\/\ NEW}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+Some functions have only a unique functionality e.\+g {\ttfamily scatter}-\/plot. If you want to have a unique functionality to the {\ttfamily bar}-\/plot, then you need to write a specific {\ttfamily set}-\/function for that. Here is just one example how I can set the radius and fill circles for the {\ttfamily scatter}-\/plot. These won\textquotesingle{}t effect the {\ttfamily bar}-\/plot.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{void}\ \_2DType::setRadius(\textcolor{keyword}{const}\ wxCoord\ radius)\ \{}
+\DoxyCodeLine{\ \ \ \ scatter.setRadius(radius);}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keywordtype}{void}\ \_2DType::fillCircles(\textcolor{keyword}{const}\ \textcolor{keywordtype}{bool}\ fillCircle)\ \{}
+\DoxyCodeLine{\ \ \ \ scatter.fillCircles(fillCircle);}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+The second last thing you need to do is to add code inside the {\ttfamily bool \+\_\+2\+DType\+::draw\+Type(wx\+DC\& dc)} function. Same {\ttfamily 2\+Dtype.\+cpp} file. Add the new {\ttfamily bar.\+draw(dc, x\+Data, y\+Data, colour\+Index)} as a new case.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{comment}{//\ Draw\ type\ now}}
+\DoxyCodeLine{\textcolor{keywordflow}{switch}\ (wxPlotType)\ \{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{case}\ WXPLOT\_TYPE\_LINE:}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ line.draw(dc,\ xData,\ yData,\ colourIndex);}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{case}\ WXPLOT\_TYPE\_SCATTER:}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ scatter.draw(dc,\ xData,\ yData,\ colourIndex);}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{case}\ WXPLOT\_TYPE\_LINE\_SCATTER:}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ line.draw(dc,\ xData,\ yData,\ colourIndex);}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ scatter.draw(dc,\ xData,\ yData,\ colourIndex);}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{case}\ WXPLOT\_TYPE\_SPLINE:}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ spline.draw(dc,\ xData,\ yData,\ colourIndex);}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{case}\ WXPLOT\_TYPE\_SPLINE\_SCATTER:}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ spline.draw(dc,\ xData,\ yData,\ colourIndex);}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ scatter.draw(dc,\ xData,\ yData,\ colourIndex);}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{case}\ WXPLOT\_TYPE\_BAR:}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ bar.draw(dc,\ xData,\ yData,\ colourIndex);\ <-\/-\/-\/\ NEW}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+The last thing you need to do is to add code to {\ttfamily bar.\+cpp}. The one you just created above, but did not wrote anyting in to it. Let\textquotesingle{}s try out this code. It won\textquotesingle{}t be Beautiful, but it can give us some suggestions about what should to fixed.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\#include\ "{}bar.h"{}}}
+\DoxyCodeLine{\textcolor{preprocessor}{\#include\ "{}../../../plottools/plottools.h"{}}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keywordtype}{bool}\ Bar::draw(wxDC\&\ dc,\ \textcolor{keyword}{const}\ std::vector<double>\&\ xData,\ \textcolor{keyword}{const}\ std::vector<double>\&\ yData,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ colourIndex)\ \{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ Set\ rectangle\ colour}}
+\DoxyCodeLine{\ \ \ \ setColourPen(dc,\ colourIndex);}
+\DoxyCodeLine{\ \ \ \ setColourBrush(dc,\ colourIndex);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ Draw\ rectangles}}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{size\_t}\ dataLength\ =\ xData.size();}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{const}\ wxCoord\ width\ =\ (plotEndWidth\ -\/\ plotStartHeight)\ /\ dataLength;}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ j\ =\ 0;\ j\ <\ dataLength;\ j++)\ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ wxCoord\ x\ =\ linearScalarXaxis(xData.at(j),\ minX,\ plotStartWidth,\ maxX,\ plotEndWidth);}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ wxCoord\ y\ =\ linearScalarYaxis(yData.at(j),\ minY,\ plotStartHeight,\ maxY,\ plotEndHeight);}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ wxCoord\ height\ =\ plotEndHeight\ -\/\ y;}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ dc.DrawRectangle(x,\ y,\ width,\ height);}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ Nothing\ went\ wrong}}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+With this data\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{comment}{//\ Create\ data\ for\ bar}}
+\DoxyCodeLine{std::vector<std::vector<double>>\ data\ =\ \{\ \{0\},\ \{15\},\ }
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{1\},\ \{20\},\ }
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{2\},\ \{10\},\ }
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{3\},\ \{50\},\ }
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{4\},\ \{10\},\ }
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{5\},\ \{-\/10\}\ \};}
+\DoxyCodeLine{}
+\DoxyCodeLine{plot-\/>setData(data);}
+
+\end{DoxyCode}
+
+
+It would look something like this. Here we can see that the Y-\/ticks are placed after max and minimum of {\ttfamily 2D} vector. The minimum data of {\ttfamily data} 2D vector above, is {\ttfamily -\/10} and maximum value is {\ttfamily 50}.
+
+
+
+If we are using this data, that not contains any negative numbers, we can confirm that the Y-\/ticks are placed wrong.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{comment}{//\ Create\ data\ for\ bar}}
+\DoxyCodeLine{std::vector<std::vector<double>>\ data\ =\ \{\ \{0\},\ \{15\},\ }
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{1\},\ \{20\},\ }
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{2\},\ \{10\},\ }
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{3\},\ \{50\},\ }
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{4\},\ \{10\},\ }
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{5\},\ \{-\/10\}\ \};}
+\DoxyCodeLine{}
+\DoxyCodeLine{plot-\/>setData(data);}
+
+\end{DoxyCode}
+
+
+
+
+To solve this issue, we need to change the {\ttfamily minY} so the {\ttfamily Y}-\/ticks are displayed correctly. One good option is to head over to {\ttfamily proportional.\+cpp} and add this. So if {\ttfamily minY} is positive, turn it to {\ttfamily 0}, only for {\ttfamily bar} or other column charts.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{comment}{/*}}
+\DoxyCodeLine{\textcolor{comment}{\ *\ This\ function\ draw\ the\ ticks.}}
+\DoxyCodeLine{\textcolor{comment}{\ *\ Call\ this\ function\ after\ you\ have\ drawn\ the\ plot\ type.}}
+\DoxyCodeLine{\textcolor{comment}{\ */}}
+\DoxyCodeLine{\textcolor{keywordtype}{void}\ Proportional::drawTicks(wxDC\&\ dc)\ \{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{if}\ (ticks\ >\ 0)\ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ wxCoord\ yStartRectangle\ =\ plotStartHeight;}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ wxCoord\ xStartRectangle\ =\ plotStartWidth;}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ wxCoord\ heightRectangle\ =\ plotEndHeight\ -\/\ plotStartHeight;}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ wxCoord\ widthRectangle\ =\ plotEndWidth\ -\/\ plotStartWidth;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{comment}{//\ Set\ color\ -\/\ Black}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ wxPen\ pen(plotColours.at(PLOT\_COLOUR\_BLACK));}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ dc.SetPen(pen);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{comment}{//\ Compute\ the\ minimum\ and\ maximum\ value\ from\ the\ data\ for\ correct\ scaling}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ minX,\ maxX,\ minY,\ maxY;}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ findMaxMin2Ddata(data,\ minX,\ maxX,\ minY,\ maxY);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{comment}{//\ Only\ for\ column\ charts\ such\ as\ bar,\ histogram\ etc.\ <-\/-\/-\/\ NEW}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{keywordflow}{switch}\ (wxPlotType)\ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ WXPLOT\_TYPE\_BAR:}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (minY\ >\ 0)\ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ minY\ =\ 0;}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+After few hours of figure how to make a proper column setup as a bar plot. This results this code. As you can see, there was no use of {\ttfamily X}-\/data for displaying the {\ttfamily X}-\/axis.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\#include\ "{}bar.h"{}}}
+\DoxyCodeLine{\textcolor{preprocessor}{\#include\ "{}../../../plottools/plottools.h"{}}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keywordtype}{bool}\ Bar::draw(wxDC\&\ dc,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ yData,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ colourIndex,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{size\_t}\ dataSize,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{size\_t}\ i)\ \{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ Set\ rectangle\ colour}}
+\DoxyCodeLine{\ \ \ \ setColourPen(dc,\ colourIndex);}
+\DoxyCodeLine{\ \ \ \ setColourBrush(dc,\ colourIndex);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ Some\ parameter}}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{const}\ wxCoord\ width\ =\ (plotEndWidth\ -\/\ plotStartWidth)\ /\ dataSize;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ Draw\ rectangle}}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{const}\ wxCoord\ x\ =\ plotStartWidth\ +\ width\ *\ i;}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{const}\ wxCoord\ y\ =\ linearScalarYaxis(yData,\ minY,\ plotStartHeight,\ maxY,\ plotEndHeight);}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{const}\ wxCoord\ y0\ =\ linearScalarYaxis(0,\ minY,\ plotStartHeight,\ maxY,\ plotEndHeight);}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{const}\ wxCoord\ yMin\ =\ linearScalarYaxis(minY,\ minY,\ plotStartHeight,\ maxY,\ plotEndHeight);}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{const}\ wxCoord\ delta\ =\ yMin\ -\/\ y0;}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{const}\ wxCoord\ height\ =\ plotEndHeight\ -\/\ y\ -\/\ delta;}
+\DoxyCodeLine{\ \ \ \ dc.DrawRectangle(x,\ y,\ width,\ height);}
+\DoxyCodeLine{\ \ \ \ }
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ Nothing\ went\ wrong}}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+ 
