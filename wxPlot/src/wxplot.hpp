@@ -189,8 +189,18 @@ public:
 
 	/**
 	 * @brief Important event function for draw the whole plot. Add things here, that you want to appear inside the plot for every iteration.
-	 * NOTE: When this function is called, it first draw the figure, then it recalculate the start and end of the rectangle and then draw the plot type.
-	 * @param event This even parameter is not used.
+	 * - Step 1: Create the DC object.
+	 * - Step 2: Draw the figure.
+	 * - Step 3: Get the recalculated plotStartWidth, plotStartHeight, plotEndWidth and plotEndHeight from plot figure.
+	 * - Step 4: Set the recalculated plotStartWidth, plotStartHeight, plotEndWidth and plotEndHeight to plot type.
+	 * - Step 5: Draw plot type.
+	 * - Step 6: Draw grid if enabled.
+	 * - Step 7: Draw ticks if enabled.
+	 * - Step 8: Draw legend if enabled.
+	 * 
+	 * For real time plotting, this function must be repeated all the time.
+	 * 
+	 * @param event This event parameter is not used.
 	 */
 	void drawPlot(wxPaintEvent& event);
 };
