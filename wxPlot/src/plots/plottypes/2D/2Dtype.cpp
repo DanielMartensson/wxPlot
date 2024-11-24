@@ -1,4 +1,4 @@
-#include "2Dtype.h"
+#include "2Dtype.hpp"
 
 void _2DType::setWxPlotType(const WXPLOT_TYPE wxPlotType) {
 	this->wxPlotType = wxPlotType;

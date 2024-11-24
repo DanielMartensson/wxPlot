@@ -1,4 +1,4 @@
-#include "wxplot.h"
+#include "wxplot.hpp"
 
 wxPlot::wxPlot(wxFrame* parent, const WXPLOT_FIGURE wxPlotFigure, const WXPLOT_TYPE wxPlotType) : wxPanel(parent) {
 	// Set type

@@ -1,5 +1,5 @@
 
-#include "mainframe.h"
+#include "mainframe.hpp"
 
 MainFrame::MainFrame() : wxFrame(nullptr, wxID_ANY, "wxPlot")
 {

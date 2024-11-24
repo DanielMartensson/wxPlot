@@ -1,4 +1,4 @@
-#include "2Dfigure.h"
+#include "2Dfigure.hpp"
 
 void _2DFigure::setWxPlotType(const WXPLOT_TYPE wxPlotType) {
 	this->wxPlotType = wxPlotType;

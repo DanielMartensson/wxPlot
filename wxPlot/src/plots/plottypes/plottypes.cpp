@@ -1,4 +1,4 @@
-#include "plottypes.h"
+#include "plottypes.hpp"
 
 void PlotTypes::setWxPlotFigureType(const WXPLOT_FIGURE wxPlotFigure, const WXPLOT_TYPE wxPlotType) {
 	this->wxPlotFigure = wxPlotFigure;

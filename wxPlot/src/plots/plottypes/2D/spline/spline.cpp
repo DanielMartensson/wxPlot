@@ -1,6 +1,6 @@
 
-#include "spline.h"
-#include "../../../plottools/plottools.h"
+#include "spline.hpp"
+#include "../../../plottools/plottools.hpp"
 
 bool Spline::draw(wxDC& dc, const std::vector<double>& xData, const std::vector<double>& yData, const unsigned int colourIndex) {
 	// Set line colour

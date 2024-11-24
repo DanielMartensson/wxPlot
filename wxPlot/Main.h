@@ -1,6 +1,6 @@
 #pragma once
 
-#include "src/frames/mainframe/mainframe.h"
+#include "src/frames/mainframe/mainframe.hpp"
 
 class Main : public wxApp
 {

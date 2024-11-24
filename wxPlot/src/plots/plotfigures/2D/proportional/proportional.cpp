@@ -1,4 +1,4 @@
-#include "proportional.h"
+#include "proportional.hpp"
 #include <cmath>
 
 void Proportional::setPlotStartWidth(const wxCoord plotStartWidth) { 

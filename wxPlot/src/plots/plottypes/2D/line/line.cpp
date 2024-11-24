@@ -1,6 +1,6 @@
 
-#include "line.h"
-#include "../../../plottools/plottools.h"
+#include "line.hpp"
+#include "../../../plottools/plottools.hpp"
 
 void Line::setLimits(const double minX, const double maxX, const double minY, const double maxY) { 
 	this->minX = minX; 

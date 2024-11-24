@@ -153,25 +153,25 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Main.h" />
-    <ClInclude Include="src\frames\mainframe\mainframe.h" />
-    <ClInclude Include="src\plots\plotfigures\2D\2Dfigure.h" />
-    <ClInclude Include="src\plots\plotfigures\2D\histogram\histogram.h" />
-    <ClInclude Include="src\plots\plotfigures\2D\proportional\proportional.h" />
-    <ClInclude Include="src\plots\plotfigures\plotfigures.h" />
-    <ClInclude Include="src\plots\plots.h" />
-    <ClInclude Include="src\plots\plottools\enums\placements.h" />
-    <ClInclude Include="src\plots\plottools\enums\plotfigures.h" />
-    <ClInclude Include="src\plots\plottools\enums\plottypes.h" />
-    <ClInclude Include="src\plots\plottools\functions\functions.h" />
-    <ClInclude Include="src\plots\plottools\lists\colours.h" />
-    <ClInclude Include="src\plots\plottools\plottools.h" />
-    <ClInclude Include="src\plots\plottypes\2D\2Dtype.h" />
-    <ClInclude Include="src\plots\plottypes\2D\bar\bar.h" />
-    <ClInclude Include="src\plots\plottypes\2D\line\line.h" />
-    <ClInclude Include="src\plots\plottypes\2D\scatter\scatter.h" />
-    <ClInclude Include="src\plots\plottypes\2D\spline\spline.h" />
-    <ClInclude Include="src\plots\plottypes\plottypes.h" />
-    <ClInclude Include="src\wxplot.h" />
+    <ClInclude Include="src\frames\mainframe\mainframe.hpp" />
+    <ClInclude Include="src\plots\plotfigures\2D\2Dfigure.hpp" />
+    <ClInclude Include="src\plots\plotfigures\2D\histogram\histogram.hpp" />
+    <ClInclude Include="src\plots\plotfigures\2D\proportional\proportional.hpp" />
+    <ClInclude Include="src\plots\plotfigures\plotfigures.hpp" />
+    <ClInclude Include="src\plots\plots.hpp" />
+    <ClInclude Include="src\plots\plottools\enums\placements.hpp" />
+    <ClInclude Include="src\plots\plottools\enums\plotfigures.hpp" />
+    <ClInclude Include="src\plots\plottools\enums\plottypes.hpp" />
+    <ClInclude Include="src\plots\plottools\functions\functions.hpp" />
+    <ClInclude Include="src\plots\plottools\lists\colours.hpp" />
+    <ClInclude Include="src\plots\plottools\plottools.hpp" />
+    <ClInclude Include="src\plots\plottypes\2D\2Dtype.hpp" />
+    <ClInclude Include="src\plots\plottypes\2D\bar\bar.hpp" />
+    <ClInclude Include="src\plots\plottypes\2D\line\line.hpp" />
+    <ClInclude Include="src\plots\plottypes\2D\scatter\scatter.hpp" />
+    <ClInclude Include="src\plots\plottypes\2D\spline\spline.hpp" />
+    <ClInclude Include="src\plots\plottypes\plottypes.hpp" />
+    <ClInclude Include="src\wxplot.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

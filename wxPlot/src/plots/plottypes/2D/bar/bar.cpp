@@ -1,5 +1,5 @@
-#include "bar.h"
-#include "../../../plottools/plottools.h"
+#include "bar.hpp"
+#include "../../../plottools/plottools.hpp"
 
 bool Bar::draw(wxDC& dc, const double data, const unsigned int dataSize, const unsigned int colourIndex, const size_t i) {
 

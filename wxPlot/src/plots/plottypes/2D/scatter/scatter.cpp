@@ -1,6 +1,6 @@
 
-#include "scatter.h"
-#include "../../../plottools/plottools.h"
+#include "scatter.hpp"
+#include "../../../plottools/plottools.hpp"
 
 void Scatter::setRadius(const wxCoord radius) { 
 	this->radius = radius; 

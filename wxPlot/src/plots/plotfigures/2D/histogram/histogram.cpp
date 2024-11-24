@@ -1,4 +1,4 @@
-#include "histogram.h"
+#include "histogram.hpp"
 
 
 void Histogram::setBinCount(const unsigned int binCount) {

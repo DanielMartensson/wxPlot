@@ -1,4 +1,4 @@
-#include "plots.h"
+#include "plots.hpp"
 
 PlotTypes& Plots::getPlotTypes() {
 	return plotTypes; 
