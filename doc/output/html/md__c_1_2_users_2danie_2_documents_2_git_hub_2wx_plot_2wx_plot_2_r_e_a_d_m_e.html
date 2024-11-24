@@ -165,7 +165,7 @@ $(function(){ initResizable(false); });
 <div class="line">        <span class="keywordflow">break</span>;</div>
 <div class="line">    }</div>
 <div class="line">}</div>
-</div><!-- fragment --><p>The object <code>proportional</code> is from the class <code><a class="el" href="class_proportional.html">Proportional</a></code> inside the class <code><a class="el" href="class__2_d_figure.html">_2DFigure</a></code>. That class writes the following:</p>
+</div><!-- fragment --><p>The object <code>proportional</code> is from the class <code><a class="el" href="class_proportional.html" title="Proportional class. Do the most work in all 2D plot figures.">Proportional</a></code> inside the class <code><a class="el" href="class__2_d_figure.html" title="This is the 2D plot figure class. It contains plot figures such as propotional, histogram etc.">_2DFigure</a></code>. That class writes the following:</p>
 <ul>
 <li>Rectangle</li>
 <li>Grid</li>
@@ -174,8 +174,8 @@ $(function(){ initResizable(false); });
 <li>X, Y, title labels</li>
 <li>Fonts</li>
 </ul>
-<p>Consider the use of <code>proportional</code> when you want to have a proportional plot in both X-axis and Y-axis. If you want to use a logarithmic plot, then you need to use another object rather than <code>proportional</code>, that can draw the rectangle, grid, legend, ticks, labels and fonts. Most of the time, you can just inherit most of the code from the class <code><a class="el" href="class_proportional.html">Proportional</a></code>. The rectangle, legend, labels, fonts would be the same for a logarithmic plot. Only the grid and the ticks would differ.</p>
-<p>After you have done the configuration for the <code>figure</code>. Now it's time for add code for the actuall plot - drawing on the rectangle! In this case, we are focusing on <code>2D</code> plots. Head over to the <code>2Dtype.h</code> file and add new new object <code><a class="el" href="class_bar.html">Bar</a> bar;</code> under private. Don't forget to add <code>#include "bar/bar.h"</code> as well!</p>
+<p>Consider the use of <code>proportional</code> when you want to have a proportional plot in both X-axis and Y-axis. If you want to use a logarithmic plot, then you need to use another object rather than <code>proportional</code>, that can draw the rectangle, grid, legend, ticks, labels and fonts. Most of the time, you can just inherit most of the code from the class <code><a class="el" href="class_proportional.html" title="Proportional class. Do the most work in all 2D plot figures.">Proportional</a></code>. The rectangle, legend, labels, fonts would be the same for a logarithmic plot. Only the grid and the ticks would differ.</p>
+<p>After you have done the configuration for the <code>figure</code>. Now it's time for add code for the actuall plot - drawing on the rectangle! In this case, we are focusing on <code>2D</code> plots. Head over to the <code>2Dtype.h</code> file and add new new object <code><a class="el" href="class_bar.html" title="Bar class. Inheritance from class Line.">Bar</a> bar;</code> under private. Don't forget to add <code>#include "bar/bar.h"</code> as well!</p>
 <div class="fragment"><div class="line"><span class="preprocessor">#pragma once</span></div>
 <div class="line"> </div>
 <div class="line"><span class="preprocessor">#include &quot;line/line.h&quot;</span></div>
@@ -204,25 +204,34 @@ $(function(){ initResizable(false); });
 <div class="line">    <a class="code hl_class" href="class__2_d_type.html">_2DType</a>() { }</div>
 <div class="line"> </div>
 <div class="line">    <span class="comment">// Setters</span></div>
-<div class="line">    <span class="keywordtype">void</span> setWxPlotType(<span class="keyword">const</span> WXPLOT_TYPE wxPlotType);</div>
-<div class="line">    <span class="keywordtype">void</span> setRadius(<span class="keyword">const</span> wxCoord radius);</div>
-<div class="line">    <span class="keywordtype">void</span> fillCircles(<span class="keyword">const</span> <span class="keywordtype">bool</span> fillCircle);</div>
-<div class="line">    <span class="keywordtype">void</span> setData(<span class="keyword">const</span> std::vector&lt;std::vector&lt;double&gt;&gt;&amp; data);</div>
-<div class="line">    <span class="keywordtype">void</span> setPlotStartWidth(<span class="keyword">const</span> wxCoord plotStartWidth);</div>
-<div class="line">    <span class="keywordtype">void</span> setPlotStartHeight(<span class="keyword">const</span> wxCoord plotStartHeight);</div>
-<div class="line">    <span class="keywordtype">void</span> setPlotEndWidth(<span class="keyword">const</span> wxCoord plotEndWidth);</div>
-<div class="line">    <span class="keywordtype">void</span> setPlotEndHeight(<span class="keyword">const</span> wxCoord plotEndHeight);</div>
+<div class="line">    <span class="keywordtype">void</span> <a class="code hl_function" href="class__2_d_type.html#a7cc4f55c2339692385889b3fe15b1a5f">setWxPlotType</a>(<span class="keyword">const</span> WXPLOT_TYPE wxPlotType);</div>
+<div class="line">    <span class="keywordtype">void</span> <a class="code hl_function" href="class__2_d_type.html#a625f9124ec31303bbbabaafce1a94edd">setRadius</a>(<span class="keyword">const</span> wxCoord radius);</div>
+<div class="line">    <span class="keywordtype">void</span> <a class="code hl_function" href="class__2_d_type.html#a3bb712d8b890a0023a84644b676673a6">fillCircles</a>(<span class="keyword">const</span> <span class="keywordtype">bool</span> fillCircle);</div>
+<div class="line">    <span class="keywordtype">void</span> <a class="code hl_function" href="class__2_d_type.html#afe30ec1bf5565a14b8a8ed317218014d">setData</a>(<span class="keyword">const</span> std::vector&lt;std::vector&lt;double&gt;&gt;&amp; data);</div>
+<div class="line">    <span class="keywordtype">void</span> <a class="code hl_function" href="class__2_d_type.html#a3cad969bbc3cb77140b806073f866d98">setPlotStartWidth</a>(<span class="keyword">const</span> wxCoord plotStartWidth);</div>
+<div class="line">    <span class="keywordtype">void</span> <a class="code hl_function" href="class__2_d_type.html#a08912e3aeaf2fabfeaa1b94f17e5c352">setPlotStartHeight</a>(<span class="keyword">const</span> wxCoord plotStartHeight);</div>
+<div class="line">    <span class="keywordtype">void</span> <a class="code hl_function" href="class__2_d_type.html#ad7f853ffafe7eb9b9da993dea836e70a">setPlotEndWidth</a>(<span class="keyword">const</span> wxCoord plotEndWidth);</div>
+<div class="line">    <span class="keywordtype">void</span> <a class="code hl_function" href="class__2_d_type.html#a4543532d75d0058804de5aac49e5b3ec">setPlotEndHeight</a>(<span class="keyword">const</span> wxCoord plotEndHeight);</div>
 <div class="line"> </div>
 <div class="line">    <span class="comment">// Functions</span></div>
-<div class="line">    <span class="keywordtype">bool</span> drawType(wxDC&amp; dc);</div>
+<div class="line">    <span class="keywordtype">bool</span> <a class="code hl_function" href="class__2_d_type.html#ad940eb679968fd05acb8217ab9ab20ae">drawType</a>(wxDC&amp; dc);</div>
 <div class="line">};</div>
-<div class="ttc" id="aclass__2_d_type_html"><div class="ttname"><a href="class__2_d_type.html">_2DType</a></div><div class="ttdef"><b>Definition</b> 2Dtype.hpp:9</div></div>
-<div class="ttc" id="aclass_bar_html"><div class="ttname"><a href="class_bar.html">Bar</a></div><div class="ttdef"><b>Definition</b> bar.hpp:7</div></div>
-<div class="ttc" id="aclass_line_html"><div class="ttname"><a href="class_line.html">Line</a></div><div class="ttdef"><b>Definition</b> line.hpp:6</div></div>
-<div class="ttc" id="aclass_scatter_html"><div class="ttname"><a href="class_scatter.html">Scatter</a></div><div class="ttdef"><b>Definition</b> scatter.hpp:7</div></div>
-<div class="ttc" id="aclass_spline_html"><div class="ttname"><a href="class_spline.html">Spline</a></div><div class="ttdef"><b>Definition</b> spline.hpp:7</div></div>
+<div class="ttc" id="aclass__2_d_type_html"><div class="ttname"><a href="class__2_d_type.html">_2DType</a></div><div class="ttdoc">Here all the 2D plot types.</div><div class="ttdef"><b>Definition</b> 2Dtype.hpp:13</div></div>
+<div class="ttc" id="aclass__2_d_type_html_a08912e3aeaf2fabfeaa1b94f17e5c352"><div class="ttname"><a href="class__2_d_type.html#a08912e3aeaf2fabfeaa1b94f17e5c352">_2DType::setPlotStartHeight</a></div><div class="ttdeci">void setPlotStartHeight(const wxCoord plotStartHeight)</div><div class="ttdoc">Set the left upper corner in Y-axis. Inside this rectangle, the plot is drawn. NOTE: This value is re...</div><div class="ttdef"><b>Definition</b> 2Dtype.cpp:81</div></div>
+<div class="ttc" id="aclass__2_d_type_html_a3bb712d8b890a0023a84644b676673a6"><div class="ttname"><a href="class__2_d_type.html#a3bb712d8b890a0023a84644b676673a6">_2DType::fillCircles</a></div><div class="ttdeci">void fillCircles(const bool fillCircle)</div><div class="ttdoc">Fill circles if radius is applied if circiles are going to be filled with the same colour as they are...</div><div class="ttdef"><b>Definition</b> 2Dtype.cpp:15</div></div>
+<div class="ttc" id="aclass__2_d_type_html_a3cad969bbc3cb77140b806073f866d98"><div class="ttname"><a href="class__2_d_type.html#a3cad969bbc3cb77140b806073f866d98">_2DType::setPlotStartWidth</a></div><div class="ttdeci">void setPlotStartWidth(const wxCoord plotStartWidth)</div><div class="ttdoc">Set the left upper corner in X-axis. Inside this rectangle, the plot is drawn. NOTE: This value is re...</div><div class="ttdef"><b>Definition</b> 2Dtype.cpp:74</div></div>
+<div class="ttc" id="aclass__2_d_type_html_a4543532d75d0058804de5aac49e5b3ec"><div class="ttname"><a href="class__2_d_type.html#a4543532d75d0058804de5aac49e5b3ec">_2DType::setPlotEndHeight</a></div><div class="ttdeci">void setPlotEndHeight(const wxCoord plotEndHeight)</div><div class="ttdoc">Set the right bottom corner in Y-axis. Inside this rectangle, the plot is drawn. NOTE: This value is ...</div><div class="ttdef"><b>Definition</b> 2Dtype.cpp:95</div></div>
+<div class="ttc" id="aclass__2_d_type_html_a625f9124ec31303bbbabaafce1a94edd"><div class="ttname"><a href="class__2_d_type.html#a625f9124ec31303bbbabaafce1a94edd">_2DType::setRadius</a></div><div class="ttdeci">void setRadius(const wxCoord radius)</div><div class="ttdoc">Set radius. Most used for circles e.g filling scatter plots.</div><div class="ttdef"><b>Definition</b> 2Dtype.cpp:7</div></div>
+<div class="ttc" id="aclass__2_d_type_html_a7cc4f55c2339692385889b3fe15b1a5f"><div class="ttname"><a href="class__2_d_type.html#a7cc4f55c2339692385889b3fe15b1a5f">_2DType::setWxPlotType</a></div><div class="ttdeci">void setWxPlotType(const WXPLOT_TYPE wxPlotType)</div><div class="ttdoc">Set the plot type selection.</div><div class="ttdef"><b>Definition</b> 2Dtype.cpp:3</div></div>
+<div class="ttc" id="aclass__2_d_type_html_ad7f853ffafe7eb9b9da993dea836e70a"><div class="ttname"><a href="class__2_d_type.html#ad7f853ffafe7eb9b9da993dea836e70a">_2DType::setPlotEndWidth</a></div><div class="ttdeci">void setPlotEndWidth(const wxCoord plotEndWidth)</div><div class="ttdoc">Set the right upper corner in X-axis. Inside this rectangle, the plot is drawn. NOTE: This value is r...</div><div class="ttdef"><b>Definition</b> 2Dtype.cpp:88</div></div>
+<div class="ttc" id="aclass__2_d_type_html_ad940eb679968fd05acb8217ab9ab20ae"><div class="ttname"><a href="class__2_d_type.html#ad940eb679968fd05acb8217ab9ab20ae">_2DType::drawType</a></div><div class="ttdeci">void drawType(wxDC &amp;dc)</div><div class="ttdoc">This function draw the plot e.g line, bar, histogram, spline, scatter etc. inside in this rectangle.</div><div class="ttdef"><b>Definition</b> 2Dtype.cpp:102</div></div>
+<div class="ttc" id="aclass__2_d_type_html_afe30ec1bf5565a14b8a8ed317218014d"><div class="ttname"><a href="class__2_d_type.html#afe30ec1bf5565a14b8a8ed317218014d">_2DType::setData</a></div><div class="ttdeci">void setData(const std::vector&lt; std::vector&lt; double &gt; &gt; &amp;data2D)</div><div class="ttdoc">Set 2D data.</div><div class="ttdef"><b>Definition</b> 2Dtype.cpp:19</div></div>
+<div class="ttc" id="aclass_bar_html"><div class="ttname"><a href="class_bar.html">Bar</a></div><div class="ttdoc">Bar class. Inheritance from class Line.</div><div class="ttdef"><b>Definition</b> bar.hpp:11</div></div>
+<div class="ttc" id="aclass_line_html"><div class="ttname"><a href="class_line.html">Line</a></div><div class="ttdoc">Line class. Does the most of the things in 2D.</div><div class="ttdef"><b>Definition</b> line.hpp:10</div></div>
+<div class="ttc" id="aclass_scatter_html"><div class="ttname"><a href="class_scatter.html">Scatter</a></div><div class="ttdoc">Scatter class. Inheritance from class Line.</div><div class="ttdef"><b>Definition</b> scatter.hpp:11</div></div>
+<div class="ttc" id="aclass_spline_html"><div class="ttname"><a href="class_spline.html">Spline</a></div><div class="ttdoc">Spline class. Inheritance from class Line.</div><div class="ttdef"><b>Definition</b> spline.hpp:11</div></div>
 </div><!-- fragment --><p>Create a folder called <code>bar</code> inside <code>plots/plottypes/2D</code> where <code>line</code>, <code>scatter</code> and <code>spline</code> are. Inside the <code>bar</code> folder. Add <code>bar.h</code> and <code>bar.cpp</code></p>
-<p>Inside <code>bar.h</code>, paste this. Here we are inherit most of the protected fields and public functions from the <code><a class="el" href="class_line.html">Line</a></code> class. You don't need to do anything more here.</p>
+<p>Inside <code>bar.h</code>, paste this. Here we are inherit most of the protected fields and public functions from the <code><a class="el" href="class_line.html" title="Line class. Does the most of the things in 2D.">Line</a></code> class. You don't need to do anything more here.</p>
 <div class="fragment"><div class="line"><span class="preprocessor">#pragma once</span></div>
 <div class="line"> </div>
 <div class="line"><span class="preprocessor">#include &lt;vector&gt;</span></div>
@@ -234,10 +243,11 @@ $(function(){ initResizable(false); });
 <div class="line"> </div>
 <div class="line"><span class="keyword">public</span>:</div>
 <div class="line">    <span class="comment">// Functions</span></div>
-<div class="line">    <span class="keywordtype">bool</span> draw(wxDC&amp; dc, <span class="keyword">const</span> std::vector&lt;double&gt;&amp; xData, <span class="keyword">const</span> std::vector&lt;double&gt;&amp; yData, <span class="keyword">const</span> <span class="keywordtype">int</span> colourIndex) <span class="keyword">override</span>;</div>
+<div class="line">    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_bar.html#a70014c02918e1daaf6515e49cc123132">draw</a>(wxDC&amp; dc, <span class="keyword">const</span> std::vector&lt;double&gt;&amp; xData, <span class="keyword">const</span> std::vector&lt;double&gt;&amp; yData, <span class="keyword">const</span> <span class="keywordtype">int</span> colourIndex) <span class="keyword">override</span>;</div>
 <div class="line">};</div>
+<div class="ttc" id="aclass_bar_html_a70014c02918e1daaf6515e49cc123132"><div class="ttname"><a href="class_bar.html#a70014c02918e1daaf6515e49cc123132">Bar::draw</a></div><div class="ttdeci">void draw(wxDC &amp;dc, const double value, const unsigned int dataSize, const unsigned int colourIndex, const size_t i)</div><div class="ttdoc">Draw the bar plot inside the rectangle. This is called by iteration. For example, this function is us...</div><div class="ttdef"><b>Definition</b> bar.cpp:4</div></div>
 </div><!-- fragment --><p>Head over to <code>2Dtype.cpp</code> file and add code to all <code>set</code>-functions.</p>
-<div class="fragment"><div class="line"><span class="keywordtype">void</span> _2DType::setData(<span class="keyword">const</span> std::vector&lt;std::vector&lt;double&gt;&gt;&amp; data) {</div>
+<div class="fragment"><div class="line"><span class="keywordtype">void</span> <a class="code hl_function" href="class__2_d_type.html#afe30ec1bf5565a14b8a8ed317218014d">_2DType::setData</a>(<span class="keyword">const</span> std::vector&lt;std::vector&lt;double&gt;&gt;&amp; data) {</div>
 <div class="line">    this-&gt;data = data;</div>
 <div class="line"> </div>
 <div class="line">    <span class="comment">// Find max and min for the complete data, or else, we will get very weird scaling inside the plot</span></div>
@@ -245,27 +255,31 @@ $(function(){ initResizable(false); });
 <div class="line">    findMaxMin2Ddata(data, minX, maxX, minY, maxY);</div>
 <div class="line"> </div>
 <div class="line">    <span class="comment">// Set the limits</span></div>
-<div class="line">    line.setLimits(minX, maxX, minY, maxY);</div>
-<div class="line">    scatter.setLimits(minX, maxX, minY, maxY);</div>
-<div class="line">    spline.setLimits(minX, maxX, minY, maxY);</div>
-<div class="line">    bar.setLimits(minX, maxX, minY, maxY); &lt;--- NEW</div>
+<div class="line">    line.<a class="code hl_function" href="class_line.html#a281ac8321234db58306b017596eab9a7">setLimits</a>(minX, maxX, minY, maxY);</div>
+<div class="line">    scatter.<a class="code hl_function" href="class_line.html#a281ac8321234db58306b017596eab9a7">setLimits</a>(minX, maxX, minY, maxY);</div>
+<div class="line">    spline.<a class="code hl_function" href="class_line.html#a281ac8321234db58306b017596eab9a7">setLimits</a>(minX, maxX, minY, maxY);</div>
+<div class="line">    bar.<a class="code hl_function" href="class_line.html#a281ac8321234db58306b017596eab9a7">setLimits</a>(minX, maxX, minY, maxY); &lt;--- NEW</div>
 <div class="line">}</div>
 <div class="line"> </div>
-<div class="line"><span class="keywordtype">void</span> _2DType::setPlotStartWidth(<span class="keyword">const</span> wxCoord plotStartWidth) {</div>
-<div class="line">    line.setPlotStartWidth(plotStartWidth);</div>
-<div class="line">    scatter.setPlotStartWidth(plotStartWidth);</div>
-<div class="line">    spline.setPlotStartWidth(plotStartWidth);</div>
-<div class="line">    bar.setPlotStartWidth(plotStartWidth); &lt;--- NEW</div>
+<div class="line"><span class="keywordtype">void</span> <a class="code hl_function" href="class__2_d_type.html#a3cad969bbc3cb77140b806073f866d98">_2DType::setPlotStartWidth</a>(<span class="keyword">const</span> wxCoord plotStartWidth) {</div>
+<div class="line">    line.<a class="code hl_function" href="class_line.html#ade7560149deea45afc6e036fdabb2302">setPlotStartWidth</a>(plotStartWidth);</div>
+<div class="line">    scatter.<a class="code hl_function" href="class_line.html#ade7560149deea45afc6e036fdabb2302">setPlotStartWidth</a>(plotStartWidth);</div>
+<div class="line">    spline.<a class="code hl_function" href="class_line.html#ade7560149deea45afc6e036fdabb2302">setPlotStartWidth</a>(plotStartWidth);</div>
+<div class="line">    bar.<a class="code hl_function" href="class_line.html#ade7560149deea45afc6e036fdabb2302">setPlotStartWidth</a>(plotStartWidth); &lt;--- NEW</div>
 <div class="line">}</div>
+<div class="ttc" id="aclass_line_html_a281ac8321234db58306b017596eab9a7"><div class="ttname"><a href="class_line.html#a281ac8321234db58306b017596eab9a7">Line::setLimits</a></div><div class="ttdeci">void setLimits(const double minX, const double maxX, const double minY, const double maxY)</div><div class="ttdoc">Set minimum and maximum limits of the data.</div><div class="ttdef"><b>Definition</b> line.cpp:5</div></div>
+<div class="ttc" id="aclass_line_html_ade7560149deea45afc6e036fdabb2302"><div class="ttname"><a href="class_line.html#ade7560149deea45afc6e036fdabb2302">Line::setPlotStartWidth</a></div><div class="ttdeci">void setPlotStartWidth(const wxCoord plotStartWidth)</div><div class="ttdoc">Set the left upper corner in X-axis. Inside this rectangle, the plot is drawn. NOTE: This value is re...</div><div class="ttdef"><b>Definition</b> line.cpp:12</div></div>
 </div><!-- fragment --><p>Some functions have only a unique functionality e.g <code>scatter</code>-plot. If you want to have a unique functionality to the <code>bar</code>-plot, then you need to write a specific <code>set</code>-function for that. Here is just one example how I can set the radius and fill circles for the <code>scatter</code>-plot. These won't effect the <code>bar</code>-plot.</p>
-<div class="fragment"><div class="line"><span class="keywordtype">void</span> _2DType::setRadius(<span class="keyword">const</span> wxCoord radius) {</div>
-<div class="line">    scatter.setRadius(radius);</div>
+<div class="fragment"><div class="line"><span class="keywordtype">void</span> <a class="code hl_function" href="class__2_d_type.html#a625f9124ec31303bbbabaafce1a94edd">_2DType::setRadius</a>(<span class="keyword">const</span> wxCoord radius) {</div>
+<div class="line">    scatter.<a class="code hl_function" href="class_scatter.html#ace490438429fb7a1aab151bd5616c1cc">setRadius</a>(radius);</div>
 <div class="line">}</div>
 <div class="line"> </div>
-<div class="line"><span class="keywordtype">void</span> _2DType::fillCircles(<span class="keyword">const</span> <span class="keywordtype">bool</span> fillCircle) {</div>
-<div class="line">    scatter.fillCircles(fillCircle);</div>
+<div class="line"><span class="keywordtype">void</span> <a class="code hl_function" href="class__2_d_type.html#a3bb712d8b890a0023a84644b676673a6">_2DType::fillCircles</a>(<span class="keyword">const</span> <span class="keywordtype">bool</span> fillCircle) {</div>
+<div class="line">    scatter.<a class="code hl_function" href="class_scatter.html#a128abc4bb419506c07e4b66b432c9c8f">fillCircles</a>(fillCircle);</div>
 <div class="line">}</div>
-</div><!-- fragment --><p>The second last thing you need to do is to add code inside the <code>bool _2DType::drawType(wxDC&amp; dc)</code> function. Same <code>2Dtype.cpp</code> file. Add the new <code>bar.draw(dc, xData, yData, colourIndex)</code> as a new case.</p>
+<div class="ttc" id="aclass_scatter_html_a128abc4bb419506c07e4b66b432c9c8f"><div class="ttname"><a href="class_scatter.html#a128abc4bb419506c07e4b66b432c9c8f">Scatter::fillCircles</a></div><div class="ttdeci">void fillCircles(const bool fillCircle)</div><div class="ttdoc">Fill circles if radius is applied if circiles are going to be filled with the same colour as they are...</div><div class="ttdef"><b>Definition</b> scatter.cpp:8</div></div>
+<div class="ttc" id="aclass_scatter_html_ace490438429fb7a1aab151bd5616c1cc"><div class="ttname"><a href="class_scatter.html#ace490438429fb7a1aab151bd5616c1cc">Scatter::setRadius</a></div><div class="ttdeci">void setRadius(const wxCoord radius)</div><div class="ttdoc">Set radius. Most used for circles e.g filling scatter plots.</div><div class="ttdef"><b>Definition</b> scatter.cpp:5</div></div>
+</div><!-- fragment --><p>The second last thing you need to do is to add code inside the <code>bool <a class="el" href="class__2_d_type.html#ad940eb679968fd05acb8217ab9ab20ae" title="This function draw the plot e.g line, bar, histogram, spline, scatter etc. inside in this rectangle.">_2DType::drawType</a>(wxDC&amp; dc)</code> function. Same <code>2Dtype.cpp</code> file. Add the new <code>bar.draw(dc, xData, yData, colourIndex)</code> as a new case.</p>
 <div class="fragment"><div class="line"><span class="comment">// Draw type now</span></div>
 <div class="line"><span class="keywordflow">switch</span> (wxPlotType) {</div>
 <div class="line">    <span class="keywordflow">case</span> WXPLOT_TYPE_LINE:</div>
@@ -295,24 +309,32 @@ $(function(){ initResizable(false); });
 <div class="fragment"><div class="line"><span class="preprocessor">#include &quot;bar.h&quot;</span></div>
 <div class="line"><span class="preprocessor">#include &quot;../../../plottools/plottools.h&quot;</span></div>
 <div class="line"> </div>
-<div class="line"><span class="keywordtype">bool</span> Bar::draw(wxDC&amp; dc, <span class="keyword">const</span> std::vector&lt;double&gt;&amp; xData, <span class="keyword">const</span> std::vector&lt;double&gt;&amp; yData, <span class="keyword">const</span> <span class="keywordtype">int</span> colourIndex) {</div>
+<div class="line"><span class="keywordtype">bool</span> <a class="code hl_function" href="class_bar.html#a70014c02918e1daaf6515e49cc123132">Bar::draw</a>(wxDC&amp; dc, <span class="keyword">const</span> std::vector&lt;double&gt;&amp; xData, <span class="keyword">const</span> std::vector&lt;double&gt;&amp; yData, <span class="keyword">const</span> <span class="keywordtype">int</span> colourIndex) {</div>
 <div class="line">    <span class="comment">// Set rectangle colour</span></div>
 <div class="line">    setColourPen(dc, colourIndex);</div>
 <div class="line">    setColourBrush(dc, colourIndex);</div>
 <div class="line"> </div>
 <div class="line">    <span class="comment">// Draw rectangles</span></div>
 <div class="line">    <span class="keyword">const</span> <span class="keywordtype">size_t</span> dataLength = xData.size();</div>
-<div class="line">    <span class="keyword">const</span> wxCoord width = (plotEndWidth - plotStartHeight) / dataLength;</div>
+<div class="line">    <span class="keyword">const</span> wxCoord width = (<a class="code hl_variable" href="class_line.html#adfd37018929fd47cc85aea6b009e6ecd">plotEndWidth</a> - <a class="code hl_variable" href="class_line.html#a2468b0064fa2026eecaf3f4ac9c138e4">plotStartHeight</a>) / dataLength;</div>
 <div class="line">    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> j = 0; j &lt; dataLength; j++) {</div>
-<div class="line">        <span class="keyword">const</span> wxCoord x = linearScalarXaxis(xData.at(j), minX, plotStartWidth, maxX, plotEndWidth);</div>
-<div class="line">        <span class="keyword">const</span> wxCoord y = linearScalarYaxis(yData.at(j), minY, plotStartHeight, maxY, plotEndHeight);</div>
-<div class="line">        <span class="keyword">const</span> wxCoord height = plotEndHeight - y;</div>
+<div class="line">        <span class="keyword">const</span> wxCoord x = linearScalarXaxis(xData.at(j), <a class="code hl_variable" href="class_line.html#af2aaefd513c665b045e771e812e59bea">minX</a>, <a class="code hl_variable" href="class_line.html#af77792fe6c61cdf5651c11b2ee9d4fd9">plotStartWidth</a>, <a class="code hl_variable" href="class_line.html#a4b2a944fd143204a253ce23968cd9e61">maxX</a>, <a class="code hl_variable" href="class_line.html#adfd37018929fd47cc85aea6b009e6ecd">plotEndWidth</a>);</div>
+<div class="line">        <span class="keyword">const</span> wxCoord y = linearScalarYaxis(yData.at(j), <a class="code hl_variable" href="class_line.html#a174e69897228bfd03c9e98a9283dad9c">minY</a>, <a class="code hl_variable" href="class_line.html#a2468b0064fa2026eecaf3f4ac9c138e4">plotStartHeight</a>, <a class="code hl_variable" href="class_line.html#a61909563e4694b3ece73a63732724156">maxY</a>, <a class="code hl_variable" href="class_line.html#a1198f195b092c608928a8dedd41520d5">plotEndHeight</a>);</div>
+<div class="line">        <span class="keyword">const</span> wxCoord height = <a class="code hl_variable" href="class_line.html#a1198f195b092c608928a8dedd41520d5">plotEndHeight</a> - y;</div>
 <div class="line">        dc.DrawRectangle(x, y, width, height);</div>
 <div class="line">    }</div>
 <div class="line"> </div>
 <div class="line">    <span class="comment">// Nothing went wrong</span></div>
 <div class="line">    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
 <div class="line">}</div>
+<div class="ttc" id="aclass_line_html_a1198f195b092c608928a8dedd41520d5"><div class="ttname"><a href="class_line.html#a1198f195b092c608928a8dedd41520d5">Line::plotEndHeight</a></div><div class="ttdeci">wxCoord plotEndHeight</div><div class="ttdoc">Location of right bottom corner in Y-axis.</div><div class="ttdef"><b>Definition</b> line.hpp:14</div></div>
+<div class="ttc" id="aclass_line_html_a174e69897228bfd03c9e98a9283dad9c"><div class="ttname"><a href="class_line.html#a174e69897228bfd03c9e98a9283dad9c">Line::minY</a></div><div class="ttdeci">double minY</div><div class="ttdoc">Minimum value of data in Y-axis.</div><div class="ttdef"><b>Definition</b> line.hpp:20</div></div>
+<div class="ttc" id="aclass_line_html_a2468b0064fa2026eecaf3f4ac9c138e4"><div class="ttname"><a href="class_line.html#a2468b0064fa2026eecaf3f4ac9c138e4">Line::plotStartHeight</a></div><div class="ttdeci">wxCoord plotStartHeight</div><div class="ttdoc">Location of left upper corner in Y-axis.</div><div class="ttdef"><b>Definition</b> line.hpp:16</div></div>
+<div class="ttc" id="aclass_line_html_a4b2a944fd143204a253ce23968cd9e61"><div class="ttname"><a href="class_line.html#a4b2a944fd143204a253ce23968cd9e61">Line::maxX</a></div><div class="ttdeci">double maxX</div><div class="ttdoc">Maximum value of data in X-axis.</div><div class="ttdef"><b>Definition</b> line.hpp:19</div></div>
+<div class="ttc" id="aclass_line_html_a61909563e4694b3ece73a63732724156"><div class="ttname"><a href="class_line.html#a61909563e4694b3ece73a63732724156">Line::maxY</a></div><div class="ttdeci">double maxY</div><div class="ttdoc">Maximum value of data in Y-axis.</div><div class="ttdef"><b>Definition</b> line.hpp:21</div></div>
+<div class="ttc" id="aclass_line_html_adfd37018929fd47cc85aea6b009e6ecd"><div class="ttname"><a href="class_line.html#adfd37018929fd47cc85aea6b009e6ecd">Line::plotEndWidth</a></div><div class="ttdeci">wxCoord plotEndWidth</div><div class="ttdoc">Location of right upper corner in X-axis.</div><div class="ttdef"><b>Definition</b> line.hpp:13</div></div>
+<div class="ttc" id="aclass_line_html_af2aaefd513c665b045e771e812e59bea"><div class="ttname"><a href="class_line.html#af2aaefd513c665b045e771e812e59bea">Line::minX</a></div><div class="ttdeci">double minX</div><div class="ttdoc">Minimum value of data in X-axis.</div><div class="ttdef"><b>Definition</b> line.hpp:18</div></div>
+<div class="ttc" id="aclass_line_html_af77792fe6c61cdf5651c11b2ee9d4fd9"><div class="ttname"><a href="class_line.html#af77792fe6c61cdf5651c11b2ee9d4fd9">Line::plotStartWidth</a></div><div class="ttdeci">wxCoord plotStartWidth</div><div class="ttdoc">Location of left upper corner in X-axis.</div><div class="ttdef"><b>Definition</b> line.hpp:15</div></div>
 </div><!-- fragment --><p>With this data:</p>
 <div class="fragment"><div class="line"><span class="comment">// Create data for bar</span></div>
 <div class="line">std::vector&lt;std::vector&lt;double&gt;&gt; data = { {0}, {15}, </div>
@@ -341,48 +363,59 @@ $(function(){ initResizable(false); });
 <div class="line"><span class="comment"> * This function draw the ticks.</span></div>
 <div class="line"><span class="comment"> * Call this function after you have drawn the plot type.</span></div>
 <div class="line"><span class="comment"> */</span></div>
-<div class="line"><span class="keywordtype">void</span> Proportional::drawTicks(wxDC&amp; dc) {</div>
-<div class="line">    <span class="keywordflow">if</span> (ticks &gt; 0) {</div>
-<div class="line">        <span class="keyword">const</span> wxCoord yStartRectangle = plotStartHeight;</div>
-<div class="line">        <span class="keyword">const</span> wxCoord xStartRectangle = plotStartWidth;</div>
-<div class="line">        <span class="keyword">const</span> wxCoord heightRectangle = plotEndHeight - plotStartHeight;</div>
-<div class="line">        <span class="keyword">const</span> wxCoord widthRectangle = plotEndWidth - plotStartWidth;</div>
+<div class="line"><span class="keywordtype">void</span> <a class="code hl_function" href="class_proportional.html#add5843671f428e388116500e3f8d96f1">Proportional::drawTicks</a>(wxDC&amp; dc) {</div>
+<div class="line">    <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_proportional.html#a1776dacf5d8f7a32544327362b8f07b2">ticks</a> &gt; 0) {</div>
+<div class="line">        <span class="keyword">const</span> wxCoord yStartRectangle = <a class="code hl_variable" href="class_proportional.html#a75bb9a65fda3055a90b831828df1a1b0">plotStartHeight</a>;</div>
+<div class="line">        <span class="keyword">const</span> wxCoord xStartRectangle = <a class="code hl_variable" href="class_proportional.html#a787d6e92734b225e71337049493acd8c">plotStartWidth</a>;</div>
+<div class="line">        <span class="keyword">const</span> wxCoord heightRectangle = <a class="code hl_variable" href="class_proportional.html#a94db99dbecfd83bef56e4fd30a6e7ea5">plotEndHeight</a> - <a class="code hl_variable" href="class_proportional.html#a75bb9a65fda3055a90b831828df1a1b0">plotStartHeight</a>;</div>
+<div class="line">        <span class="keyword">const</span> wxCoord widthRectangle = <a class="code hl_variable" href="class_proportional.html#ab188013bb02c135c59e6fe69822471eb">plotEndWidth</a> - <a class="code hl_variable" href="class_proportional.html#a787d6e92734b225e71337049493acd8c">plotStartWidth</a>;</div>
 <div class="line"> </div>
 <div class="line">        <span class="comment">// Set color - Black</span></div>
 <div class="line">        wxPen pen(plotColours.at(PLOT_COLOUR_BLACK));</div>
 <div class="line">        dc.SetPen(pen);</div>
 <div class="line"> </div>
 <div class="line">        <span class="comment">// Compute the minimum and maximum value from the data for correct scaling</span></div>
-<div class="line">        <span class="keywordtype">double</span> minX, maxX, minY, maxY;</div>
-<div class="line">        findMaxMin2Ddata(data, minX, maxX, minY, maxY);</div>
+<div class="line">        <span class="keywordtype">double</span> <a class="code hl_variable" href="class_proportional.html#adf5251f7526240c3a1bf5e5d9e20f8ba">minX</a>, <a class="code hl_variable" href="class_proportional.html#aa934b32ddb06e4f626030491f112d27f">maxX</a>, <a class="code hl_variable" href="class_proportional.html#a27a325496f8befd62f22247ed481eb60">minY</a>, <a class="code hl_variable" href="class_proportional.html#ae62c17d1d4138934b5622e5bf17ccdcc">maxY</a>;</div>
+<div class="line">        findMaxMin2Ddata(data, <a class="code hl_variable" href="class_proportional.html#adf5251f7526240c3a1bf5e5d9e20f8ba">minX</a>, <a class="code hl_variable" href="class_proportional.html#aa934b32ddb06e4f626030491f112d27f">maxX</a>, <a class="code hl_variable" href="class_proportional.html#a27a325496f8befd62f22247ed481eb60">minY</a>, <a class="code hl_variable" href="class_proportional.html#ae62c17d1d4138934b5622e5bf17ccdcc">maxY</a>);</div>
 <div class="line"> </div>
 <div class="line">        <span class="comment">// Only for column charts such as bar, histogram etc. &lt;--- NEW</span></div>
-<div class="line">        <span class="keywordflow">switch</span> (wxPlotType) {</div>
+<div class="line">        <span class="keywordflow">switch</span> (<a class="code hl_variable" href="class_proportional.html#a59c22dea060000ff0311adccbb86853e">wxPlotType</a>) {</div>
 <div class="line">        <span class="keywordflow">case</span> WXPLOT_TYPE_BAR:</div>
-<div class="line">            <span class="keywordflow">if</span> (minY &gt; 0) {</div>
-<div class="line">                minY = 0;</div>
+<div class="line">            <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_proportional.html#a27a325496f8befd62f22247ed481eb60">minY</a> &gt; 0) {</div>
+<div class="line">                <a class="code hl_variable" href="class_proportional.html#a27a325496f8befd62f22247ed481eb60">minY</a> = 0;</div>
 <div class="line">            }</div>
 <div class="line">            <span class="keywordflow">break</span>;</div>
 <div class="line">        }</div>
+<div class="ttc" id="aclass_proportional_html_a1776dacf5d8f7a32544327362b8f07b2"><div class="ttname"><a href="class_proportional.html#a1776dacf5d8f7a32544327362b8f07b2">Proportional::ticks</a></div><div class="ttdeci">unsigned int ticks</div><div class="ttdoc">The number of ticks at the figure in all axis.</div><div class="ttdef"><b>Definition</b> proportional.hpp:26</div></div>
+<div class="ttc" id="aclass_proportional_html_a27a325496f8befd62f22247ed481eb60"><div class="ttname"><a href="class_proportional.html#a27a325496f8befd62f22247ed481eb60">Proportional::minY</a></div><div class="ttdeci">double minY</div><div class="ttdoc">Minimum value of data in Y-axis.</div><div class="ttdef"><b>Definition</b> proportional.hpp:22</div></div>
+<div class="ttc" id="aclass_proportional_html_a59c22dea060000ff0311adccbb86853e"><div class="ttname"><a href="class_proportional.html#a59c22dea060000ff0311adccbb86853e">Proportional::wxPlotType</a></div><div class="ttdeci">WXPLOT_TYPE wxPlotType</div><div class="ttdoc">Plot type selection.</div><div class="ttdef"><b>Definition</b> proportional.hpp:34</div></div>
+<div class="ttc" id="aclass_proportional_html_a75bb9a65fda3055a90b831828df1a1b0"><div class="ttname"><a href="class_proportional.html#a75bb9a65fda3055a90b831828df1a1b0">Proportional::plotStartHeight</a></div><div class="ttdeci">wxCoord plotStartHeight</div><div class="ttdoc">Location of left upper corner in Y-axis.</div><div class="ttdef"><b>Definition</b> proportional.hpp:18</div></div>
+<div class="ttc" id="aclass_proportional_html_a787d6e92734b225e71337049493acd8c"><div class="ttname"><a href="class_proportional.html#a787d6e92734b225e71337049493acd8c">Proportional::plotStartWidth</a></div><div class="ttdeci">wxCoord plotStartWidth</div><div class="ttdoc">Location of left upper corner in X-axis.</div><div class="ttdef"><b>Definition</b> proportional.hpp:17</div></div>
+<div class="ttc" id="aclass_proportional_html_a94db99dbecfd83bef56e4fd30a6e7ea5"><div class="ttname"><a href="class_proportional.html#a94db99dbecfd83bef56e4fd30a6e7ea5">Proportional::plotEndHeight</a></div><div class="ttdeci">wxCoord plotEndHeight</div><div class="ttdoc">Location of right bottom corner in Y-axis.</div><div class="ttdef"><b>Definition</b> proportional.hpp:16</div></div>
+<div class="ttc" id="aclass_proportional_html_aa934b32ddb06e4f626030491f112d27f"><div class="ttname"><a href="class_proportional.html#aa934b32ddb06e4f626030491f112d27f">Proportional::maxX</a></div><div class="ttdeci">double maxX</div><div class="ttdoc">Maximum value of data in X-axis.</div><div class="ttdef"><b>Definition</b> proportional.hpp:21</div></div>
+<div class="ttc" id="aclass_proportional_html_ab188013bb02c135c59e6fe69822471eb"><div class="ttname"><a href="class_proportional.html#ab188013bb02c135c59e6fe69822471eb">Proportional::plotEndWidth</a></div><div class="ttdeci">wxCoord plotEndWidth</div><div class="ttdoc">Location of right upper corner in X-axis.</div><div class="ttdef"><b>Definition</b> proportional.hpp:15</div></div>
+<div class="ttc" id="aclass_proportional_html_add5843671f428e388116500e3f8d96f1"><div class="ttname"><a href="class_proportional.html#add5843671f428e388116500e3f8d96f1">Proportional::drawTicks</a></div><div class="ttdeci">void drawTicks(wxDC &amp;dc)</div><div class="ttdoc">This function will draw the ticks. Call this function after you have drawn the plot type.</div><div class="ttdef"><b>Definition</b> proportional.cpp:161</div></div>
+<div class="ttc" id="aclass_proportional_html_adf5251f7526240c3a1bf5e5d9e20f8ba"><div class="ttname"><a href="class_proportional.html#adf5251f7526240c3a1bf5e5d9e20f8ba">Proportional::minX</a></div><div class="ttdeci">double minX</div><div class="ttdoc">Minimum value of data in X-axis.</div><div class="ttdef"><b>Definition</b> proportional.hpp:20</div></div>
+<div class="ttc" id="aclass_proportional_html_ae62c17d1d4138934b5622e5bf17ccdcc"><div class="ttname"><a href="class_proportional.html#ae62c17d1d4138934b5622e5bf17ccdcc">Proportional::maxY</a></div><div class="ttdeci">double maxY</div><div class="ttdoc">Maximum value of data in Y-axis.</div><div class="ttdef"><b>Definition</b> proportional.hpp:23</div></div>
 </div><!-- fragment --><p>After few hours of figure how to make a proper column setup as a bar plot. This results this code. As you can see, there was no use of <code>X</code>-data for displaying the <code>X</code>-axis.</p>
 <div class="fragment"><div class="line"><span class="preprocessor">#include &quot;bar.h&quot;</span></div>
 <div class="line"><span class="preprocessor">#include &quot;../../../plottools/plottools.h&quot;</span></div>
 <div class="line"> </div>
-<div class="line"><span class="keywordtype">bool</span> Bar::draw(wxDC&amp; dc, <span class="keyword">const</span> <span class="keywordtype">double</span> yData, <span class="keyword">const</span> <span class="keywordtype">int</span> colourIndex, <span class="keyword">const</span> <span class="keywordtype">size_t</span> dataSize, <span class="keyword">const</span> <span class="keywordtype">size_t</span> i) {</div>
+<div class="line"><span class="keywordtype">bool</span> <a class="code hl_function" href="class_bar.html#a70014c02918e1daaf6515e49cc123132">Bar::draw</a>(wxDC&amp; dc, <span class="keyword">const</span> <span class="keywordtype">double</span> yData, <span class="keyword">const</span> <span class="keywordtype">int</span> colourIndex, <span class="keyword">const</span> <span class="keywordtype">size_t</span> dataSize, <span class="keyword">const</span> <span class="keywordtype">size_t</span> i) {</div>
 <div class="line">    <span class="comment">// Set rectangle colour</span></div>
 <div class="line">    setColourPen(dc, colourIndex);</div>
 <div class="line">    setColourBrush(dc, colourIndex);</div>
 <div class="line"> </div>
 <div class="line">    <span class="comment">// Some parameter</span></div>
-<div class="line">    <span class="keyword">const</span> wxCoord width = (plotEndWidth - plotStartWidth) / dataSize;</div>
+<div class="line">    <span class="keyword">const</span> wxCoord width = (<a class="code hl_variable" href="class_line.html#adfd37018929fd47cc85aea6b009e6ecd">plotEndWidth</a> - <a class="code hl_variable" href="class_line.html#af77792fe6c61cdf5651c11b2ee9d4fd9">plotStartWidth</a>) / dataSize;</div>
 <div class="line"> </div>
 <div class="line">    <span class="comment">// Draw rectangle</span></div>
-<div class="line">    <span class="keyword">const</span> wxCoord x = plotStartWidth + width * i;</div>
-<div class="line">    <span class="keyword">const</span> wxCoord y = linearScalarYaxis(yData, minY, plotStartHeight, maxY, plotEndHeight);</div>
-<div class="line">    <span class="keyword">const</span> wxCoord y0 = linearScalarYaxis(0, minY, plotStartHeight, maxY, plotEndHeight);</div>
-<div class="line">    <span class="keyword">const</span> wxCoord yMin = linearScalarYaxis(minY, minY, plotStartHeight, maxY, plotEndHeight);</div>
+<div class="line">    <span class="keyword">const</span> wxCoord x = <a class="code hl_variable" href="class_line.html#af77792fe6c61cdf5651c11b2ee9d4fd9">plotStartWidth</a> + width * i;</div>
+<div class="line">    <span class="keyword">const</span> wxCoord y = linearScalarYaxis(yData, <a class="code hl_variable" href="class_line.html#a174e69897228bfd03c9e98a9283dad9c">minY</a>, <a class="code hl_variable" href="class_line.html#a2468b0064fa2026eecaf3f4ac9c138e4">plotStartHeight</a>, <a class="code hl_variable" href="class_line.html#a61909563e4694b3ece73a63732724156">maxY</a>, <a class="code hl_variable" href="class_line.html#a1198f195b092c608928a8dedd41520d5">plotEndHeight</a>);</div>
+<div class="line">    <span class="keyword">const</span> wxCoord y0 = linearScalarYaxis(0, <a class="code hl_variable" href="class_line.html#a174e69897228bfd03c9e98a9283dad9c">minY</a>, <a class="code hl_variable" href="class_line.html#a2468b0064fa2026eecaf3f4ac9c138e4">plotStartHeight</a>, <a class="code hl_variable" href="class_line.html#a61909563e4694b3ece73a63732724156">maxY</a>, <a class="code hl_variable" href="class_line.html#a1198f195b092c608928a8dedd41520d5">plotEndHeight</a>);</div>
+<div class="line">    <span class="keyword">const</span> wxCoord yMin = linearScalarYaxis(<a class="code hl_variable" href="class_line.html#a174e69897228bfd03c9e98a9283dad9c">minY</a>, <a class="code hl_variable" href="class_line.html#a174e69897228bfd03c9e98a9283dad9c">minY</a>, <a class="code hl_variable" href="class_line.html#a2468b0064fa2026eecaf3f4ac9c138e4">plotStartHeight</a>, <a class="code hl_variable" href="class_line.html#a61909563e4694b3ece73a63732724156">maxY</a>, <a class="code hl_variable" href="class_line.html#a1198f195b092c608928a8dedd41520d5">plotEndHeight</a>);</div>
 <div class="line">    <span class="keyword">const</span> wxCoord delta = yMin - y0;</div>
-<div class="line">    <span class="keyword">const</span> wxCoord height = plotEndHeight - y - delta;</div>
+<div class="line">    <span class="keyword">const</span> wxCoord height = <a class="code hl_variable" href="class_line.html#a1198f195b092c608928a8dedd41520d5">plotEndHeight</a> - y - delta;</div>
 <div class="line">    dc.DrawRectangle(x, y, width, height);</div>
 <div class="line">    </div>
 <div class="line">    <span class="comment">// Nothing went wrong</span></div>

@@ -98,24 +98,26 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;wx/wx.h&gt;</span></div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;../line/line.hpp&quot;</span></div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
-<div class="foldopen" id="foldopen00007" data-start="{" data-end="};">
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno"><a class="line" href="class_scatter.html">    7</a></span><span class="keyword">class </span><a class="code hl_class" href="class_scatter.html">Scatter</a>: <span class="keyword">public</span> <a class="code hl_class" href="class_line.html">Line</a> {</div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">private</span>:</div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>    <span class="comment">// Proportional configuration</span></div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>    wxCoord radius = 3;</div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    <span class="keywordtype">bool</span> fillCircle = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    <span class="comment">// Setters</span></div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    <span class="keywordtype">void</span> setRadius(<span class="keyword">const</span> wxCoord radius);</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    <span class="keywordtype">void</span> fillCircles(<span class="keyword">const</span> <span class="keywordtype">bool</span> fillCircle);</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    <span class="comment">// Functions</span></div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    <span class="keywordtype">bool</span> draw(wxDC&amp; dc, <span class="keyword">const</span> std::vector&lt;double&gt;&amp; xData, <span class="keyword">const</span> std::vector&lt;double&gt;&amp; yData, <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> colourIndex) <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>};</div>
+<div class="foldopen" id="foldopen00011" data-start="{" data-end="};">
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="class_scatter.html">   11</a></span><span class="keyword">class </span><a class="code hl_class" href="class_scatter.html">Scatter</a>: <span class="keyword">public</span> <a class="code hl_class" href="class_line.html">Line</a> {</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    wxCoord radius = 3;               </div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    <span class="keywordtype">bool</span> fillCircle = <span class="keyword">false</span>;          </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_scatter.html#ace490438429fb7a1aab151bd5616c1cc">setRadius</a>(<span class="keyword">const</span> wxCoord radius);</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_scatter.html#a128abc4bb419506c07e4b66b432c9c8f">fillCircles</a>(<span class="keyword">const</span> <span class="keywordtype">bool</span> fillCircle);</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_scatter.html#ad0a2c7a54c9352f309b4aa87b0f18c62">draw</a>(wxDC&amp; dc, <span class="keyword">const</span> std::vector&lt;double&gt;&amp; xData, <span class="keyword">const</span> std::vector&lt;double&gt;&amp; yData, <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> colourIndex) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>};</div>
 </div>
-<div class="ttc" id="aclass_line_html"><div class="ttname"><a href="class_line.html">Line</a></div><div class="ttdef"><b>Definition</b> line.hpp:6</div></div>
-<div class="ttc" id="aclass_scatter_html"><div class="ttname"><a href="class_scatter.html">Scatter</a></div><div class="ttdef"><b>Definition</b> scatter.hpp:7</div></div>
+<div class="ttc" id="aclass_line_html"><div class="ttname"><a href="class_line.html">Line</a></div><div class="ttdoc">Line class. Does the most of the things in 2D.</div><div class="ttdef"><b>Definition</b> line.hpp:10</div></div>
+<div class="ttc" id="aclass_scatter_html"><div class="ttname"><a href="class_scatter.html">Scatter</a></div><div class="ttdoc">Scatter class. Inheritance from class Line.</div><div class="ttdef"><b>Definition</b> scatter.hpp:11</div></div>
+<div class="ttc" id="aclass_scatter_html_a128abc4bb419506c07e4b66b432c9c8f"><div class="ttname"><a href="class_scatter.html#a128abc4bb419506c07e4b66b432c9c8f">Scatter::fillCircles</a></div><div class="ttdeci">void fillCircles(const bool fillCircle)</div><div class="ttdoc">Fill circles if radius is applied if circiles are going to be filled with the same colour as they are...</div><div class="ttdef"><b>Definition</b> scatter.cpp:8</div></div>
+<div class="ttc" id="aclass_scatter_html_ace490438429fb7a1aab151bd5616c1cc"><div class="ttname"><a href="class_scatter.html#ace490438429fb7a1aab151bd5616c1cc">Scatter::setRadius</a></div><div class="ttdeci">void setRadius(const wxCoord radius)</div><div class="ttdoc">Set radius. Most used for circles e.g filling scatter plots.</div><div class="ttdef"><b>Definition</b> scatter.cpp:5</div></div>
+<div class="ttc" id="aclass_scatter_html_ad0a2c7a54c9352f309b4aa87b0f18c62"><div class="ttname"><a href="class_scatter.html#ad0a2c7a54c9352f309b4aa87b0f18c62">Scatter::draw</a></div><div class="ttdeci">void draw(wxDC &amp;dc, const std::vector&lt; double &gt; &amp;xData, const std::vector&lt; double &gt; &amp;yData, const unsigned int colourIndex) override</div><div class="ttdoc">Draw the scatter plot inside the rectangle.</div><div class="ttdef"><b>Definition</b> scatter.cpp:12</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

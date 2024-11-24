@@ -1,4 +1,10 @@
 var searchData=
 [
-  ['gridon_0',['gridOn',['../classwx_plot.html#ab50bdc7c75524540edad23ace02e2388',1,'wxPlot']]]
+  ['getplotendheight_0',['getPlotEndHeight',['../class__2_d_figure.html#a1970a9024887fca45695157f5b603aec',1,'_2DFigure::getPlotEndHeight()'],['../class_proportional.html#adac5c89155e3c1aabfbce6e9ec7dde27',1,'Proportional::getPlotEndHeight()'],['../class_plot_figure.html#a187a82d1762025e56dc2477c148c1378',1,'PlotFigure::getPlotEndHeight()']]],
+  ['getplotendwidth_1',['getPlotEndWidth',['../class__2_d_figure.html#ab6a3b61479ad97c998bee5663a86192b',1,'_2DFigure::getPlotEndWidth()'],['../class_proportional.html#a9150aae72ccfdf979367e9f6e14eae4a',1,'Proportional::getPlotEndWidth()'],['../class_plot_figure.html#af0dc2987524fdb970a3e933a6ba38839',1,'PlotFigure::getPlotEndWidth()']]],
+  ['getplotfigures_2',['getPlotFigures',['../class_plots.html#a253d22534fd495b4568a41559d73c9c3',1,'Plots']]],
+  ['getplotstartheight_3',['getPlotStartHeight',['../class__2_d_figure.html#ae305407be204ffc3085560cb0f176ce9',1,'_2DFigure::getPlotStartHeight()'],['../class_proportional.html#a3cb76783f802a621cc80eac43aeffb32',1,'Proportional::getPlotStartHeight()'],['../class_plot_figure.html#aa744eb09b4fed591aa3254ee4ab96bbe',1,'PlotFigure::getPlotStartHeight()']]],
+  ['getplotstartwidth_4',['getPlotStartWidth',['../class__2_d_figure.html#a68602ca94a46dcfbba192fc601bb970e',1,'_2DFigure::getPlotStartWidth()'],['../class_proportional.html#a6016afb3eb59853e4f32a533665d7b9f',1,'Proportional::getPlotStartWidth()'],['../class_plot_figure.html#abfb93dd598cbc2d7c0649f5c8423c192',1,'PlotFigure::getPlotStartWidth()']]],
+  ['getplottypes_5',['getPlotTypes',['../class_plots.html#abe8dc4e3b7cf28f1b2a6a8a6ba53c138',1,'Plots']]],
+  ['gridon_6',['gridOn',['../class__2_d_figure.html#afbbf844587c17b54d1464635e31066b9',1,'_2DFigure::gridOn()'],['../class_proportional.html#a3b90e4622086694d42b8ccbdc719fd14',1,'Proportional::gridOn()'],['../class_plot_figure.html#aa47287f14fb3325811179df89c322f46',1,'PlotFigure::gridOn()'],['../classwx_plot.html#ab50bdc7c75524540edad23ace02e2388',1,'wxPlot::gridOn()']]]
 ];

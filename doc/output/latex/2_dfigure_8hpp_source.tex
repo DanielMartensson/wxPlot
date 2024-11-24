@@ -8,51 +8,66 @@
 \DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}histogram/histogram.hpp"{}}}
 \DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}../../plottools/plottools.hpp"{}}}
 \DoxyCodeLine{00006\ }
-\DoxyCodeLine{00007\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class__2_d_figure}{\_2DFigure}}\ \{}
-\DoxyCodeLine{00008\ \textcolor{keyword}{private}:}
-\DoxyCodeLine{00009\ \ \ \ \ \textcolor{comment}{//\ Type\ select}}
-\DoxyCodeLine{00010\ \ \ \ \ WXPLOT\_TYPE\ wxPlotType\ =\ WXPLOT\_TYPE\_LINE;}
-\DoxyCodeLine{00011\ }
-\DoxyCodeLine{00012\ \ \ \ \ \textcolor{comment}{//\ Proportional\ figure}}
-\DoxyCodeLine{00013\ \ \ \ \ \mbox{\hyperlink{class_proportional}{Proportional}}\ proportional;}
-\DoxyCodeLine{00014\ }
-\DoxyCodeLine{00015\ \ \ \ \ \textcolor{comment}{//\ Histogram\ figure}}
-\DoxyCodeLine{00016\ \ \ \ \ \mbox{\hyperlink{class_histogram}{Histogram}}\ histogram;}
-\DoxyCodeLine{00017\ }
-\DoxyCodeLine{00018\ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00019\ \ \ \ \ \textcolor{comment}{//\ Constructor}}
-\DoxyCodeLine{00020\ \ \ \ \ \mbox{\hyperlink{class__2_d_figure}{\_2DFigure}}()\ \{\}}
+\DoxyCodeLine{00011\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class__2_d_figure}{\_2DFigure}}\ \{}
+\DoxyCodeLine{00012\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00013\ \ \ \ \ }
+\DoxyCodeLine{00014\ \ \ \ \ WXPLOT\_TYPE\ wxPlotType\ =\ WXPLOT\_TYPE\_LINE;\ \ \ \ \ }
+\DoxyCodeLine{00015\ \ \ \ \ }
+\DoxyCodeLine{00016\ \ \ \ \ \mbox{\hyperlink{class_proportional}{Proportional}}\ proportional;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00017\ \ \ \ \ }
+\DoxyCodeLine{00018\ \ \ \ \ \mbox{\hyperlink{class_histogram}{Histogram}}\ histogram;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \textcolor{keyword}{public}:}
 \DoxyCodeLine{00021\ }
-\DoxyCodeLine{00022\ \ \ \ \ \textcolor{comment}{//\ Setters}}
-\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordtype}{void}\ setWxPlotType(\textcolor{keyword}{const}\ WXPLOT\_TYPE\ wxPlotType);}
-\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{void}\ setTitle(\textcolor{keyword}{const}\ wxString\&\ title);}
-\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{void}\ setXlabel(\textcolor{keyword}{const}\ wxString\&\ xLabel);}
-\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{void}\ setYlabel(\textcolor{keyword}{const}\ wxString\&\ yLabel);}
-\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordtype}{void}\ setTicks(\textcolor{keyword}{const}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ gridSize);}
-\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordtype}{void}\ gridOn(\textcolor{keyword}{const}\ \textcolor{keywordtype}{bool}\ grid);}
-\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordtype}{void}\ setPlotStartWidth(\textcolor{keyword}{const}\ wxCoord\ plotStartWidth);}
-\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordtype}{void}\ setPlotStartHeight(\textcolor{keyword}{const}\ wxCoord\ plotStartHeight);}
-\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keywordtype}{void}\ setPlotEndWidth(\textcolor{keyword}{const}\ wxCoord\ plotEndWidth);}
-\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{void}\ setPlotEndHeight(\textcolor{keyword}{const}\ wxCoord\ plotEndHeight);}
-\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{void}\ setLegend(\textcolor{keyword}{const}\ std::vector<wxString>\&\ legend,\ \textcolor{keyword}{const}\ PLACEMENT\ legendPosition);}
-\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keywordtype}{void}\ setData(\textcolor{keyword}{const}\ std::vector<std::vector<double>>\&\ data);}
-\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{void}\ setData(\textcolor{keyword}{const}\ std::vector<double>\&\ data);}
-\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordtype}{void}\ legendOn(\textcolor{keyword}{const}\ \textcolor{keywordtype}{bool}\ useLegend);}
-\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keywordtype}{void}\ setFontSize(\textcolor{keyword}{const}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ fontSize);}
-\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordtype}{void}\ setYlim(\textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ minY,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ maxY);}
-\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keywordtype}{void}\ setBinCount(\textcolor{keyword}{const}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ binCount);}
-\DoxyCodeLine{00040\ }
-\DoxyCodeLine{00041\ \ \ \ \ \textcolor{comment}{//\ Getters}}
-\DoxyCodeLine{00042\ \ \ \ \ wxCoord\ getPlotStartWidth()\ \textcolor{keyword}{const};}
-\DoxyCodeLine{00043\ \ \ \ \ wxCoord\ getPlotEndWidth()\ \textcolor{keyword}{const};}
-\DoxyCodeLine{00044\ \ \ \ \ wxCoord\ getPlotStartHeight()\ \textcolor{keyword}{const};}
-\DoxyCodeLine{00045\ \ \ \ \ wxCoord\ getPlotEndHeight()\ \textcolor{keyword}{const};}
-\DoxyCodeLine{00046\ }
-\DoxyCodeLine{00047\ \ \ \ \ \textcolor{comment}{//\ Functions}}
-\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keywordtype}{void}\ drawFigure(wxDC\&\ dc);}
-\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keywordtype}{void}\ drawGrid(wxDC\&\ dc);}
-\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keywordtype}{void}\ drawTicks(wxDC\&\ dc);}
-\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keywordtype}{void}\ drawLegend(wxDC\&\ dc);}
-\DoxyCodeLine{00052\ \};}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class__2_d_figure_a6be7a624cd5b25708a7ae484c6544241}{setWxPlotType}}(\textcolor{keyword}{const}\ WXPLOT\_TYPE\ wxPlotType);}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class__2_d_figure_a6966b524a770dda11c7b49850088a2d6}{setFontSize}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ fontSize);}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class__2_d_figure_acf75a3c9875cb1de45de5326de12dc9b}{setTitle}}(\textcolor{keyword}{const}\ wxString\&\ title);}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class__2_d_figure_a2f23515136abdd95edd8c264f9a4e057}{setXlabel}}(\textcolor{keyword}{const}\ wxString\&\ xLabel);}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class__2_d_figure_acc39724ffcb0a83e1b085575d203657b}{setYlabel}}(\textcolor{keyword}{const}\ wxString\&\ yLabel);}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class__2_d_figure_a375964567ede20457bb265626223ba47}{setTicks}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ ticks);}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class__2_d_figure_afbbf844587c17b54d1464635e31066b9}{gridOn}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{bool}\ useGrid);}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00082\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class__2_d_figure_a43e23e3956d1a5f2e3fd0f740adf67a1}{setPlotStartWidth}}(\textcolor{keyword}{const}\ wxCoord\ plotStartWidth);}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00102\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class__2_d_figure_a8e1690ddd5e08f5f0e2ea0212cf7d0de}{setPlotStartHeight}}(\textcolor{keyword}{const}\ wxCoord\ plotStartHeight);}
+\DoxyCodeLine{00103\ }
+\DoxyCodeLine{00122\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class__2_d_figure_a1a624125ea1bd9bab71fa7291025e498}{setPlotEndWidth}}(\textcolor{keyword}{const}\ wxCoord\ plotEndWidth);}
+\DoxyCodeLine{00123\ }
+\DoxyCodeLine{00142\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class__2_d_figure_aeed176895210d3ed725292a163e20eb2}{setPlotEndHeight}}(\textcolor{keyword}{const}\ wxCoord\ plotEndHeight);}
+\DoxyCodeLine{00143\ }
+\DoxyCodeLine{00148\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class__2_d_figure_a3d0331d9d2e7216084baebaac18149ce}{setData}}(\textcolor{keyword}{const}\ std::vector<std::vector<double>>\&\ data2D);}
+\DoxyCodeLine{00149\ }
+\DoxyCodeLine{00154\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class__2_d_figure_a3d0331d9d2e7216084baebaac18149ce}{setData}}(\textcolor{keyword}{const}\ std::vector<double>\&\ data1D);}
+\DoxyCodeLine{00155\ }
+\DoxyCodeLine{00160\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class__2_d_figure_a8cfeb91303d1ea194a860f9450977a8a}{legendOn}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{bool}\ useLegend);}
+\DoxyCodeLine{00161\ }
+\DoxyCodeLine{00167\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class__2_d_figure_a0a684788232e8f6993037b0151c3257c}{setLegend}}(\textcolor{keyword}{const}\ std::vector<wxString>\&\ legend,\ \textcolor{keyword}{const}\ PLACEMENT\ legendPosition\ =\ PLACEMENT\_NORTH\_EAST);}
+\DoxyCodeLine{00168\ }
+\DoxyCodeLine{00173\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class__2_d_figure_a4f1631384d6f864769a824ba7ed548eb}{setBinCount}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ binCount);}
+\DoxyCodeLine{00174\ }
+\DoxyCodeLine{00180\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class__2_d_figure_aef06f1a6549644fe5f7970bb80102d90}{setYlim}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ minY,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ maxY);}
+\DoxyCodeLine{00181\ }
+\DoxyCodeLine{00187\ \ \ \ \ wxCoord\ \mbox{\hyperlink{class__2_d_figure_a68602ca94a46dcfbba192fc601bb970e}{getPlotStartWidth}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00188\ }
+\DoxyCodeLine{00194\ \ \ \ \ wxCoord\ \mbox{\hyperlink{class__2_d_figure_ab6a3b61479ad97c998bee5663a86192b}{getPlotEndWidth}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00195\ }
+\DoxyCodeLine{00201\ \ \ \ \ wxCoord\ \mbox{\hyperlink{class__2_d_figure_ae305407be204ffc3085560cb0f176ce9}{getPlotStartHeight}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00202\ }
+\DoxyCodeLine{00208\ \ \ \ \ wxCoord\ \mbox{\hyperlink{class__2_d_figure_a1970a9024887fca45695157f5b603aec}{getPlotEndHeight}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00209\ }
+\DoxyCodeLine{00220\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class__2_d_figure_a738202b27c7274d023d778a67a96254b}{drawFigure}}(wxDC\&\ dc);}
+\DoxyCodeLine{00221\ }
+\DoxyCodeLine{00227\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class__2_d_figure_abdaa866a5be4ef061599900a64bc348a}{drawGrid}}(wxDC\&\ dc);}
+\DoxyCodeLine{00228\ }
+\DoxyCodeLine{00234\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class__2_d_figure_a71574704f3b15985645c3dc10c60fcbd}{drawTicks}}(wxDC\&\ dc);}
+\DoxyCodeLine{00235\ }
+\DoxyCodeLine{00241\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class__2_d_figure_aa97db9520f2a9caeacb6a4ca93438694}{drawLegend}}(wxDC\&\ dc);}
+\DoxyCodeLine{00242\ \};}
 
 \end{DoxyCode}

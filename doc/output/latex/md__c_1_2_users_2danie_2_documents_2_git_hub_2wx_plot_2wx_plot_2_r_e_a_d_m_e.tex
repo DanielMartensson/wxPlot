@@ -152,17 +152,17 @@ After you have done the configuration for the {\ttfamily figure}. Now it\textquo
 \DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{class__2_d_type}{\_2DType}}()\ \{\ \}}
 \DoxyCodeLine{}
 \DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ Setters}}
-\DoxyCodeLine{\ \ \ \ \textcolor{keywordtype}{void}\ setWxPlotType(\textcolor{keyword}{const}\ WXPLOT\_TYPE\ wxPlotType);}
-\DoxyCodeLine{\ \ \ \ \textcolor{keywordtype}{void}\ setRadius(\textcolor{keyword}{const}\ wxCoord\ radius);}
-\DoxyCodeLine{\ \ \ \ \textcolor{keywordtype}{void}\ fillCircles(\textcolor{keyword}{const}\ \textcolor{keywordtype}{bool}\ fillCircle);}
-\DoxyCodeLine{\ \ \ \ \textcolor{keywordtype}{void}\ setData(\textcolor{keyword}{const}\ std::vector<std::vector<double>>\&\ data);}
-\DoxyCodeLine{\ \ \ \ \textcolor{keywordtype}{void}\ setPlotStartWidth(\textcolor{keyword}{const}\ wxCoord\ plotStartWidth);}
-\DoxyCodeLine{\ \ \ \ \textcolor{keywordtype}{void}\ setPlotStartHeight(\textcolor{keyword}{const}\ wxCoord\ plotStartHeight);}
-\DoxyCodeLine{\ \ \ \ \textcolor{keywordtype}{void}\ setPlotEndWidth(\textcolor{keyword}{const}\ wxCoord\ plotEndWidth);}
-\DoxyCodeLine{\ \ \ \ \textcolor{keywordtype}{void}\ setPlotEndHeight(\textcolor{keyword}{const}\ wxCoord\ plotEndHeight);}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class__2_d_type_a7cc4f55c2339692385889b3fe15b1a5f}{setWxPlotType}}(\textcolor{keyword}{const}\ WXPLOT\_TYPE\ wxPlotType);}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class__2_d_type_a625f9124ec31303bbbabaafce1a94edd}{setRadius}}(\textcolor{keyword}{const}\ wxCoord\ radius);}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class__2_d_type_a3bb712d8b890a0023a84644b676673a6}{fillCircles}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{bool}\ fillCircle);}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class__2_d_type_afe30ec1bf5565a14b8a8ed317218014d}{setData}}(\textcolor{keyword}{const}\ std::vector<std::vector<double>>\&\ data);}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class__2_d_type_a3cad969bbc3cb77140b806073f866d98}{setPlotStartWidth}}(\textcolor{keyword}{const}\ wxCoord\ plotStartWidth);}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class__2_d_type_a08912e3aeaf2fabfeaa1b94f17e5c352}{setPlotStartHeight}}(\textcolor{keyword}{const}\ wxCoord\ plotStartHeight);}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class__2_d_type_ad7f853ffafe7eb9b9da993dea836e70a}{setPlotEndWidth}}(\textcolor{keyword}{const}\ wxCoord\ plotEndWidth);}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class__2_d_type_a4543532d75d0058804de5aac49e5b3ec}{setPlotEndHeight}}(\textcolor{keyword}{const}\ wxCoord\ plotEndHeight);}
 \DoxyCodeLine{}
 \DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ Functions}}
-\DoxyCodeLine{\ \ \ \ \textcolor{keywordtype}{bool}\ drawType(wxDC\&\ dc);}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class__2_d_type_ad940eb679968fd05acb8217ab9ab20ae}{drawType}}(wxDC\&\ dc);}
 \DoxyCodeLine{\};}
 
 \end{DoxyCode}
@@ -185,7 +185,7 @@ Inside {\ttfamily bar.\+h}, paste this. Here we are inherit most of the protecte
 \DoxyCodeLine{}
 \DoxyCodeLine{\textcolor{keyword}{public}:}
 \DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ Functions}}
-\DoxyCodeLine{\ \ \ \ \textcolor{keywordtype}{bool}\ draw(wxDC\&\ dc,\ \textcolor{keyword}{const}\ std::vector<double>\&\ xData,\ \textcolor{keyword}{const}\ std::vector<double>\&\ yData,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ colourIndex)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_bar_a70014c02918e1daaf6515e49cc123132}{draw}}(wxDC\&\ dc,\ \textcolor{keyword}{const}\ std::vector<double>\&\ xData,\ \textcolor{keyword}{const}\ std::vector<double>\&\ yData,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ colourIndex)\ \textcolor{keyword}{override};}
 \DoxyCodeLine{\};}
 
 \end{DoxyCode}
@@ -195,7 +195,7 @@ Head over to {\ttfamily 2\+Dtype.\+cpp} file and add code to all {\ttfamily set}
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{\textcolor{keywordtype}{void}\ \_2DType::setData(\textcolor{keyword}{const}\ std::vector<std::vector<double>>\&\ data)\ \{}
+\DoxyCodeLine{\textcolor{keywordtype}{void}\ \mbox{\hyperlink{class__2_d_type_afe30ec1bf5565a14b8a8ed317218014d}{\_2DType::setData}}(\textcolor{keyword}{const}\ std::vector<std::vector<double>>\&\ data)\ \{}
 \DoxyCodeLine{\ \ \ \ this-\/>data\ =\ data;}
 \DoxyCodeLine{}
 \DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ Find\ max\ and\ min\ for\ the\ complete\ data,\ or\ else,\ we\ will\ get\ very\ weird\ scaling\ inside\ the\ plot}}
@@ -203,17 +203,17 @@ Head over to {\ttfamily 2\+Dtype.\+cpp} file and add code to all {\ttfamily set}
 \DoxyCodeLine{\ \ \ \ findMaxMin2Ddata(data,\ minX,\ maxX,\ minY,\ maxY);}
 \DoxyCodeLine{}
 \DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ Set\ the\ limits}}
-\DoxyCodeLine{\ \ \ \ line.setLimits(minX,\ maxX,\ minY,\ maxY);}
-\DoxyCodeLine{\ \ \ \ scatter.setLimits(minX,\ maxX,\ minY,\ maxY);}
-\DoxyCodeLine{\ \ \ \ spline.setLimits(minX,\ maxX,\ minY,\ maxY);}
-\DoxyCodeLine{\ \ \ \ bar.setLimits(minX,\ maxX,\ minY,\ maxY);\ <-\/-\/-\/\ NEW}
+\DoxyCodeLine{\ \ \ \ line.\mbox{\hyperlink{class_line_a281ac8321234db58306b017596eab9a7}{setLimits}}(minX,\ maxX,\ minY,\ maxY);}
+\DoxyCodeLine{\ \ \ \ scatter.\mbox{\hyperlink{class_line_a281ac8321234db58306b017596eab9a7}{setLimits}}(minX,\ maxX,\ minY,\ maxY);}
+\DoxyCodeLine{\ \ \ \ spline.\mbox{\hyperlink{class_line_a281ac8321234db58306b017596eab9a7}{setLimits}}(minX,\ maxX,\ minY,\ maxY);}
+\DoxyCodeLine{\ \ \ \ bar.\mbox{\hyperlink{class_line_a281ac8321234db58306b017596eab9a7}{setLimits}}(minX,\ maxX,\ minY,\ maxY);\ <-\/-\/-\/\ NEW}
 \DoxyCodeLine{\}}
 \DoxyCodeLine{}
-\DoxyCodeLine{\textcolor{keywordtype}{void}\ \_2DType::setPlotStartWidth(\textcolor{keyword}{const}\ wxCoord\ plotStartWidth)\ \{}
-\DoxyCodeLine{\ \ \ \ line.setPlotStartWidth(plotStartWidth);}
-\DoxyCodeLine{\ \ \ \ scatter.setPlotStartWidth(plotStartWidth);}
-\DoxyCodeLine{\ \ \ \ spline.setPlotStartWidth(plotStartWidth);}
-\DoxyCodeLine{\ \ \ \ bar.setPlotStartWidth(plotStartWidth);\ <-\/-\/-\/\ NEW}
+\DoxyCodeLine{\textcolor{keywordtype}{void}\ \mbox{\hyperlink{class__2_d_type_a3cad969bbc3cb77140b806073f866d98}{\_2DType::setPlotStartWidth}}(\textcolor{keyword}{const}\ wxCoord\ plotStartWidth)\ \{}
+\DoxyCodeLine{\ \ \ \ line.\mbox{\hyperlink{class_line_ade7560149deea45afc6e036fdabb2302}{setPlotStartWidth}}(plotStartWidth);}
+\DoxyCodeLine{\ \ \ \ scatter.\mbox{\hyperlink{class_line_ade7560149deea45afc6e036fdabb2302}{setPlotStartWidth}}(plotStartWidth);}
+\DoxyCodeLine{\ \ \ \ spline.\mbox{\hyperlink{class_line_ade7560149deea45afc6e036fdabb2302}{setPlotStartWidth}}(plotStartWidth);}
+\DoxyCodeLine{\ \ \ \ bar.\mbox{\hyperlink{class_line_ade7560149deea45afc6e036fdabb2302}{setPlotStartWidth}}(plotStartWidth);\ <-\/-\/-\/\ NEW}
 \DoxyCodeLine{\}}
 
 \end{DoxyCode}
@@ -223,18 +223,18 @@ Some functions have only a unique functionality e.\+g {\ttfamily scatter}-\/plot
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{\textcolor{keywordtype}{void}\ \_2DType::setRadius(\textcolor{keyword}{const}\ wxCoord\ radius)\ \{}
-\DoxyCodeLine{\ \ \ \ scatter.setRadius(radius);}
+\DoxyCodeLine{\textcolor{keywordtype}{void}\ \mbox{\hyperlink{class__2_d_type_a625f9124ec31303bbbabaafce1a94edd}{\_2DType::setRadius}}(\textcolor{keyword}{const}\ wxCoord\ radius)\ \{}
+\DoxyCodeLine{\ \ \ \ scatter.\mbox{\hyperlink{class_scatter_ace490438429fb7a1aab151bd5616c1cc}{setRadius}}(radius);}
 \DoxyCodeLine{\}}
 \DoxyCodeLine{}
-\DoxyCodeLine{\textcolor{keywordtype}{void}\ \_2DType::fillCircles(\textcolor{keyword}{const}\ \textcolor{keywordtype}{bool}\ fillCircle)\ \{}
-\DoxyCodeLine{\ \ \ \ scatter.fillCircles(fillCircle);}
+\DoxyCodeLine{\textcolor{keywordtype}{void}\ \mbox{\hyperlink{class__2_d_type_a3bb712d8b890a0023a84644b676673a6}{\_2DType::fillCircles}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{bool}\ fillCircle)\ \{}
+\DoxyCodeLine{\ \ \ \ scatter.\mbox{\hyperlink{class_scatter_a128abc4bb419506c07e4b66b432c9c8f}{fillCircles}}(fillCircle);}
 \DoxyCodeLine{\}}
 
 \end{DoxyCode}
 
 
-The second last thing you need to do is to add code inside the {\ttfamily bool \+\_\+2\+DType\+::draw\+Type(wx\+DC\& dc)} function. Same {\ttfamily 2\+Dtype.\+cpp} file. Add the new {\ttfamily bar.\+draw(dc, x\+Data, y\+Data, colour\+Index)} as a new case.
+The second last thing you need to do is to add code inside the {\ttfamily bool \doxylink{class__2_d_type_ad940eb679968fd05acb8217ab9ab20ae}{\+\_\+2\+DType\+::draw\+Type}(wx\+DC\& dc)} function. Same {\ttfamily 2\+Dtype.\+cpp} file. Add the new {\ttfamily bar.\+draw(dc, x\+Data, y\+Data, colour\+Index)} as a new case.
 
 
 \begin{DoxyCode}{0}
@@ -274,18 +274,18 @@ The last thing you need to do is to add code to {\ttfamily bar.\+cpp}. The one y
 \DoxyCodeLine{\textcolor{preprocessor}{\#include\ "{}bar.h"{}}}
 \DoxyCodeLine{\textcolor{preprocessor}{\#include\ "{}../../../plottools/plottools.h"{}}}
 \DoxyCodeLine{}
-\DoxyCodeLine{\textcolor{keywordtype}{bool}\ Bar::draw(wxDC\&\ dc,\ \textcolor{keyword}{const}\ std::vector<double>\&\ xData,\ \textcolor{keyword}{const}\ std::vector<double>\&\ yData,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ colourIndex)\ \{}
+\DoxyCodeLine{\textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_bar_a70014c02918e1daaf6515e49cc123132}{Bar::draw}}(wxDC\&\ dc,\ \textcolor{keyword}{const}\ std::vector<double>\&\ xData,\ \textcolor{keyword}{const}\ std::vector<double>\&\ yData,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ colourIndex)\ \{}
 \DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ Set\ rectangle\ colour}}
 \DoxyCodeLine{\ \ \ \ setColourPen(dc,\ colourIndex);}
 \DoxyCodeLine{\ \ \ \ setColourBrush(dc,\ colourIndex);}
 \DoxyCodeLine{}
 \DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ Draw\ rectangles}}
 \DoxyCodeLine{\ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{size\_t}\ dataLength\ =\ xData.size();}
-\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{const}\ wxCoord\ width\ =\ (plotEndWidth\ -\/\ plotStartHeight)\ /\ dataLength;}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{const}\ wxCoord\ width\ =\ (\mbox{\hyperlink{class_line_adfd37018929fd47cc85aea6b009e6ecd}{plotEndWidth}}\ -\/\ \mbox{\hyperlink{class_line_a2468b0064fa2026eecaf3f4ac9c138e4}{plotStartHeight}})\ /\ dataLength;}
 \DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ j\ =\ 0;\ j\ <\ dataLength;\ j++)\ \{}
-\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ wxCoord\ x\ =\ linearScalarXaxis(xData.at(j),\ minX,\ plotStartWidth,\ maxX,\ plotEndWidth);}
-\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ wxCoord\ y\ =\ linearScalarYaxis(yData.at(j),\ minY,\ plotStartHeight,\ maxY,\ plotEndHeight);}
-\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ wxCoord\ height\ =\ plotEndHeight\ -\/\ y;}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ wxCoord\ x\ =\ linearScalarXaxis(xData.at(j),\ \mbox{\hyperlink{class_line_af2aaefd513c665b045e771e812e59bea}{minX}},\ \mbox{\hyperlink{class_line_af77792fe6c61cdf5651c11b2ee9d4fd9}{plotStartWidth}},\ \mbox{\hyperlink{class_line_a4b2a944fd143204a253ce23968cd9e61}{maxX}},\ \mbox{\hyperlink{class_line_adfd37018929fd47cc85aea6b009e6ecd}{plotEndWidth}});}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ wxCoord\ y\ =\ linearScalarYaxis(yData.at(j),\ \mbox{\hyperlink{class_line_a174e69897228bfd03c9e98a9283dad9c}{minY}},\ \mbox{\hyperlink{class_line_a2468b0064fa2026eecaf3f4ac9c138e4}{plotStartHeight}},\ \mbox{\hyperlink{class_line_a61909563e4694b3ece73a63732724156}{maxY}},\ \mbox{\hyperlink{class_line_a1198f195b092c608928a8dedd41520d5}{plotEndHeight}});}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ wxCoord\ height\ =\ \mbox{\hyperlink{class_line_a1198f195b092c608928a8dedd41520d5}{plotEndHeight}}\ -\/\ y;}
 \DoxyCodeLine{\ \ \ \ \ \ \ \ dc.DrawRectangle(x,\ y,\ width,\ height);}
 \DoxyCodeLine{\ \ \ \ \}}
 \DoxyCodeLine{}
@@ -344,26 +344,26 @@ To solve this issue, we need to change the {\ttfamily minY} so the {\ttfamily Y}
 \DoxyCodeLine{\textcolor{comment}{\ *\ This\ function\ draw\ the\ ticks.}}
 \DoxyCodeLine{\textcolor{comment}{\ *\ Call\ this\ function\ after\ you\ have\ drawn\ the\ plot\ type.}}
 \DoxyCodeLine{\textcolor{comment}{\ */}}
-\DoxyCodeLine{\textcolor{keywordtype}{void}\ Proportional::drawTicks(wxDC\&\ dc)\ \{}
-\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{if}\ (ticks\ >\ 0)\ \{}
-\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ wxCoord\ yStartRectangle\ =\ plotStartHeight;}
-\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ wxCoord\ xStartRectangle\ =\ plotStartWidth;}
-\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ wxCoord\ heightRectangle\ =\ plotEndHeight\ -\/\ plotStartHeight;}
-\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ wxCoord\ widthRectangle\ =\ plotEndWidth\ -\/\ plotStartWidth;}
+\DoxyCodeLine{\textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_proportional_add5843671f428e388116500e3f8d96f1}{Proportional::drawTicks}}(wxDC\&\ dc)\ \{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_proportional_a1776dacf5d8f7a32544327362b8f07b2}{ticks}}\ >\ 0)\ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ wxCoord\ yStartRectangle\ =\ \mbox{\hyperlink{class_proportional_a75bb9a65fda3055a90b831828df1a1b0}{plotStartHeight}};}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ wxCoord\ xStartRectangle\ =\ \mbox{\hyperlink{class_proportional_a787d6e92734b225e71337049493acd8c}{plotStartWidth}};}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ wxCoord\ heightRectangle\ =\ \mbox{\hyperlink{class_proportional_a94db99dbecfd83bef56e4fd30a6e7ea5}{plotEndHeight}}\ -\/\ \mbox{\hyperlink{class_proportional_a75bb9a65fda3055a90b831828df1a1b0}{plotStartHeight}};}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ wxCoord\ widthRectangle\ =\ \mbox{\hyperlink{class_proportional_ab188013bb02c135c59e6fe69822471eb}{plotEndWidth}}\ -\/\ \mbox{\hyperlink{class_proportional_a787d6e92734b225e71337049493acd8c}{plotStartWidth}};}
 \DoxyCodeLine{}
 \DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{comment}{//\ Set\ color\ -\/\ Black}}
 \DoxyCodeLine{\ \ \ \ \ \ \ \ wxPen\ pen(plotColours.at(PLOT\_COLOUR\_BLACK));}
 \DoxyCodeLine{\ \ \ \ \ \ \ \ dc.SetPen(pen);}
 \DoxyCodeLine{}
 \DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{comment}{//\ Compute\ the\ minimum\ and\ maximum\ value\ from\ the\ data\ for\ correct\ scaling}}
-\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ minX,\ maxX,\ minY,\ maxY;}
-\DoxyCodeLine{\ \ \ \ \ \ \ \ findMaxMin2Ddata(data,\ minX,\ maxX,\ minY,\ maxY);}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_proportional_adf5251f7526240c3a1bf5e5d9e20f8ba}{minX}},\ \mbox{\hyperlink{class_proportional_aa934b32ddb06e4f626030491f112d27f}{maxX}},\ \mbox{\hyperlink{class_proportional_a27a325496f8befd62f22247ed481eb60}{minY}},\ \mbox{\hyperlink{class_proportional_ae62c17d1d4138934b5622e5bf17ccdcc}{maxY}};}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ findMaxMin2Ddata(data,\ \mbox{\hyperlink{class_proportional_adf5251f7526240c3a1bf5e5d9e20f8ba}{minX}},\ \mbox{\hyperlink{class_proportional_aa934b32ddb06e4f626030491f112d27f}{maxX}},\ \mbox{\hyperlink{class_proportional_a27a325496f8befd62f22247ed481eb60}{minY}},\ \mbox{\hyperlink{class_proportional_ae62c17d1d4138934b5622e5bf17ccdcc}{maxY}});}
 \DoxyCodeLine{}
 \DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{comment}{//\ Only\ for\ column\ charts\ such\ as\ bar,\ histogram\ etc.\ <-\/-\/-\/\ NEW}}
-\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{keywordflow}{switch}\ (wxPlotType)\ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{keywordflow}{switch}\ (\mbox{\hyperlink{class_proportional_a59c22dea060000ff0311adccbb86853e}{wxPlotType}})\ \{}
 \DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ WXPLOT\_TYPE\_BAR:}
-\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (minY\ >\ 0)\ \{}
-\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ minY\ =\ 0;}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_proportional_a27a325496f8befd62f22247ed481eb60}{minY}}\ >\ 0)\ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_proportional_a27a325496f8befd62f22247ed481eb60}{minY}}\ =\ 0;}
 \DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
 \DoxyCodeLine{\ \ \ \ \ \ \ \ \}}
@@ -378,21 +378,21 @@ After few hours of figure how to make a proper column setup as a bar plot. This 
 \DoxyCodeLine{\textcolor{preprocessor}{\#include\ "{}bar.h"{}}}
 \DoxyCodeLine{\textcolor{preprocessor}{\#include\ "{}../../../plottools/plottools.h"{}}}
 \DoxyCodeLine{}
-\DoxyCodeLine{\textcolor{keywordtype}{bool}\ Bar::draw(wxDC\&\ dc,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ yData,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ colourIndex,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{size\_t}\ dataSize,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{size\_t}\ i)\ \{}
+\DoxyCodeLine{\textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_bar_a70014c02918e1daaf6515e49cc123132}{Bar::draw}}(wxDC\&\ dc,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ yData,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ colourIndex,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{size\_t}\ dataSize,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{size\_t}\ i)\ \{}
 \DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ Set\ rectangle\ colour}}
 \DoxyCodeLine{\ \ \ \ setColourPen(dc,\ colourIndex);}
 \DoxyCodeLine{\ \ \ \ setColourBrush(dc,\ colourIndex);}
 \DoxyCodeLine{}
 \DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ Some\ parameter}}
-\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{const}\ wxCoord\ width\ =\ (plotEndWidth\ -\/\ plotStartWidth)\ /\ dataSize;}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{const}\ wxCoord\ width\ =\ (\mbox{\hyperlink{class_line_adfd37018929fd47cc85aea6b009e6ecd}{plotEndWidth}}\ -\/\ \mbox{\hyperlink{class_line_af77792fe6c61cdf5651c11b2ee9d4fd9}{plotStartWidth}})\ /\ dataSize;}
 \DoxyCodeLine{}
 \DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ Draw\ rectangle}}
-\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{const}\ wxCoord\ x\ =\ plotStartWidth\ +\ width\ *\ i;}
-\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{const}\ wxCoord\ y\ =\ linearScalarYaxis(yData,\ minY,\ plotStartHeight,\ maxY,\ plotEndHeight);}
-\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{const}\ wxCoord\ y0\ =\ linearScalarYaxis(0,\ minY,\ plotStartHeight,\ maxY,\ plotEndHeight);}
-\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{const}\ wxCoord\ yMin\ =\ linearScalarYaxis(minY,\ minY,\ plotStartHeight,\ maxY,\ plotEndHeight);}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{const}\ wxCoord\ x\ =\ \mbox{\hyperlink{class_line_af77792fe6c61cdf5651c11b2ee9d4fd9}{plotStartWidth}}\ +\ width\ *\ i;}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{const}\ wxCoord\ y\ =\ linearScalarYaxis(yData,\ \mbox{\hyperlink{class_line_a174e69897228bfd03c9e98a9283dad9c}{minY}},\ \mbox{\hyperlink{class_line_a2468b0064fa2026eecaf3f4ac9c138e4}{plotStartHeight}},\ \mbox{\hyperlink{class_line_a61909563e4694b3ece73a63732724156}{maxY}},\ \mbox{\hyperlink{class_line_a1198f195b092c608928a8dedd41520d5}{plotEndHeight}});}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{const}\ wxCoord\ y0\ =\ linearScalarYaxis(0,\ \mbox{\hyperlink{class_line_a174e69897228bfd03c9e98a9283dad9c}{minY}},\ \mbox{\hyperlink{class_line_a2468b0064fa2026eecaf3f4ac9c138e4}{plotStartHeight}},\ \mbox{\hyperlink{class_line_a61909563e4694b3ece73a63732724156}{maxY}},\ \mbox{\hyperlink{class_line_a1198f195b092c608928a8dedd41520d5}{plotEndHeight}});}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{const}\ wxCoord\ yMin\ =\ linearScalarYaxis(\mbox{\hyperlink{class_line_a174e69897228bfd03c9e98a9283dad9c}{minY}},\ \mbox{\hyperlink{class_line_a174e69897228bfd03c9e98a9283dad9c}{minY}},\ \mbox{\hyperlink{class_line_a2468b0064fa2026eecaf3f4ac9c138e4}{plotStartHeight}},\ \mbox{\hyperlink{class_line_a61909563e4694b3ece73a63732724156}{maxY}},\ \mbox{\hyperlink{class_line_a1198f195b092c608928a8dedd41520d5}{plotEndHeight}});}
 \DoxyCodeLine{\ \ \ \ \textcolor{keyword}{const}\ wxCoord\ delta\ =\ yMin\ -\/\ y0;}
-\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{const}\ wxCoord\ height\ =\ plotEndHeight\ -\/\ y\ -\/\ delta;}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{const}\ wxCoord\ height\ =\ \mbox{\hyperlink{class_line_a1198f195b092c608928a8dedd41520d5}{plotEndHeight}}\ -\/\ y\ -\/\ delta;}
 \DoxyCodeLine{\ \ \ \ dc.DrawRectangle(x,\ y,\ width,\ height);}
 \DoxyCodeLine{\ \ \ \ }
 \DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ Nothing\ went\ wrong}}

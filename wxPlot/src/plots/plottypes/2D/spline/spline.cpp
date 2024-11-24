@@ -2,7 +2,7 @@
 #include "spline.hpp"
 #include "../../../plottools/plottools.hpp"
 
-bool Spline::draw(wxDC& dc, const std::vector<double>& xData, const std::vector<double>& yData, const unsigned int colourIndex) {
+void Spline::draw(wxDC& dc, const std::vector<double>& xData, const std::vector<double>& yData, const unsigned int colourIndex) {
 	// Set line colour
 	setColourPen(dc, colourIndex);
 
@@ -30,6 +30,4 @@ bool Spline::draw(wxDC& dc, const std::vector<double>& xData, const std::vector<
 	// Draw splines
 	dc.DrawSpline(points.size(), points.data());
 
-	// Nothing went wrong
-	return true;
 }

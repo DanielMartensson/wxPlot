@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['wxplot_0',['wxPlot',['../classwx_plot.html#a068b1a775ea5df21d27128c576b0e0ab',1,'wxPlot']]]
+  ['oninit_0',['OnInit',['../class_main.html#ac0c7503d4f1cf9f8dd92d328487d90ea',1,'Main']]]
 ];

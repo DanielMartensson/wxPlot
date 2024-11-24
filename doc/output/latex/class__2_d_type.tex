@@ -1,44 +1,309 @@
 \doxysection{\+\_\+2\+DType Class Reference}
 \hypertarget{class__2_d_type}{}\label{class__2_d_type}\index{\_2DType@{\_2DType}}
+
+
+Here all the 2D plot types.  
+
+
+
+
+{\ttfamily \#include $<$2\+Dtype.\+hpp$>$}
+
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\Hypertarget{class__2_d_type_a7cc4f55c2339692385889b3fe15b1a5f}\label{class__2_d_type_a7cc4f55c2339692385889b3fe15b1a5f} 
-void {\bfseries set\+Wx\+Plot\+Type} (const WXPLOT\+\_\+\+TYPE wx\+Plot\+Type)
-\item 
-\Hypertarget{class__2_d_type_a625f9124ec31303bbbabaafce1a94edd}\label{class__2_d_type_a625f9124ec31303bbbabaafce1a94edd} 
-void {\bfseries set\+Radius} (const wx\+Coord radius)
-\item 
-\Hypertarget{class__2_d_type_abb722c8651658e47843ed14c6f094107}\label{class__2_d_type_abb722c8651658e47843ed14c6f094107} 
-void {\bfseries set\+Bin\+Count} (const unsigned int bin\+Count)
-\item 
-\Hypertarget{class__2_d_type_a3bb712d8b890a0023a84644b676673a6}\label{class__2_d_type_a3bb712d8b890a0023a84644b676673a6} 
-void {\bfseries fill\+Circles} (const bool fill\+Circle)
-\item 
-\Hypertarget{class__2_d_type_afe30ec1bf5565a14b8a8ed317218014d}\label{class__2_d_type_afe30ec1bf5565a14b8a8ed317218014d} 
-void {\bfseries set\+Data} (const std\+::vector$<$ std\+::vector$<$ double $>$ $>$ \&data2D)
-\item 
-\Hypertarget{class__2_d_type_a0edf552daafb4385c555ab6e783a3fee}\label{class__2_d_type_a0edf552daafb4385c555ab6e783a3fee} 
-void {\bfseries set\+Data} (const std\+::vector$<$ double $>$ \&data1D)
-\item 
-\Hypertarget{class__2_d_type_a3cad969bbc3cb77140b806073f866d98}\label{class__2_d_type_a3cad969bbc3cb77140b806073f866d98} 
-void {\bfseries set\+Plot\+Start\+Width} (const wx\+Coord plot\+Start\+Width)
-\item 
-\Hypertarget{class__2_d_type_a08912e3aeaf2fabfeaa1b94f17e5c352}\label{class__2_d_type_a08912e3aeaf2fabfeaa1b94f17e5c352} 
-void {\bfseries set\+Plot\+Start\+Height} (const wx\+Coord plot\+Start\+Height)
-\item 
-\Hypertarget{class__2_d_type_ad7f853ffafe7eb9b9da993dea836e70a}\label{class__2_d_type_ad7f853ffafe7eb9b9da993dea836e70a} 
-void {\bfseries set\+Plot\+End\+Width} (const wx\+Coord plot\+End\+Width)
-\item 
-\Hypertarget{class__2_d_type_a4543532d75d0058804de5aac49e5b3ec}\label{class__2_d_type_a4543532d75d0058804de5aac49e5b3ec} 
-void {\bfseries set\+Plot\+End\+Height} (const wx\+Coord plot\+End\+Height)
-\item 
-\Hypertarget{class__2_d_type_ae216967a463bece33c5c6bd728609ddf}\label{class__2_d_type_ae216967a463bece33c5c6bd728609ddf} 
-void {\bfseries set\+Ylim} (const double minY, const double maxY)
-\item 
-\Hypertarget{class__2_d_type_a694a06b743a2e669baec949321019782}\label{class__2_d_type_a694a06b743a2e669baec949321019782} 
-bool {\bfseries draw\+Type} (wx\+DC \&dc)
-\end{DoxyCompactItemize}
+void \mbox{\hyperlink{class__2_d_type_a7cc4f55c2339692385889b3fe15b1a5f}{set\+Wx\+Plot\+Type}} (const WXPLOT\+\_\+\+TYPE wx\+Plot\+Type)
+\begin{DoxyCompactList}\small\item\em Set the plot type selection. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class__2_d_type_a625f9124ec31303bbbabaafce1a94edd}{set\+Radius}} (const wx\+Coord radius)
+\begin{DoxyCompactList}\small\item\em Set radius. Most used for circles e.\+g filling scatter plots. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class__2_d_type_a3bb712d8b890a0023a84644b676673a6}{fill\+Circles}} (const bool fill\+Circle)
+\begin{DoxyCompactList}\small\item\em Fill circles if radius is applied if circiles are going to be filled with the same colour as they are drawn. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class__2_d_type_afe30ec1bf5565a14b8a8ed317218014d}{set\+Data}} (const std\+::vector$<$ std\+::vector$<$ double $>$ $>$ \&data2D)
+\begin{DoxyCompactList}\small\item\em Set 2D data. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class__2_d_type_a0edf552daafb4385c555ab6e783a3fee}{set\+Data}} (const std\+::vector$<$ double $>$ \&data1D)
+\begin{DoxyCompactList}\small\item\em Set 1D data. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class__2_d_type_a3cad969bbc3cb77140b806073f866d98}{set\+Plot\+Start\+Width}} (const wx\+Coord plot\+Start\+Width)
+\begin{DoxyCompactList}\small\item\em Set the left upper corner in X-\/axis. Inside this rectangle, the plot is drawn. NOTE\+: This value is recalculated since the plot figure is drawn! (plot\+Start\+Width, plot\+Start\+Height) -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/--- (plot\+End\+Width, plot\+Start\+Height) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class__2_d_type_a08912e3aeaf2fabfeaa1b94f17e5c352}{set\+Plot\+Start\+Height}} (const wx\+Coord plot\+Start\+Height)
+\begin{DoxyCompactList}\small\item\em Set the left upper corner in Y-\/axis. Inside this rectangle, the plot is drawn. NOTE\+: This value is recalculated since the plot figure is drawn! (plot\+Start\+Width, plot\+Start\+Height) -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/--- (plot\+End\+Width, plot\+Start\+Height) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class__2_d_type_ad7f853ffafe7eb9b9da993dea836e70a}{set\+Plot\+End\+Width}} (const wx\+Coord plot\+End\+Width)
+\begin{DoxyCompactList}\small\item\em Set the right upper corner in X-\/axis. Inside this rectangle, the plot is drawn. NOTE\+: This value is recalculated since the plot figure is drawn! (plot\+Start\+Width, plot\+Start\+Height) -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/--- (plot\+End\+Width, plot\+Start\+Height) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class__2_d_type_a4543532d75d0058804de5aac49e5b3ec}{set\+Plot\+End\+Height}} (const wx\+Coord plot\+End\+Height)
+\begin{DoxyCompactList}\small\item\em Set the right bottom corner in Y-\/axis. Inside this rectangle, the plot is drawn. NOTE\+: This value is recalculated since the plot figure is drawn! (plot\+Start\+Width, plot\+Start\+Height) -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/--- (plot\+End\+Width, plot\+Start\+Height) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class__2_d_type_abb722c8651658e47843ed14c6f094107}{set\+Bin\+Count}} (const unsigned int bin\+Count)
+\begin{DoxyCompactList}\small\item\em Set the bin count for e.\+g. histogram. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class__2_d_type_ae216967a463bece33c5c6bd728609ddf}{set\+Ylim}} (const double minY, const double maxY)
+\begin{DoxyCompactList}\small\item\em Set the plot zoom limit in Y-\/axis. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class__2_d_type_ad940eb679968fd05acb8217ab9ab20ae}{draw\+Type}} (wx\+DC \&dc)
+\begin{DoxyCompactList}\small\item\em This function draw the plot e.\+g line, bar, histogram, spline, scatter etc. inside in this rectangle. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Here all the 2D plot types. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class__2_d_type_ad940eb679968fd05acb8217ab9ab20ae}\index{\_2DType@{\_2DType}!drawType@{drawType}}
+\index{drawType@{drawType}!\_2DType@{\_2DType}}
+\doxysubsubsection{\texorpdfstring{drawType()}{drawType()}}
+{\footnotesize\ttfamily \label{class__2_d_type_ad940eb679968fd05acb8217ab9ab20ae} 
+void \+\_\+2\+DType\+::draw\+Type (\begin{DoxyParamCaption}\item[{wx\+DC \&}]{dc}{}\end{DoxyParamCaption})}
+
+
+
+This function draw the plot e.\+g line, bar, histogram, spline, scatter etc. inside in this rectangle. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dc} & The wx\+DC object for drawing lines, polygons etc. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class__2_d_type_a3bb712d8b890a0023a84644b676673a6}\index{\_2DType@{\_2DType}!fillCircles@{fillCircles}}
+\index{fillCircles@{fillCircles}!\_2DType@{\_2DType}}
+\doxysubsubsection{\texorpdfstring{fillCircles()}{fillCircles()}}
+{\footnotesize\ttfamily \label{class__2_d_type_a3bb712d8b890a0023a84644b676673a6} 
+void \+\_\+2\+DType\+::fill\+Circles (\begin{DoxyParamCaption}\item[{const bool}]{fill\+Circle}{}\end{DoxyParamCaption})}
+
+
+
+Fill circles if radius is applied if circiles are going to be filled with the same colour as they are drawn. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em fill\+Circle} & Set true if filled. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class__2_d_type_abb722c8651658e47843ed14c6f094107}\index{\_2DType@{\_2DType}!setBinCount@{setBinCount}}
+\index{setBinCount@{setBinCount}!\_2DType@{\_2DType}}
+\doxysubsubsection{\texorpdfstring{setBinCount()}{setBinCount()}}
+{\footnotesize\ttfamily \label{class__2_d_type_abb722c8651658e47843ed14c6f094107} 
+void \+\_\+2\+DType\+::set\+Bin\+Count (\begin{DoxyParamCaption}\item[{const unsigned int}]{bin\+Count}{}\end{DoxyParamCaption})}
+
+
+
+Set the bin count for e.\+g. histogram. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bin\+Count} & Bin count is total columns inside a e.\+g historam chart. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class__2_d_type_a0edf552daafb4385c555ab6e783a3fee}\index{\_2DType@{\_2DType}!setData@{setData}}
+\index{setData@{setData}!\_2DType@{\_2DType}}
+\doxysubsubsection{\texorpdfstring{setData()}{setData()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class__2_d_type_a0edf552daafb4385c555ab6e783a3fee} 
+void \+\_\+2\+DType\+::set\+Data (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ double $>$ \&}]{data1D}{}\end{DoxyParamCaption})}
+
+
+
+Set 1D data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data1D} & 1D data in form of 1D vector. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class__2_d_type_afe30ec1bf5565a14b8a8ed317218014d}\index{\_2DType@{\_2DType}!setData@{setData}}
+\index{setData@{setData}!\_2DType@{\_2DType}}
+\doxysubsubsection{\texorpdfstring{setData()}{setData()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class__2_d_type_afe30ec1bf5565a14b8a8ed317218014d} 
+void \+\_\+2\+DType\+::set\+Data (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::vector$<$ double $>$ $>$ \&}]{data2D}{}\end{DoxyParamCaption})}
+
+
+
+Set 2D data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data2D} & 2D data in form of 2D vector. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class__2_d_type_a4543532d75d0058804de5aac49e5b3ec}\index{\_2DType@{\_2DType}!setPlotEndHeight@{setPlotEndHeight}}
+\index{setPlotEndHeight@{setPlotEndHeight}!\_2DType@{\_2DType}}
+\doxysubsubsection{\texorpdfstring{setPlotEndHeight()}{setPlotEndHeight()}}
+{\footnotesize\ttfamily \label{class__2_d_type_a4543532d75d0058804de5aac49e5b3ec} 
+void \+\_\+2\+DType\+::set\+Plot\+End\+Height (\begin{DoxyParamCaption}\item[{const wx\+Coord}]{plot\+End\+Height}{}\end{DoxyParamCaption})}
+
+
+
+Set the right bottom corner in Y-\/axis. Inside this rectangle, the plot is drawn. NOTE\+: This value is recalculated since the plot figure is drawn! (plot\+Start\+Width, plot\+Start\+Height) -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/--- (plot\+End\+Width, plot\+Start\+Height) 
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{1}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ }\\\cline{1-1}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ }\\\cline{1-1}
+\endhead
+\\\cline{1-1}
+\\\cline{1-1}
+\\\cline{1-1}
+\\\cline{1-1}
+\\\cline{1-1}
+\\\cline{1-1}
+\\\cline{1-1}
+\\\cline{1-1}
+\\\cline{1-1}
+\end{longtabu}
+(plot\+Start\+Width, plot\+End\+Height) -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/--- (plot\+End\+Width, plot\+End\+Height) 
+\begin{DoxyParams}{Parameters}
+{\em plot\+End\+Height} & End height is at the end of Y-\/axis. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class__2_d_type_ad7f853ffafe7eb9b9da993dea836e70a}\index{\_2DType@{\_2DType}!setPlotEndWidth@{setPlotEndWidth}}
+\index{setPlotEndWidth@{setPlotEndWidth}!\_2DType@{\_2DType}}
+\doxysubsubsection{\texorpdfstring{setPlotEndWidth()}{setPlotEndWidth()}}
+{\footnotesize\ttfamily \label{class__2_d_type_ad7f853ffafe7eb9b9da993dea836e70a} 
+void \+\_\+2\+DType\+::set\+Plot\+End\+Width (\begin{DoxyParamCaption}\item[{const wx\+Coord}]{plot\+End\+Width}{}\end{DoxyParamCaption})}
+
+
+
+Set the right upper corner in X-\/axis. Inside this rectangle, the plot is drawn. NOTE\+: This value is recalculated since the plot figure is drawn! (plot\+Start\+Width, plot\+Start\+Height) -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/--- (plot\+End\+Width, plot\+Start\+Height) 
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{1}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ }\\\cline{1-1}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ }\\\cline{1-1}
+\endhead
+\\\cline{1-1}
+\\\cline{1-1}
+\\\cline{1-1}
+\\\cline{1-1}
+\\\cline{1-1}
+\\\cline{1-1}
+\\\cline{1-1}
+\\\cline{1-1}
+\\\cline{1-1}
+\end{longtabu}
+(plot\+Start\+Width, plot\+End\+Height) -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/--- (plot\+End\+Width, plot\+End\+Height) 
+\begin{DoxyParams}{Parameters}
+{\em plot\+End\+Width} & End width is at the end of X-\/axis. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class__2_d_type_a08912e3aeaf2fabfeaa1b94f17e5c352}\index{\_2DType@{\_2DType}!setPlotStartHeight@{setPlotStartHeight}}
+\index{setPlotStartHeight@{setPlotStartHeight}!\_2DType@{\_2DType}}
+\doxysubsubsection{\texorpdfstring{setPlotStartHeight()}{setPlotStartHeight()}}
+{\footnotesize\ttfamily \label{class__2_d_type_a08912e3aeaf2fabfeaa1b94f17e5c352} 
+void \+\_\+2\+DType\+::set\+Plot\+Start\+Height (\begin{DoxyParamCaption}\item[{const wx\+Coord}]{plot\+Start\+Height}{}\end{DoxyParamCaption})}
+
+
+
+Set the left upper corner in Y-\/axis. Inside this rectangle, the plot is drawn. NOTE\+: This value is recalculated since the plot figure is drawn! (plot\+Start\+Width, plot\+Start\+Height) -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/--- (plot\+End\+Width, plot\+Start\+Height) 
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{1}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ }\\\cline{1-1}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ }\\\cline{1-1}
+\endhead
+\\\cline{1-1}
+\\\cline{1-1}
+\\\cline{1-1}
+\\\cline{1-1}
+\\\cline{1-1}
+\\\cline{1-1}
+\\\cline{1-1}
+\\\cline{1-1}
+\\\cline{1-1}
+\end{longtabu}
+(plot\+Start\+Width, plot\+End\+Height) -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/--- (plot\+End\+Width, plot\+End\+Height) 
+\begin{DoxyParams}{Parameters}
+{\em plot\+Start\+Height} & Start height is at the start of Y-\/axis. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class__2_d_type_a3cad969bbc3cb77140b806073f866d98}\index{\_2DType@{\_2DType}!setPlotStartWidth@{setPlotStartWidth}}
+\index{setPlotStartWidth@{setPlotStartWidth}!\_2DType@{\_2DType}}
+\doxysubsubsection{\texorpdfstring{setPlotStartWidth()}{setPlotStartWidth()}}
+{\footnotesize\ttfamily \label{class__2_d_type_a3cad969bbc3cb77140b806073f866d98} 
+void \+\_\+2\+DType\+::set\+Plot\+Start\+Width (\begin{DoxyParamCaption}\item[{const wx\+Coord}]{plot\+Start\+Width}{}\end{DoxyParamCaption})}
+
+
+
+Set the left upper corner in X-\/axis. Inside this rectangle, the plot is drawn. NOTE\+: This value is recalculated since the plot figure is drawn! (plot\+Start\+Width, plot\+Start\+Height) -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/--- (plot\+End\+Width, plot\+Start\+Height) 
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{1}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ }\\\cline{1-1}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ }\\\cline{1-1}
+\endhead
+\\\cline{1-1}
+\\\cline{1-1}
+\\\cline{1-1}
+\\\cline{1-1}
+\\\cline{1-1}
+\\\cline{1-1}
+\\\cline{1-1}
+\\\cline{1-1}
+\\\cline{1-1}
+\end{longtabu}
+(plot\+Start\+Width, plot\+End\+Height) -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/--- (plot\+End\+Width, plot\+End\+Height) 
+\begin{DoxyParams}{Parameters}
+{\em plot\+Start\+Width} & Start width is at the start of X-\/axis. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class__2_d_type_a625f9124ec31303bbbabaafce1a94edd}\index{\_2DType@{\_2DType}!setRadius@{setRadius}}
+\index{setRadius@{setRadius}!\_2DType@{\_2DType}}
+\doxysubsubsection{\texorpdfstring{setRadius()}{setRadius()}}
+{\footnotesize\ttfamily \label{class__2_d_type_a625f9124ec31303bbbabaafce1a94edd} 
+void \+\_\+2\+DType\+::set\+Radius (\begin{DoxyParamCaption}\item[{const wx\+Coord}]{radius}{}\end{DoxyParamCaption})}
+
+
+
+Set radius. Most used for circles e.\+g filling scatter plots. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em radius} & The radius of the circle. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class__2_d_type_a7cc4f55c2339692385889b3fe15b1a5f}\index{\_2DType@{\_2DType}!setWxPlotType@{setWxPlotType}}
+\index{setWxPlotType@{setWxPlotType}!\_2DType@{\_2DType}}
+\doxysubsubsection{\texorpdfstring{setWxPlotType()}{setWxPlotType()}}
+{\footnotesize\ttfamily \label{class__2_d_type_a7cc4f55c2339692385889b3fe15b1a5f} 
+void \+\_\+2\+DType\+::set\+Wx\+Plot\+Type (\begin{DoxyParamCaption}\item[{const WXPLOT\+\_\+\+TYPE}]{wx\+Plot\+Type}{}\end{DoxyParamCaption})}
+
+
+
+Set the plot type selection. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em wx\+Plot\+Type} & Selection of plot type \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class__2_d_type_ae216967a463bece33c5c6bd728609ddf}\index{\_2DType@{\_2DType}!setYlim@{setYlim}}
+\index{setYlim@{setYlim}!\_2DType@{\_2DType}}
+\doxysubsubsection{\texorpdfstring{setYlim()}{setYlim()}}
+{\footnotesize\ttfamily \label{class__2_d_type_ae216967a463bece33c5c6bd728609ddf} 
+void \+\_\+2\+DType\+::set\+Ylim (\begin{DoxyParamCaption}\item[{const double}]{minY}{, }\item[{const double}]{maxY}{}\end{DoxyParamCaption})}
+
+
+
+Set the plot zoom limit in Y-\/axis. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em minY} & Minimum limit in Y-\/axis. \\
+\hline
+{\em maxY} & Maximum limit in Y-\/axis. \\
+\hline
+\end{DoxyParams}
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}

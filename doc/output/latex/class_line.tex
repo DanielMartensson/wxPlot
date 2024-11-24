@@ -1,5 +1,14 @@
 \doxysection{Line Class Reference}
 \hypertarget{class_line}{}\label{class_line}\index{Line@{Line}}
+
+
+\doxylink{class_line}{Line} class. Does the most of the things in 2D.  
+
+
+
+
+{\ttfamily \#include $<$line.\+hpp$>$}
+
 Inheritance diagram for Line\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -9,51 +18,237 @@ Inheritance diagram for Line\+:\begin{figure}[H]
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\Hypertarget{class_line_a281ac8321234db58306b017596eab9a7}\label{class_line_a281ac8321234db58306b017596eab9a7} 
-void {\bfseries set\+Limits} (const double minX, const double maxX, const double minY, const double maxY)
-\item 
-\Hypertarget{class_line_ade7560149deea45afc6e036fdabb2302}\label{class_line_ade7560149deea45afc6e036fdabb2302} 
-void {\bfseries set\+Plot\+Start\+Width} (const wx\+Coord plot\+Start\+Width)
-\item 
-\Hypertarget{class_line_aa1836a393bd60485566f58f6d405782d}\label{class_line_aa1836a393bd60485566f58f6d405782d} 
-void {\bfseries set\+Plot\+Start\+Height} (const wx\+Coord plot\+Start\+Height)
-\item 
-\Hypertarget{class_line_a62eee93e58ee963050d3463cbcae368c}\label{class_line_a62eee93e58ee963050d3463cbcae368c} 
-void {\bfseries set\+Plot\+End\+Width} (const wx\+Coord plot\+End\+Width)
-\item 
-\Hypertarget{class_line_a860c64fc275cf8e4d1f841a118baab4f}\label{class_line_a860c64fc275cf8e4d1f841a118baab4f} 
-void {\bfseries set\+Plot\+End\+Height} (const wx\+Coord plot\+End\+Height)
-\item 
-\Hypertarget{class_line_a45a5a9aafc32f306ad4985bf2223b59e}\label{class_line_a45a5a9aafc32f306ad4985bf2223b59e} 
-virtual bool {\bfseries draw} (wx\+DC \&dc, const std\+::vector$<$ double $>$ \&x\+Data, const std\+::vector$<$ double $>$ \&y\+Data, const unsigned int colour\+Index)
-\end{DoxyCompactItemize}
+void \mbox{\hyperlink{class_line_a281ac8321234db58306b017596eab9a7}{set\+Limits}} (const double \mbox{\hyperlink{class_line_af2aaefd513c665b045e771e812e59bea}{minX}}, const double \mbox{\hyperlink{class_line_a4b2a944fd143204a253ce23968cd9e61}{maxX}}, const double \mbox{\hyperlink{class_line_a174e69897228bfd03c9e98a9283dad9c}{minY}}, const double \mbox{\hyperlink{class_line_a61909563e4694b3ece73a63732724156}{maxY}})
+\begin{DoxyCompactList}\small\item\em Set minimum and maximum limits of the data. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_line_ade7560149deea45afc6e036fdabb2302}{set\+Plot\+Start\+Width}} (const wx\+Coord \mbox{\hyperlink{class_line_af77792fe6c61cdf5651c11b2ee9d4fd9}{plot\+Start\+Width}})
+\begin{DoxyCompactList}\small\item\em Set the left upper corner in X-\/axis. Inside this rectangle, the plot is drawn. NOTE\+: This value is recalculated since the plot figure is drawn! (plot\+Start\+Width, plot\+Start\+Height) -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/--- (plot\+End\+Width, plot\+Start\+Height) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_line_aa1836a393bd60485566f58f6d405782d}{set\+Plot\+Start\+Height}} (const wx\+Coord \mbox{\hyperlink{class_line_a2468b0064fa2026eecaf3f4ac9c138e4}{plot\+Start\+Height}})
+\begin{DoxyCompactList}\small\item\em Set the left upper corner in Y-\/axis. Inside this rectangle, the plot is drawn. NOTE\+: This value is recalculated since the plot figure is drawn! (plot\+Start\+Width, plot\+Start\+Height) -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/--- (plot\+End\+Width, plot\+Start\+Height) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_line_a62eee93e58ee963050d3463cbcae368c}{set\+Plot\+End\+Width}} (const wx\+Coord \mbox{\hyperlink{class_line_adfd37018929fd47cc85aea6b009e6ecd}{plot\+End\+Width}})
+\begin{DoxyCompactList}\small\item\em Set the right upper corner in X-\/axis. Inside this rectangle, the plot is drawn. NOTE\+: This value is recalculated since the plot figure is drawn! (plot\+Start\+Width, plot\+Start\+Height) -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/--- (plot\+End\+Width, plot\+Start\+Height) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_line_a860c64fc275cf8e4d1f841a118baab4f}{set\+Plot\+End\+Height}} (const wx\+Coord \mbox{\hyperlink{class_line_a1198f195b092c608928a8dedd41520d5}{plot\+End\+Height}})
+\begin{DoxyCompactList}\small\item\em Set the right bottom corner in Y-\/axis. Inside this rectangle, the plot is drawn. NOTE\+: This value is recalculated since the plot figure is drawn! (plot\+Start\+Width, plot\+Start\+Height) -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/--- (plot\+End\+Width, plot\+Start\+Height) \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_line_a66e47d8474d26db5ec512dbd6c3a64d4}{draw}} (wx\+DC \&dc, const std\+::vector$<$ double $>$ \&x\+Data, const std\+::vector$<$ double $>$ \&y\+Data, const unsigned int colour\+Index)
+\begin{DoxyCompactList}\small\item\em Draw the line plot inside the rectangle. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
 \Hypertarget{class_line_adfd37018929fd47cc85aea6b009e6ecd}\label{class_line_adfd37018929fd47cc85aea6b009e6ecd} 
 wx\+Coord {\bfseries plot\+End\+Width} = 0
-\item 
+\begin{DoxyCompactList}\small\item\em Location of right upper corner in X-\/axis. \end{DoxyCompactList}\item 
 \Hypertarget{class_line_a1198f195b092c608928a8dedd41520d5}\label{class_line_a1198f195b092c608928a8dedd41520d5} 
 wx\+Coord {\bfseries plot\+End\+Height} = 0
-\item 
+\begin{DoxyCompactList}\small\item\em Location of right bottom corner in Y-\/axis. \end{DoxyCompactList}\item 
 \Hypertarget{class_line_af77792fe6c61cdf5651c11b2ee9d4fd9}\label{class_line_af77792fe6c61cdf5651c11b2ee9d4fd9} 
 wx\+Coord {\bfseries plot\+Start\+Width} = 0
-\item 
+\begin{DoxyCompactList}\small\item\em Location of left upper corner in X-\/axis. \end{DoxyCompactList}\item 
 \Hypertarget{class_line_a2468b0064fa2026eecaf3f4ac9c138e4}\label{class_line_a2468b0064fa2026eecaf3f4ac9c138e4} 
 wx\+Coord {\bfseries plot\+Start\+Height} = 0
-\item 
+\begin{DoxyCompactList}\small\item\em Location of left upper corner in Y-\/axis. \end{DoxyCompactList}\item 
 \Hypertarget{class_line_af2aaefd513c665b045e771e812e59bea}\label{class_line_af2aaefd513c665b045e771e812e59bea} 
 double {\bfseries minX} = 0
-\item 
+\begin{DoxyCompactList}\small\item\em Minimum value of data in X-\/axis. \end{DoxyCompactList}\item 
 \Hypertarget{class_line_a4b2a944fd143204a253ce23968cd9e61}\label{class_line_a4b2a944fd143204a253ce23968cd9e61} 
 double {\bfseries maxX} = 0
-\item 
+\begin{DoxyCompactList}\small\item\em Maximum value of data in X-\/axis. \end{DoxyCompactList}\item 
 \Hypertarget{class_line_a174e69897228bfd03c9e98a9283dad9c}\label{class_line_a174e69897228bfd03c9e98a9283dad9c} 
 double {\bfseries minY} = 0
-\item 
+\begin{DoxyCompactList}\small\item\em Minimum value of data in Y-\/axis. \end{DoxyCompactList}\item 
 \Hypertarget{class_line_a61909563e4694b3ece73a63732724156}\label{class_line_a61909563e4694b3ece73a63732724156} 
 double {\bfseries maxY} = 0
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Maximum value of data in Y-\/axis. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\doxylink{class_line}{Line} class. Does the most of the things in 2D. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_line_a66e47d8474d26db5ec512dbd6c3a64d4}\index{Line@{Line}!draw@{draw}}
+\index{draw@{draw}!Line@{Line}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily \label{class_line_a66e47d8474d26db5ec512dbd6c3a64d4} 
+void Line\+::draw (\begin{DoxyParamCaption}\item[{wx\+DC \&}]{dc}{, }\item[{const std\+::vector$<$ double $>$ \&}]{x\+Data}{, }\item[{const std\+::vector$<$ double $>$ \&}]{y\+Data}{, }\item[{const unsigned int}]{colour\+Index}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Draw the line plot inside the rectangle. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dc} & The wx\+DC object for drawing lines, polygons etc. \\
+\hline
+{\em x\+Data} & Data in X-\/axis. \\
+\hline
+{\em y\+Data} & Data in Y-\/axis. \\
+\hline
+{\em colour\+Index} & Selection index of the colour. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \mbox{\hyperlink{class_scatter_ad0a2c7a54c9352f309b4aa87b0f18c62}{Scatter}}, and \mbox{\hyperlink{class_spline_ac2fbba99327d1238b38541dca5d38c1b}{Spline}}.
+
+\Hypertarget{class_line_a281ac8321234db58306b017596eab9a7}\index{Line@{Line}!setLimits@{setLimits}}
+\index{setLimits@{setLimits}!Line@{Line}}
+\doxysubsubsection{\texorpdfstring{setLimits()}{setLimits()}}
+{\footnotesize\ttfamily \label{class_line_a281ac8321234db58306b017596eab9a7} 
+void Line\+::set\+Limits (\begin{DoxyParamCaption}\item[{const double}]{minX}{, }\item[{const double}]{maxX}{, }\item[{const double}]{minY}{, }\item[{const double}]{maxY}{}\end{DoxyParamCaption})}
+
+
+
+Set minimum and maximum limits of the data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em minX} & Minimum limit in X-\/axis. \\
+\hline
+{\em maxX} & Maximum limit in X-\/axis. \\
+\hline
+{\em minY} & Minimum limit in Y-\/axis. \\
+\hline
+{\em maxY} & Maximum limit in Y-\/axis. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_line_a860c64fc275cf8e4d1f841a118baab4f}\index{Line@{Line}!setPlotEndHeight@{setPlotEndHeight}}
+\index{setPlotEndHeight@{setPlotEndHeight}!Line@{Line}}
+\doxysubsubsection{\texorpdfstring{setPlotEndHeight()}{setPlotEndHeight()}}
+{\footnotesize\ttfamily \label{class_line_a860c64fc275cf8e4d1f841a118baab4f} 
+void Line\+::set\+Plot\+End\+Height (\begin{DoxyParamCaption}\item[{const wx\+Coord}]{plot\+End\+Height}{}\end{DoxyParamCaption})}
+
+
+
+Set the right bottom corner in Y-\/axis. Inside this rectangle, the plot is drawn. NOTE\+: This value is recalculated since the plot figure is drawn! (plot\+Start\+Width, plot\+Start\+Height) -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/--- (plot\+End\+Width, plot\+Start\+Height) 
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{1}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ }\\\cline{1-1}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ }\\\cline{1-1}
+\endhead
+\\\cline{1-1}
+\\\cline{1-1}
+\\\cline{1-1}
+\\\cline{1-1}
+\\\cline{1-1}
+\\\cline{1-1}
+\\\cline{1-1}
+\\\cline{1-1}
+\\\cline{1-1}
+\end{longtabu}
+(plot\+Start\+Width, plot\+End\+Height) -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/--- (plot\+End\+Width, plot\+End\+Height) 
+\begin{DoxyParams}{Parameters}
+{\em plot\+End\+Height} & End height is at the end of Y-\/axis. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_line_a62eee93e58ee963050d3463cbcae368c}\index{Line@{Line}!setPlotEndWidth@{setPlotEndWidth}}
+\index{setPlotEndWidth@{setPlotEndWidth}!Line@{Line}}
+\doxysubsubsection{\texorpdfstring{setPlotEndWidth()}{setPlotEndWidth()}}
+{\footnotesize\ttfamily \label{class_line_a62eee93e58ee963050d3463cbcae368c} 
+void Line\+::set\+Plot\+End\+Width (\begin{DoxyParamCaption}\item[{const wx\+Coord}]{plot\+End\+Width}{}\end{DoxyParamCaption})}
+
+
+
+Set the right upper corner in X-\/axis. Inside this rectangle, the plot is drawn. NOTE\+: This value is recalculated since the plot figure is drawn! (plot\+Start\+Width, plot\+Start\+Height) -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/--- (plot\+End\+Width, plot\+Start\+Height) 
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{1}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ }\\\cline{1-1}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ }\\\cline{1-1}
+\endhead
+\\\cline{1-1}
+\\\cline{1-1}
+\\\cline{1-1}
+\\\cline{1-1}
+\\\cline{1-1}
+\\\cline{1-1}
+\\\cline{1-1}
+\\\cline{1-1}
+\\\cline{1-1}
+\end{longtabu}
+(plot\+Start\+Width, plot\+End\+Height) -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/--- (plot\+End\+Width, plot\+End\+Height) 
+\begin{DoxyParams}{Parameters}
+{\em plot\+End\+Width} & End width is at the end of X-\/axis. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_line_aa1836a393bd60485566f58f6d405782d}\index{Line@{Line}!setPlotStartHeight@{setPlotStartHeight}}
+\index{setPlotStartHeight@{setPlotStartHeight}!Line@{Line}}
+\doxysubsubsection{\texorpdfstring{setPlotStartHeight()}{setPlotStartHeight()}}
+{\footnotesize\ttfamily \label{class_line_aa1836a393bd60485566f58f6d405782d} 
+void Line\+::set\+Plot\+Start\+Height (\begin{DoxyParamCaption}\item[{const wx\+Coord}]{plot\+Start\+Height}{}\end{DoxyParamCaption})}
+
+
+
+Set the left upper corner in Y-\/axis. Inside this rectangle, the plot is drawn. NOTE\+: This value is recalculated since the plot figure is drawn! (plot\+Start\+Width, plot\+Start\+Height) -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/--- (plot\+End\+Width, plot\+Start\+Height) 
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{1}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ }\\\cline{1-1}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ }\\\cline{1-1}
+\endhead
+\\\cline{1-1}
+\\\cline{1-1}
+\\\cline{1-1}
+\\\cline{1-1}
+\\\cline{1-1}
+\\\cline{1-1}
+\\\cline{1-1}
+\\\cline{1-1}
+\\\cline{1-1}
+\end{longtabu}
+(plot\+Start\+Width, plot\+End\+Height) -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/--- (plot\+End\+Width, plot\+End\+Height) 
+\begin{DoxyParams}{Parameters}
+{\em plot\+Start\+Height} & Start height is at the start of Y-\/axis. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_line_ade7560149deea45afc6e036fdabb2302}\index{Line@{Line}!setPlotStartWidth@{setPlotStartWidth}}
+\index{setPlotStartWidth@{setPlotStartWidth}!Line@{Line}}
+\doxysubsubsection{\texorpdfstring{setPlotStartWidth()}{setPlotStartWidth()}}
+{\footnotesize\ttfamily \label{class_line_ade7560149deea45afc6e036fdabb2302} 
+void Line\+::set\+Plot\+Start\+Width (\begin{DoxyParamCaption}\item[{const wx\+Coord}]{plot\+Start\+Width}{}\end{DoxyParamCaption})}
+
+
+
+Set the left upper corner in X-\/axis. Inside this rectangle, the plot is drawn. NOTE\+: This value is recalculated since the plot figure is drawn! (plot\+Start\+Width, plot\+Start\+Height) -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/--- (plot\+End\+Width, plot\+Start\+Height) 
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{1}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ }\\\cline{1-1}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ }\\\cline{1-1}
+\endhead
+\\\cline{1-1}
+\\\cline{1-1}
+\\\cline{1-1}
+\\\cline{1-1}
+\\\cline{1-1}
+\\\cline{1-1}
+\\\cline{1-1}
+\\\cline{1-1}
+\\\cline{1-1}
+\end{longtabu}
+(plot\+Start\+Width, plot\+End\+Height) -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/--- (plot\+End\+Width, plot\+End\+Height) 
+\begin{DoxyParams}{Parameters}
+{\em plot\+Start\+Width} & Start width is at the start of X-\/axis. \\
+\hline
+\end{DoxyParams}
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}

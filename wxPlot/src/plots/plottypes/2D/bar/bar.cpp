@@ -1,7 +1,7 @@
 #include "bar.hpp"
 #include "../../../plottools/plottools.hpp"
 
-bool Bar::draw(wxDC& dc, const double data, const unsigned int dataSize, const unsigned int colourIndex, const size_t i) {
+void Bar::draw(wxDC& dc, const double value, const unsigned int dataSize, const unsigned int colourIndex, const size_t i) {
 
 	// Some parameters
 	const unsigned int gap = 5;
@@ -17,14 +17,14 @@ bool Bar::draw(wxDC& dc, const double data, const unsigned int dataSize, const u
 	}
 
 	// Head of the column
-	wxCoord y = linearScalarYaxis(data, minY, plotStartHeight, maxY, plotEndHeight);
+	wxCoord y = linearScalarYaxis(value, minY, plotStartHeight, maxY, plotEndHeight);
 
 	// Position of the column
 	const wxCoord x = plotStartWidth + (width + gap) * i;
 
 	// Out of rectangle
 	if (y <= plotStartHeight && y0 < plotStartHeight) {
-		return true;
+		return;
 	}
 
 	// Saturation
@@ -34,7 +34,7 @@ bool Bar::draw(wxDC& dc, const double data, const unsigned int dataSize, const u
 
 	// Out of rectangle
 	if (y >= plotEndHeight && y0 > plotEndHeight) {
-		return true;
+		return;
 	}
 
 	// Saturation
@@ -51,7 +51,4 @@ bool Bar::draw(wxDC& dc, const double data, const unsigned int dataSize, const u
 
 	// Draw the rectangle now
 	dc.DrawRectangle(x + gap, y, width, height);
-
-	// Nothing went wrong
-	return true;
 }

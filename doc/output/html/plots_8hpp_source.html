@@ -97,34 +97,35 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &quot;plotfigures/plotfigures.hpp&quot;</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;plottypes/plottypes.hpp&quot;</span></div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
-<div class="foldopen" id="foldopen00006" data-start="{" data-end="};">
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno"><a class="line" href="class_plots.html">    6</a></span><span class="keyword">class </span><a class="code hl_class" href="class_plots.html">Plots</a> {</div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">private</span>:</div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>    <span class="comment">// Plot types are the type of the plot e.g line, bar, histogram, bubble, scatter etc.</span></div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>    <a class="code hl_class" href="class_plot_types.html">PlotTypes</a> plotTypes;</div>
+<div class="foldopen" id="foldopen00010" data-start="{" data-end="};">
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="class_plots.html">   10</a></span><span class="keyword">class </span><a class="code hl_class" href="class_plots.html">Plots</a> {</div>
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    <span class="comment">// Plot frames are figures of the frame e.g 2D, 3D, custom etc.</span></div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    <a class="code hl_class" href="class_plot_figure.html">PlotFigure</a> plotFigures;</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    <a class="code hl_class" href="class_plot_types.html">PlotTypes</a> plotTypes;        </div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    <span class="comment">// Constructor</span></div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    <a class="code hl_class" href="class_plots.html">Plots</a>() {}</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    <a class="code hl_class" href="class_plot_figure.html">PlotFigure</a> plotFigures;     </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="keyword">public</span>:</div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    <span class="comment">// Getters</span></div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    <a class="code hl_class" href="class_plot_types.html">PlotTypes</a>&amp; getPlotTypes();</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    <a class="code hl_class" href="class_plot_figure.html">PlotFigure</a>&amp; getPlotFigures();</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    <span class="comment">// Setters </span></div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <span class="keywordtype">void</span> setWxPlotFigureType(<span class="keyword">const</span> WXPLOT_FIGURE wxPlotFigure, <span class="keyword">const</span> WXPLOT_TYPE wxPlotType);</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <span class="keywordtype">void</span> setData(<span class="keyword">const</span> std::vector&lt;std::vector&lt;double&gt;&gt;&amp; data);</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    <span class="keywordtype">void</span> setData(<span class="keyword">const</span> std::vector&lt;double&gt;&amp; data);</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>};</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    <a class="code hl_class" href="class_plot_types.html">PlotTypes</a>&amp; <a class="code hl_function" href="class_plots.html#abe8dc4e3b7cf28f1b2a6a8a6ba53c138">getPlotTypes</a>();</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <a class="code hl_class" href="class_plot_figure.html">PlotFigure</a>&amp; <a class="code hl_function" href="class_plots.html#a253d22534fd495b4568a41559d73c9c3">getPlotFigures</a>();</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_plots.html#a38dfbe52d6f14ab32cdc243675f6f9a4">setWxPlotFigureType</a>(<span class="keyword">const</span> WXPLOT_FIGURE wxPlotFigure, <span class="keyword">const</span> WXPLOT_TYPE wxPlotType);</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_plots.html#a0d2598f037ced15cc34016d0da1e3000">setData</a>(<span class="keyword">const</span> std::vector&lt;std::vector&lt;double&gt;&gt;&amp; data2D);</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_plots.html#a0d2598f037ced15cc34016d0da1e3000">setData</a>(<span class="keyword">const</span> std::vector&lt;double&gt;&amp; data1D);</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>};</div>
 </div>
-<div class="ttc" id="aclass_plot_figure_html"><div class="ttname"><a href="class_plot_figure.html">PlotFigure</a></div><div class="ttdef"><b>Definition</b> plotfigures.hpp:5</div></div>
-<div class="ttc" id="aclass_plot_types_html"><div class="ttname"><a href="class_plot_types.html">PlotTypes</a></div><div class="ttdef"><b>Definition</b> plottypes.hpp:5</div></div>
-<div class="ttc" id="aclass_plots_html"><div class="ttname"><a href="class_plots.html">Plots</a></div><div class="ttdef"><b>Definition</b> plots.hpp:6</div></div>
+<div class="ttc" id="aclass_plot_figure_html"><div class="ttname"><a href="class_plot_figure.html">PlotFigure</a></div><div class="ttdoc">This is the plot figure class. It contains plot figures such as 2D, 3D and customs.</div><div class="ttdef"><b>Definition</b> plotfigures.hpp:9</div></div>
+<div class="ttc" id="aclass_plot_types_html"><div class="ttname"><a href="class_plot_types.html">PlotTypes</a></div><div class="ttdoc">Here all the plot types e.g 2D, 3D, custom etc. are included.</div><div class="ttdef"><b>Definition</b> plottypes.hpp:9</div></div>
+<div class="ttc" id="aclass_plots_html"><div class="ttname"><a href="class_plots.html">Plots</a></div><div class="ttdoc">Plot class for wxPlot. This class contains plot types and plot figures.</div><div class="ttdef"><b>Definition</b> plots.hpp:10</div></div>
+<div class="ttc" id="aclass_plots_html_a0d2598f037ced15cc34016d0da1e3000"><div class="ttname"><a href="class_plots.html#a0d2598f037ced15cc34016d0da1e3000">Plots::setData</a></div><div class="ttdeci">void setData(const std::vector&lt; std::vector&lt; double &gt; &gt; &amp;data2D)</div><div class="ttdoc">Set 2D data.</div><div class="ttdef"><b>Definition</b> plots.cpp:15</div></div>
+<div class="ttc" id="aclass_plots_html_a253d22534fd495b4568a41559d73c9c3"><div class="ttname"><a href="class_plots.html#a253d22534fd495b4568a41559d73c9c3">Plots::getPlotFigures</a></div><div class="ttdeci">PlotFigure &amp; getPlotFigures()</div><div class="ttdoc">Return the reference of plot figure object.</div><div class="ttdef"><b>Definition</b> plots.cpp:6</div></div>
+<div class="ttc" id="aclass_plots_html_a38dfbe52d6f14ab32cdc243675f6f9a4"><div class="ttname"><a href="class_plots.html#a38dfbe52d6f14ab32cdc243675f6f9a4">Plots::setWxPlotFigureType</a></div><div class="ttdeci">void setWxPlotFigureType(const WXPLOT_FIGURE wxPlotFigure, const WXPLOT_TYPE wxPlotType)</div><div class="ttdoc">Set the plot type selection and plot figure selection.</div><div class="ttdef"><b>Definition</b> plots.cpp:10</div></div>
+<div class="ttc" id="aclass_plots_html_abe8dc4e3b7cf28f1b2a6a8a6ba53c138"><div class="ttname"><a href="class_plots.html#abe8dc4e3b7cf28f1b2a6a8a6ba53c138">Plots::getPlotTypes</a></div><div class="ttdeci">PlotTypes &amp; getPlotTypes()</div><div class="ttdoc">Return the reference of plot types object.</div><div class="ttdef"><b>Definition</b> plots.cpp:3</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

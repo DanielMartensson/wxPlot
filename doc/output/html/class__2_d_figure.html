@@ -91,85 +91,804 @@ $(function(){ initResizable(false); });
   <div class="headertitle"><div class="title">_2DFigure Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>This is the 2D plot figure class. It contains plot figures such as propotional, histogram etc.  
+ <a href="#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="2_dfigure_8hpp_source.html">2Dfigure.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a6be7a624cd5b25708a7ae484c6544241" id="r_a6be7a624cd5b25708a7ae484c6544241"><td class="memItemLeft" align="right" valign="top"><a id="a6be7a624cd5b25708a7ae484c6544241" name="a6be7a624cd5b25708a7ae484c6544241"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setWxPlotType</b> (const WXPLOT_TYPE wxPlotType)</td></tr>
+<tr class="memitem:a6be7a624cd5b25708a7ae484c6544241" id="r_a6be7a624cd5b25708a7ae484c6544241"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6be7a624cd5b25708a7ae484c6544241">setWxPlotType</a> (const WXPLOT_TYPE wxPlotType)</td></tr>
+<tr class="memdesc:a6be7a624cd5b25708a7ae484c6544241"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the plot type selection.  <br /></td></tr>
 <tr class="separator:a6be7a624cd5b25708a7ae484c6544241"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acf75a3c9875cb1de45de5326de12dc9b" id="r_acf75a3c9875cb1de45de5326de12dc9b"><td class="memItemLeft" align="right" valign="top"><a id="acf75a3c9875cb1de45de5326de12dc9b" name="acf75a3c9875cb1de45de5326de12dc9b"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setTitle</b> (const wxString &amp;title)</td></tr>
-<tr class="separator:acf75a3c9875cb1de45de5326de12dc9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2f23515136abdd95edd8c264f9a4e057" id="r_a2f23515136abdd95edd8c264f9a4e057"><td class="memItemLeft" align="right" valign="top"><a id="a2f23515136abdd95edd8c264f9a4e057" name="a2f23515136abdd95edd8c264f9a4e057"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setXlabel</b> (const wxString &amp;xLabel)</td></tr>
-<tr class="separator:a2f23515136abdd95edd8c264f9a4e057"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acc39724ffcb0a83e1b085575d203657b" id="r_acc39724ffcb0a83e1b085575d203657b"><td class="memItemLeft" align="right" valign="top"><a id="acc39724ffcb0a83e1b085575d203657b" name="acc39724ffcb0a83e1b085575d203657b"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setYlabel</b> (const wxString &amp;yLabel)</td></tr>
-<tr class="separator:acc39724ffcb0a83e1b085575d203657b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2ac52919d8ebeb2f98ea6a43604fe851" id="r_a2ac52919d8ebeb2f98ea6a43604fe851"><td class="memItemLeft" align="right" valign="top"><a id="a2ac52919d8ebeb2f98ea6a43604fe851" name="a2ac52919d8ebeb2f98ea6a43604fe851"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setTicks</b> (const unsigned int gridSize)</td></tr>
-<tr class="separator:a2ac52919d8ebeb2f98ea6a43604fe851"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aed070a7de2bbd99e44254e1176306c70" id="r_aed070a7de2bbd99e44254e1176306c70"><td class="memItemLeft" align="right" valign="top"><a id="aed070a7de2bbd99e44254e1176306c70" name="aed070a7de2bbd99e44254e1176306c70"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>gridOn</b> (const bool grid)</td></tr>
-<tr class="separator:aed070a7de2bbd99e44254e1176306c70"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a43e23e3956d1a5f2e3fd0f740adf67a1" id="r_a43e23e3956d1a5f2e3fd0f740adf67a1"><td class="memItemLeft" align="right" valign="top"><a id="a43e23e3956d1a5f2e3fd0f740adf67a1" name="a43e23e3956d1a5f2e3fd0f740adf67a1"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setPlotStartWidth</b> (const wxCoord plotStartWidth)</td></tr>
-<tr class="separator:a43e23e3956d1a5f2e3fd0f740adf67a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8e1690ddd5e08f5f0e2ea0212cf7d0de" id="r_a8e1690ddd5e08f5f0e2ea0212cf7d0de"><td class="memItemLeft" align="right" valign="top"><a id="a8e1690ddd5e08f5f0e2ea0212cf7d0de" name="a8e1690ddd5e08f5f0e2ea0212cf7d0de"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setPlotStartHeight</b> (const wxCoord plotStartHeight)</td></tr>
-<tr class="separator:a8e1690ddd5e08f5f0e2ea0212cf7d0de"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1a624125ea1bd9bab71fa7291025e498" id="r_a1a624125ea1bd9bab71fa7291025e498"><td class="memItemLeft" align="right" valign="top"><a id="a1a624125ea1bd9bab71fa7291025e498" name="a1a624125ea1bd9bab71fa7291025e498"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setPlotEndWidth</b> (const wxCoord plotEndWidth)</td></tr>
-<tr class="separator:a1a624125ea1bd9bab71fa7291025e498"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aeed176895210d3ed725292a163e20eb2" id="r_aeed176895210d3ed725292a163e20eb2"><td class="memItemLeft" align="right" valign="top"><a id="aeed176895210d3ed725292a163e20eb2" name="aeed176895210d3ed725292a163e20eb2"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setPlotEndHeight</b> (const wxCoord plotEndHeight)</td></tr>
-<tr class="separator:aeed176895210d3ed725292a163e20eb2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a54f8e2fc597b36c5711d8708e24f9b16" id="r_a54f8e2fc597b36c5711d8708e24f9b16"><td class="memItemLeft" align="right" valign="top"><a id="a54f8e2fc597b36c5711d8708e24f9b16" name="a54f8e2fc597b36c5711d8708e24f9b16"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setLegend</b> (const std::vector&lt; wxString &gt; &amp;legend, const PLACEMENT legendPosition)</td></tr>
-<tr class="separator:a54f8e2fc597b36c5711d8708e24f9b16"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acbdbab55be281190a67852db7b17042a" id="r_acbdbab55be281190a67852db7b17042a"><td class="memItemLeft" align="right" valign="top"><a id="acbdbab55be281190a67852db7b17042a" name="acbdbab55be281190a67852db7b17042a"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setData</b> (const std::vector&lt; std::vector&lt; double &gt; &gt; &amp;data)</td></tr>
-<tr class="separator:acbdbab55be281190a67852db7b17042a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a883830a8088a384ba7deb2368d24dc05" id="r_a883830a8088a384ba7deb2368d24dc05"><td class="memItemLeft" align="right" valign="top"><a id="a883830a8088a384ba7deb2368d24dc05" name="a883830a8088a384ba7deb2368d24dc05"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setData</b> (const std::vector&lt; double &gt; &amp;data)</td></tr>
-<tr class="separator:a883830a8088a384ba7deb2368d24dc05"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8cfeb91303d1ea194a860f9450977a8a" id="r_a8cfeb91303d1ea194a860f9450977a8a"><td class="memItemLeft" align="right" valign="top"><a id="a8cfeb91303d1ea194a860f9450977a8a" name="a8cfeb91303d1ea194a860f9450977a8a"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>legendOn</b> (const bool useLegend)</td></tr>
-<tr class="separator:a8cfeb91303d1ea194a860f9450977a8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6966b524a770dda11c7b49850088a2d6" id="r_a6966b524a770dda11c7b49850088a2d6"><td class="memItemLeft" align="right" valign="top"><a id="a6966b524a770dda11c7b49850088a2d6" name="a6966b524a770dda11c7b49850088a2d6"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setFontSize</b> (const unsigned int fontSize)</td></tr>
+<tr class="memitem:a6966b524a770dda11c7b49850088a2d6" id="r_a6966b524a770dda11c7b49850088a2d6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6966b524a770dda11c7b49850088a2d6">setFontSize</a> (const unsigned int fontSize)</td></tr>
+<tr class="memdesc:a6966b524a770dda11c7b49850088a2d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the size of the fonts.  <br /></td></tr>
 <tr class="separator:a6966b524a770dda11c7b49850088a2d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aef06f1a6549644fe5f7970bb80102d90" id="r_aef06f1a6549644fe5f7970bb80102d90"><td class="memItemLeft" align="right" valign="top"><a id="aef06f1a6549644fe5f7970bb80102d90" name="aef06f1a6549644fe5f7970bb80102d90"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setYlim</b> (const double minY, const double maxY)</td></tr>
-<tr class="separator:aef06f1a6549644fe5f7970bb80102d90"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4f1631384d6f864769a824ba7ed548eb" id="r_a4f1631384d6f864769a824ba7ed548eb"><td class="memItemLeft" align="right" valign="top"><a id="a4f1631384d6f864769a824ba7ed548eb" name="a4f1631384d6f864769a824ba7ed548eb"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setBinCount</b> (const unsigned int binCount)</td></tr>
+<tr class="memitem:acf75a3c9875cb1de45de5326de12dc9b" id="r_acf75a3c9875cb1de45de5326de12dc9b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acf75a3c9875cb1de45de5326de12dc9b">setTitle</a> (const wxString &amp;title)</td></tr>
+<tr class="memdesc:acf75a3c9875cb1de45de5326de12dc9b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the title of the plot.  <br /></td></tr>
+<tr class="separator:acf75a3c9875cb1de45de5326de12dc9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f23515136abdd95edd8c264f9a4e057" id="r_a2f23515136abdd95edd8c264f9a4e057"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2f23515136abdd95edd8c264f9a4e057">setXlabel</a> (const wxString &amp;xLabel)</td></tr>
+<tr class="memdesc:a2f23515136abdd95edd8c264f9a4e057"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the name of the X-label.  <br /></td></tr>
+<tr class="separator:a2f23515136abdd95edd8c264f9a4e057"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acc39724ffcb0a83e1b085575d203657b" id="r_acc39724ffcb0a83e1b085575d203657b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acc39724ffcb0a83e1b085575d203657b">setYlabel</a> (const wxString &amp;yLabel)</td></tr>
+<tr class="memdesc:acc39724ffcb0a83e1b085575d203657b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the name of the Y-label.  <br /></td></tr>
+<tr class="separator:acc39724ffcb0a83e1b085575d203657b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a375964567ede20457bb265626223ba47" id="r_a375964567ede20457bb265626223ba47"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a375964567ede20457bb265626223ba47">setTicks</a> (const unsigned int ticks)</td></tr>
+<tr class="memdesc:a375964567ede20457bb265626223ba47"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the number of ticks at the figure in all axis.  <br /></td></tr>
+<tr class="separator:a375964567ede20457bb265626223ba47"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afbbf844587c17b54d1464635e31066b9" id="r_afbbf844587c17b54d1464635e31066b9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afbbf844587c17b54d1464635e31066b9">gridOn</a> (const bool useGrid)</td></tr>
+<tr class="memdesc:afbbf844587c17b54d1464635e31066b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable grid on the figure.  <br /></td></tr>
+<tr class="separator:afbbf844587c17b54d1464635e31066b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a43e23e3956d1a5f2e3fd0f740adf67a1" id="r_a43e23e3956d1a5f2e3fd0f740adf67a1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a43e23e3956d1a5f2e3fd0f740adf67a1">setPlotStartWidth</a> (const wxCoord plotStartWidth)</td></tr>
+<tr class="memdesc:a43e23e3956d1a5f2e3fd0f740adf67a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the left upper corner in X-axis. Inside this rectangle, the plot is drawn. NOTE: This value is recalculated since the plot figure is drawn! (plotStartWidth, plotStartHeight) --------------------------------------------&mdash; (plotEndWidth, plotStartHeight)  <br /></td></tr>
+<tr class="separator:a43e23e3956d1a5f2e3fd0f740adf67a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e1690ddd5e08f5f0e2ea0212cf7d0de" id="r_a8e1690ddd5e08f5f0e2ea0212cf7d0de"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8e1690ddd5e08f5f0e2ea0212cf7d0de">setPlotStartHeight</a> (const wxCoord plotStartHeight)</td></tr>
+<tr class="memdesc:a8e1690ddd5e08f5f0e2ea0212cf7d0de"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the left upper corner in Y-axis. Inside this rectangle, the plot is drawn. NOTE: This value is recalculated since the plot figure is drawn! (plotStartWidth, plotStartHeight) --------------------------------------------&mdash; (plotEndWidth, plotStartHeight)  <br /></td></tr>
+<tr class="separator:a8e1690ddd5e08f5f0e2ea0212cf7d0de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a624125ea1bd9bab71fa7291025e498" id="r_a1a624125ea1bd9bab71fa7291025e498"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1a624125ea1bd9bab71fa7291025e498">setPlotEndWidth</a> (const wxCoord plotEndWidth)</td></tr>
+<tr class="memdesc:a1a624125ea1bd9bab71fa7291025e498"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the right upper corner in X-axis. Inside this rectangle, the plot is drawn. NOTE: This value is recalculated since the plot figure is drawn! (plotStartWidth, plotStartHeight) --------------------------------------------&mdash; (plotEndWidth, plotStartHeight)  <br /></td></tr>
+<tr class="separator:a1a624125ea1bd9bab71fa7291025e498"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeed176895210d3ed725292a163e20eb2" id="r_aeed176895210d3ed725292a163e20eb2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aeed176895210d3ed725292a163e20eb2">setPlotEndHeight</a> (const wxCoord plotEndHeight)</td></tr>
+<tr class="memdesc:aeed176895210d3ed725292a163e20eb2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the right bottom corner in Y-axis. Inside this rectangle, the plot is drawn. NOTE: This value is recalculated since the plot figure is drawn! (plotStartWidth, plotStartHeight) --------------------------------------------&mdash; (plotEndWidth, plotStartHeight)  <br /></td></tr>
+<tr class="separator:aeed176895210d3ed725292a163e20eb2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3d0331d9d2e7216084baebaac18149ce" id="r_a3d0331d9d2e7216084baebaac18149ce"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3d0331d9d2e7216084baebaac18149ce">setData</a> (const std::vector&lt; std::vector&lt; double &gt; &gt; &amp;data2D)</td></tr>
+<tr class="memdesc:a3d0331d9d2e7216084baebaac18149ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set 2D data.  <br /></td></tr>
+<tr class="separator:a3d0331d9d2e7216084baebaac18149ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac21483f5ebdc4ae106163a49a4ef5187" id="r_ac21483f5ebdc4ae106163a49a4ef5187"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac21483f5ebdc4ae106163a49a4ef5187">setData</a> (const std::vector&lt; double &gt; &amp;data1D)</td></tr>
+<tr class="memdesc:ac21483f5ebdc4ae106163a49a4ef5187"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set 1D data.  <br /></td></tr>
+<tr class="separator:ac21483f5ebdc4ae106163a49a4ef5187"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8cfeb91303d1ea194a860f9450977a8a" id="r_a8cfeb91303d1ea194a860f9450977a8a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8cfeb91303d1ea194a860f9450977a8a">legendOn</a> (const bool useLegend)</td></tr>
+<tr class="memdesc:a8cfeb91303d1ea194a860f9450977a8a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Activate the legend.  <br /></td></tr>
+<tr class="separator:a8cfeb91303d1ea194a860f9450977a8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0a684788232e8f6993037b0151c3257c" id="r_a0a684788232e8f6993037b0151c3257c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0a684788232e8f6993037b0151c3257c">setLegend</a> (const std::vector&lt; wxString &gt; &amp;legend, const PLACEMENT legendPosition=PLACEMENT_NORTH_EAST)</td></tr>
+<tr class="memdesc:a0a684788232e8f6993037b0151c3257c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the labels and placement for the legend.  <br /></td></tr>
+<tr class="separator:a0a684788232e8f6993037b0151c3257c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f1631384d6f864769a824ba7ed548eb" id="r_a4f1631384d6f864769a824ba7ed548eb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4f1631384d6f864769a824ba7ed548eb">setBinCount</a> (const unsigned int binCount)</td></tr>
+<tr class="memdesc:a4f1631384d6f864769a824ba7ed548eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the bin count for e.g. histogram.  <br /></td></tr>
 <tr class="separator:a4f1631384d6f864769a824ba7ed548eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a68602ca94a46dcfbba192fc601bb970e" id="r_a68602ca94a46dcfbba192fc601bb970e"><td class="memItemLeft" align="right" valign="top"><a id="a68602ca94a46dcfbba192fc601bb970e" name="a68602ca94a46dcfbba192fc601bb970e"></a>
-wxCoord&#160;</td><td class="memItemRight" valign="bottom"><b>getPlotStartWidth</b> () const</td></tr>
+<tr class="memitem:aef06f1a6549644fe5f7970bb80102d90" id="r_aef06f1a6549644fe5f7970bb80102d90"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aef06f1a6549644fe5f7970bb80102d90">setYlim</a> (const double minY, const double maxY)</td></tr>
+<tr class="memdesc:aef06f1a6549644fe5f7970bb80102d90"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the plot zoom limit in Y-axis.  <br /></td></tr>
+<tr class="separator:aef06f1a6549644fe5f7970bb80102d90"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a68602ca94a46dcfbba192fc601bb970e" id="r_a68602ca94a46dcfbba192fc601bb970e"><td class="memItemLeft" align="right" valign="top">wxCoord&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a68602ca94a46dcfbba192fc601bb970e">getPlotStartWidth</a> () const</td></tr>
+<tr class="memdesc:a68602ca94a46dcfbba192fc601bb970e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the recalculated start width X-axis value. This value is recalculated after the figure is drawn.  <br /></td></tr>
 <tr class="separator:a68602ca94a46dcfbba192fc601bb970e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab6a3b61479ad97c998bee5663a86192b" id="r_ab6a3b61479ad97c998bee5663a86192b"><td class="memItemLeft" align="right" valign="top"><a id="ab6a3b61479ad97c998bee5663a86192b" name="ab6a3b61479ad97c998bee5663a86192b"></a>
-wxCoord&#160;</td><td class="memItemRight" valign="bottom"><b>getPlotEndWidth</b> () const</td></tr>
+<tr class="memitem:ab6a3b61479ad97c998bee5663a86192b" id="r_ab6a3b61479ad97c998bee5663a86192b"><td class="memItemLeft" align="right" valign="top">wxCoord&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab6a3b61479ad97c998bee5663a86192b">getPlotEndWidth</a> () const</td></tr>
+<tr class="memdesc:ab6a3b61479ad97c998bee5663a86192b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the recalculated end width X-axis value. This value is recalculated after the figure is drawn.  <br /></td></tr>
 <tr class="separator:ab6a3b61479ad97c998bee5663a86192b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae305407be204ffc3085560cb0f176ce9" id="r_ae305407be204ffc3085560cb0f176ce9"><td class="memItemLeft" align="right" valign="top"><a id="ae305407be204ffc3085560cb0f176ce9" name="ae305407be204ffc3085560cb0f176ce9"></a>
-wxCoord&#160;</td><td class="memItemRight" valign="bottom"><b>getPlotStartHeight</b> () const</td></tr>
+<tr class="memitem:ae305407be204ffc3085560cb0f176ce9" id="r_ae305407be204ffc3085560cb0f176ce9"><td class="memItemLeft" align="right" valign="top">wxCoord&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae305407be204ffc3085560cb0f176ce9">getPlotStartHeight</a> () const</td></tr>
+<tr class="memdesc:ae305407be204ffc3085560cb0f176ce9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the recalculated start height Y-axis value. This value is recalculated after the figure is drawn.  <br /></td></tr>
 <tr class="separator:ae305407be204ffc3085560cb0f176ce9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1970a9024887fca45695157f5b603aec" id="r_a1970a9024887fca45695157f5b603aec"><td class="memItemLeft" align="right" valign="top"><a id="a1970a9024887fca45695157f5b603aec" name="a1970a9024887fca45695157f5b603aec"></a>
-wxCoord&#160;</td><td class="memItemRight" valign="bottom"><b>getPlotEndHeight</b> () const</td></tr>
+<tr class="memitem:a1970a9024887fca45695157f5b603aec" id="r_a1970a9024887fca45695157f5b603aec"><td class="memItemLeft" align="right" valign="top">wxCoord&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1970a9024887fca45695157f5b603aec">getPlotEndHeight</a> () const</td></tr>
+<tr class="memdesc:a1970a9024887fca45695157f5b603aec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the recalculated end height Y-axis value. This value is recalculated after the figure is drawn.  <br /></td></tr>
 <tr class="separator:a1970a9024887fca45695157f5b603aec"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a738202b27c7274d023d778a67a96254b" id="r_a738202b27c7274d023d778a67a96254b"><td class="memItemLeft" align="right" valign="top"><a id="a738202b27c7274d023d778a67a96254b" name="a738202b27c7274d023d778a67a96254b"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>drawFigure</b> (wxDC &amp;dc)</td></tr>
+<tr class="memitem:a738202b27c7274d023d778a67a96254b" id="r_a738202b27c7274d023d778a67a96254b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a738202b27c7274d023d778a67a96254b">drawFigure</a> (wxDC &amp;dc)</td></tr>
+<tr class="memdesc:a738202b27c7274d023d778a67a96254b"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function will do the following:  <br /></td></tr>
 <tr class="separator:a738202b27c7274d023d778a67a96254b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abdaa866a5be4ef061599900a64bc348a" id="r_abdaa866a5be4ef061599900a64bc348a"><td class="memItemLeft" align="right" valign="top"><a id="abdaa866a5be4ef061599900a64bc348a" name="abdaa866a5be4ef061599900a64bc348a"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>drawGrid</b> (wxDC &amp;dc)</td></tr>
+<tr class="memitem:abdaa866a5be4ef061599900a64bc348a" id="r_abdaa866a5be4ef061599900a64bc348a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abdaa866a5be4ef061599900a64bc348a">drawGrid</a> (wxDC &amp;dc)</td></tr>
+<tr class="memdesc:abdaa866a5be4ef061599900a64bc348a"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function will draw the grid. Call this function after you have drawn the plot type.  <br /></td></tr>
 <tr class="separator:abdaa866a5be4ef061599900a64bc348a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a71574704f3b15985645c3dc10c60fcbd" id="r_a71574704f3b15985645c3dc10c60fcbd"><td class="memItemLeft" align="right" valign="top"><a id="a71574704f3b15985645c3dc10c60fcbd" name="a71574704f3b15985645c3dc10c60fcbd"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>drawTicks</b> (wxDC &amp;dc)</td></tr>
+<tr class="memitem:a71574704f3b15985645c3dc10c60fcbd" id="r_a71574704f3b15985645c3dc10c60fcbd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a71574704f3b15985645c3dc10c60fcbd">drawTicks</a> (wxDC &amp;dc)</td></tr>
+<tr class="memdesc:a71574704f3b15985645c3dc10c60fcbd"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function will draw the ticks. Call this function after you have drawn the plot type.  <br /></td></tr>
 <tr class="separator:a71574704f3b15985645c3dc10c60fcbd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa97db9520f2a9caeacb6a4ca93438694" id="r_aa97db9520f2a9caeacb6a4ca93438694"><td class="memItemLeft" align="right" valign="top"><a id="aa97db9520f2a9caeacb6a4ca93438694" name="aa97db9520f2a9caeacb6a4ca93438694"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>drawLegend</b> (wxDC &amp;dc)</td></tr>
+<tr class="memitem:aa97db9520f2a9caeacb6a4ca93438694" id="r_aa97db9520f2a9caeacb6a4ca93438694"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa97db9520f2a9caeacb6a4ca93438694">drawLegend</a> (wxDC &amp;dc)</td></tr>
+<tr class="memdesc:aa97db9520f2a9caeacb6a4ca93438694"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function will draw the legend. Call this function after you have drawn the plot type.  <br /></td></tr>
 <tr class="separator:aa97db9520f2a9caeacb6a4ca93438694"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>This is the 2D plot figure class. It contains plot figures such as propotional, histogram etc. </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a738202b27c7274d023d778a67a96254b" name="a738202b27c7274d023d778a67a96254b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a738202b27c7274d023d778a67a96254b">&#9670;&#160;</a></span>drawFigure()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void _2DFigure::drawFigure </td>
+          <td>(</td>
+          <td class="paramtype">wxDC &amp;</td>          <td class="paramname"><span class="paramname"><em>dc</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This function will do the following: </p>
+<ul>
+<li>Set the fonts</li>
+<li>Draw the title</li>
+<li>Draw the y-label</li>
+<li>Draw the x-label</li>
+<li>Draw the rectangle</li>
+<li>Update the plotStartHeight, plotEndtHeight, plotStartWidth and plotEndtWidth for correct plotting the plot type <dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dc</td><td>The wxDC object for drawing lines, polygons etc. </td></tr>
+  </table>
+  </dd>
+</dl>
+</li>
+</ul>
+
+</div>
+</div>
+<a id="abdaa866a5be4ef061599900a64bc348a" name="abdaa866a5be4ef061599900a64bc348a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abdaa866a5be4ef061599900a64bc348a">&#9670;&#160;</a></span>drawGrid()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void _2DFigure::drawGrid </td>
+          <td>(</td>
+          <td class="paramtype">wxDC &amp;</td>          <td class="paramname"><span class="paramname"><em>dc</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This function will draw the grid. Call this function after you have drawn the plot type. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dc</td><td>The wxDC object for drawing lines, polygons etc. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aa97db9520f2a9caeacb6a4ca93438694" name="aa97db9520f2a9caeacb6a4ca93438694"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa97db9520f2a9caeacb6a4ca93438694">&#9670;&#160;</a></span>drawLegend()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void _2DFigure::drawLegend </td>
+          <td>(</td>
+          <td class="paramtype">wxDC &amp;</td>          <td class="paramname"><span class="paramname"><em>dc</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This function will draw the legend. Call this function after you have drawn the plot type. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dc</td><td>The wxDC object for drawing lines, polygons etc. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a71574704f3b15985645c3dc10c60fcbd" name="a71574704f3b15985645c3dc10c60fcbd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a71574704f3b15985645c3dc10c60fcbd">&#9670;&#160;</a></span>drawTicks()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void _2DFigure::drawTicks </td>
+          <td>(</td>
+          <td class="paramtype">wxDC &amp;</td>          <td class="paramname"><span class="paramname"><em>dc</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This function will draw the ticks. Call this function after you have drawn the plot type. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dc</td><td>The wxDC object for drawing lines, polygons etc. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a1970a9024887fca45695157f5b603aec" name="a1970a9024887fca45695157f5b603aec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1970a9024887fca45695157f5b603aec">&#9670;&#160;</a></span>getPlotEndHeight()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">wxCoord _2DFigure::getPlotEndHeight </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the recalculated end height Y-axis value. This value is recalculated after the figure is drawn. </p>
+<dl class="section return"><dt>Returns</dt><dd>wxCoord Recalculated value </dd></dl>
+
+</div>
+</div>
+<a id="ab6a3b61479ad97c998bee5663a86192b" name="ab6a3b61479ad97c998bee5663a86192b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab6a3b61479ad97c998bee5663a86192b">&#9670;&#160;</a></span>getPlotEndWidth()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">wxCoord _2DFigure::getPlotEndWidth </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the recalculated end width X-axis value. This value is recalculated after the figure is drawn. </p>
+<dl class="section return"><dt>Returns</dt><dd>wxCoord Recalculated value </dd></dl>
+
+</div>
+</div>
+<a id="ae305407be204ffc3085560cb0f176ce9" name="ae305407be204ffc3085560cb0f176ce9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae305407be204ffc3085560cb0f176ce9">&#9670;&#160;</a></span>getPlotStartHeight()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">wxCoord _2DFigure::getPlotStartHeight </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the recalculated start height Y-axis value. This value is recalculated after the figure is drawn. </p>
+<dl class="section return"><dt>Returns</dt><dd>wxCoord Recalculated value </dd></dl>
+
+</div>
+</div>
+<a id="a68602ca94a46dcfbba192fc601bb970e" name="a68602ca94a46dcfbba192fc601bb970e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a68602ca94a46dcfbba192fc601bb970e">&#9670;&#160;</a></span>getPlotStartWidth()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">wxCoord _2DFigure::getPlotStartWidth </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the recalculated start width X-axis value. This value is recalculated after the figure is drawn. </p>
+<dl class="section return"><dt>Returns</dt><dd>wxCoord Recalculated value </dd></dl>
+
+</div>
+</div>
+<a id="afbbf844587c17b54d1464635e31066b9" name="afbbf844587c17b54d1464635e31066b9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afbbf844587c17b54d1464635e31066b9">&#9670;&#160;</a></span>gridOn()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void _2DFigure::gridOn </td>
+          <td>(</td>
+          <td class="paramtype">const bool</td>          <td class="paramname"><span class="paramname"><em>useGrid</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Enable grid on the figure. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">useGrid</td><td>Set true for enabling grid. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a8cfeb91303d1ea194a860f9450977a8a" name="a8cfeb91303d1ea194a860f9450977a8a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8cfeb91303d1ea194a860f9450977a8a">&#9670;&#160;</a></span>legendOn()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void _2DFigure::legendOn </td>
+          <td>(</td>
+          <td class="paramtype">const bool</td>          <td class="paramname"><span class="paramname"><em>useLegend</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Activate the legend. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">useLegend</td><td>Set true to make a little box with labels appear. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a4f1631384d6f864769a824ba7ed548eb" name="a4f1631384d6f864769a824ba7ed548eb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4f1631384d6f864769a824ba7ed548eb">&#9670;&#160;</a></span>setBinCount()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void _2DFigure::setBinCount </td>
+          <td>(</td>
+          <td class="paramtype">const unsigned int</td>          <td class="paramname"><span class="paramname"><em>binCount</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set the bin count for e.g. histogram. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">binCount</td><td>Bin count is total columns inside a e.g historam chart. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ac21483f5ebdc4ae106163a49a4ef5187" name="ac21483f5ebdc4ae106163a49a4ef5187"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac21483f5ebdc4ae106163a49a4ef5187">&#9670;&#160;</a></span>setData() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void _2DFigure::setData </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; double &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>data1D</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set 1D data. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">data1D</td><td>1D data in form of 1D vector. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a3d0331d9d2e7216084baebaac18149ce" name="a3d0331d9d2e7216084baebaac18149ce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3d0331d9d2e7216084baebaac18149ce">&#9670;&#160;</a></span>setData() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void _2DFigure::setData </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; std::vector&lt; double &gt; &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>data2D</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set 2D data. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">data2D</td><td>2D data in form of 2D vector. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a6966b524a770dda11c7b49850088a2d6" name="a6966b524a770dda11c7b49850088a2d6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6966b524a770dda11c7b49850088a2d6">&#9670;&#160;</a></span>setFontSize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void _2DFigure::setFontSize </td>
+          <td>(</td>
+          <td class="paramtype">const unsigned int</td>          <td class="paramname"><span class="paramname"><em>fontSize</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set the size of the fonts. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fontSize</td><td>The size of the fonts. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a0a684788232e8f6993037b0151c3257c" name="a0a684788232e8f6993037b0151c3257c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0a684788232e8f6993037b0151c3257c">&#9670;&#160;</a></span>setLegend()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void _2DFigure::setLegend </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; wxString &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>legend</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const PLACEMENT</td>          <td class="paramname"><span class="paramname"><em>legendPosition</em></span><span class="paramdefsep"> = </span><span class="paramdefval">PLACEMENT_NORTH_EAST</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set the labels and placement for the legend. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">legend</td><td>Vector of strings for the legend. </td></tr>
+    <tr><td class="paramname">legendPosition</td><td>Position where the legend should be placed. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aeed176895210d3ed725292a163e20eb2" name="aeed176895210d3ed725292a163e20eb2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeed176895210d3ed725292a163e20eb2">&#9670;&#160;</a></span>setPlotEndHeight()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void _2DFigure::setPlotEndHeight </td>
+          <td>(</td>
+          <td class="paramtype">const wxCoord</td>          <td class="paramname"><span class="paramname"><em>plotEndHeight</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set the right bottom corner in Y-axis. Inside this rectangle, the plot is drawn. NOTE: This value is recalculated since the plot figure is drawn! (plotStartWidth, plotStartHeight) --------------------------------------------&mdash; (plotEndWidth, plotStartHeight) </p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone"></th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"></td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"></td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"></td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"></td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"></td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"></td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"></td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"></td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"></td></tr>
+</table>
+<p>(plotStartWidth, plotEndHeight) --------------------------------------------&mdash; (plotEndWidth, plotEndHeight) </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">plotEndHeight</td><td>End height is at the end of Y-axis. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a1a624125ea1bd9bab71fa7291025e498" name="a1a624125ea1bd9bab71fa7291025e498"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1a624125ea1bd9bab71fa7291025e498">&#9670;&#160;</a></span>setPlotEndWidth()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void _2DFigure::setPlotEndWidth </td>
+          <td>(</td>
+          <td class="paramtype">const wxCoord</td>          <td class="paramname"><span class="paramname"><em>plotEndWidth</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set the right upper corner in X-axis. Inside this rectangle, the plot is drawn. NOTE: This value is recalculated since the plot figure is drawn! (plotStartWidth, plotStartHeight) --------------------------------------------&mdash; (plotEndWidth, plotStartHeight) </p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone"></th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"></td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"></td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"></td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"></td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"></td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"></td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"></td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"></td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"></td></tr>
+</table>
+<p>(plotStartWidth, plotEndHeight) --------------------------------------------&mdash; (plotEndWidth, plotEndHeight) </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">plotEndWidth</td><td>End width is at the end of X-axis. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a8e1690ddd5e08f5f0e2ea0212cf7d0de" name="a8e1690ddd5e08f5f0e2ea0212cf7d0de"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e1690ddd5e08f5f0e2ea0212cf7d0de">&#9670;&#160;</a></span>setPlotStartHeight()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void _2DFigure::setPlotStartHeight </td>
+          <td>(</td>
+          <td class="paramtype">const wxCoord</td>          <td class="paramname"><span class="paramname"><em>plotStartHeight</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set the left upper corner in Y-axis. Inside this rectangle, the plot is drawn. NOTE: This value is recalculated since the plot figure is drawn! (plotStartWidth, plotStartHeight) --------------------------------------------&mdash; (plotEndWidth, plotStartHeight) </p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone"></th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"></td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"></td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"></td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"></td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"></td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"></td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"></td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"></td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"></td></tr>
+</table>
+<p>(plotStartWidth, plotEndHeight) --------------------------------------------&mdash; (plotEndWidth, plotEndHeight) </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">plotStartHeight</td><td>Start height is at the start of Y-axis. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a43e23e3956d1a5f2e3fd0f740adf67a1" name="a43e23e3956d1a5f2e3fd0f740adf67a1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a43e23e3956d1a5f2e3fd0f740adf67a1">&#9670;&#160;</a></span>setPlotStartWidth()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void _2DFigure::setPlotStartWidth </td>
+          <td>(</td>
+          <td class="paramtype">const wxCoord</td>          <td class="paramname"><span class="paramname"><em>plotStartWidth</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set the left upper corner in X-axis. Inside this rectangle, the plot is drawn. NOTE: This value is recalculated since the plot figure is drawn! (plotStartWidth, plotStartHeight) --------------------------------------------&mdash; (plotEndWidth, plotStartHeight) </p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone"></th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"></td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"></td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"></td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"></td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"></td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"></td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"></td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"></td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"></td></tr>
+</table>
+<p>(plotStartWidth, plotEndHeight) --------------------------------------------&mdash; (plotEndWidth, plotEndHeight) </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">plotStartWidth</td><td>Start width is at the start of X-axis. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a375964567ede20457bb265626223ba47" name="a375964567ede20457bb265626223ba47"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a375964567ede20457bb265626223ba47">&#9670;&#160;</a></span>setTicks()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void _2DFigure::setTicks </td>
+          <td>(</td>
+          <td class="paramtype">const unsigned int</td>          <td class="paramname"><span class="paramname"><em>ticks</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set the number of ticks at the figure in all axis. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ticks</td><td>Number of ticks. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="acf75a3c9875cb1de45de5326de12dc9b" name="acf75a3c9875cb1de45de5326de12dc9b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acf75a3c9875cb1de45de5326de12dc9b">&#9670;&#160;</a></span>setTitle()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void _2DFigure::setTitle </td>
+          <td>(</td>
+          <td class="paramtype">const wxString &amp;</td>          <td class="paramname"><span class="paramname"><em>title</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set the title of the plot. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">title</td><td>Name of the title. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a6be7a624cd5b25708a7ae484c6544241" name="a6be7a624cd5b25708a7ae484c6544241"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6be7a624cd5b25708a7ae484c6544241">&#9670;&#160;</a></span>setWxPlotType()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void _2DFigure::setWxPlotType </td>
+          <td>(</td>
+          <td class="paramtype">const WXPLOT_TYPE</td>          <td class="paramname"><span class="paramname"><em>wxPlotType</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set the plot type selection. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">wxPlotType</td><td>Selection of plot type. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a2f23515136abdd95edd8c264f9a4e057" name="a2f23515136abdd95edd8c264f9a4e057"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2f23515136abdd95edd8c264f9a4e057">&#9670;&#160;</a></span>setXlabel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void _2DFigure::setXlabel </td>
+          <td>(</td>
+          <td class="paramtype">const wxString &amp;</td>          <td class="paramname"><span class="paramname"><em>xLabel</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set the name of the X-label. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">xLabel</td><td>Name of the X-label. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="acc39724ffcb0a83e1b085575d203657b" name="acc39724ffcb0a83e1b085575d203657b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acc39724ffcb0a83e1b085575d203657b">&#9670;&#160;</a></span>setYlabel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void _2DFigure::setYlabel </td>
+          <td>(</td>
+          <td class="paramtype">const wxString &amp;</td>          <td class="paramname"><span class="paramname"><em>yLabel</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set the name of the Y-label. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">yLabel</td><td>Name of the Y-label. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aef06f1a6549644fe5f7970bb80102d90" name="aef06f1a6549644fe5f7970bb80102d90"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aef06f1a6549644fe5f7970bb80102d90">&#9670;&#160;</a></span>setYlim()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void _2DFigure::setYlim </td>
+          <td>(</td>
+          <td class="paramtype">const double</td>          <td class="paramname"><span class="paramname"><em>minY</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const double</td>          <td class="paramname"><span class="paramname"><em>maxY</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set the plot zoom limit in Y-axis. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">minY</td><td>Minimum limit in Y-axis. </td></tr>
+    <tr><td class="paramname">maxY</td><td>Maximum limit in Y-axis. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>C:/Users/danie/Documents/GitHub/wxPlot/wxPlot/src/plots/plotfigures/2D/<a class="el" href="2_dfigure_8hpp_source.html">2Dfigure.hpp</a></li>
 <li>C:/Users/danie/Documents/GitHub/wxPlot/wxPlot/src/plots/plotfigures/2D/<b>2Dfigure.cpp</b></li>

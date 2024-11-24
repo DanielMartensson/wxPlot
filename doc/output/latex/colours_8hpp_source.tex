@@ -7,88 +7,82 @@
 \DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <wx/wx.h>}}
 \DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <vector>}}
 \DoxyCodeLine{00005\ }
-\DoxyCodeLine{00006\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ \{}
-\DoxyCodeLine{00007\ \ \ \ \ \textcolor{comment}{//\ Grundläggande\ färger}}
-\DoxyCodeLine{00008\ \ \ \ \ PLOT\_COLOUR\_RED,}
-\DoxyCodeLine{00009\ \ \ \ \ PLOT\_COLOUR\_GREEN,}
-\DoxyCodeLine{00010\ \ \ \ \ PLOT\_COLOUR\_BLUE,}
-\DoxyCodeLine{00011\ \ \ \ \ PLOT\_COLOUR\_YELLOW,}
-\DoxyCodeLine{00012\ \ \ \ \ PLOT\_COLOUR\_CYAN,}
-\DoxyCodeLine{00013\ \ \ \ \ PLOT\_COLOUR\_MAGENTA,}
-\DoxyCodeLine{00014\ \ \ \ \ PLOT\_COLOUR\_BLACK,}
-\DoxyCodeLine{00015\ \ \ \ \ PLOT\_COLOUR\_WHITE,}
-\DoxyCodeLine{00016\ }
-\DoxyCodeLine{00017\ \ \ \ \ \textcolor{comment}{//\ Pastellfärger}}
-\DoxyCodeLine{00018\ \ \ \ \ PLOT\_COLOUR\_LIGHT\_PINK,}
-\DoxyCodeLine{00019\ \ \ \ \ PLOT\_COLOUR\_LIGHT\_BLUE,}
-\DoxyCodeLine{00020\ \ \ \ \ PLOT\_COLOUR\_LIGHT\_GREEN,}
-\DoxyCodeLine{00021\ \ \ \ \ PLOT\_COLOUR\_LIGHT\_YELLOW,}
+\DoxyCodeLine{00012\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ \{}
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{comment}{//\ Grundläggande\ färger}}
+\DoxyCodeLine{00014\ \ \ \ \ PLOT\_COLOUR\_RED,\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00015\ \ \ \ \ PLOT\_COLOUR\_GREEN,\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00016\ \ \ \ \ PLOT\_COLOUR\_BLUE,\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00017\ \ \ \ \ PLOT\_COLOUR\_YELLOW,\ \ \ \ \ \ \ }
+\DoxyCodeLine{00018\ \ \ \ \ PLOT\_COLOUR\_CYAN,\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00019\ \ \ \ \ PLOT\_COLOUR\_MAGENTA,\ \ \ \ \ \ }
+\DoxyCodeLine{00020\ \ \ \ \ PLOT\_COLOUR\_BLACK,\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00021\ \ \ \ \ PLOT\_COLOUR\_WHITE,\ \ \ \ \ \ \ \ }
 \DoxyCodeLine{00022\ }
-\DoxyCodeLine{00023\ \ \ \ \ \textcolor{comment}{//\ Jordnära\ färger}}
-\DoxyCodeLine{00024\ \ \ \ \ PLOT\_COLOUR\_BROWN,}
-\DoxyCodeLine{00025\ \ \ \ \ PLOT\_COLOUR\_SIENNA,}
-\DoxyCodeLine{00026\ \ \ \ \ PLOT\_COLOUR\_PERU,}
-\DoxyCodeLine{00027\ \ \ \ \ PLOT\_COLOUR\_SADDLE\_BROWN,}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{comment}{//\ Pastellfärger}}
+\DoxyCodeLine{00024\ \ \ \ \ PLOT\_COLOUR\_LIGHT\_PINK,\ \ \ }
+\DoxyCodeLine{00025\ \ \ \ \ PLOT\_COLOUR\_LIGHT\_BLUE,\ \ \ }
+\DoxyCodeLine{00026\ \ \ \ \ PLOT\_COLOUR\_LIGHT\_GREEN,\ \ }
+\DoxyCodeLine{00027\ \ \ \ \ PLOT\_COLOUR\_LIGHT\_YELLOW,\ }
 \DoxyCodeLine{00028\ }
-\DoxyCodeLine{00029\ \ \ \ \ \textcolor{comment}{//\ Moderna\ färger}}
-\DoxyCodeLine{00030\ \ \ \ \ PLOT\_COLOUR\_TOMATO,}
-\DoxyCodeLine{00031\ \ \ \ \ PLOT\_COLOUR\_LIME,}
-\DoxyCodeLine{00032\ \ \ \ \ PLOT\_COLOUR\_VIOLET,}
-\DoxyCodeLine{00033\ \ \ \ \ PLOT\_COLOUR\_HOT\_PINK,}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{comment}{//\ Jordnära\ färger}}
+\DoxyCodeLine{00030\ \ \ \ \ PLOT\_COLOUR\_BROWN,\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00031\ \ \ \ \ PLOT\_COLOUR\_SIENNA,\ \ \ \ \ \ \ }
+\DoxyCodeLine{00032\ \ \ \ \ PLOT\_COLOUR\_PERU,\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00033\ \ \ \ \ PLOT\_COLOUR\_SADDLE\_BROWN,\ }
 \DoxyCodeLine{00034\ }
-\DoxyCodeLine{00035\ \ \ \ \ \textcolor{comment}{//\ Neutrala\ toner}}
-\DoxyCodeLine{00036\ \ \ \ \ PLOT\_COLOUR\_DARK\_GRAY,}
-\DoxyCodeLine{00037\ \ \ \ \ PLOT\_COLOUR\_LIGHT\_GRAY,}
-\DoxyCodeLine{00038\ \ \ \ \ PLOT\_COLOUR\_GRAY,}
-\DoxyCodeLine{00039\ }
-\DoxyCodeLine{00040\ \ \ \ \ \textcolor{comment}{//\ Dämpade\ färger}}
-\DoxyCodeLine{00041\ \ \ \ \ PLOT\_COLOUR\_DARK\_SLATE\_GRAY,}
-\DoxyCodeLine{00042\ \ \ \ \ PLOT\_COLOUR\_DARK\_SLATE\_BLUE,}
-\DoxyCodeLine{00043\ \ \ \ \ PLOT\_COLOUR\_TEAL,}
-\DoxyCodeLine{00044\ \ \ \ \ PLOT\_COLOUR\_DARK\_GREEN,}
-\DoxyCodeLine{00045\ \ \ \ \ PLOT\_COLOUR\_DARK\_ORANGE}
-\DoxyCodeLine{00046\ \}PLOT\_COLOUR;}
-\DoxyCodeLine{00047\ }
-\DoxyCodeLine{00048\ \textcolor{keyword}{static}\ std::vector<wxColour>\ plotColours\ =\ \{}
-\DoxyCodeLine{00049\ \ \ \ \ \textcolor{comment}{//\ Grundläggande\ färger}}
-\DoxyCodeLine{00050\ \ \ \ \ wxColour(255,\ 0,\ 0),\ \ \ \ \ \textcolor{comment}{//\ Röd}}
-\DoxyCodeLine{00051\ \ \ \ \ wxColour(0,\ 255,\ 0),\ \ \ \ \ \textcolor{comment}{//\ Grön}}
-\DoxyCodeLine{00052\ \ \ \ \ wxColour(0,\ 0,\ 255),\ \ \ \ \ \textcolor{comment}{//\ Blå}}
-\DoxyCodeLine{00053\ \ \ \ \ wxColour(255,\ 255,\ 0),\ \ \ \textcolor{comment}{//\ Gul}}
-\DoxyCodeLine{00054\ \ \ \ \ wxColour(0,\ 255,\ 255),\ \ \ \textcolor{comment}{//\ Cyan}}
-\DoxyCodeLine{00055\ \ \ \ \ wxColour(255,\ 0,\ 255),\ \ \ \textcolor{comment}{//\ Magenta}}
-\DoxyCodeLine{00056\ \ \ \ \ wxColour(0,\ 0,\ 0),\ \ \ \ \ \ \ \textcolor{comment}{//\ Svart}}
-\DoxyCodeLine{00057\ \ \ \ \ wxColour(255,\ 255,\ 255),\ \textcolor{comment}{//\ Vit}}
-\DoxyCodeLine{00058\ }
-\DoxyCodeLine{00059\ \ \ \ \ \textcolor{comment}{//\ Färger\ med\ pastelltoner}}
-\DoxyCodeLine{00060\ \ \ \ \ wxColour(255,\ 182,\ 193),\ \textcolor{comment}{//\ Ljusrosa}}
-\DoxyCodeLine{00061\ \ \ \ \ wxColour(173,\ 216,\ 230),\ \textcolor{comment}{//\ Ljusblå}}
-\DoxyCodeLine{00062\ \ \ \ \ wxColour(144,\ 238,\ 144),\ \textcolor{comment}{//\ Ljusgrön}}
-\DoxyCodeLine{00063\ \ \ \ \ wxColour(255,\ 228,\ 181),\ \textcolor{comment}{//\ Ljusgul}}
-\DoxyCodeLine{00064\ }
-\DoxyCodeLine{00065\ \ \ \ \ \textcolor{comment}{//\ Jordnära\ färger}}
-\DoxyCodeLine{00066\ \ \ \ \ wxColour(139,\ 69,\ 19),\ \ \textcolor{comment}{//\ Brun}}
-\DoxyCodeLine{00067\ \ \ \ \ wxColour(160,\ 82,\ 45),\ \ \ \textcolor{comment}{//\ Sienna}}
-\DoxyCodeLine{00068\ \ \ \ \ wxColour(205,\ 133,\ 63),\ \ \textcolor{comment}{//\ Peru}}
-\DoxyCodeLine{00069\ \ \ \ \ wxColour(160,\ 82,\ 45),\ \ \ \textcolor{comment}{//\ Saddle\ Brown}}
-\DoxyCodeLine{00070\ }
-\DoxyCodeLine{00071\ \ \ \ \ \textcolor{comment}{//\ Färger\ för trendiga\ och\ moderna\ nyanser}}
-\DoxyCodeLine{00072\ \ \ \ \ wxColour(255,\ 99,\ 71),\ \ \ \textcolor{comment}{//\ Tomatröd}}
-\DoxyCodeLine{00073\ \ \ \ \ wxColour(50,\ 205,\ 50),\ \ \ \textcolor{comment}{//\ Limegrön}}
-\DoxyCodeLine{00074\ \ \ \ \ wxColour(238,\ 130,\ 238),\ \textcolor{comment}{//\ Lila}}
-\DoxyCodeLine{00075\ \ \ \ \ wxColour(255,\ 105,\ 180),\ \textcolor{comment}{//\ Hot\ pink}}
-\DoxyCodeLine{00076\ }
-\DoxyCodeLine{00077\ \ \ \ \ \textcolor{comment}{//\ Ljus\ och\ mörka\ neutrala\ färger}}
-\DoxyCodeLine{00078\ \ \ \ \ wxColour(169,\ 169,\ 169),\ \textcolor{comment}{//\ Mörkgrå}}
-\DoxyCodeLine{00079\ \ \ \ \ wxColour(211,\ 211,\ 211),\ \textcolor{comment}{//\ Ljusgrå}}
-\DoxyCodeLine{00080\ \ \ \ \ wxColour(128,\ 128,\ 128),\ \textcolor{comment}{//\ Grå}}
-\DoxyCodeLine{00081\ }
-\DoxyCodeLine{00082\ \ \ \ \ \textcolor{comment}{//\ Mer\ dämpade\ färger}}
-\DoxyCodeLine{00083\ \ \ \ \ wxColour(47,\ 79,\ 79),\ \ \ \ \textcolor{comment}{//\ Dark\ Slate\ Gray}}
-\DoxyCodeLine{00084\ \ \ \ \ wxColour(72,\ 61,\ 139),\ \ \ \textcolor{comment}{//\ Dark\ Slate\ Blue}}
-\DoxyCodeLine{00085\ \ \ \ \ wxColour(0,\ 128,\ 128),\ \ \ \textcolor{comment}{//\ Teal}}
-\DoxyCodeLine{00086\ \ \ \ \ wxColour(0,\ 100,\ 0),\ \ \ \ \ \textcolor{comment}{//\ Dark\ Green}}
-\DoxyCodeLine{00087\ \ \ \ \ wxColour(255,\ 140,\ 0),\ \ \ \textcolor{comment}{//\ Dark\ Orange}}
-\DoxyCodeLine{00088\ \};}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{comment}{//\ Moderna\ färger}}
+\DoxyCodeLine{00036\ \ \ \ \ PLOT\_COLOUR\_TOMATO,\ \ \ \ \ \ \ }
+\DoxyCodeLine{00037\ \ \ \ \ PLOT\_COLOUR\_LIME,\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00038\ \ \ \ \ PLOT\_COLOUR\_VIOLET,\ \ \ \ \ \ \ }
+\DoxyCodeLine{00039\ \ \ \ \ PLOT\_COLOUR\_HOT\_PINK,\ \ \ \ \ }
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{comment}{//\ Neutrala\ toner}}
+\DoxyCodeLine{00042\ \ \ \ \ PLOT\_COLOUR\_DARK\_GRAY,\ \ \ \ }
+\DoxyCodeLine{00043\ \ \ \ \ PLOT\_COLOUR\_LIGHT\_GRAY,\ \ \ }
+\DoxyCodeLine{00044\ \ \ \ \ PLOT\_COLOUR\_GRAY,\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{comment}{//\ Dämpade\ färger}}
+\DoxyCodeLine{00047\ \ \ \ \ PLOT\_COLOUR\_DARK\_SLATE\_GRAY,\ }
+\DoxyCodeLine{00048\ \ \ \ \ PLOT\_COLOUR\_DARK\_SLATE\_BLUE,\ }
+\DoxyCodeLine{00049\ \ \ \ \ PLOT\_COLOUR\_TEAL,\ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00050\ \ \ \ \ PLOT\_COLOUR\_DARK\_GREEN,\ \ \ \ \ \ }
+\DoxyCodeLine{00051\ \ \ \ \ PLOT\_COLOUR\_DARK\_ORANGE\ \ \ \ \ \ }
+\DoxyCodeLine{00052\ \}\ PLOT\_COLOUR;}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00059\ \textcolor{keyword}{static}\ std::vector<wxColour>\ plotColours\ =\ \{}
+\DoxyCodeLine{00060\ \ \ \ \ wxColour(255,\ 0,\ 0),\ \ \ \ \ }
+\DoxyCodeLine{00061\ \ \ \ \ wxColour(0,\ 255,\ 0),\ \ \ \ \ }
+\DoxyCodeLine{00062\ \ \ \ \ wxColour(0,\ 0,\ 255),\ \ \ \ \ }
+\DoxyCodeLine{00063\ \ \ \ \ wxColour(255,\ 255,\ 0),\ \ \ }
+\DoxyCodeLine{00064\ \ \ \ \ wxColour(0,\ 255,\ 255),\ \ \ }
+\DoxyCodeLine{00065\ \ \ \ \ wxColour(255,\ 0,\ 255),\ \ \ }
+\DoxyCodeLine{00066\ \ \ \ \ wxColour(0,\ 0,\ 0),\ \ \ \ \ \ \ }
+\DoxyCodeLine{00067\ \ \ \ \ wxColour(255,\ 255,\ 255),\ }
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00069\ \ \ \ \ wxColour(255,\ 182,\ 193),\ }
+\DoxyCodeLine{00070\ \ \ \ \ wxColour(173,\ 216,\ 230),\ }
+\DoxyCodeLine{00071\ \ \ \ \ wxColour(144,\ 238,\ 144),\ }
+\DoxyCodeLine{00072\ \ \ \ \ wxColour(255,\ 228,\ 181),\ }
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00074\ \ \ \ \ wxColour(139,\ 69,\ 19),\ \ \ }
+\DoxyCodeLine{00075\ \ \ \ \ wxColour(160,\ 82,\ 45),\ \ \ }
+\DoxyCodeLine{00076\ \ \ \ \ wxColour(205,\ 133,\ 63),\ \ }
+\DoxyCodeLine{00077\ \ \ \ \ wxColour(160,\ 82,\ 45),\ \ \ }
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00079\ \ \ \ \ wxColour(255,\ 99,\ 71),\ \ \ }
+\DoxyCodeLine{00080\ \ \ \ \ wxColour(50,\ 205,\ 50),\ \ \ }
+\DoxyCodeLine{00081\ \ \ \ \ wxColour(238,\ 130,\ 238),\ }
+\DoxyCodeLine{00082\ \ \ \ \ wxColour(255,\ 105,\ 180),\ }
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00084\ \ \ \ \ wxColour(169,\ 169,\ 169),\ }
+\DoxyCodeLine{00085\ \ \ \ \ wxColour(211,\ 211,\ 211),\ }
+\DoxyCodeLine{00086\ \ \ \ \ wxColour(128,\ 128,\ 128),\ }
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00088\ \ \ \ \ wxColour(47,\ 79,\ 79),\ \ \ \ }
+\DoxyCodeLine{00089\ \ \ \ \ wxColour(72,\ 61,\ 139),\ \ \ }
+\DoxyCodeLine{00090\ \ \ \ \ wxColour(0,\ 128,\ 128),\ \ \ }
+\DoxyCodeLine{00091\ \ \ \ \ wxColour(0,\ 100,\ 0),\ \ \ \ \ }
+\DoxyCodeLine{00092\ \ \ \ \ wxColour(255,\ 140,\ 0),\ \ \ }
+\DoxyCodeLine{00093\ \};}
 
 \end{DoxyCode}

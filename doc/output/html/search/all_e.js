@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['your_20own_20plot_0',['Tutorial - Add your own plot',['../md__c_1_2_users_2danie_2_documents_2_git_hub_2wx_plot_2wx_plot_2_r_e_a_d_m_e.html',1,'']]]
+  ['wxplot_0',['wxPlot',['../classwx_plot.html',1,'wxPlot'],['../classwx_plot.html#a068b1a775ea5df21d27128c576b0e0ab',1,'wxPlot::wxPlot()']]],
+  ['wxplottype_1',['wxPlotType',['../class_proportional.html#a59c22dea060000ff0311adccbb86853e',1,'Proportional']]]
 ];

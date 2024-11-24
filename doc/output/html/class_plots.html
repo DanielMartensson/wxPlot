@@ -91,25 +91,153 @@ $(function(){ initResizable(false); });
   <div class="headertitle"><div class="title">Plots Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Plot class for <a class="el" href="classwx_plot.html" title="Main class for wxPlot. This is the only class the user going to work with.">wxPlot</a>. This class contains plot types and plot figures.  
+ <a href="#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="plots_8hpp_source.html">plots.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:abe8dc4e3b7cf28f1b2a6a8a6ba53c138" id="r_abe8dc4e3b7cf28f1b2a6a8a6ba53c138"><td class="memItemLeft" align="right" valign="top"><a id="abe8dc4e3b7cf28f1b2a6a8a6ba53c138" name="abe8dc4e3b7cf28f1b2a6a8a6ba53c138"></a>
-<a class="el" href="class_plot_types.html">PlotTypes</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getPlotTypes</b> ()</td></tr>
+<tr class="memitem:abe8dc4e3b7cf28f1b2a6a8a6ba53c138" id="r_abe8dc4e3b7cf28f1b2a6a8a6ba53c138"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_plot_types.html">PlotTypes</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abe8dc4e3b7cf28f1b2a6a8a6ba53c138">getPlotTypes</a> ()</td></tr>
+<tr class="memdesc:abe8dc4e3b7cf28f1b2a6a8a6ba53c138"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the reference of plot types object.  <br /></td></tr>
 <tr class="separator:abe8dc4e3b7cf28f1b2a6a8a6ba53c138"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a253d22534fd495b4568a41559d73c9c3" id="r_a253d22534fd495b4568a41559d73c9c3"><td class="memItemLeft" align="right" valign="top"><a id="a253d22534fd495b4568a41559d73c9c3" name="a253d22534fd495b4568a41559d73c9c3"></a>
-<a class="el" href="class_plot_figure.html">PlotFigure</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getPlotFigures</b> ()</td></tr>
+<tr class="memitem:a253d22534fd495b4568a41559d73c9c3" id="r_a253d22534fd495b4568a41559d73c9c3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_plot_figure.html">PlotFigure</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a253d22534fd495b4568a41559d73c9c3">getPlotFigures</a> ()</td></tr>
+<tr class="memdesc:a253d22534fd495b4568a41559d73c9c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the reference of plot figure object.  <br /></td></tr>
 <tr class="separator:a253d22534fd495b4568a41559d73c9c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a38dfbe52d6f14ab32cdc243675f6f9a4" id="r_a38dfbe52d6f14ab32cdc243675f6f9a4"><td class="memItemLeft" align="right" valign="top"><a id="a38dfbe52d6f14ab32cdc243675f6f9a4" name="a38dfbe52d6f14ab32cdc243675f6f9a4"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setWxPlotFigureType</b> (const WXPLOT_FIGURE wxPlotFigure, const WXPLOT_TYPE wxPlotType)</td></tr>
+<tr class="memitem:a38dfbe52d6f14ab32cdc243675f6f9a4" id="r_a38dfbe52d6f14ab32cdc243675f6f9a4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a38dfbe52d6f14ab32cdc243675f6f9a4">setWxPlotFigureType</a> (const WXPLOT_FIGURE wxPlotFigure, const WXPLOT_TYPE wxPlotType)</td></tr>
+<tr class="memdesc:a38dfbe52d6f14ab32cdc243675f6f9a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the plot type selection and plot figure selection.  <br /></td></tr>
 <tr class="separator:a38dfbe52d6f14ab32cdc243675f6f9a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0fb6ab09a9511860addff529bd42ea60" id="r_a0fb6ab09a9511860addff529bd42ea60"><td class="memItemLeft" align="right" valign="top"><a id="a0fb6ab09a9511860addff529bd42ea60" name="a0fb6ab09a9511860addff529bd42ea60"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setData</b> (const std::vector&lt; std::vector&lt; double &gt; &gt; &amp;data)</td></tr>
-<tr class="separator:a0fb6ab09a9511860addff529bd42ea60"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a58a990eb9b5d7d533a666962b6eae1f3" id="r_a58a990eb9b5d7d533a666962b6eae1f3"><td class="memItemLeft" align="right" valign="top"><a id="a58a990eb9b5d7d533a666962b6eae1f3" name="a58a990eb9b5d7d533a666962b6eae1f3"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setData</b> (const std::vector&lt; double &gt; &amp;data)</td></tr>
-<tr class="separator:a58a990eb9b5d7d533a666962b6eae1f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0d2598f037ced15cc34016d0da1e3000" id="r_a0d2598f037ced15cc34016d0da1e3000"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0d2598f037ced15cc34016d0da1e3000">setData</a> (const std::vector&lt; std::vector&lt; double &gt; &gt; &amp;data2D)</td></tr>
+<tr class="memdesc:a0d2598f037ced15cc34016d0da1e3000"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set 2D data.  <br /></td></tr>
+<tr class="separator:a0d2598f037ced15cc34016d0da1e3000"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3399377ba8384ac9c6f87b3483ac31d8" id="r_a3399377ba8384ac9c6f87b3483ac31d8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3399377ba8384ac9c6f87b3483ac31d8">setData</a> (const std::vector&lt; double &gt; &amp;data1D)</td></tr>
+<tr class="memdesc:a3399377ba8384ac9c6f87b3483ac31d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set 1D data.  <br /></td></tr>
+<tr class="separator:a3399377ba8384ac9c6f87b3483ac31d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Plot class for <a class="el" href="classwx_plot.html" title="Main class for wxPlot. This is the only class the user going to work with.">wxPlot</a>. This class contains plot types and plot figures. </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a253d22534fd495b4568a41559d73c9c3" name="a253d22534fd495b4568a41559d73c9c3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a253d22534fd495b4568a41559d73c9c3">&#9670;&#160;</a></span>getPlotFigures()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_plot_figure.html">PlotFigure</a> &amp; Plots::getPlotFigures </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Return the reference of plot figure object. </p>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="class_plot_figure.html" title="This is the plot figure class. It contains plot figures such as 2D, 3D and customs.">PlotFigure</a>&amp; </dd></dl>
+
+</div>
+</div>
+<a id="abe8dc4e3b7cf28f1b2a6a8a6ba53c138" name="abe8dc4e3b7cf28f1b2a6a8a6ba53c138"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abe8dc4e3b7cf28f1b2a6a8a6ba53c138">&#9670;&#160;</a></span>getPlotTypes()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_plot_types.html">PlotTypes</a> &amp; Plots::getPlotTypes </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Return the reference of plot types object. </p>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="class_plot_types.html" title="Here all the plot types e.g 2D, 3D, custom etc. are included.">PlotTypes</a>&amp; </dd></dl>
+
+</div>
+</div>
+<a id="a3399377ba8384ac9c6f87b3483ac31d8" name="a3399377ba8384ac9c6f87b3483ac31d8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3399377ba8384ac9c6f87b3483ac31d8">&#9670;&#160;</a></span>setData() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Plots::setData </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; double &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>data1D</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set 1D data. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">data1D</td><td>1D data in form of 1D vector. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a0d2598f037ced15cc34016d0da1e3000" name="a0d2598f037ced15cc34016d0da1e3000"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0d2598f037ced15cc34016d0da1e3000">&#9670;&#160;</a></span>setData() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Plots::setData </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; std::vector&lt; double &gt; &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>data2D</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set 2D data. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">data2D</td><td>2D data in form of 2D vector. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a38dfbe52d6f14ab32cdc243675f6f9a4" name="a38dfbe52d6f14ab32cdc243675f6f9a4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a38dfbe52d6f14ab32cdc243675f6f9a4">&#9670;&#160;</a></span>setWxPlotFigureType()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Plots::setWxPlotFigureType </td>
+          <td>(</td>
+          <td class="paramtype">const WXPLOT_FIGURE</td>          <td class="paramname"><span class="paramname"><em>wxPlotFigure</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const WXPLOT_TYPE</td>          <td class="paramname"><span class="paramname"><em>wxPlotType</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set the plot type selection and plot figure selection. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">wxPlotFigure</td><td>Selection of plot figure. </td></tr>
+    <tr><td class="paramname">wxPlotType</td><td>Selection of plot type. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>C:/Users/danie/Documents/GitHub/wxPlot/wxPlot/src/plots/<a class="el" href="plots_8hpp_source.html">plots.hpp</a></li>
 <li>C:/Users/danie/Documents/GitHub/wxPlot/wxPlot/src/plots/<b>plots.cpp</b></li>

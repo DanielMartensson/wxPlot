@@ -1,83 +1,534 @@
 \doxysection{Plot\+Figure Class Reference}
 \hypertarget{class_plot_figure}{}\label{class_plot_figure}\index{PlotFigure@{PlotFigure}}
+
+
+This is the plot figure class. It contains plot figures such as 2D, 3D and customs.  
+
+
+
+
+{\ttfamily \#include $<$plotfigures.\+hpp$>$}
+
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\Hypertarget{class_plot_figure_ae4b5366bc75dc93ab9f089adfe7d9964}\label{class_plot_figure_ae4b5366bc75dc93ab9f089adfe7d9964} 
-void {\bfseries set\+Wx\+Plot\+Figure\+Type} (const WXPLOT\+\_\+\+FIGURE wx\+Plot\+Figure, const WXPLOT\+\_\+\+TYPE wx\+Plot\+Type)
-\item 
-\Hypertarget{class_plot_figure_a6d5730de584d29efd225c4ef4020091c}\label{class_plot_figure_a6d5730de584d29efd225c4ef4020091c} 
-void {\bfseries set\+Title} (const wx\+String \&title)
-\item 
-\Hypertarget{class_plot_figure_a58a646703cf2c3c03373c53c2d9ce64c}\label{class_plot_figure_a58a646703cf2c3c03373c53c2d9ce64c} 
-void {\bfseries set\+Xlabel} (const wx\+String \&x\+Label)
-\item 
-\Hypertarget{class_plot_figure_a670eff9a8a4c2fbc58cdc228d064be39}\label{class_plot_figure_a670eff9a8a4c2fbc58cdc228d064be39} 
-void {\bfseries set\+Ylabel} (const wx\+String \&y\+Label)
-\item 
-\Hypertarget{class_plot_figure_a747fe79228aae6cc91bd8b5232e6e7ce}\label{class_plot_figure_a747fe79228aae6cc91bd8b5232e6e7ce} 
-void {\bfseries set\+Ticks} (const unsigned int grid\+Size)
-\item 
-\Hypertarget{class_plot_figure_ae937bf9a9050a59ee0251695690b1872}\label{class_plot_figure_ae937bf9a9050a59ee0251695690b1872} 
-void {\bfseries grid\+On} (const bool grid)
-\item 
-\Hypertarget{class_plot_figure_a7adf7d614ec83303cd67ff367f9739dd}\label{class_plot_figure_a7adf7d614ec83303cd67ff367f9739dd} 
-void {\bfseries set\+Plot\+Start\+Width} (const wx\+Coord plot\+Start\+Width)
-\item 
-\Hypertarget{class_plot_figure_a42eed265c85b0a3426d837bf55e709cd}\label{class_plot_figure_a42eed265c85b0a3426d837bf55e709cd} 
-void {\bfseries set\+Plot\+Start\+Height} (const wx\+Coord plot\+Start\+Height)
-\item 
-\Hypertarget{class_plot_figure_a16ffa5ea9ba419edc125fb1bd3f645c1}\label{class_plot_figure_a16ffa5ea9ba419edc125fb1bd3f645c1} 
-void {\bfseries set\+Plot\+End\+Width} (const wx\+Coord plot\+End\+Width)
-\item 
-\Hypertarget{class_plot_figure_a152aa361470f69399c1698b400d96b41}\label{class_plot_figure_a152aa361470f69399c1698b400d96b41} 
-void {\bfseries set\+Plot\+End\+Height} (const wx\+Coord plot\+End\+Height)
-\item 
-\Hypertarget{class_plot_figure_ad505e7b571c139b5a35eea0f95150885}\label{class_plot_figure_ad505e7b571c139b5a35eea0f95150885} 
-void {\bfseries set\+Legend} (const std\+::vector$<$ wx\+String $>$ \&legend, const PLACEMENT legend\+Position)
-\item 
-\Hypertarget{class_plot_figure_af40a457167dc30844802bf82a851b80f}\label{class_plot_figure_af40a457167dc30844802bf82a851b80f} 
-void {\bfseries set\+Data} (const std\+::vector$<$ std\+::vector$<$ double $>$ $>$ \&data2D)
-\item 
-\Hypertarget{class_plot_figure_af7b10bb6dd799da140ed2b62c7f6f6e8}\label{class_plot_figure_af7b10bb6dd799da140ed2b62c7f6f6e8} 
-void {\bfseries set\+Data} (const std\+::vector$<$ double $>$ \&data2D)
-\item 
-\Hypertarget{class_plot_figure_ab2650fb2b0fb92e0d78dfc65fb96950f}\label{class_plot_figure_ab2650fb2b0fb92e0d78dfc65fb96950f} 
-void {\bfseries legend\+On} (const bool use\+Legend)
-\item 
-\Hypertarget{class_plot_figure_ac3022dca3aa89275d6fdd7173c798759}\label{class_plot_figure_ac3022dca3aa89275d6fdd7173c798759} 
-void {\bfseries set\+Font\+Size} (const unsigned int font\+Size)
-\item 
-\Hypertarget{class_plot_figure_a6417f00ad3743b78e87ef2f7c3d1949c}\label{class_plot_figure_a6417f00ad3743b78e87ef2f7c3d1949c} 
-void {\bfseries set\+Ylim} (const double minY, const double maxY)
-\item 
-\Hypertarget{class_plot_figure_a9f6e35597a47fd68c12631f4e65daf70}\label{class_plot_figure_a9f6e35597a47fd68c12631f4e65daf70} 
-void {\bfseries set\+Bin\+Count} (const unsigned int bin\+Count)
-\item 
-\Hypertarget{class_plot_figure_abfb93dd598cbc2d7c0649f5c8423c192}\label{class_plot_figure_abfb93dd598cbc2d7c0649f5c8423c192} 
-wx\+Coord {\bfseries get\+Plot\+Start\+Width} () const
-\item 
-\Hypertarget{class_plot_figure_af0dc2987524fdb970a3e933a6ba38839}\label{class_plot_figure_af0dc2987524fdb970a3e933a6ba38839} 
-wx\+Coord {\bfseries get\+Plot\+End\+Width} () const
-\item 
-\Hypertarget{class_plot_figure_aa744eb09b4fed591aa3254ee4ab96bbe}\label{class_plot_figure_aa744eb09b4fed591aa3254ee4ab96bbe} 
-wx\+Coord {\bfseries get\+Plot\+Start\+Height} () const
-\item 
-\Hypertarget{class_plot_figure_a187a82d1762025e56dc2477c148c1378}\label{class_plot_figure_a187a82d1762025e56dc2477c148c1378} 
-wx\+Coord {\bfseries get\+Plot\+End\+Height} () const
-\item 
-\Hypertarget{class_plot_figure_ae8dcd15f6dd35b5ba1047ef515fd3461}\label{class_plot_figure_ae8dcd15f6dd35b5ba1047ef515fd3461} 
-void {\bfseries draw\+Figure} (wx\+DC \&dc)
-\item 
-\Hypertarget{class_plot_figure_a868035481331a206a41452f48259e67d}\label{class_plot_figure_a868035481331a206a41452f48259e67d} 
-void {\bfseries draw\+Grid} (wx\+DC \&dc)
-\item 
-\Hypertarget{class_plot_figure_a9dbb9afdc45b3669b056c2452d268d16}\label{class_plot_figure_a9dbb9afdc45b3669b056c2452d268d16} 
-void {\bfseries draw\+Ticks} (wx\+DC \&dc)
-\item 
-\Hypertarget{class_plot_figure_a310cfa02e727c18dcde72fe72da43d5d}\label{class_plot_figure_a310cfa02e727c18dcde72fe72da43d5d} 
-void {\bfseries draw\+Legend} (wx\+DC \&dc)
-\end{DoxyCompactItemize}
+void \mbox{\hyperlink{class_plot_figure_ae4b5366bc75dc93ab9f089adfe7d9964}{set\+Wx\+Plot\+Figure\+Type}} (const WXPLOT\+\_\+\+FIGURE wx\+Plot\+Figure, const WXPLOT\+\_\+\+TYPE wx\+Plot\+Type)
+\begin{DoxyCompactList}\small\item\em Set the plot type selection and plot figure selection. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_plot_figure_ac3022dca3aa89275d6fdd7173c798759}{set\+Font\+Size}} (const unsigned int font\+Size)
+\begin{DoxyCompactList}\small\item\em Set the size of the fonts. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_plot_figure_a6d5730de584d29efd225c4ef4020091c}{set\+Title}} (const wx\+String \&title)
+\begin{DoxyCompactList}\small\item\em Set the title of the plot. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_plot_figure_a58a646703cf2c3c03373c53c2d9ce64c}{set\+Xlabel}} (const wx\+String \&x\+Label)
+\begin{DoxyCompactList}\small\item\em Set the name of the X-\/label. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_plot_figure_a670eff9a8a4c2fbc58cdc228d064be39}{set\+Ylabel}} (const wx\+String \&y\+Label)
+\begin{DoxyCompactList}\small\item\em Set the name of the Y-\/label. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_plot_figure_afe420245891180b7d4e9203ffc3aad9d}{set\+Ticks}} (const unsigned int ticks)
+\begin{DoxyCompactList}\small\item\em Set the number of ticks at the figure in all axis. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_plot_figure_aa47287f14fb3325811179df89c322f46}{grid\+On}} (const bool use\+Grid)
+\begin{DoxyCompactList}\small\item\em Enable grid on the figure. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_plot_figure_a7adf7d614ec83303cd67ff367f9739dd}{set\+Plot\+Start\+Width}} (const wx\+Coord plot\+Start\+Width)
+\begin{DoxyCompactList}\small\item\em Set the left upper corner in X-\/axis. Inside this rectangle, the plot is drawn. NOTE\+: This value is recalculated since the plot figure is drawn! (plot\+Start\+Width, plot\+Start\+Height) -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/--- (plot\+End\+Width, plot\+Start\+Height) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_plot_figure_a42eed265c85b0a3426d837bf55e709cd}{set\+Plot\+Start\+Height}} (const wx\+Coord plot\+Start\+Height)
+\begin{DoxyCompactList}\small\item\em Set the left upper corner in Y-\/axis. Inside this rectangle, the plot is drawn. NOTE\+: This value is recalculated since the plot figure is drawn! (plot\+Start\+Width, plot\+Start\+Height) -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/--- (plot\+End\+Width, plot\+Start\+Height) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_plot_figure_a16ffa5ea9ba419edc125fb1bd3f645c1}{set\+Plot\+End\+Width}} (const wx\+Coord plot\+End\+Width)
+\begin{DoxyCompactList}\small\item\em Set the right upper corner in X-\/axis. Inside this rectangle, the plot is drawn. NOTE\+: This value is recalculated since the plot figure is drawn! (plot\+Start\+Width, plot\+Start\+Height) -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/--- (plot\+End\+Width, plot\+Start\+Height) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_plot_figure_a152aa361470f69399c1698b400d96b41}{set\+Plot\+End\+Height}} (const wx\+Coord plot\+End\+Height)
+\begin{DoxyCompactList}\small\item\em Set the right bottom corner in Y-\/axis. Inside this rectangle, the plot is drawn. NOTE\+: This value is recalculated since the plot figure is drawn! (plot\+Start\+Width, plot\+Start\+Height) -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/--- (plot\+End\+Width, plot\+Start\+Height) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_plot_figure_af40a457167dc30844802bf82a851b80f}{set\+Data}} (const std\+::vector$<$ std\+::vector$<$ double $>$ $>$ \&data2D)
+\begin{DoxyCompactList}\small\item\em Set 2D data. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_plot_figure_a0df33a8e008be2a7adf1ffa3bc99a854}{set\+Data}} (const std\+::vector$<$ double $>$ \&data1D)
+\begin{DoxyCompactList}\small\item\em Set 1D data. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_plot_figure_ab2650fb2b0fb92e0d78dfc65fb96950f}{legend\+On}} (const bool use\+Legend)
+\begin{DoxyCompactList}\small\item\em Activate the legend. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_plot_figure_aac86bea335d5743bbf6877e17345b022}{set\+Legend}} (const std\+::vector$<$ wx\+String $>$ \&legend, const PLACEMENT legend\+Position=PLACEMENT\+\_\+\+NORTH\+\_\+\+EAST)
+\begin{DoxyCompactList}\small\item\em Set the labels and placement for the legend. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_plot_figure_a9f6e35597a47fd68c12631f4e65daf70}{set\+Bin\+Count}} (const unsigned int bin\+Count)
+\begin{DoxyCompactList}\small\item\em Set the bin count for e.\+g. histogram. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_plot_figure_a6417f00ad3743b78e87ef2f7c3d1949c}{set\+Ylim}} (const double minY, const double maxY)
+\begin{DoxyCompactList}\small\item\em Set the plot zoom limit in Y-\/axis. \end{DoxyCompactList}\item 
+wx\+Coord \mbox{\hyperlink{class_plot_figure_abfb93dd598cbc2d7c0649f5c8423c192}{get\+Plot\+Start\+Width}} () const
+\begin{DoxyCompactList}\small\item\em Get the recalculated start width X-\/axis value. This value is recalculated after the figure is drawn. \end{DoxyCompactList}\item 
+wx\+Coord \mbox{\hyperlink{class_plot_figure_af0dc2987524fdb970a3e933a6ba38839}{get\+Plot\+End\+Width}} () const
+\begin{DoxyCompactList}\small\item\em Get the recalculated end width X-\/axis value. This value is recalculated after the figure is drawn. \end{DoxyCompactList}\item 
+wx\+Coord \mbox{\hyperlink{class_plot_figure_aa744eb09b4fed591aa3254ee4ab96bbe}{get\+Plot\+Start\+Height}} () const
+\begin{DoxyCompactList}\small\item\em Get the recalculated start height Y-\/axis value. This value is recalculated after the figure is drawn. \end{DoxyCompactList}\item 
+wx\+Coord \mbox{\hyperlink{class_plot_figure_a187a82d1762025e56dc2477c148c1378}{get\+Plot\+End\+Height}} () const
+\begin{DoxyCompactList}\small\item\em Get the recalculated end height Y-\/axis value. This value is recalculated after the figure is drawn. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_plot_figure_ae8dcd15f6dd35b5ba1047ef515fd3461}{draw\+Figure}} (wx\+DC \&dc)
+\begin{DoxyCompactList}\small\item\em This function will do the following\+: \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_plot_figure_a868035481331a206a41452f48259e67d}{draw\+Grid}} (wx\+DC \&dc)
+\begin{DoxyCompactList}\small\item\em This function will draw the grid. Call this function after you have drawn the plot type. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_plot_figure_a9dbb9afdc45b3669b056c2452d268d16}{draw\+Ticks}} (wx\+DC \&dc)
+\begin{DoxyCompactList}\small\item\em This function will draw the ticks. Call this function after you have drawn the plot type. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_plot_figure_a310cfa02e727c18dcde72fe72da43d5d}{draw\+Legend}} (wx\+DC \&dc)
+\begin{DoxyCompactList}\small\item\em This function will draw the legend. Call this function after you have drawn the plot type. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This is the plot figure class. It contains plot figures such as 2D, 3D and customs. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_plot_figure_ae8dcd15f6dd35b5ba1047ef515fd3461}\index{PlotFigure@{PlotFigure}!drawFigure@{drawFigure}}
+\index{drawFigure@{drawFigure}!PlotFigure@{PlotFigure}}
+\doxysubsubsection{\texorpdfstring{drawFigure()}{drawFigure()}}
+{\footnotesize\ttfamily \label{class_plot_figure_ae8dcd15f6dd35b5ba1047ef515fd3461} 
+void Plot\+Figure\+::draw\+Figure (\begin{DoxyParamCaption}\item[{wx\+DC \&}]{dc}{}\end{DoxyParamCaption})}
+
+
+
+This function will do the following\+: 
+
+
+\begin{DoxyItemize}
+\item Set the fonts
+\item Draw the title
+\item Draw the y-\/label
+\item Draw the x-\/label
+\item Draw the rectangle
+\item Update the plot\+Start\+Height, plot\+Endt\+Height, plot\+Start\+Width and plot\+Endt\+Width for correct plotting the plot type 
+\begin{DoxyParams}{Parameters}
+{\em dc} & The wx\+DC object for drawing lines, polygons etc. \\
+\hline
+\end{DoxyParams}
+
+\end{DoxyItemize}\Hypertarget{class_plot_figure_a868035481331a206a41452f48259e67d}\index{PlotFigure@{PlotFigure}!drawGrid@{drawGrid}}
+\index{drawGrid@{drawGrid}!PlotFigure@{PlotFigure}}
+\doxysubsubsection{\texorpdfstring{drawGrid()}{drawGrid()}}
+{\footnotesize\ttfamily \label{class_plot_figure_a868035481331a206a41452f48259e67d} 
+void Plot\+Figure\+::draw\+Grid (\begin{DoxyParamCaption}\item[{wx\+DC \&}]{dc}{}\end{DoxyParamCaption})}
+
+
+
+This function will draw the grid. Call this function after you have drawn the plot type. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dc} & The wx\+DC object for drawing lines, polygons etc. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_plot_figure_a310cfa02e727c18dcde72fe72da43d5d}\index{PlotFigure@{PlotFigure}!drawLegend@{drawLegend}}
+\index{drawLegend@{drawLegend}!PlotFigure@{PlotFigure}}
+\doxysubsubsection{\texorpdfstring{drawLegend()}{drawLegend()}}
+{\footnotesize\ttfamily \label{class_plot_figure_a310cfa02e727c18dcde72fe72da43d5d} 
+void Plot\+Figure\+::draw\+Legend (\begin{DoxyParamCaption}\item[{wx\+DC \&}]{dc}{}\end{DoxyParamCaption})}
+
+
+
+This function will draw the legend. Call this function after you have drawn the plot type. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dc} & The wx\+DC object for drawing lines, polygons etc. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_plot_figure_a9dbb9afdc45b3669b056c2452d268d16}\index{PlotFigure@{PlotFigure}!drawTicks@{drawTicks}}
+\index{drawTicks@{drawTicks}!PlotFigure@{PlotFigure}}
+\doxysubsubsection{\texorpdfstring{drawTicks()}{drawTicks()}}
+{\footnotesize\ttfamily \label{class_plot_figure_a9dbb9afdc45b3669b056c2452d268d16} 
+void Plot\+Figure\+::draw\+Ticks (\begin{DoxyParamCaption}\item[{wx\+DC \&}]{dc}{}\end{DoxyParamCaption})}
+
+
+
+This function will draw the ticks. Call this function after you have drawn the plot type. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dc} & The wx\+DC object for drawing lines, polygons etc. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_plot_figure_a187a82d1762025e56dc2477c148c1378}\index{PlotFigure@{PlotFigure}!getPlotEndHeight@{getPlotEndHeight}}
+\index{getPlotEndHeight@{getPlotEndHeight}!PlotFigure@{PlotFigure}}
+\doxysubsubsection{\texorpdfstring{getPlotEndHeight()}{getPlotEndHeight()}}
+{\footnotesize\ttfamily \label{class_plot_figure_a187a82d1762025e56dc2477c148c1378} 
+wx\+Coord Plot\+Figure\+::get\+Plot\+End\+Height (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Get the recalculated end height Y-\/axis value. This value is recalculated after the figure is drawn. 
+
+\begin{DoxyReturn}{Returns}
+wx\+Coord Recalculated value 
+\end{DoxyReturn}
+\Hypertarget{class_plot_figure_af0dc2987524fdb970a3e933a6ba38839}\index{PlotFigure@{PlotFigure}!getPlotEndWidth@{getPlotEndWidth}}
+\index{getPlotEndWidth@{getPlotEndWidth}!PlotFigure@{PlotFigure}}
+\doxysubsubsection{\texorpdfstring{getPlotEndWidth()}{getPlotEndWidth()}}
+{\footnotesize\ttfamily \label{class_plot_figure_af0dc2987524fdb970a3e933a6ba38839} 
+wx\+Coord Plot\+Figure\+::get\+Plot\+End\+Width (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Get the recalculated end width X-\/axis value. This value is recalculated after the figure is drawn. 
+
+\begin{DoxyReturn}{Returns}
+wx\+Coord Recalculated value 
+\end{DoxyReturn}
+\Hypertarget{class_plot_figure_aa744eb09b4fed591aa3254ee4ab96bbe}\index{PlotFigure@{PlotFigure}!getPlotStartHeight@{getPlotStartHeight}}
+\index{getPlotStartHeight@{getPlotStartHeight}!PlotFigure@{PlotFigure}}
+\doxysubsubsection{\texorpdfstring{getPlotStartHeight()}{getPlotStartHeight()}}
+{\footnotesize\ttfamily \label{class_plot_figure_aa744eb09b4fed591aa3254ee4ab96bbe} 
+wx\+Coord Plot\+Figure\+::get\+Plot\+Start\+Height (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Get the recalculated start height Y-\/axis value. This value is recalculated after the figure is drawn. 
+
+\begin{DoxyReturn}{Returns}
+wx\+Coord Recalculated value 
+\end{DoxyReturn}
+\Hypertarget{class_plot_figure_abfb93dd598cbc2d7c0649f5c8423c192}\index{PlotFigure@{PlotFigure}!getPlotStartWidth@{getPlotStartWidth}}
+\index{getPlotStartWidth@{getPlotStartWidth}!PlotFigure@{PlotFigure}}
+\doxysubsubsection{\texorpdfstring{getPlotStartWidth()}{getPlotStartWidth()}}
+{\footnotesize\ttfamily \label{class_plot_figure_abfb93dd598cbc2d7c0649f5c8423c192} 
+wx\+Coord Plot\+Figure\+::get\+Plot\+Start\+Width (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Get the recalculated start width X-\/axis value. This value is recalculated after the figure is drawn. 
+
+\begin{DoxyReturn}{Returns}
+wx\+Coord Recalculated value 
+\end{DoxyReturn}
+\Hypertarget{class_plot_figure_aa47287f14fb3325811179df89c322f46}\index{PlotFigure@{PlotFigure}!gridOn@{gridOn}}
+\index{gridOn@{gridOn}!PlotFigure@{PlotFigure}}
+\doxysubsubsection{\texorpdfstring{gridOn()}{gridOn()}}
+{\footnotesize\ttfamily \label{class_plot_figure_aa47287f14fb3325811179df89c322f46} 
+void Plot\+Figure\+::grid\+On (\begin{DoxyParamCaption}\item[{const bool}]{use\+Grid}{}\end{DoxyParamCaption})}
+
+
+
+Enable grid on the figure. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em use\+Grid} & Set true for enabling grid. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_plot_figure_ab2650fb2b0fb92e0d78dfc65fb96950f}\index{PlotFigure@{PlotFigure}!legendOn@{legendOn}}
+\index{legendOn@{legendOn}!PlotFigure@{PlotFigure}}
+\doxysubsubsection{\texorpdfstring{legendOn()}{legendOn()}}
+{\footnotesize\ttfamily \label{class_plot_figure_ab2650fb2b0fb92e0d78dfc65fb96950f} 
+void Plot\+Figure\+::legend\+On (\begin{DoxyParamCaption}\item[{const bool}]{use\+Legend}{}\end{DoxyParamCaption})}
+
+
+
+Activate the legend. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em use\+Legend} & Set true to make a little box with labels appear. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_plot_figure_a9f6e35597a47fd68c12631f4e65daf70}\index{PlotFigure@{PlotFigure}!setBinCount@{setBinCount}}
+\index{setBinCount@{setBinCount}!PlotFigure@{PlotFigure}}
+\doxysubsubsection{\texorpdfstring{setBinCount()}{setBinCount()}}
+{\footnotesize\ttfamily \label{class_plot_figure_a9f6e35597a47fd68c12631f4e65daf70} 
+void Plot\+Figure\+::set\+Bin\+Count (\begin{DoxyParamCaption}\item[{const unsigned int}]{bin\+Count}{}\end{DoxyParamCaption})}
+
+
+
+Set the bin count for e.\+g. histogram. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bin\+Count} & Bin count is total columns inside a e.\+g historam chart. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_plot_figure_a0df33a8e008be2a7adf1ffa3bc99a854}\index{PlotFigure@{PlotFigure}!setData@{setData}}
+\index{setData@{setData}!PlotFigure@{PlotFigure}}
+\doxysubsubsection{\texorpdfstring{setData()}{setData()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_plot_figure_a0df33a8e008be2a7adf1ffa3bc99a854} 
+void Plot\+Figure\+::set\+Data (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ double $>$ \&}]{data1D}{}\end{DoxyParamCaption})}
+
+
+
+Set 1D data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data1D} & 1D data in form of 1D vector. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_plot_figure_af40a457167dc30844802bf82a851b80f}\index{PlotFigure@{PlotFigure}!setData@{setData}}
+\index{setData@{setData}!PlotFigure@{PlotFigure}}
+\doxysubsubsection{\texorpdfstring{setData()}{setData()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_plot_figure_af40a457167dc30844802bf82a851b80f} 
+void Plot\+Figure\+::set\+Data (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::vector$<$ double $>$ $>$ \&}]{data2D}{}\end{DoxyParamCaption})}
+
+
+
+Set 2D data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data2D} & 2D data in form of 2D vector. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_plot_figure_ac3022dca3aa89275d6fdd7173c798759}\index{PlotFigure@{PlotFigure}!setFontSize@{setFontSize}}
+\index{setFontSize@{setFontSize}!PlotFigure@{PlotFigure}}
+\doxysubsubsection{\texorpdfstring{setFontSize()}{setFontSize()}}
+{\footnotesize\ttfamily \label{class_plot_figure_ac3022dca3aa89275d6fdd7173c798759} 
+void Plot\+Figure\+::set\+Font\+Size (\begin{DoxyParamCaption}\item[{const unsigned int}]{font\+Size}{}\end{DoxyParamCaption})}
+
+
+
+Set the size of the fonts. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em font\+Size} & The size of the fonts. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_plot_figure_aac86bea335d5743bbf6877e17345b022}\index{PlotFigure@{PlotFigure}!setLegend@{setLegend}}
+\index{setLegend@{setLegend}!PlotFigure@{PlotFigure}}
+\doxysubsubsection{\texorpdfstring{setLegend()}{setLegend()}}
+{\footnotesize\ttfamily \label{class_plot_figure_aac86bea335d5743bbf6877e17345b022} 
+void Plot\+Figure\+::set\+Legend (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ wx\+String $>$ \&}]{legend}{, }\item[{const PLACEMENT}]{legend\+Position}{ = {\ttfamily PLACEMENT\+\_\+NORTH\+\_\+EAST}}\end{DoxyParamCaption})}
+
+
+
+Set the labels and placement for the legend. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em legend} & Vector of strings for the legend. \\
+\hline
+{\em legend\+Position} & Position where the legend should be placed. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_plot_figure_a152aa361470f69399c1698b400d96b41}\index{PlotFigure@{PlotFigure}!setPlotEndHeight@{setPlotEndHeight}}
+\index{setPlotEndHeight@{setPlotEndHeight}!PlotFigure@{PlotFigure}}
+\doxysubsubsection{\texorpdfstring{setPlotEndHeight()}{setPlotEndHeight()}}
+{\footnotesize\ttfamily \label{class_plot_figure_a152aa361470f69399c1698b400d96b41} 
+void Plot\+Figure\+::set\+Plot\+End\+Height (\begin{DoxyParamCaption}\item[{const wx\+Coord}]{plot\+End\+Height}{}\end{DoxyParamCaption})}
+
+
+
+Set the right bottom corner in Y-\/axis. Inside this rectangle, the plot is drawn. NOTE\+: This value is recalculated since the plot figure is drawn! (plot\+Start\+Width, plot\+Start\+Height) -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/--- (plot\+End\+Width, plot\+Start\+Height) 
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{1}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ }\\\cline{1-1}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ }\\\cline{1-1}
+\endhead
+\\\cline{1-1}
+\\\cline{1-1}
+\\\cline{1-1}
+\\\cline{1-1}
+\\\cline{1-1}
+\\\cline{1-1}
+\\\cline{1-1}
+\\\cline{1-1}
+\\\cline{1-1}
+\end{longtabu}
+(plot\+Start\+Width, plot\+End\+Height) -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/--- (plot\+End\+Width, plot\+End\+Height) 
+\begin{DoxyParams}{Parameters}
+{\em plot\+End\+Height} & End height is at the end of Y-\/axis. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_plot_figure_a16ffa5ea9ba419edc125fb1bd3f645c1}\index{PlotFigure@{PlotFigure}!setPlotEndWidth@{setPlotEndWidth}}
+\index{setPlotEndWidth@{setPlotEndWidth}!PlotFigure@{PlotFigure}}
+\doxysubsubsection{\texorpdfstring{setPlotEndWidth()}{setPlotEndWidth()}}
+{\footnotesize\ttfamily \label{class_plot_figure_a16ffa5ea9ba419edc125fb1bd3f645c1} 
+void Plot\+Figure\+::set\+Plot\+End\+Width (\begin{DoxyParamCaption}\item[{const wx\+Coord}]{plot\+End\+Width}{}\end{DoxyParamCaption})}
+
+
+
+Set the right upper corner in X-\/axis. Inside this rectangle, the plot is drawn. NOTE\+: This value is recalculated since the plot figure is drawn! (plot\+Start\+Width, plot\+Start\+Height) -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/--- (plot\+End\+Width, plot\+Start\+Height) 
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{1}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ }\\\cline{1-1}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ }\\\cline{1-1}
+\endhead
+\\\cline{1-1}
+\\\cline{1-1}
+\\\cline{1-1}
+\\\cline{1-1}
+\\\cline{1-1}
+\\\cline{1-1}
+\\\cline{1-1}
+\\\cline{1-1}
+\\\cline{1-1}
+\end{longtabu}
+(plot\+Start\+Width, plot\+End\+Height) -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/--- (plot\+End\+Width, plot\+End\+Height) 
+\begin{DoxyParams}{Parameters}
+{\em plot\+End\+Width} & End width is at the end of X-\/axis. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_plot_figure_a42eed265c85b0a3426d837bf55e709cd}\index{PlotFigure@{PlotFigure}!setPlotStartHeight@{setPlotStartHeight}}
+\index{setPlotStartHeight@{setPlotStartHeight}!PlotFigure@{PlotFigure}}
+\doxysubsubsection{\texorpdfstring{setPlotStartHeight()}{setPlotStartHeight()}}
+{\footnotesize\ttfamily \label{class_plot_figure_a42eed265c85b0a3426d837bf55e709cd} 
+void Plot\+Figure\+::set\+Plot\+Start\+Height (\begin{DoxyParamCaption}\item[{const wx\+Coord}]{plot\+Start\+Height}{}\end{DoxyParamCaption})}
+
+
+
+Set the left upper corner in Y-\/axis. Inside this rectangle, the plot is drawn. NOTE\+: This value is recalculated since the plot figure is drawn! (plot\+Start\+Width, plot\+Start\+Height) -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/--- (plot\+End\+Width, plot\+Start\+Height) 
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{1}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ }\\\cline{1-1}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ }\\\cline{1-1}
+\endhead
+\\\cline{1-1}
+\\\cline{1-1}
+\\\cline{1-1}
+\\\cline{1-1}
+\\\cline{1-1}
+\\\cline{1-1}
+\\\cline{1-1}
+\\\cline{1-1}
+\\\cline{1-1}
+\end{longtabu}
+(plot\+Start\+Width, plot\+End\+Height) -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/--- (plot\+End\+Width, plot\+End\+Height) 
+\begin{DoxyParams}{Parameters}
+{\em plot\+Start\+Height} & Start height is at the start of Y-\/axis. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_plot_figure_a7adf7d614ec83303cd67ff367f9739dd}\index{PlotFigure@{PlotFigure}!setPlotStartWidth@{setPlotStartWidth}}
+\index{setPlotStartWidth@{setPlotStartWidth}!PlotFigure@{PlotFigure}}
+\doxysubsubsection{\texorpdfstring{setPlotStartWidth()}{setPlotStartWidth()}}
+{\footnotesize\ttfamily \label{class_plot_figure_a7adf7d614ec83303cd67ff367f9739dd} 
+void Plot\+Figure\+::set\+Plot\+Start\+Width (\begin{DoxyParamCaption}\item[{const wx\+Coord}]{plot\+Start\+Width}{}\end{DoxyParamCaption})}
+
+
+
+Set the left upper corner in X-\/axis. Inside this rectangle, the plot is drawn. NOTE\+: This value is recalculated since the plot figure is drawn! (plot\+Start\+Width, plot\+Start\+Height) -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/--- (plot\+End\+Width, plot\+Start\+Height) 
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{1}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ }\\\cline{1-1}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ }\\\cline{1-1}
+\endhead
+\\\cline{1-1}
+\\\cline{1-1}
+\\\cline{1-1}
+\\\cline{1-1}
+\\\cline{1-1}
+\\\cline{1-1}
+\\\cline{1-1}
+\\\cline{1-1}
+\\\cline{1-1}
+\end{longtabu}
+(plot\+Start\+Width, plot\+End\+Height) -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/--- (plot\+End\+Width, plot\+End\+Height) 
+\begin{DoxyParams}{Parameters}
+{\em plot\+Start\+Width} & Start width is at the start of X-\/axis. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_plot_figure_afe420245891180b7d4e9203ffc3aad9d}\index{PlotFigure@{PlotFigure}!setTicks@{setTicks}}
+\index{setTicks@{setTicks}!PlotFigure@{PlotFigure}}
+\doxysubsubsection{\texorpdfstring{setTicks()}{setTicks()}}
+{\footnotesize\ttfamily \label{class_plot_figure_afe420245891180b7d4e9203ffc3aad9d} 
+void Plot\+Figure\+::set\+Ticks (\begin{DoxyParamCaption}\item[{const unsigned int}]{ticks}{}\end{DoxyParamCaption})}
+
+
+
+Set the number of ticks at the figure in all axis. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ticks} & Number of ticks. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_plot_figure_a6d5730de584d29efd225c4ef4020091c}\index{PlotFigure@{PlotFigure}!setTitle@{setTitle}}
+\index{setTitle@{setTitle}!PlotFigure@{PlotFigure}}
+\doxysubsubsection{\texorpdfstring{setTitle()}{setTitle()}}
+{\footnotesize\ttfamily \label{class_plot_figure_a6d5730de584d29efd225c4ef4020091c} 
+void Plot\+Figure\+::set\+Title (\begin{DoxyParamCaption}\item[{const wx\+String \&}]{title}{}\end{DoxyParamCaption})}
+
+
+
+Set the title of the plot. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em title} & Name of the title. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_plot_figure_ae4b5366bc75dc93ab9f089adfe7d9964}\index{PlotFigure@{PlotFigure}!setWxPlotFigureType@{setWxPlotFigureType}}
+\index{setWxPlotFigureType@{setWxPlotFigureType}!PlotFigure@{PlotFigure}}
+\doxysubsubsection{\texorpdfstring{setWxPlotFigureType()}{setWxPlotFigureType()}}
+{\footnotesize\ttfamily \label{class_plot_figure_ae4b5366bc75dc93ab9f089adfe7d9964} 
+void Plot\+Figure\+::set\+Wx\+Plot\+Figure\+Type (\begin{DoxyParamCaption}\item[{const WXPLOT\+\_\+\+FIGURE}]{wx\+Plot\+Figure}{, }\item[{const WXPLOT\+\_\+\+TYPE}]{wx\+Plot\+Type}{}\end{DoxyParamCaption})}
+
+
+
+Set the plot type selection and plot figure selection. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em wx\+Plot\+Figure} & Selection of plot figure. \\
+\hline
+{\em wx\+Plot\+Type} & Selection of plot type. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_plot_figure_a58a646703cf2c3c03373c53c2d9ce64c}\index{PlotFigure@{PlotFigure}!setXlabel@{setXlabel}}
+\index{setXlabel@{setXlabel}!PlotFigure@{PlotFigure}}
+\doxysubsubsection{\texorpdfstring{setXlabel()}{setXlabel()}}
+{\footnotesize\ttfamily \label{class_plot_figure_a58a646703cf2c3c03373c53c2d9ce64c} 
+void Plot\+Figure\+::set\+Xlabel (\begin{DoxyParamCaption}\item[{const wx\+String \&}]{x\+Label}{}\end{DoxyParamCaption})}
+
+
+
+Set the name of the X-\/label. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x\+Label} & Name of the X-\/label. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_plot_figure_a670eff9a8a4c2fbc58cdc228d064be39}\index{PlotFigure@{PlotFigure}!setYlabel@{setYlabel}}
+\index{setYlabel@{setYlabel}!PlotFigure@{PlotFigure}}
+\doxysubsubsection{\texorpdfstring{setYlabel()}{setYlabel()}}
+{\footnotesize\ttfamily \label{class_plot_figure_a670eff9a8a4c2fbc58cdc228d064be39} 
+void Plot\+Figure\+::set\+Ylabel (\begin{DoxyParamCaption}\item[{const wx\+String \&}]{y\+Label}{}\end{DoxyParamCaption})}
+
+
+
+Set the name of the Y-\/label. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em y\+Label} & Name of the Y-\/label. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_plot_figure_a6417f00ad3743b78e87ef2f7c3d1949c}\index{PlotFigure@{PlotFigure}!setYlim@{setYlim}}
+\index{setYlim@{setYlim}!PlotFigure@{PlotFigure}}
+\doxysubsubsection{\texorpdfstring{setYlim()}{setYlim()}}
+{\footnotesize\ttfamily \label{class_plot_figure_a6417f00ad3743b78e87ef2f7c3d1949c} 
+void Plot\+Figure\+::set\+Ylim (\begin{DoxyParamCaption}\item[{const double}]{minY}{, }\item[{const double}]{maxY}{}\end{DoxyParamCaption})}
+
+
+
+Set the plot zoom limit in Y-\/axis. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em minY} & Minimum limit in Y-\/axis. \\
+\hline
+{\em maxY} & Maximum limit in Y-\/axis. \\
+\hline
+\end{DoxyParams}
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}

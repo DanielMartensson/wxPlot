@@ -91,35 +91,41 @@ $(function(){ initResizable(false); });
   <div class="headertitle"><div class="title">Spline Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p><a class="el" href="class_spline.html" title="Spline class. Inheritance from class Line.">Spline</a> class. Inheritance from class <a class="el" href="class_line.html" title="Line class. Does the most of the things in 2D.">Line</a>.  
+ <a href="#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="spline_8hpp_source.html">spline.hpp</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for Spline:</div>
 <div class="dyncontent">
  <div class="center">
   <img src="class_spline.png" usemap="#Spline_map" alt=""/>
   <map id="Spline_map" name="Spline_map">
-<area href="class_line.html" alt="Line" shape="rect" coords="0,0,47,24"/>
+<area href="class_line.html" title="Line class. Does the most of the things in 2D." alt="Line" shape="rect" coords="0,0,47,24"/>
   </map>
 </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a0508f8e92b3ec34f8db530dbb32d4b92" id="r_a0508f8e92b3ec34f8db530dbb32d4b92"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0508f8e92b3ec34f8db530dbb32d4b92">draw</a> (wxDC &amp;dc, const std::vector&lt; double &gt; &amp;xData, const std::vector&lt; double &gt; &amp;yData, const unsigned int colourIndex) override</td></tr>
-<tr class="separator:a0508f8e92b3ec34f8db530dbb32d4b92"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac2fbba99327d1238b38541dca5d38c1b" id="r_ac2fbba99327d1238b38541dca5d38c1b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac2fbba99327d1238b38541dca5d38c1b">draw</a> (wxDC &amp;dc, const std::vector&lt; double &gt; &amp;xData, const std::vector&lt; double &gt; &amp;yData, const unsigned int colourIndex) override</td></tr>
+<tr class="memdesc:ac2fbba99327d1238b38541dca5d38c1b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw the spline plot inside the rectangle.  <br /></td></tr>
+<tr class="separator:ac2fbba99327d1238b38541dca5d38c1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_line"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_class_line')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_line.html">Line</a></td></tr>
-<tr class="memitem:a281ac8321234db58306b017596eab9a7 inherit pub_methods_class_line" id="r_a281ac8321234db58306b017596eab9a7"><td class="memItemLeft" align="right" valign="top">
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setLimits</b> (const double minX, const double maxX, const double minY, const double maxY)</td></tr>
+<tr class="memitem:a281ac8321234db58306b017596eab9a7 inherit pub_methods_class_line" id="r_a281ac8321234db58306b017596eab9a7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_line.html#a281ac8321234db58306b017596eab9a7">setLimits</a> (const double <a class="el" href="class_line.html#af2aaefd513c665b045e771e812e59bea">minX</a>, const double <a class="el" href="class_line.html#a4b2a944fd143204a253ce23968cd9e61">maxX</a>, const double <a class="el" href="class_line.html#a174e69897228bfd03c9e98a9283dad9c">minY</a>, const double <a class="el" href="class_line.html#a61909563e4694b3ece73a63732724156">maxY</a>)</td></tr>
+<tr class="memdesc:a281ac8321234db58306b017596eab9a7 inherit pub_methods_class_line"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set minimum and maximum limits of the data.  <br /></td></tr>
 <tr class="separator:a281ac8321234db58306b017596eab9a7 inherit pub_methods_class_line"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ade7560149deea45afc6e036fdabb2302 inherit pub_methods_class_line" id="r_ade7560149deea45afc6e036fdabb2302"><td class="memItemLeft" align="right" valign="top">
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setPlotStartWidth</b> (const wxCoord plotStartWidth)</td></tr>
+<tr class="memitem:ade7560149deea45afc6e036fdabb2302 inherit pub_methods_class_line" id="r_ade7560149deea45afc6e036fdabb2302"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_line.html#ade7560149deea45afc6e036fdabb2302">setPlotStartWidth</a> (const wxCoord <a class="el" href="class_line.html#af77792fe6c61cdf5651c11b2ee9d4fd9">plotStartWidth</a>)</td></tr>
+<tr class="memdesc:ade7560149deea45afc6e036fdabb2302 inherit pub_methods_class_line"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the left upper corner in X-axis. Inside this rectangle, the plot is drawn. NOTE: This value is recalculated since the plot figure is drawn! (plotStartWidth, plotStartHeight) --------------------------------------------&mdash; (plotEndWidth, plotStartHeight)  <br /></td></tr>
 <tr class="separator:ade7560149deea45afc6e036fdabb2302 inherit pub_methods_class_line"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa1836a393bd60485566f58f6d405782d inherit pub_methods_class_line" id="r_aa1836a393bd60485566f58f6d405782d"><td class="memItemLeft" align="right" valign="top">
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setPlotStartHeight</b> (const wxCoord plotStartHeight)</td></tr>
+<tr class="memitem:aa1836a393bd60485566f58f6d405782d inherit pub_methods_class_line" id="r_aa1836a393bd60485566f58f6d405782d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_line.html#aa1836a393bd60485566f58f6d405782d">setPlotStartHeight</a> (const wxCoord <a class="el" href="class_line.html#a2468b0064fa2026eecaf3f4ac9c138e4">plotStartHeight</a>)</td></tr>
+<tr class="memdesc:aa1836a393bd60485566f58f6d405782d inherit pub_methods_class_line"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the left upper corner in Y-axis. Inside this rectangle, the plot is drawn. NOTE: This value is recalculated since the plot figure is drawn! (plotStartWidth, plotStartHeight) --------------------------------------------&mdash; (plotEndWidth, plotStartHeight)  <br /></td></tr>
 <tr class="separator:aa1836a393bd60485566f58f6d405782d inherit pub_methods_class_line"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a62eee93e58ee963050d3463cbcae368c inherit pub_methods_class_line" id="r_a62eee93e58ee963050d3463cbcae368c"><td class="memItemLeft" align="right" valign="top">
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setPlotEndWidth</b> (const wxCoord plotEndWidth)</td></tr>
+<tr class="memitem:a62eee93e58ee963050d3463cbcae368c inherit pub_methods_class_line" id="r_a62eee93e58ee963050d3463cbcae368c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_line.html#a62eee93e58ee963050d3463cbcae368c">setPlotEndWidth</a> (const wxCoord <a class="el" href="class_line.html#adfd37018929fd47cc85aea6b009e6ecd">plotEndWidth</a>)</td></tr>
+<tr class="memdesc:a62eee93e58ee963050d3463cbcae368c inherit pub_methods_class_line"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the right upper corner in X-axis. Inside this rectangle, the plot is drawn. NOTE: This value is recalculated since the plot figure is drawn! (plotStartWidth, plotStartHeight) --------------------------------------------&mdash; (plotEndWidth, plotStartHeight)  <br /></td></tr>
 <tr class="separator:a62eee93e58ee963050d3463cbcae368c inherit pub_methods_class_line"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a860c64fc275cf8e4d1f841a118baab4f inherit pub_methods_class_line" id="r_a860c64fc275cf8e4d1f841a118baab4f"><td class="memItemLeft" align="right" valign="top">
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setPlotEndHeight</b> (const wxCoord plotEndHeight)</td></tr>
+<tr class="memitem:a860c64fc275cf8e4d1f841a118baab4f inherit pub_methods_class_line" id="r_a860c64fc275cf8e4d1f841a118baab4f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_line.html#a860c64fc275cf8e4d1f841a118baab4f">setPlotEndHeight</a> (const wxCoord <a class="el" href="class_line.html#a1198f195b092c608928a8dedd41520d5">plotEndHeight</a>)</td></tr>
+<tr class="memdesc:a860c64fc275cf8e4d1f841a118baab4f inherit pub_methods_class_line"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the right bottom corner in Y-axis. Inside this rectangle, the plot is drawn. NOTE: This value is recalculated since the plot figure is drawn! (plotStartWidth, plotStartHeight) --------------------------------------------&mdash; (plotEndWidth, plotStartHeight)  <br /></td></tr>
 <tr class="separator:a860c64fc275cf8e4d1f841a118baab4f inherit pub_methods_class_line"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
@@ -127,32 +133,42 @@ Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pro_attribs_class_line"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_attribs_class_line')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="class_line.html">Line</a></td></tr>
 <tr class="memitem:adfd37018929fd47cc85aea6b009e6ecd inherit pro_attribs_class_line" id="r_adfd37018929fd47cc85aea6b009e6ecd"><td class="memItemLeft" align="right" valign="top">
 wxCoord&#160;</td><td class="memItemRight" valign="bottom"><b>plotEndWidth</b> = 0</td></tr>
+<tr class="memdesc:adfd37018929fd47cc85aea6b009e6ecd inherit pro_attribs_class_line"><td class="mdescLeft">&#160;</td><td class="mdescRight">Location of right upper corner in X-axis. <br /></td></tr>
 <tr class="separator:adfd37018929fd47cc85aea6b009e6ecd inherit pro_attribs_class_line"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1198f195b092c608928a8dedd41520d5 inherit pro_attribs_class_line" id="r_a1198f195b092c608928a8dedd41520d5"><td class="memItemLeft" align="right" valign="top">
 wxCoord&#160;</td><td class="memItemRight" valign="bottom"><b>plotEndHeight</b> = 0</td></tr>
+<tr class="memdesc:a1198f195b092c608928a8dedd41520d5 inherit pro_attribs_class_line"><td class="mdescLeft">&#160;</td><td class="mdescRight">Location of right bottom corner in Y-axis. <br /></td></tr>
 <tr class="separator:a1198f195b092c608928a8dedd41520d5 inherit pro_attribs_class_line"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af77792fe6c61cdf5651c11b2ee9d4fd9 inherit pro_attribs_class_line" id="r_af77792fe6c61cdf5651c11b2ee9d4fd9"><td class="memItemLeft" align="right" valign="top">
 wxCoord&#160;</td><td class="memItemRight" valign="bottom"><b>plotStartWidth</b> = 0</td></tr>
+<tr class="memdesc:af77792fe6c61cdf5651c11b2ee9d4fd9 inherit pro_attribs_class_line"><td class="mdescLeft">&#160;</td><td class="mdescRight">Location of left upper corner in X-axis. <br /></td></tr>
 <tr class="separator:af77792fe6c61cdf5651c11b2ee9d4fd9 inherit pro_attribs_class_line"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2468b0064fa2026eecaf3f4ac9c138e4 inherit pro_attribs_class_line" id="r_a2468b0064fa2026eecaf3f4ac9c138e4"><td class="memItemLeft" align="right" valign="top">
 wxCoord&#160;</td><td class="memItemRight" valign="bottom"><b>plotStartHeight</b> = 0</td></tr>
+<tr class="memdesc:a2468b0064fa2026eecaf3f4ac9c138e4 inherit pro_attribs_class_line"><td class="mdescLeft">&#160;</td><td class="mdescRight">Location of left upper corner in Y-axis. <br /></td></tr>
 <tr class="separator:a2468b0064fa2026eecaf3f4ac9c138e4 inherit pro_attribs_class_line"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af2aaefd513c665b045e771e812e59bea inherit pro_attribs_class_line" id="r_af2aaefd513c665b045e771e812e59bea"><td class="memItemLeft" align="right" valign="top">
 double&#160;</td><td class="memItemRight" valign="bottom"><b>minX</b> = 0</td></tr>
+<tr class="memdesc:af2aaefd513c665b045e771e812e59bea inherit pro_attribs_class_line"><td class="mdescLeft">&#160;</td><td class="mdescRight">Minimum value of data in X-axis. <br /></td></tr>
 <tr class="separator:af2aaefd513c665b045e771e812e59bea inherit pro_attribs_class_line"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4b2a944fd143204a253ce23968cd9e61 inherit pro_attribs_class_line" id="r_a4b2a944fd143204a253ce23968cd9e61"><td class="memItemLeft" align="right" valign="top">
 double&#160;</td><td class="memItemRight" valign="bottom"><b>maxX</b> = 0</td></tr>
+<tr class="memdesc:a4b2a944fd143204a253ce23968cd9e61 inherit pro_attribs_class_line"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maximum value of data in X-axis. <br /></td></tr>
 <tr class="separator:a4b2a944fd143204a253ce23968cd9e61 inherit pro_attribs_class_line"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a174e69897228bfd03c9e98a9283dad9c inherit pro_attribs_class_line" id="r_a174e69897228bfd03c9e98a9283dad9c"><td class="memItemLeft" align="right" valign="top">
 double&#160;</td><td class="memItemRight" valign="bottom"><b>minY</b> = 0</td></tr>
+<tr class="memdesc:a174e69897228bfd03c9e98a9283dad9c inherit pro_attribs_class_line"><td class="mdescLeft">&#160;</td><td class="mdescRight">Minimum value of data in Y-axis. <br /></td></tr>
 <tr class="separator:a174e69897228bfd03c9e98a9283dad9c inherit pro_attribs_class_line"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a61909563e4694b3ece73a63732724156 inherit pro_attribs_class_line" id="r_a61909563e4694b3ece73a63732724156"><td class="memItemLeft" align="right" valign="top">
 double&#160;</td><td class="memItemRight" valign="bottom"><b>maxY</b> = 0</td></tr>
+<tr class="memdesc:a61909563e4694b3ece73a63732724156 inherit pro_attribs_class_line"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maximum value of data in Y-axis. <br /></td></tr>
 <tr class="separator:a61909563e4694b3ece73a63732724156 inherit pro_attribs_class_line"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Function Documentation</h2>
-<a id="a0508f8e92b3ec34f8db530dbb32d4b92" name="a0508f8e92b3ec34f8db530dbb32d4b92"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0508f8e92b3ec34f8db530dbb32d4b92">&#9670;&#160;</a></span>draw()</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p><a class="el" href="class_spline.html" title="Spline class. Inheritance from class Line.">Spline</a> class. Inheritance from class <a class="el" href="class_line.html" title="Line class. Does the most of the things in 2D.">Line</a>. </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="ac2fbba99327d1238b38541dca5d38c1b" name="ac2fbba99327d1238b38541dca5d38c1b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac2fbba99327d1238b38541dca5d38c1b">&#9670;&#160;</a></span>draw()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -161,7 +177,7 @@ double&#160;</td><td class="memItemRight" valign="bottom"><b>maxY</b> = 0</td></
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool Spline::draw </td>
+          <td class="memname">void Spline::draw </td>
           <td>(</td>
           <td class="paramtype">wxDC &amp;</td>          <td class="paramname"><span class="paramname"><em>dc</em></span>, </td>
         </tr>
@@ -188,7 +204,18 @@ double&#160;</td><td class="memItemRight" valign="bottom"><b>maxY</b> = 0</td></
 </table>
 </div><div class="memdoc">
 
-<p>Reimplemented from <a class="el" href="class_line.html">Line</a>.</p>
+<p>Draw the spline plot inside the rectangle. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dc</td><td>The wxDC object for drawing lines, polygons etc. </td></tr>
+    <tr><td class="paramname">xData</td><td>Data in X-axis. </td></tr>
+    <tr><td class="paramname">yData</td><td>Data in Y-axis. </td></tr>
+    <tr><td class="paramname">colourIndex</td><td>Selection index of the colour. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Reimplemented from <a class="el" href="class_line.html#a66e47d8474d26db5ec512dbd6c3a64d4">Line</a>.</p>
 
 </div>
 </div>

@@ -97,21 +97,25 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;wx/wx.h&gt;</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;../../wxplot.hpp&quot;</span></div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
-<div class="foldopen" id="foldopen00006" data-start="{" data-end="};">
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno"><a class="line" href="class_main_frame.html">    6</a></span><span class="keyword">class </span><a class="code hl_class" href="class_main_frame.html">MainFrame</a> : <span class="keyword">public</span> wxFrame</div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>{</div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>    <a class="code hl_class" href="class_main_frame.html">MainFrame</a>();</div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="keyword">private</span>:</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    <a class="code hl_class" href="classwx_plot.html">wxPlot</a>* plot;</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    <span class="keywordtype">void</span> OnHello(wxCommandEvent&amp; event);</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    <span class="keywordtype">void</span> OnExit(wxCommandEvent&amp; event);</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    <span class="keywordtype">void</span> OnSize(wxSizeEvent&amp; event);</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>};</div>
+<div class="foldopen" id="foldopen00017" data-start="{" data-end="};">
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="class_main_frame.html">   17</a></span><span class="keyword">class </span><a class="code hl_class" href="class_main_frame.html">MainFrame</a> : <span class="keyword">public</span> wxFrame</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>{</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    <a class="code hl_class" href="classwx_plot.html">wxPlot</a>* plot;    </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <span class="keywordtype">void</span> OnHello(wxCommandEvent&amp; event);</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    <span class="keywordtype">void</span> OnExit(wxCommandEvent&amp; event);</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    <span class="keywordtype">void</span> OnSize(wxSizeEvent&amp; event);</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    <a class="code hl_function" href="class_main_frame.html#a667b44053cae174a361cfd21124ef995">MainFrame</a>();</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>};</div>
 </div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
-<div class="ttc" id="aclass_main_frame_html"><div class="ttname"><a href="class_main_frame.html">MainFrame</a></div><div class="ttdef"><b>Definition</b> mainframe.hpp:7</div></div>
+<div class="ttc" id="aclass_main_frame_html"><div class="ttname"><a href="class_main_frame.html">MainFrame</a></div><div class="ttdoc">This class represents the main example window for the application.</div><div class="ttdef"><b>Definition</b> mainframe.hpp:18</div></div>
+<div class="ttc" id="aclass_main_frame_html_a667b44053cae174a361cfd21124ef995"><div class="ttname"><a href="class_main_frame.html#a667b44053cae174a361cfd21124ef995">MainFrame::MainFrame</a></div><div class="ttdeci">MainFrame()</div><div class="ttdoc">Constructor for the MainFrame class.</div><div class="ttdef"><b>Definition</b> mainframe.cpp:4</div></div>
 <div class="ttc" id="aclasswx_plot_html"><div class="ttname"><a href="classwx_plot.html">wxPlot</a></div><div class="ttdoc">Main class for wxPlot. This is the only class the user going to work with.</div><div class="ttdef"><b>Definition</b> wxplot.hpp:11</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->

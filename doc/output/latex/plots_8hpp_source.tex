@@ -7,28 +7,25 @@
 \DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}plotfigures/plotfigures.hpp"{}}}
 \DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}plottypes/plottypes.hpp"{}}}
 \DoxyCodeLine{00005\ }
-\DoxyCodeLine{00006\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_plots}{Plots}}\ \{}
-\DoxyCodeLine{00007\ }
-\DoxyCodeLine{00008\ \textcolor{keyword}{private}:}
-\DoxyCodeLine{00009\ \ \ \ \ \textcolor{comment}{//\ Plot\ types\ are\ the\ type\ of\ the\ plot\ e.g\ line,\ bar,\ histogram,\ bubble,\ scatter\ etc.}}
-\DoxyCodeLine{00010\ \ \ \ \ \mbox{\hyperlink{class_plot_types}{PlotTypes}}\ plotTypes;}
+\DoxyCodeLine{00010\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_plots}{Plots}}\ \{}
 \DoxyCodeLine{00011\ }
-\DoxyCodeLine{00012\ \ \ \ \ \textcolor{comment}{//\ Plot\ frames\ are\ figures\ of\ the\ frame\ e.g\ 2D,\ 3D,\ custom\ etc.}}
-\DoxyCodeLine{00013\ \ \ \ \ \mbox{\hyperlink{class_plot_figure}{PlotFigure}}\ plotFigures;}
+\DoxyCodeLine{00012\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00013\ \ \ \ \ \mbox{\hyperlink{class_plot_types}{PlotTypes}}\ plotTypes;\ \ \ \ \ \ \ \ }
 \DoxyCodeLine{00014\ }
-\DoxyCodeLine{00015\ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00016\ \ \ \ \ \textcolor{comment}{//\ Constructor}}
-\DoxyCodeLine{00017\ \ \ \ \ \mbox{\hyperlink{class_plots}{Plots}}()\ \{\}}
+\DoxyCodeLine{00015\ \ \ \ \ \mbox{\hyperlink{class_plot_figure}{PlotFigure}}\ plotFigures;\ \ \ \ \ }
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{keyword}{public}:}
 \DoxyCodeLine{00018\ }
-\DoxyCodeLine{00019\ \ \ \ \ \textcolor{comment}{//\ Getters}}
-\DoxyCodeLine{00020\ \ \ \ \ \mbox{\hyperlink{class_plot_types}{PlotTypes}}\&\ getPlotTypes();}
-\DoxyCodeLine{00021\ \ \ \ \ \mbox{\hyperlink{class_plot_figure}{PlotFigure}}\&\ getPlotFigures();}
-\DoxyCodeLine{00022\ }
-\DoxyCodeLine{00023\ \ \ \ \ \textcolor{comment}{//\ Setters\ }}
-\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{void}\ setWxPlotFigureType(\textcolor{keyword}{const}\ WXPLOT\_FIGURE\ wxPlotFigure,\ \textcolor{keyword}{const}\ WXPLOT\_TYPE\ wxPlotType);}
-\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{void}\ setData(\textcolor{keyword}{const}\ std::vector<std::vector<double>>\&\ data);}
-\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{void}\ setData(\textcolor{keyword}{const}\ std::vector<double>\&\ data);}
-\DoxyCodeLine{00027\ }
-\DoxyCodeLine{00028\ \};}
+\DoxyCodeLine{00023\ \ \ \ \ \mbox{\hyperlink{class_plot_types}{PlotTypes}}\&\ \mbox{\hyperlink{class_plots_abe8dc4e3b7cf28f1b2a6a8a6ba53c138}{getPlotTypes}}();}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00029\ \ \ \ \ \mbox{\hyperlink{class_plot_figure}{PlotFigure}}\&\ \mbox{\hyperlink{class_plots_a253d22534fd495b4568a41559d73c9c3}{getPlotFigures}}();}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_plots_a38dfbe52d6f14ab32cdc243675f6f9a4}{setWxPlotFigureType}}(\textcolor{keyword}{const}\ WXPLOT\_FIGURE\ wxPlotFigure,\ \textcolor{keyword}{const}\ WXPLOT\_TYPE\ wxPlotType);}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_plots_a0d2598f037ced15cc34016d0da1e3000}{setData}}(\textcolor{keyword}{const}\ std::vector<std::vector<double>>\&\ data2D);}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_plots_a0d2598f037ced15cc34016d0da1e3000}{setData}}(\textcolor{keyword}{const}\ std::vector<double>\&\ data1D);}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ \};}
 
 \end{DoxyCode}

@@ -1,23 +1,106 @@
 \doxysection{Plots Class Reference}
 \hypertarget{class_plots}{}\label{class_plots}\index{Plots@{Plots}}
+
+
+Plot class for \doxylink{classwx_plot}{wx\+Plot}. This class contains plot types and plot figures.  
+
+
+
+
+{\ttfamily \#include $<$plots.\+hpp$>$}
+
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\Hypertarget{class_plots_abe8dc4e3b7cf28f1b2a6a8a6ba53c138}\label{class_plots_abe8dc4e3b7cf28f1b2a6a8a6ba53c138} 
-\mbox{\hyperlink{class_plot_types}{Plot\+Types}} \& {\bfseries get\+Plot\+Types} ()
-\item 
-\Hypertarget{class_plots_a253d22534fd495b4568a41559d73c9c3}\label{class_plots_a253d22534fd495b4568a41559d73c9c3} 
-\mbox{\hyperlink{class_plot_figure}{Plot\+Figure}} \& {\bfseries get\+Plot\+Figures} ()
-\item 
-\Hypertarget{class_plots_a38dfbe52d6f14ab32cdc243675f6f9a4}\label{class_plots_a38dfbe52d6f14ab32cdc243675f6f9a4} 
-void {\bfseries set\+Wx\+Plot\+Figure\+Type} (const WXPLOT\+\_\+\+FIGURE wx\+Plot\+Figure, const WXPLOT\+\_\+\+TYPE wx\+Plot\+Type)
-\item 
-\Hypertarget{class_plots_a0fb6ab09a9511860addff529bd42ea60}\label{class_plots_a0fb6ab09a9511860addff529bd42ea60} 
-void {\bfseries set\+Data} (const std\+::vector$<$ std\+::vector$<$ double $>$ $>$ \&data)
-\item 
-\Hypertarget{class_plots_a58a990eb9b5d7d533a666962b6eae1f3}\label{class_plots_a58a990eb9b5d7d533a666962b6eae1f3} 
-void {\bfseries set\+Data} (const std\+::vector$<$ double $>$ \&data)
-\end{DoxyCompactItemize}
+\mbox{\hyperlink{class_plot_types}{Plot\+Types}} \& \mbox{\hyperlink{class_plots_abe8dc4e3b7cf28f1b2a6a8a6ba53c138}{get\+Plot\+Types}} ()
+\begin{DoxyCompactList}\small\item\em Return the reference of plot types object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_plot_figure}{Plot\+Figure}} \& \mbox{\hyperlink{class_plots_a253d22534fd495b4568a41559d73c9c3}{get\+Plot\+Figures}} ()
+\begin{DoxyCompactList}\small\item\em Return the reference of plot figure object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_plots_a38dfbe52d6f14ab32cdc243675f6f9a4}{set\+Wx\+Plot\+Figure\+Type}} (const WXPLOT\+\_\+\+FIGURE wx\+Plot\+Figure, const WXPLOT\+\_\+\+TYPE wx\+Plot\+Type)
+\begin{DoxyCompactList}\small\item\em Set the plot type selection and plot figure selection. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_plots_a0d2598f037ced15cc34016d0da1e3000}{set\+Data}} (const std\+::vector$<$ std\+::vector$<$ double $>$ $>$ \&data2D)
+\begin{DoxyCompactList}\small\item\em Set 2D data. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_plots_a3399377ba8384ac9c6f87b3483ac31d8}{set\+Data}} (const std\+::vector$<$ double $>$ \&data1D)
+\begin{DoxyCompactList}\small\item\em Set 1D data. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Plot class for \doxylink{classwx_plot}{wx\+Plot}. This class contains plot types and plot figures. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_plots_a253d22534fd495b4568a41559d73c9c3}\index{Plots@{Plots}!getPlotFigures@{getPlotFigures}}
+\index{getPlotFigures@{getPlotFigures}!Plots@{Plots}}
+\doxysubsubsection{\texorpdfstring{getPlotFigures()}{getPlotFigures()}}
+{\footnotesize\ttfamily \label{class_plots_a253d22534fd495b4568a41559d73c9c3} 
+\mbox{\hyperlink{class_plot_figure}{Plot\+Figure}} \& Plots\+::get\+Plot\+Figures (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Return the reference of plot figure object. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{class_plot_figure}{Plot\+Figure}\& 
+\end{DoxyReturn}
+\Hypertarget{class_plots_abe8dc4e3b7cf28f1b2a6a8a6ba53c138}\index{Plots@{Plots}!getPlotTypes@{getPlotTypes}}
+\index{getPlotTypes@{getPlotTypes}!Plots@{Plots}}
+\doxysubsubsection{\texorpdfstring{getPlotTypes()}{getPlotTypes()}}
+{\footnotesize\ttfamily \label{class_plots_abe8dc4e3b7cf28f1b2a6a8a6ba53c138} 
+\mbox{\hyperlink{class_plot_types}{Plot\+Types}} \& Plots\+::get\+Plot\+Types (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Return the reference of plot types object. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{class_plot_types}{Plot\+Types}\& 
+\end{DoxyReturn}
+\Hypertarget{class_plots_a3399377ba8384ac9c6f87b3483ac31d8}\index{Plots@{Plots}!setData@{setData}}
+\index{setData@{setData}!Plots@{Plots}}
+\doxysubsubsection{\texorpdfstring{setData()}{setData()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_plots_a3399377ba8384ac9c6f87b3483ac31d8} 
+void Plots\+::set\+Data (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ double $>$ \&}]{data1D}{}\end{DoxyParamCaption})}
+
+
+
+Set 1D data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data1D} & 1D data in form of 1D vector. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_plots_a0d2598f037ced15cc34016d0da1e3000}\index{Plots@{Plots}!setData@{setData}}
+\index{setData@{setData}!Plots@{Plots}}
+\doxysubsubsection{\texorpdfstring{setData()}{setData()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_plots_a0d2598f037ced15cc34016d0da1e3000} 
+void Plots\+::set\+Data (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::vector$<$ double $>$ $>$ \&}]{data2D}{}\end{DoxyParamCaption})}
+
+
+
+Set 2D data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data2D} & 2D data in form of 2D vector. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_plots_a38dfbe52d6f14ab32cdc243675f6f9a4}\index{Plots@{Plots}!setWxPlotFigureType@{setWxPlotFigureType}}
+\index{setWxPlotFigureType@{setWxPlotFigureType}!Plots@{Plots}}
+\doxysubsubsection{\texorpdfstring{setWxPlotFigureType()}{setWxPlotFigureType()}}
+{\footnotesize\ttfamily \label{class_plots_a38dfbe52d6f14ab32cdc243675f6f9a4} 
+void Plots\+::set\+Wx\+Plot\+Figure\+Type (\begin{DoxyParamCaption}\item[{const WXPLOT\+\_\+\+FIGURE}]{wx\+Plot\+Figure}{, }\item[{const WXPLOT\+\_\+\+TYPE}]{wx\+Plot\+Type}{}\end{DoxyParamCaption})}
+
+
+
+Set the plot type selection and plot figure selection. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em wx\+Plot\+Figure} & Selection of plot figure. \\
+\hline
+{\em wx\+Plot\+Type} & Selection of plot type. \\
+\hline
+\end{DoxyParams}
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}

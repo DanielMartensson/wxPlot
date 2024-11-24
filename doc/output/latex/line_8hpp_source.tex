@@ -7,33 +7,32 @@
 \DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <vector>}}
 \DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <wx/wx.h>}}
 \DoxyCodeLine{00005\ }
-\DoxyCodeLine{00006\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_line}{Line}}\ \{}
-\DoxyCodeLine{00007\ \textcolor{keyword}{protected}:}
-\DoxyCodeLine{00008\ \ \ \ \ \textcolor{comment}{//\ Size\ for\ the\ rectangle}}
-\DoxyCodeLine{00009\ \ \ \ \ wxCoord\ plotEndWidth\ =\ 0;}
-\DoxyCodeLine{00010\ \ \ \ \ wxCoord\ plotEndHeight\ =\ 0;}
-\DoxyCodeLine{00011\ \ \ \ \ wxCoord\ plotStartWidth\ =\ 0;}
-\DoxyCodeLine{00012\ \ \ \ \ wxCoord\ plotStartHeight\ =\ 0;}
-\DoxyCodeLine{00013\ }
-\DoxyCodeLine{00014\ \ \ \ \ \textcolor{comment}{//\ Limits\ for\ the\ data\ }}
-\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keywordtype}{double}\ minX\ =\ 0;}
-\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keywordtype}{double}\ maxX\ =\ 0;}
-\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keywordtype}{double}\ minY\ =\ 0;}
-\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keywordtype}{double}\ maxY\ =\ 0;}
-\DoxyCodeLine{00019\ }
-\DoxyCodeLine{00020\ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00021\ \ \ \ \ \textcolor{comment}{//\ Constructor}}
-\DoxyCodeLine{00022\ \ \ \ \ \mbox{\hyperlink{class_line}{Line}}()\ \{\}}
-\DoxyCodeLine{00023\ }
-\DoxyCodeLine{00024\ \ \ \ \ \textcolor{comment}{//\ Setters}}
-\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{void}\ setLimits(\textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ minX,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ maxX,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ minY,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ maxY);}
-\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{void}\ setPlotStartWidth(\textcolor{keyword}{const}\ wxCoord\ plotStartWidth);}
-\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordtype}{void}\ setPlotStartHeight(\textcolor{keyword}{const}\ wxCoord\ plotStartHeight);}
-\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordtype}{void}\ setPlotEndWidth(\textcolor{keyword}{const}\ wxCoord\ plotEndWidth);}
-\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordtype}{void}\ setPlotEndHeight(\textcolor{keyword}{const}\ wxCoord\ plotEndHeight);}
-\DoxyCodeLine{00030\ }
-\DoxyCodeLine{00031\ \ \ \ \ \textcolor{comment}{//\ Functions}}
-\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ draw(wxDC\&\ dc,\ \textcolor{keyword}{const}\ std::vector<double>\&\ xData,\ \textcolor{keyword}{const}\ std::vector<double>\&\ yData,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ colourIndex);}
-\DoxyCodeLine{00033\ \};}
+\DoxyCodeLine{00010\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_line}{Line}}\ \{}
+\DoxyCodeLine{00011\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00012\ \ \ \ \ }
+\DoxyCodeLine{00013\ \ \ \ \ wxCoord\ \mbox{\hyperlink{class_line_adfd37018929fd47cc85aea6b009e6ecd}{plotEndWidth}}\ =\ 0;\ \ \ \ \ \ \ }
+\DoxyCodeLine{00014\ \ \ \ \ wxCoord\ \mbox{\hyperlink{class_line_a1198f195b092c608928a8dedd41520d5}{plotEndHeight}}\ =\ 0;\ \ \ \ \ \ }
+\DoxyCodeLine{00015\ \ \ \ \ wxCoord\ \mbox{\hyperlink{class_line_af77792fe6c61cdf5651c11b2ee9d4fd9}{plotStartWidth}}\ =\ 0;\ \ \ \ \ }
+\DoxyCodeLine{00016\ \ \ \ \ wxCoord\ \mbox{\hyperlink{class_line_a2468b0064fa2026eecaf3f4ac9c138e4}{plotStartHeight}}\ =\ 0;\ \ \ \ }
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_line_af2aaefd513c665b045e771e812e59bea}{minX}}\ =\ 0;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_line_a4b2a944fd143204a253ce23968cd9e61}{maxX}}\ =\ 0;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_line_a174e69897228bfd03c9e98a9283dad9c}{minY}}\ =\ 0;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_line_a61909563e4694b3ece73a63732724156}{maxY}}\ =\ 0;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_line_a281ac8321234db58306b017596eab9a7}{setLimits}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_line_af2aaefd513c665b045e771e812e59bea}{minX}},\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_line_a4b2a944fd143204a253ce23968cd9e61}{maxX}},\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_line_a174e69897228bfd03c9e98a9283dad9c}{minY}},\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_line_a61909563e4694b3ece73a63732724156}{maxY}});}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_line_ade7560149deea45afc6e036fdabb2302}{setPlotStartWidth}}(\textcolor{keyword}{const}\ wxCoord\ \mbox{\hyperlink{class_line_af77792fe6c61cdf5651c11b2ee9d4fd9}{plotStartWidth}});}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00072\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_line_aa1836a393bd60485566f58f6d405782d}{setPlotStartHeight}}(\textcolor{keyword}{const}\ wxCoord\ \mbox{\hyperlink{class_line_a2468b0064fa2026eecaf3f4ac9c138e4}{plotStartHeight}});}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00092\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_line_a62eee93e58ee963050d3463cbcae368c}{setPlotEndWidth}}(\textcolor{keyword}{const}\ wxCoord\ \mbox{\hyperlink{class_line_adfd37018929fd47cc85aea6b009e6ecd}{plotEndWidth}});}
+\DoxyCodeLine{00093\ }
+\DoxyCodeLine{00112\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_line_a860c64fc275cf8e4d1f841a118baab4f}{setPlotEndHeight}}(\textcolor{keyword}{const}\ wxCoord\ \mbox{\hyperlink{class_line_a1198f195b092c608928a8dedd41520d5}{plotEndHeight}});}
+\DoxyCodeLine{00113\ }
+\DoxyCodeLine{00121\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_line_a66e47d8474d26db5ec512dbd6c3a64d4}{draw}}(wxDC\&\ dc,\ \textcolor{keyword}{const}\ std::vector<double>\&\ xData,\ \textcolor{keyword}{const}\ std::vector<double>\&\ yData,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ colourIndex);}
+\DoxyCodeLine{00122\ \};}
 
 \end{DoxyCode}

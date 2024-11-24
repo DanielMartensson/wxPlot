@@ -1,5 +1,14 @@
 \doxysection{Scatter Class Reference}
 \hypertarget{class_scatter}{}\label{class_scatter}\index{Scatter@{Scatter}}
+
+
+\doxylink{class_scatter}{Scatter} class. Inheritance from class \doxylink{class_line}{Line}.  
+
+
+
+
+{\ttfamily \#include $<$scatter.\+hpp$>$}
+
 Inheritance diagram for Scatter\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -9,60 +18,106 @@ Inheritance diagram for Scatter\+:\begin{figure}[H]
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\Hypertarget{class_scatter_ace490438429fb7a1aab151bd5616c1cc}\label{class_scatter_ace490438429fb7a1aab151bd5616c1cc} 
-void {\bfseries set\+Radius} (const wx\+Coord radius)
-\item 
-\Hypertarget{class_scatter_a128abc4bb419506c07e4b66b432c9c8f}\label{class_scatter_a128abc4bb419506c07e4b66b432c9c8f} 
-void {\bfseries fill\+Circles} (const bool fill\+Circle)
-\item 
-bool \mbox{\hyperlink{class_scatter_ada7aa17ad955348f8c999431b441c7f7}{draw}} (wx\+DC \&dc, const std\+::vector$<$ double $>$ \&x\+Data, const std\+::vector$<$ double $>$ \&y\+Data, const unsigned int colour\+Index) override
-\end{DoxyCompactItemize}
+void \mbox{\hyperlink{class_scatter_ace490438429fb7a1aab151bd5616c1cc}{set\+Radius}} (const wx\+Coord radius)
+\begin{DoxyCompactList}\small\item\em Set radius. Most used for circles e.\+g filling scatter plots. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_scatter_a128abc4bb419506c07e4b66b432c9c8f}{fill\+Circles}} (const bool fill\+Circle)
+\begin{DoxyCompactList}\small\item\em Fill circles if radius is applied if circiles are going to be filled with the same colour as they are drawn. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_scatter_ad0a2c7a54c9352f309b4aa87b0f18c62}{draw}} (wx\+DC \&dc, const std\+::vector$<$ double $>$ \&x\+Data, const std\+::vector$<$ double $>$ \&y\+Data, const unsigned int colour\+Index) override
+\begin{DoxyCompactList}\small\item\em Draw the scatter plot inside the rectangle. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_line}{Line}}}
 \begin{DoxyCompactItemize}
 \item 
-void {\bfseries set\+Limits} (const double minX, const double maxX, const double minY, const double maxY)
-\item 
-void {\bfseries set\+Plot\+Start\+Width} (const wx\+Coord plot\+Start\+Width)
-\item 
-void {\bfseries set\+Plot\+Start\+Height} (const wx\+Coord plot\+Start\+Height)
-\item 
-void {\bfseries set\+Plot\+End\+Width} (const wx\+Coord plot\+End\+Width)
-\item 
-void {\bfseries set\+Plot\+End\+Height} (const wx\+Coord plot\+End\+Height)
-\end{DoxyCompactItemize}
+void \mbox{\hyperlink{class_line_a281ac8321234db58306b017596eab9a7}{set\+Limits}} (const double \mbox{\hyperlink{class_line_af2aaefd513c665b045e771e812e59bea}{minX}}, const double \mbox{\hyperlink{class_line_a4b2a944fd143204a253ce23968cd9e61}{maxX}}, const double \mbox{\hyperlink{class_line_a174e69897228bfd03c9e98a9283dad9c}{minY}}, const double \mbox{\hyperlink{class_line_a61909563e4694b3ece73a63732724156}{maxY}})
+\begin{DoxyCompactList}\small\item\em Set minimum and maximum limits of the data. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_line_ade7560149deea45afc6e036fdabb2302}{set\+Plot\+Start\+Width}} (const wx\+Coord \mbox{\hyperlink{class_line_af77792fe6c61cdf5651c11b2ee9d4fd9}{plot\+Start\+Width}})
+\begin{DoxyCompactList}\small\item\em Set the left upper corner in X-\/axis. Inside this rectangle, the plot is drawn. NOTE\+: This value is recalculated since the plot figure is drawn! (plot\+Start\+Width, plot\+Start\+Height) -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/--- (plot\+End\+Width, plot\+Start\+Height) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_line_aa1836a393bd60485566f58f6d405782d}{set\+Plot\+Start\+Height}} (const wx\+Coord \mbox{\hyperlink{class_line_a2468b0064fa2026eecaf3f4ac9c138e4}{plot\+Start\+Height}})
+\begin{DoxyCompactList}\small\item\em Set the left upper corner in Y-\/axis. Inside this rectangle, the plot is drawn. NOTE\+: This value is recalculated since the plot figure is drawn! (plot\+Start\+Width, plot\+Start\+Height) -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/--- (plot\+End\+Width, plot\+Start\+Height) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_line_a62eee93e58ee963050d3463cbcae368c}{set\+Plot\+End\+Width}} (const wx\+Coord \mbox{\hyperlink{class_line_adfd37018929fd47cc85aea6b009e6ecd}{plot\+End\+Width}})
+\begin{DoxyCompactList}\small\item\em Set the right upper corner in X-\/axis. Inside this rectangle, the plot is drawn. NOTE\+: This value is recalculated since the plot figure is drawn! (plot\+Start\+Width, plot\+Start\+Height) -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/--- (plot\+End\+Width, plot\+Start\+Height) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_line_a860c64fc275cf8e4d1f841a118baab4f}{set\+Plot\+End\+Height}} (const wx\+Coord \mbox{\hyperlink{class_line_a1198f195b092c608928a8dedd41520d5}{plot\+End\+Height}})
+\begin{DoxyCompactList}\small\item\em Set the right bottom corner in Y-\/axis. Inside this rectangle, the plot is drawn. NOTE\+: This value is recalculated since the plot figure is drawn! (plot\+Start\+Width, plot\+Start\+Height) -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/--- (plot\+End\+Width, plot\+Start\+Height) \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Additional Inherited Members}
 \doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_line}{Line}}}
 \begin{DoxyCompactItemize}
 \item 
 wx\+Coord {\bfseries plot\+End\+Width} = 0
-\item 
+\begin{DoxyCompactList}\small\item\em Location of right upper corner in X-\/axis. \end{DoxyCompactList}\item 
 wx\+Coord {\bfseries plot\+End\+Height} = 0
-\item 
+\begin{DoxyCompactList}\small\item\em Location of right bottom corner in Y-\/axis. \end{DoxyCompactList}\item 
 wx\+Coord {\bfseries plot\+Start\+Width} = 0
-\item 
+\begin{DoxyCompactList}\small\item\em Location of left upper corner in X-\/axis. \end{DoxyCompactList}\item 
 wx\+Coord {\bfseries plot\+Start\+Height} = 0
-\item 
+\begin{DoxyCompactList}\small\item\em Location of left upper corner in Y-\/axis. \end{DoxyCompactList}\item 
 double {\bfseries minX} = 0
-\item 
+\begin{DoxyCompactList}\small\item\em Minimum value of data in X-\/axis. \end{DoxyCompactList}\item 
 double {\bfseries maxX} = 0
-\item 
+\begin{DoxyCompactList}\small\item\em Maximum value of data in X-\/axis. \end{DoxyCompactList}\item 
 double {\bfseries minY} = 0
-\item 
+\begin{DoxyCompactList}\small\item\em Minimum value of data in Y-\/axis. \end{DoxyCompactList}\item 
 double {\bfseries maxY} = 0
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Maximum value of data in Y-\/axis. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
+
+\doxysubsection{Detailed Description}
+\doxylink{class_scatter}{Scatter} class. Inheritance from class \doxylink{class_line}{Line}. 
 
 \doxysubsection{Member Function Documentation}
-\Hypertarget{class_scatter_ada7aa17ad955348f8c999431b441c7f7}\index{Scatter@{Scatter}!draw@{draw}}
+\Hypertarget{class_scatter_ad0a2c7a54c9352f309b4aa87b0f18c62}\index{Scatter@{Scatter}!draw@{draw}}
 \index{draw@{draw}!Scatter@{Scatter}}
 \doxysubsubsection{\texorpdfstring{draw()}{draw()}}
-{\footnotesize\ttfamily \label{class_scatter_ada7aa17ad955348f8c999431b441c7f7} 
-bool Scatter\+::draw (\begin{DoxyParamCaption}\item[{wx\+DC \&}]{dc}{, }\item[{const std\+::vector$<$ double $>$ \&}]{x\+Data}{, }\item[{const std\+::vector$<$ double $>$ \&}]{y\+Data}{, }\item[{const unsigned int}]{colour\+Index}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+{\footnotesize\ttfamily \label{class_scatter_ad0a2c7a54c9352f309b4aa87b0f18c62} 
+void Scatter\+::draw (\begin{DoxyParamCaption}\item[{wx\+DC \&}]{dc}{, }\item[{const std\+::vector$<$ double $>$ \&}]{x\+Data}{, }\item[{const std\+::vector$<$ double $>$ \&}]{y\+Data}{, }\item[{const unsigned int}]{colour\+Index}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
 
 
-Reimplemented from \mbox{\hyperlink{class_line}{Line}}.
+Draw the scatter plot inside the rectangle. 
 
+
+\begin{DoxyParams}{Parameters}
+{\em dc} & The wx\+DC object for drawing lines, polygons etc. \\
+\hline
+{\em x\+Data} & Data in X-\/axis \\
+\hline
+{\em y\+Data} & Data in Y-\/axis \\
+\hline
+{\em colour\+Index} & Selection index of the colour. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_line_a66e47d8474d26db5ec512dbd6c3a64d4}{Line}}.
+
+\Hypertarget{class_scatter_a128abc4bb419506c07e4b66b432c9c8f}\index{Scatter@{Scatter}!fillCircles@{fillCircles}}
+\index{fillCircles@{fillCircles}!Scatter@{Scatter}}
+\doxysubsubsection{\texorpdfstring{fillCircles()}{fillCircles()}}
+{\footnotesize\ttfamily \label{class_scatter_a128abc4bb419506c07e4b66b432c9c8f} 
+void Scatter\+::fill\+Circles (\begin{DoxyParamCaption}\item[{const bool}]{fill\+Circle}{}\end{DoxyParamCaption})}
+
+
+
+Fill circles if radius is applied if circiles are going to be filled with the same colour as they are drawn. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em fill\+Circle} & Set true if filled. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_scatter_ace490438429fb7a1aab151bd5616c1cc}\index{Scatter@{Scatter}!setRadius@{setRadius}}
+\index{setRadius@{setRadius}!Scatter@{Scatter}}
+\doxysubsubsection{\texorpdfstring{setRadius()}{setRadius()}}
+{\footnotesize\ttfamily \label{class_scatter_ace490438429fb7a1aab151bd5616c1cc} 
+void Scatter\+::set\+Radius (\begin{DoxyParamCaption}\item[{const wx\+Coord}]{radius}{}\end{DoxyParamCaption})}
+
+
+
+Set radius. Most used for circles e.\+g filling scatter plots. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em radius} & The radius of the circle. \\
+\hline
+\end{DoxyParams}
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}

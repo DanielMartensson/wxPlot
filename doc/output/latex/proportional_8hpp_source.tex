@@ -9,59 +9,80 @@
 \DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <wx/wx.h>}}
 \DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}../../../plottools/plottools.hpp"{}}}
 \DoxyCodeLine{00007\ }
-\DoxyCodeLine{00008\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_proportional}{Proportional}}\ \{}
-\DoxyCodeLine{00009\ \textcolor{keyword}{protected}:}
-\DoxyCodeLine{00010\ \ \ \ \ \textcolor{comment}{//\ General\ plot\ information}}
-\DoxyCodeLine{00011\ \ \ \ \ wxCoord\ plotEndWidth\ =\ 0;}
-\DoxyCodeLine{00012\ \ \ \ \ wxCoord\ plotEndHeight\ =\ 0;}
-\DoxyCodeLine{00013\ \ \ \ \ wxCoord\ plotStartWidth\ =\ 0;}
-\DoxyCodeLine{00014\ \ \ \ \ wxCoord\ plotStartHeight\ =\ 0;}
-\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ fontSize\ =\ 0;}
-\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ ticks\ =\ 0;}
-\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keywordtype}{bool}\ useGrid\ =\ \textcolor{keyword}{false};}
-\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keywordtype}{bool}\ useLegend\ =\ \textcolor{keyword}{false};}
-\DoxyCodeLine{00019\ \ \ \ \ wxString\ title;}
-\DoxyCodeLine{00020\ \ \ \ \ wxString\ xLabel;}
-\DoxyCodeLine{00021\ \ \ \ \ wxString\ yLabel;}
-\DoxyCodeLine{00022\ \ \ \ \ std::vector<wxString>\ legend;}
-\DoxyCodeLine{00023\ \ \ \ \ PLACEMENT\ legendPosition\ =\ PLACEMENT\_NORTH\_WEST;}
-\DoxyCodeLine{00024\ \ \ \ \ WXPLOT\_TYPE\ wxPlotType\ =\ WXPLOT\_TYPE\_LINE;}
-\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{double}\ minX\ =\ 0,\ maxX\ =\ 0,\ minY\ =\ 0,\ maxY\ =\ 0;}
-\DoxyCodeLine{00026\ }
-\DoxyCodeLine{00027\ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00028\ \ \ \ \ \textcolor{comment}{//\ Constructor}}
-\DoxyCodeLine{00029\ \ \ \ \ \mbox{\hyperlink{class_proportional}{Proportional}}()\ \{\}}
-\DoxyCodeLine{00030\ }
-\DoxyCodeLine{00031\ \ \ \ \ \textcolor{comment}{//\ Setters}}
-\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{void}\ setPlotStartWidth(\textcolor{keyword}{const}\ wxCoord\ plotStartWidth);}
-\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{void}\ setPlotStartHeight(\textcolor{keyword}{const}\ wxCoord\ plotStartHeight);}
-\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keywordtype}{void}\ setPlotEndWidth(\textcolor{keyword}{const}\ wxCoord\ plotEndWidth);}
-\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{void}\ setPlotEndHeight(\textcolor{keyword}{const}\ wxCoord\ plotEndHeight);}
-\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordtype}{void}\ setFontSize(\textcolor{keyword}{const}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ fontSize);}
-\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keywordtype}{void}\ setTicks(\textcolor{keyword}{const}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ ticks);}
-\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordtype}{void}\ gridOn(\textcolor{keyword}{const}\ \textcolor{keywordtype}{bool}\ useGrid);}
-\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keywordtype}{void}\ setTitle(\textcolor{keyword}{const}\ wxString\&\ title);}
-\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keywordtype}{void}\ setXlabel(\textcolor{keyword}{const}\ wxString\&\ xLabel);}
-\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordtype}{void}\ setYlabel(\textcolor{keyword}{const}\ wxString\&\ yLabel);}
-\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordtype}{void}\ legendOn(\textcolor{keyword}{const}\ \textcolor{keywordtype}{bool}\ useLegend);}
-\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordtype}{void}\ setLegend(\textcolor{keyword}{const}\ std::vector<wxString>\&\ legend,\ \textcolor{keyword}{const}\ PLACEMENT\ legendPosition);}
-\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keywordtype}{void}\ setData(\textcolor{keyword}{const}\ std::vector<std::vector<double>>\&\ data);}
-\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keywordtype}{void}\ setData(\textcolor{keyword}{const}\ std::vector<double>\&\ data);}
-\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keywordtype}{void}\ setWxPlotType(\textcolor{keyword}{const}\ WXPLOT\_TYPE\ wxPlotType);}
-\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keywordtype}{void}\ setYlim(\textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ minY,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ maxY);}
-\DoxyCodeLine{00048\ }
-\DoxyCodeLine{00049\ \ \ \ \ \textcolor{comment}{//\ Getters}}
-\DoxyCodeLine{00050\ \ \ \ \ wxCoord\ getPlotStartWidth()\ \textcolor{keyword}{const};}
-\DoxyCodeLine{00051\ \ \ \ \ wxCoord\ getPlotStartHeight()\ \textcolor{keyword}{const};}
-\DoxyCodeLine{00052\ \ \ \ \ wxCoord\ getPlotEndWidth()\ \textcolor{keyword}{const};}
-\DoxyCodeLine{00053\ \ \ \ \ wxCoord\ getPlotEndHeight()\ \textcolor{keyword}{const};}
-\DoxyCodeLine{00054\ }
-\DoxyCodeLine{00055\ \ \ \ \ \textcolor{comment}{//\ Functions}}
-\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keywordtype}{bool}\ drawFigure(wxDC\&\ dc);}
-\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keywordtype}{void}\ drawGrid(wxDC\&\ dc);}
-\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keywordtype}{void}\ drawTicks(wxDC\&\ dc);}
-\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keywordtype}{void}\ drawLegend(wxDC\&\ dc);}
-\DoxyCodeLine{00060\ }
-\DoxyCodeLine{00061\ \};}
+\DoxyCodeLine{00012\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_proportional}{Proportional}}\ \{}
+\DoxyCodeLine{00013\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{comment}{//\ General\ plot\ information}}
+\DoxyCodeLine{00015\ \ \ \ \ wxCoord\ \mbox{\hyperlink{class_proportional_ab188013bb02c135c59e6fe69822471eb}{plotEndWidth}}\ =\ 0;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00016\ \ \ \ \ wxCoord\ \mbox{\hyperlink{class_proportional_a94db99dbecfd83bef56e4fd30a6e7ea5}{plotEndHeight}}\ =\ 0;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00017\ \ \ \ \ wxCoord\ \mbox{\hyperlink{class_proportional_a787d6e92734b225e71337049493acd8c}{plotStartWidth}}\ =\ 0;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00018\ \ \ \ \ wxCoord\ \mbox{\hyperlink{class_proportional_a75bb9a65fda3055a90b831828df1a1b0}{plotStartHeight}}\ =\ 0;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_proportional_adf5251f7526240c3a1bf5e5d9e20f8ba}{minX}}\ =\ 0;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_proportional_aa934b32ddb06e4f626030491f112d27f}{maxX}}\ =\ 0;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_proportional_a27a325496f8befd62f22247ed481eb60}{minY}}\ =\ 0;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_proportional_ae62c17d1d4138934b5622e5bf17ccdcc}{maxY}}\ =\ 0;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_proportional_ad720e3893080fc6963db87ebf1eac016}{fontSize}}\ =\ 0;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_proportional_a1776dacf5d8f7a32544327362b8f07b2}{ticks}}\ =\ 0;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_proportional_a767392b84e72521158f28189f50ed228}{useGrid}}\ =\ \textcolor{keyword}{false};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_proportional_abffd79cf1c81668ceb3367d8099c3f3d}{useLegend}}\ =\ \textcolor{keyword}{false};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00029\ \ \ \ \ wxString\ \mbox{\hyperlink{class_proportional_a50a20741cb345d1410d2d2c6b913991a}{title}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00030\ \ \ \ \ wxString\ \mbox{\hyperlink{class_proportional_add35a2a7a59f42184132900ea680e1ac}{xLabel}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00031\ \ \ \ \ wxString\ \mbox{\hyperlink{class_proportional_af1c51e637088c51cdcd690e6146f36e4}{yLabel}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00032\ \ \ \ \ std::vector<wxString>\ \mbox{\hyperlink{class_proportional_a14e6d669313f762686c4192857d802ba}{legend}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00033\ \ \ \ \ PLACEMENT\ \mbox{\hyperlink{class_proportional_a4aeae4b01a4bb44285cb2ecad2f6201f}{legendPosition}}\ =\ PLACEMENT\_NORTH\_WEST;\ \ \ \ \ \ \ }
+\DoxyCodeLine{00034\ \ \ \ \ WXPLOT\_TYPE\ \mbox{\hyperlink{class_proportional_a59c22dea060000ff0311adccbb86853e}{wxPlotType}}\ =\ WXPLOT\_TYPE\_LINE;\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_proportional_a12b7f1873b5e1c1fd9f0609200887869}{setWxPlotType}}(\textcolor{keyword}{const}\ WXPLOT\_TYPE\ \mbox{\hyperlink{class_proportional_a59c22dea060000ff0311adccbb86853e}{wxPlotType}});}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_proportional_a1007efe8dc6a53a6d1847ccda9832bcc}{setFontSize}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_proportional_ad720e3893080fc6963db87ebf1eac016}{fontSize}});}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_proportional_a8d9bba5c5f06f5b17525de90674e67b6}{setTitle}}(\textcolor{keyword}{const}\ wxString\&\ \mbox{\hyperlink{class_proportional_a50a20741cb345d1410d2d2c6b913991a}{title}});}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_proportional_a6d734ebe613997c7aea77b22932a6a58}{setXlabel}}(\textcolor{keyword}{const}\ wxString\&\ \mbox{\hyperlink{class_proportional_add35a2a7a59f42184132900ea680e1ac}{xLabel}});}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_proportional_a8c64c0a09b2318e117e88d1bcc12d733}{setYlabel}}(\textcolor{keyword}{const}\ wxString\&\ \mbox{\hyperlink{class_proportional_af1c51e637088c51cdcd690e6146f36e4}{yLabel}});}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00072\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_proportional_a2e443e66e0af535ce00caf87f6122075}{setTicks}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_proportional_a1776dacf5d8f7a32544327362b8f07b2}{ticks}});}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00078\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_proportional_a3b90e4622086694d42b8ccbdc719fd14}{gridOn}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_proportional_a767392b84e72521158f28189f50ed228}{useGrid}});}
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00098\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_proportional_abc98284faca3e5816b0696b183bef230}{setPlotStartWidth}}(\textcolor{keyword}{const}\ wxCoord\ \mbox{\hyperlink{class_proportional_a787d6e92734b225e71337049493acd8c}{plotStartWidth}});}
+\DoxyCodeLine{00099\ }
+\DoxyCodeLine{00118\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_proportional_af52b3ca174c0ecd3f03bf1fb7e0001d6}{setPlotStartHeight}}(\textcolor{keyword}{const}\ wxCoord\ \mbox{\hyperlink{class_proportional_a75bb9a65fda3055a90b831828df1a1b0}{plotStartHeight}});}
+\DoxyCodeLine{00119\ }
+\DoxyCodeLine{00138\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_proportional_aca32dde84c95cf2dc02090edc1465191}{setPlotEndWidth}}(\textcolor{keyword}{const}\ wxCoord\ \mbox{\hyperlink{class_proportional_ab188013bb02c135c59e6fe69822471eb}{plotEndWidth}});}
+\DoxyCodeLine{00139\ }
+\DoxyCodeLine{00158\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_proportional_a46c9d0f4897c140f9a728da1665ed790}{setPlotEndHeight}}(\textcolor{keyword}{const}\ wxCoord\ \mbox{\hyperlink{class_proportional_a94db99dbecfd83bef56e4fd30a6e7ea5}{plotEndHeight}});}
+\DoxyCodeLine{00159\ }
+\DoxyCodeLine{00164\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_proportional_a7d205ffc0e2c411da21dc5e010ca742e}{setData}}(\textcolor{keyword}{const}\ std::vector<std::vector<double>>\&\ data2D);}
+\DoxyCodeLine{00165\ }
+\DoxyCodeLine{00170\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_proportional_a7d205ffc0e2c411da21dc5e010ca742e}{setData}}(\textcolor{keyword}{const}\ std::vector<double>\&\ data1D);}
+\DoxyCodeLine{00171\ }
+\DoxyCodeLine{00176\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_proportional_a786dcf2ae9ed347bce0bdd2a0be6f18a}{legendOn}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_proportional_abffd79cf1c81668ceb3367d8099c3f3d}{useLegend}});}
+\DoxyCodeLine{00177\ }
+\DoxyCodeLine{00183\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_proportional_ad8810399a877ff475b171fd6aca101b0}{setLegend}}(\textcolor{keyword}{const}\ std::vector<wxString>\&\ \mbox{\hyperlink{class_proportional_a14e6d669313f762686c4192857d802ba}{legend}},\ \textcolor{keyword}{const}\ PLACEMENT\ \mbox{\hyperlink{class_proportional_a4aeae4b01a4bb44285cb2ecad2f6201f}{legendPosition}}\ =\ PLACEMENT\_NORTH\_EAST);}
+\DoxyCodeLine{00184\ }
+\DoxyCodeLine{00190\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_proportional_aa30a0a702b739e1667427207efd13b77}{setYlim}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_proportional_a27a325496f8befd62f22247ed481eb60}{minY}},\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_proportional_ae62c17d1d4138934b5622e5bf17ccdcc}{maxY}});}
+\DoxyCodeLine{00191\ }
+\DoxyCodeLine{00197\ \ \ \ \ wxCoord\ \mbox{\hyperlink{class_proportional_a6016afb3eb59853e4f32a533665d7b9f}{getPlotStartWidth}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00198\ }
+\DoxyCodeLine{00204\ \ \ \ \ wxCoord\ \mbox{\hyperlink{class_proportional_a9150aae72ccfdf979367e9f6e14eae4a}{getPlotEndWidth}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00205\ }
+\DoxyCodeLine{00211\ \ \ \ \ wxCoord\ \mbox{\hyperlink{class_proportional_a3cb76783f802a621cc80eac43aeffb32}{getPlotStartHeight}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00212\ }
+\DoxyCodeLine{00218\ \ \ \ \ wxCoord\ \mbox{\hyperlink{class_proportional_adac5c89155e3c1aabfbce6e9ec7dde27}{getPlotEndHeight}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00219\ }
+\DoxyCodeLine{00230\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_proportional_af3c9c6caddc6626e1a2157dc8d51048a}{drawFigure}}(wxDC\&\ dc);}
+\DoxyCodeLine{00231\ }
+\DoxyCodeLine{00237\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_proportional_ab756d82fddabdd06f88f37ea66328fc3}{drawGrid}}(wxDC\&\ dc);}
+\DoxyCodeLine{00238\ }
+\DoxyCodeLine{00244\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_proportional_add5843671f428e388116500e3f8d96f1}{drawTicks}}(wxDC\&\ dc);}
+\DoxyCodeLine{00245\ }
+\DoxyCodeLine{00251\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_proportional_a02704074ac0529c731c69b7477772a6f}{drawLegend}}(wxDC\&\ dc);}
+\DoxyCodeLine{00252\ }
+\DoxyCodeLine{00253\ \};}
 
 \end{DoxyCode}

@@ -25,7 +25,7 @@ void Line::setPlotEndHeight(const wxCoord plotEndHeight) {
 	this->plotEndHeight = plotEndHeight; 
 }
 
-bool Line::draw(wxDC& dc, const std::vector<double>& xData, const std::vector<double>& yData, const unsigned int colourIndex) {
+void Line::draw(wxDC& dc, const std::vector<double>& xData, const std::vector<double>& yData, const unsigned int colourIndex) {
 	// Set line colour
 	setColourPen(dc, colourIndex);
 
@@ -67,7 +67,4 @@ bool Line::draw(wxDC& dc, const std::vector<double>& xData, const std::vector<do
 		dc.DrawLine(x1, y1, x2, y2);
 	
 	}
-
-	// Nothing went wrong
-	return true;
 }

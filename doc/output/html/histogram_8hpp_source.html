@@ -100,22 +100,23 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;../proportional/proportional.hpp&quot;</span></div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;../../../plottools/plottools.hpp&quot;</span></div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
-<div class="foldopen" id="foldopen00009" data-start="{" data-end="};">
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno"><a class="line" href="class_histogram.html">    9</a></span><span class="keyword">class </span><a class="code hl_class" href="class_histogram.html">Histogram</a> : <span class="keyword">public</span> <a class="code hl_class" href="class_proportional.html">Proportional</a> {</div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keyword">private</span>:</div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    <span class="comment">// For the histogram</span></div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> binCount = 10;</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    <span class="comment">// Setters</span></div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    <span class="keywordtype">void</span> setBinCount(<span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> binCount);</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    <span class="keywordtype">void</span> setData(<span class="keyword">const</span> std::vector&lt;double&gt;&amp; data);</div>
+<div class="foldopen" id="foldopen00013" data-start="{" data-end="};">
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="class_histogram.html">   13</a></span><span class="keyword">class </span><a class="code hl_class" href="class_histogram.html">Histogram</a> : <span class="keyword">public</span> <a class="code hl_class" href="class_proportional.html">Proportional</a> {</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> binCount = 10;    </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="keyword">public</span>:</div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>};</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_histogram.html#a7c392205ea07cb1b13a95e8d6f03c686">setBinCount</a>(<span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> binCount);</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_histogram.html#a67e3eb72688a08def214e9e2be44c3a9">setData</a>(<span class="keyword">const</span> std::vector&lt;double&gt;&amp; data1D);</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>};</div>
 </div>
-<div class="ttc" id="aclass_histogram_html"><div class="ttname"><a href="class_histogram.html">Histogram</a></div><div class="ttdef"><b>Definition</b> histogram.hpp:9</div></div>
-<div class="ttc" id="aclass_proportional_html"><div class="ttname"><a href="class_proportional.html">Proportional</a></div><div class="ttdef"><b>Definition</b> proportional.hpp:8</div></div>
+<div class="ttc" id="aclass_histogram_html"><div class="ttname"><a href="class_histogram.html">Histogram</a></div><div class="ttdoc">Histogram class. Inheritance from class Proportional.</div><div class="ttdef"><b>Definition</b> histogram.hpp:13</div></div>
+<div class="ttc" id="aclass_histogram_html_a67e3eb72688a08def214e9e2be44c3a9"><div class="ttname"><a href="class_histogram.html#a67e3eb72688a08def214e9e2be44c3a9">Histogram::setData</a></div><div class="ttdeci">void setData(const std::vector&lt; double &gt; &amp;data1D)</div><div class="ttdoc">Set 1D data.</div><div class="ttdef"><b>Definition</b> histogram.cpp:8</div></div>
+<div class="ttc" id="aclass_histogram_html_a7c392205ea07cb1b13a95e8d6f03c686"><div class="ttname"><a href="class_histogram.html#a7c392205ea07cb1b13a95e8d6f03c686">Histogram::setBinCount</a></div><div class="ttdeci">void setBinCount(const unsigned int binCount)</div><div class="ttdoc">Set the bin count for e.g. histogram.</div><div class="ttdef"><b>Definition</b> histogram.cpp:4</div></div>
+<div class="ttc" id="aclass_proportional_html"><div class="ttname"><a href="class_proportional.html">Proportional</a></div><div class="ttdoc">Proportional class. Do the most work in all 2D plot figures.</div><div class="ttdef"><b>Definition</b> proportional.hpp:12</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

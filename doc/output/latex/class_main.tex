@@ -1,5 +1,14 @@
 \doxysection{Main Class Reference}
 \hypertarget{class_main}{}\label{class_main}\index{Main@{Main}}
+
+
+\doxylink{class_main}{Main} application class for the wx\+Widgets application.  
+
+
+
+
+{\ttfamily \#include $<$Main.\+h$>$}
+
 Inheritance diagram for Main\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -9,9 +18,33 @@ Inheritance diagram for Main\+:\begin{figure}[H]
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\Hypertarget{class_main_ac0c7503d4f1cf9f8dd92d328487d90ea}\label{class_main_ac0c7503d4f1cf9f8dd92d328487d90ea} 
-bool {\bfseries On\+Init} () override
-\end{DoxyCompactItemize}
+bool \mbox{\hyperlink{class_main_ac0c7503d4f1cf9f8dd92d328487d90ea}{On\+Init}} () override
+\begin{DoxyCompactList}\small\item\em Initializes the application and creates the main window. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\doxylink{class_main}{Main} application class for the wx\+Widgets application. 
+
+The {\ttfamily \doxylink{class_main}{Main}} class is the entry point for the wx\+Widgets application. It inherits from {\ttfamily wx\+App} and overrides the {\ttfamily \doxylink{class_main_ac0c7503d4f1cf9f8dd92d328487d90ea}{On\+Init()}} method to initialize the application and create the main window or frame.
+
+The {\ttfamily \doxylink{class_main_ac0c7503d4f1cf9f8dd92d328487d90ea}{On\+Init()}} method is responsible for setting up the application\textquotesingle{}s initial state, including creating and displaying the main window. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_main_ac0c7503d4f1cf9f8dd92d328487d90ea}\index{Main@{Main}!OnInit@{OnInit}}
+\index{OnInit@{OnInit}!Main@{Main}}
+\doxysubsubsection{\texorpdfstring{OnInit()}{OnInit()}}
+{\footnotesize\ttfamily \label{class_main_ac0c7503d4f1cf9f8dd92d328487d90ea} 
+bool Main\+::\+On\+Init (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+
+
+Initializes the application and creates the main window. 
+
+This method is called when the application starts. It is responsible for setting up the application, initializing necessary components, and creating the main window (or frame) that the user will interact with.
+
+\begin{DoxyReturn}{Returns}
+{\ttfamily true} if the application initialization is successful, {\ttfamily false} otherwise. 
+\end{DoxyReturn}
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}

@@ -1,5 +1,14 @@
 \doxysection{Proportional Class Reference}
 \hypertarget{class_proportional}{}\label{class_proportional}\index{Proportional@{Proportional}}
+
+
+\doxylink{class_proportional}{Proportional} class. Do the most work in all 2D plot figures.  
+
+
+
+
+{\ttfamily \#include $<$proportional.\+hpp$>$}
+
 Inheritance diagram for Proportional\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -9,135 +18,561 @@ Inheritance diagram for Proportional\+:\begin{figure}[H]
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\Hypertarget{class_proportional_abc98284faca3e5816b0696b183bef230}\label{class_proportional_abc98284faca3e5816b0696b183bef230} 
-void {\bfseries set\+Plot\+Start\+Width} (const wx\+Coord plot\+Start\+Width)
-\item 
-\Hypertarget{class_proportional_af52b3ca174c0ecd3f03bf1fb7e0001d6}\label{class_proportional_af52b3ca174c0ecd3f03bf1fb7e0001d6} 
-void {\bfseries set\+Plot\+Start\+Height} (const wx\+Coord plot\+Start\+Height)
-\item 
-\Hypertarget{class_proportional_aca32dde84c95cf2dc02090edc1465191}\label{class_proportional_aca32dde84c95cf2dc02090edc1465191} 
-void {\bfseries set\+Plot\+End\+Width} (const wx\+Coord plot\+End\+Width)
-\item 
-\Hypertarget{class_proportional_a46c9d0f4897c140f9a728da1665ed790}\label{class_proportional_a46c9d0f4897c140f9a728da1665ed790} 
-void {\bfseries set\+Plot\+End\+Height} (const wx\+Coord plot\+End\+Height)
-\item 
-\Hypertarget{class_proportional_a1007efe8dc6a53a6d1847ccda9832bcc}\label{class_proportional_a1007efe8dc6a53a6d1847ccda9832bcc} 
-void {\bfseries set\+Font\+Size} (const unsigned int font\+Size)
-\item 
-\Hypertarget{class_proportional_a2e443e66e0af535ce00caf87f6122075}\label{class_proportional_a2e443e66e0af535ce00caf87f6122075} 
-void {\bfseries set\+Ticks} (const unsigned int ticks)
-\item 
-\Hypertarget{class_proportional_a3b90e4622086694d42b8ccbdc719fd14}\label{class_proportional_a3b90e4622086694d42b8ccbdc719fd14} 
-void {\bfseries grid\+On} (const bool use\+Grid)
-\item 
-\Hypertarget{class_proportional_a8d9bba5c5f06f5b17525de90674e67b6}\label{class_proportional_a8d9bba5c5f06f5b17525de90674e67b6} 
-void {\bfseries set\+Title} (const wx\+String \&title)
-\item 
-\Hypertarget{class_proportional_a6d734ebe613997c7aea77b22932a6a58}\label{class_proportional_a6d734ebe613997c7aea77b22932a6a58} 
-void {\bfseries set\+Xlabel} (const wx\+String \&x\+Label)
-\item 
-\Hypertarget{class_proportional_a8c64c0a09b2318e117e88d1bcc12d733}\label{class_proportional_a8c64c0a09b2318e117e88d1bcc12d733} 
-void {\bfseries set\+Ylabel} (const wx\+String \&y\+Label)
-\item 
-\Hypertarget{class_proportional_a786dcf2ae9ed347bce0bdd2a0be6f18a}\label{class_proportional_a786dcf2ae9ed347bce0bdd2a0be6f18a} 
-void {\bfseries legend\+On} (const bool use\+Legend)
-\item 
-\Hypertarget{class_proportional_ad09a81e3e354f57fb43a6e3b1b896592}\label{class_proportional_ad09a81e3e354f57fb43a6e3b1b896592} 
-void {\bfseries set\+Legend} (const std\+::vector$<$ wx\+String $>$ \&legend, const PLACEMENT legend\+Position)
-\item 
-\Hypertarget{class_proportional_a5ec178f1d4c54dbe9e17e2c7d50be882}\label{class_proportional_a5ec178f1d4c54dbe9e17e2c7d50be882} 
-void {\bfseries set\+Data} (const std\+::vector$<$ std\+::vector$<$ double $>$ $>$ \&data)
-\item 
-\Hypertarget{class_proportional_a82b67dce91990fe9519dcc4a94bafec3}\label{class_proportional_a82b67dce91990fe9519dcc4a94bafec3} 
-void {\bfseries set\+Data} (const std\+::vector$<$ double $>$ \&data)
-\item 
-\Hypertarget{class_proportional_a12b7f1873b5e1c1fd9f0609200887869}\label{class_proportional_a12b7f1873b5e1c1fd9f0609200887869} 
-void {\bfseries set\+Wx\+Plot\+Type} (const WXPLOT\+\_\+\+TYPE wx\+Plot\+Type)
-\item 
-\Hypertarget{class_proportional_aa30a0a702b739e1667427207efd13b77}\label{class_proportional_aa30a0a702b739e1667427207efd13b77} 
-void {\bfseries set\+Ylim} (const double minY, const double maxY)
-\item 
-\Hypertarget{class_proportional_a6016afb3eb59853e4f32a533665d7b9f}\label{class_proportional_a6016afb3eb59853e4f32a533665d7b9f} 
-wx\+Coord {\bfseries get\+Plot\+Start\+Width} () const
-\item 
-\Hypertarget{class_proportional_a3cb76783f802a621cc80eac43aeffb32}\label{class_proportional_a3cb76783f802a621cc80eac43aeffb32} 
-wx\+Coord {\bfseries get\+Plot\+Start\+Height} () const
-\item 
-\Hypertarget{class_proportional_a9150aae72ccfdf979367e9f6e14eae4a}\label{class_proportional_a9150aae72ccfdf979367e9f6e14eae4a} 
-wx\+Coord {\bfseries get\+Plot\+End\+Width} () const
-\item 
-\Hypertarget{class_proportional_adac5c89155e3c1aabfbce6e9ec7dde27}\label{class_proportional_adac5c89155e3c1aabfbce6e9ec7dde27} 
-wx\+Coord {\bfseries get\+Plot\+End\+Height} () const
-\item 
-\Hypertarget{class_proportional_ae7287004ba1ed6106bbd4a67cd95ec40}\label{class_proportional_ae7287004ba1ed6106bbd4a67cd95ec40} 
-bool {\bfseries draw\+Figure} (wx\+DC \&dc)
-\item 
-\Hypertarget{class_proportional_ab756d82fddabdd06f88f37ea66328fc3}\label{class_proportional_ab756d82fddabdd06f88f37ea66328fc3} 
-void {\bfseries draw\+Grid} (wx\+DC \&dc)
-\item 
-\Hypertarget{class_proportional_add5843671f428e388116500e3f8d96f1}\label{class_proportional_add5843671f428e388116500e3f8d96f1} 
-void {\bfseries draw\+Ticks} (wx\+DC \&dc)
-\item 
-\Hypertarget{class_proportional_a02704074ac0529c731c69b7477772a6f}\label{class_proportional_a02704074ac0529c731c69b7477772a6f} 
-void {\bfseries draw\+Legend} (wx\+DC \&dc)
-\end{DoxyCompactItemize}
+void \mbox{\hyperlink{class_proportional_a12b7f1873b5e1c1fd9f0609200887869}{set\+Wx\+Plot\+Type}} (const WXPLOT\+\_\+\+TYPE \mbox{\hyperlink{class_proportional_a59c22dea060000ff0311adccbb86853e}{wx\+Plot\+Type}})
+\begin{DoxyCompactList}\small\item\em Set the plot type selection. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_proportional_a1007efe8dc6a53a6d1847ccda9832bcc}{set\+Font\+Size}} (const unsigned int \mbox{\hyperlink{class_proportional_ad720e3893080fc6963db87ebf1eac016}{font\+Size}})
+\begin{DoxyCompactList}\small\item\em Set the size of the fonts. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_proportional_a8d9bba5c5f06f5b17525de90674e67b6}{set\+Title}} (const wx\+String \&\mbox{\hyperlink{class_proportional_a50a20741cb345d1410d2d2c6b913991a}{title}})
+\begin{DoxyCompactList}\small\item\em Set the title of the plot. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_proportional_a6d734ebe613997c7aea77b22932a6a58}{set\+Xlabel}} (const wx\+String \&\mbox{\hyperlink{class_proportional_add35a2a7a59f42184132900ea680e1ac}{x\+Label}})
+\begin{DoxyCompactList}\small\item\em Set the name of the X-\/label. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_proportional_a8c64c0a09b2318e117e88d1bcc12d733}{set\+Ylabel}} (const wx\+String \&\mbox{\hyperlink{class_proportional_af1c51e637088c51cdcd690e6146f36e4}{y\+Label}})
+\begin{DoxyCompactList}\small\item\em Set the name of the Y-\/label. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_proportional_a2e443e66e0af535ce00caf87f6122075}{set\+Ticks}} (const unsigned int \mbox{\hyperlink{class_proportional_a1776dacf5d8f7a32544327362b8f07b2}{ticks}})
+\begin{DoxyCompactList}\small\item\em Set the number of ticks at the figure in all axis. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_proportional_a3b90e4622086694d42b8ccbdc719fd14}{grid\+On}} (const bool \mbox{\hyperlink{class_proportional_a767392b84e72521158f28189f50ed228}{use\+Grid}})
+\begin{DoxyCompactList}\small\item\em Enable grid on the figure. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_proportional_abc98284faca3e5816b0696b183bef230}{set\+Plot\+Start\+Width}} (const wx\+Coord \mbox{\hyperlink{class_proportional_a787d6e92734b225e71337049493acd8c}{plot\+Start\+Width}})
+\begin{DoxyCompactList}\small\item\em Set the left upper corner in X-\/axis. Inside this rectangle, the plot is drawn. NOTE\+: This value is recalculated since the plot figure is drawn! (plot\+Start\+Width, plot\+Start\+Height) -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/--- (plot\+End\+Width, plot\+Start\+Height) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_proportional_af52b3ca174c0ecd3f03bf1fb7e0001d6}{set\+Plot\+Start\+Height}} (const wx\+Coord \mbox{\hyperlink{class_proportional_a75bb9a65fda3055a90b831828df1a1b0}{plot\+Start\+Height}})
+\begin{DoxyCompactList}\small\item\em Set the left upper corner in Y-\/axis. Inside this rectangle, the plot is drawn. NOTE\+: This value is recalculated since the plot figure is drawn! (plot\+Start\+Width, plot\+Start\+Height) -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/--- (plot\+End\+Width, plot\+Start\+Height) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_proportional_aca32dde84c95cf2dc02090edc1465191}{set\+Plot\+End\+Width}} (const wx\+Coord \mbox{\hyperlink{class_proportional_ab188013bb02c135c59e6fe69822471eb}{plot\+End\+Width}})
+\begin{DoxyCompactList}\small\item\em Set the right upper corner in X-\/axis. Inside this rectangle, the plot is drawn. NOTE\+: This value is recalculated since the plot figure is drawn! (plot\+Start\+Width, plot\+Start\+Height) -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/--- (plot\+End\+Width, plot\+Start\+Height) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_proportional_a46c9d0f4897c140f9a728da1665ed790}{set\+Plot\+End\+Height}} (const wx\+Coord \mbox{\hyperlink{class_proportional_a94db99dbecfd83bef56e4fd30a6e7ea5}{plot\+End\+Height}})
+\begin{DoxyCompactList}\small\item\em Set the right bottom corner in Y-\/axis. Inside this rectangle, the plot is drawn. NOTE\+: This value is recalculated since the plot figure is drawn! (plot\+Start\+Width, plot\+Start\+Height) -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/--- (plot\+End\+Width, plot\+Start\+Height) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_proportional_a7d205ffc0e2c411da21dc5e010ca742e}{set\+Data}} (const std\+::vector$<$ std\+::vector$<$ double $>$ $>$ \&data2D)
+\begin{DoxyCompactList}\small\item\em Set 2D data. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_proportional_a10091e6712d65a39c5563a9197fcb596}{set\+Data}} (const std\+::vector$<$ double $>$ \&data1D)
+\begin{DoxyCompactList}\small\item\em Set 1D data. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_proportional_a786dcf2ae9ed347bce0bdd2a0be6f18a}{legend\+On}} (const bool \mbox{\hyperlink{class_proportional_abffd79cf1c81668ceb3367d8099c3f3d}{use\+Legend}})
+\begin{DoxyCompactList}\small\item\em Activate the legend. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_proportional_ad8810399a877ff475b171fd6aca101b0}{set\+Legend}} (const std\+::vector$<$ wx\+String $>$ \&\mbox{\hyperlink{class_proportional_a14e6d669313f762686c4192857d802ba}{legend}}, const PLACEMENT \mbox{\hyperlink{class_proportional_a4aeae4b01a4bb44285cb2ecad2f6201f}{legend\+Position}}=PLACEMENT\+\_\+\+NORTH\+\_\+\+EAST)
+\begin{DoxyCompactList}\small\item\em Set the labels and placement for the legend. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_proportional_aa30a0a702b739e1667427207efd13b77}{set\+Ylim}} (const double \mbox{\hyperlink{class_proportional_a27a325496f8befd62f22247ed481eb60}{minY}}, const double \mbox{\hyperlink{class_proportional_ae62c17d1d4138934b5622e5bf17ccdcc}{maxY}})
+\begin{DoxyCompactList}\small\item\em Set the plot zoom limit in Y-\/axis. \end{DoxyCompactList}\item 
+wx\+Coord \mbox{\hyperlink{class_proportional_a6016afb3eb59853e4f32a533665d7b9f}{get\+Plot\+Start\+Width}} () const
+\begin{DoxyCompactList}\small\item\em Get the recalculated start width X-\/axis value. This value is recalculated after the figure is drawn. \end{DoxyCompactList}\item 
+wx\+Coord \mbox{\hyperlink{class_proportional_a9150aae72ccfdf979367e9f6e14eae4a}{get\+Plot\+End\+Width}} () const
+\begin{DoxyCompactList}\small\item\em Get the recalculated end width X-\/axis value. This value is recalculated after the figure is drawn. \end{DoxyCompactList}\item 
+wx\+Coord \mbox{\hyperlink{class_proportional_a3cb76783f802a621cc80eac43aeffb32}{get\+Plot\+Start\+Height}} () const
+\begin{DoxyCompactList}\small\item\em Get the recalculated start height Y-\/axis value. This value is recalculated after the figure is drawn. \end{DoxyCompactList}\item 
+wx\+Coord \mbox{\hyperlink{class_proportional_adac5c89155e3c1aabfbce6e9ec7dde27}{get\+Plot\+End\+Height}} () const
+\begin{DoxyCompactList}\small\item\em Get the recalculated end height Y-\/axis value. This value is recalculated after the figure is drawn. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_proportional_af3c9c6caddc6626e1a2157dc8d51048a}{draw\+Figure}} (wx\+DC \&dc)
+\begin{DoxyCompactList}\small\item\em This function will do the following\+: \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_proportional_ab756d82fddabdd06f88f37ea66328fc3}{draw\+Grid}} (wx\+DC \&dc)
+\begin{DoxyCompactList}\small\item\em This function will draw the grid. Call this function after you have drawn the plot type. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_proportional_add5843671f428e388116500e3f8d96f1}{draw\+Ticks}} (wx\+DC \&dc)
+\begin{DoxyCompactList}\small\item\em This function will draw the ticks. Call this function after you have drawn the plot type. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_proportional_a02704074ac0529c731c69b7477772a6f}{draw\+Legend}} (wx\+DC \&dc)
+\begin{DoxyCompactList}\small\item\em This function will draw the legend. Call this function after you have drawn the plot type. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
 \Hypertarget{class_proportional_ab188013bb02c135c59e6fe69822471eb}\label{class_proportional_ab188013bb02c135c59e6fe69822471eb} 
 wx\+Coord {\bfseries plot\+End\+Width} = 0
-\item 
+\begin{DoxyCompactList}\small\item\em Location of right upper corner in X-\/axis. \end{DoxyCompactList}\item 
 \Hypertarget{class_proportional_a94db99dbecfd83bef56e4fd30a6e7ea5}\label{class_proportional_a94db99dbecfd83bef56e4fd30a6e7ea5} 
 wx\+Coord {\bfseries plot\+End\+Height} = 0
-\item 
+\begin{DoxyCompactList}\small\item\em Location of right bottom corner in Y-\/axis. \end{DoxyCompactList}\item 
 \Hypertarget{class_proportional_a787d6e92734b225e71337049493acd8c}\label{class_proportional_a787d6e92734b225e71337049493acd8c} 
 wx\+Coord {\bfseries plot\+Start\+Width} = 0
-\item 
+\begin{DoxyCompactList}\small\item\em Location of left upper corner in X-\/axis. \end{DoxyCompactList}\item 
 \Hypertarget{class_proportional_a75bb9a65fda3055a90b831828df1a1b0}\label{class_proportional_a75bb9a65fda3055a90b831828df1a1b0} 
 wx\+Coord {\bfseries plot\+Start\+Height} = 0
-\item 
-\Hypertarget{class_proportional_ad720e3893080fc6963db87ebf1eac016}\label{class_proportional_ad720e3893080fc6963db87ebf1eac016} 
-unsigned int {\bfseries font\+Size} = 0
-\item 
-\Hypertarget{class_proportional_a1776dacf5d8f7a32544327362b8f07b2}\label{class_proportional_a1776dacf5d8f7a32544327362b8f07b2} 
-unsigned int {\bfseries ticks} = 0
-\item 
-\Hypertarget{class_proportional_a767392b84e72521158f28189f50ed228}\label{class_proportional_a767392b84e72521158f28189f50ed228} 
-bool {\bfseries use\+Grid} = false
-\item 
-\Hypertarget{class_proportional_abffd79cf1c81668ceb3367d8099c3f3d}\label{class_proportional_abffd79cf1c81668ceb3367d8099c3f3d} 
-bool {\bfseries use\+Legend} = false
-\item 
-\Hypertarget{class_proportional_a50a20741cb345d1410d2d2c6b913991a}\label{class_proportional_a50a20741cb345d1410d2d2c6b913991a} 
-wx\+String {\bfseries title}
-\item 
-\Hypertarget{class_proportional_add35a2a7a59f42184132900ea680e1ac}\label{class_proportional_add35a2a7a59f42184132900ea680e1ac} 
-wx\+String {\bfseries x\+Label}
-\item 
-\Hypertarget{class_proportional_af1c51e637088c51cdcd690e6146f36e4}\label{class_proportional_af1c51e637088c51cdcd690e6146f36e4} 
-wx\+String {\bfseries y\+Label}
-\item 
-\Hypertarget{class_proportional_a14e6d669313f762686c4192857d802ba}\label{class_proportional_a14e6d669313f762686c4192857d802ba} 
-std\+::vector$<$ wx\+String $>$ {\bfseries legend}
-\item 
-\Hypertarget{class_proportional_a4aeae4b01a4bb44285cb2ecad2f6201f}\label{class_proportional_a4aeae4b01a4bb44285cb2ecad2f6201f} 
-PLACEMENT {\bfseries legend\+Position} = PLACEMENT\+\_\+\+NORTH\+\_\+\+WEST
-\item 
-\Hypertarget{class_proportional_a59c22dea060000ff0311adccbb86853e}\label{class_proportional_a59c22dea060000ff0311adccbb86853e} 
-WXPLOT\+\_\+\+TYPE {\bfseries wx\+Plot\+Type} = WXPLOT\+\_\+\+TYPE\+\_\+\+LINE
-\item 
+\begin{DoxyCompactList}\small\item\em Location of left upper corner in Y-\/axis. \end{DoxyCompactList}\item 
 \Hypertarget{class_proportional_adf5251f7526240c3a1bf5e5d9e20f8ba}\label{class_proportional_adf5251f7526240c3a1bf5e5d9e20f8ba} 
 double {\bfseries minX} = 0
-\item 
+\begin{DoxyCompactList}\small\item\em Minimum value of data in X-\/axis. \end{DoxyCompactList}\item 
 \Hypertarget{class_proportional_aa934b32ddb06e4f626030491f112d27f}\label{class_proportional_aa934b32ddb06e4f626030491f112d27f} 
 double {\bfseries maxX} = 0
-\item 
+\begin{DoxyCompactList}\small\item\em Maximum value of data in X-\/axis. \end{DoxyCompactList}\item 
 \Hypertarget{class_proportional_a27a325496f8befd62f22247ed481eb60}\label{class_proportional_a27a325496f8befd62f22247ed481eb60} 
 double {\bfseries minY} = 0
-\item 
+\begin{DoxyCompactList}\small\item\em Minimum value of data in Y-\/axis. \end{DoxyCompactList}\item 
 \Hypertarget{class_proportional_ae62c17d1d4138934b5622e5bf17ccdcc}\label{class_proportional_ae62c17d1d4138934b5622e5bf17ccdcc} 
 double {\bfseries maxY} = 0
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Maximum value of data in Y-\/axis. \end{DoxyCompactList}\item 
+\Hypertarget{class_proportional_ad720e3893080fc6963db87ebf1eac016}\label{class_proportional_ad720e3893080fc6963db87ebf1eac016} 
+unsigned int {\bfseries font\+Size} = 0
+\begin{DoxyCompactList}\small\item\em The size of the all fonts. \end{DoxyCompactList}\item 
+\Hypertarget{class_proportional_a1776dacf5d8f7a32544327362b8f07b2}\label{class_proportional_a1776dacf5d8f7a32544327362b8f07b2} 
+unsigned int {\bfseries ticks} = 0
+\begin{DoxyCompactList}\small\item\em The number of ticks at the figure in all axis. \end{DoxyCompactList}\item 
+\Hypertarget{class_proportional_a767392b84e72521158f28189f50ed228}\label{class_proportional_a767392b84e72521158f28189f50ed228} 
+bool {\bfseries use\+Grid} = false
+\begin{DoxyCompactList}\small\item\em Flag for using grid or not. \end{DoxyCompactList}\item 
+\Hypertarget{class_proportional_abffd79cf1c81668ceb3367d8099c3f3d}\label{class_proportional_abffd79cf1c81668ceb3367d8099c3f3d} 
+bool {\bfseries use\+Legend} = false
+\begin{DoxyCompactList}\small\item\em Flag for using legend or not. \end{DoxyCompactList}\item 
+\Hypertarget{class_proportional_a50a20741cb345d1410d2d2c6b913991a}\label{class_proportional_a50a20741cb345d1410d2d2c6b913991a} 
+wx\+String {\bfseries title}
+\begin{DoxyCompactList}\small\item\em Title of the plot type. \end{DoxyCompactList}\item 
+\Hypertarget{class_proportional_add35a2a7a59f42184132900ea680e1ac}\label{class_proportional_add35a2a7a59f42184132900ea680e1ac} 
+wx\+String {\bfseries x\+Label}
+\begin{DoxyCompactList}\small\item\em Label under the plot type. \end{DoxyCompactList}\item 
+\Hypertarget{class_proportional_af1c51e637088c51cdcd690e6146f36e4}\label{class_proportional_af1c51e637088c51cdcd690e6146f36e4} 
+wx\+String {\bfseries y\+Label}
+\begin{DoxyCompactList}\small\item\em Label on the left side of the plot type. \end{DoxyCompactList}\item 
+\Hypertarget{class_proportional_a14e6d669313f762686c4192857d802ba}\label{class_proportional_a14e6d669313f762686c4192857d802ba} 
+std\+::vector$<$ wx\+String $>$ {\bfseries legend}
+\begin{DoxyCompactList}\small\item\em Vector of labels for the legend. \end{DoxyCompactList}\item 
+\Hypertarget{class_proportional_a4aeae4b01a4bb44285cb2ecad2f6201f}\label{class_proportional_a4aeae4b01a4bb44285cb2ecad2f6201f} 
+PLACEMENT {\bfseries legend\+Position} = PLACEMENT\+\_\+\+NORTH\+\_\+\+WEST
+\begin{DoxyCompactList}\small\item\em Location of the legend. \end{DoxyCompactList}\item 
+\Hypertarget{class_proportional_a59c22dea060000ff0311adccbb86853e}\label{class_proportional_a59c22dea060000ff0311adccbb86853e} 
+WXPLOT\+\_\+\+TYPE {\bfseries wx\+Plot\+Type} = WXPLOT\+\_\+\+TYPE\+\_\+\+LINE
+\begin{DoxyCompactList}\small\item\em Plot type selection. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\doxylink{class_proportional}{Proportional} class. Do the most work in all 2D plot figures. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_proportional_af3c9c6caddc6626e1a2157dc8d51048a}\index{Proportional@{Proportional}!drawFigure@{drawFigure}}
+\index{drawFigure@{drawFigure}!Proportional@{Proportional}}
+\doxysubsubsection{\texorpdfstring{drawFigure()}{drawFigure()}}
+{\footnotesize\ttfamily \label{class_proportional_af3c9c6caddc6626e1a2157dc8d51048a} 
+void Proportional\+::draw\+Figure (\begin{DoxyParamCaption}\item[{wx\+DC \&}]{dc}{}\end{DoxyParamCaption})}
+
+
+
+This function will do the following\+: 
+
+
+\begin{DoxyItemize}
+\item Set the fonts
+\item Draw the title
+\item Draw the y-\/label
+\item Draw the x-\/label
+\item Draw the rectangle
+\item Update the plot\+Start\+Height, plot\+Endt\+Height, plot\+Start\+Width and plot\+Endt\+Width for correct plotting the plot type 
+\begin{DoxyParams}{Parameters}
+{\em dc} & The wx\+DC object for drawing lines, polygons etc. \\
+\hline
+\end{DoxyParams}
+
+\end{DoxyItemize}\Hypertarget{class_proportional_ab756d82fddabdd06f88f37ea66328fc3}\index{Proportional@{Proportional}!drawGrid@{drawGrid}}
+\index{drawGrid@{drawGrid}!Proportional@{Proportional}}
+\doxysubsubsection{\texorpdfstring{drawGrid()}{drawGrid()}}
+{\footnotesize\ttfamily \label{class_proportional_ab756d82fddabdd06f88f37ea66328fc3} 
+void Proportional\+::draw\+Grid (\begin{DoxyParamCaption}\item[{wx\+DC \&}]{dc}{}\end{DoxyParamCaption})}
+
+
+
+This function will draw the grid. Call this function after you have drawn the plot type. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dc} & The wx\+DC object for drawing lines, polygons etc. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_proportional_a02704074ac0529c731c69b7477772a6f}\index{Proportional@{Proportional}!drawLegend@{drawLegend}}
+\index{drawLegend@{drawLegend}!Proportional@{Proportional}}
+\doxysubsubsection{\texorpdfstring{drawLegend()}{drawLegend()}}
+{\footnotesize\ttfamily \label{class_proportional_a02704074ac0529c731c69b7477772a6f} 
+void Proportional\+::draw\+Legend (\begin{DoxyParamCaption}\item[{wx\+DC \&}]{dc}{}\end{DoxyParamCaption})}
+
+
+
+This function will draw the legend. Call this function after you have drawn the plot type. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dc} & The wx\+DC object for drawing lines, polygons etc. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_proportional_add5843671f428e388116500e3f8d96f1}\index{Proportional@{Proportional}!drawTicks@{drawTicks}}
+\index{drawTicks@{drawTicks}!Proportional@{Proportional}}
+\doxysubsubsection{\texorpdfstring{drawTicks()}{drawTicks()}}
+{\footnotesize\ttfamily \label{class_proportional_add5843671f428e388116500e3f8d96f1} 
+void Proportional\+::draw\+Ticks (\begin{DoxyParamCaption}\item[{wx\+DC \&}]{dc}{}\end{DoxyParamCaption})}
+
+
+
+This function will draw the ticks. Call this function after you have drawn the plot type. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dc} & The wx\+DC object for drawing lines, polygons etc. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_proportional_adac5c89155e3c1aabfbce6e9ec7dde27}\index{Proportional@{Proportional}!getPlotEndHeight@{getPlotEndHeight}}
+\index{getPlotEndHeight@{getPlotEndHeight}!Proportional@{Proportional}}
+\doxysubsubsection{\texorpdfstring{getPlotEndHeight()}{getPlotEndHeight()}}
+{\footnotesize\ttfamily \label{class_proportional_adac5c89155e3c1aabfbce6e9ec7dde27} 
+wx\+Coord Proportional\+::get\+Plot\+End\+Height (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Get the recalculated end height Y-\/axis value. This value is recalculated after the figure is drawn. 
+
+\begin{DoxyReturn}{Returns}
+wx\+Coord Recalculated value 
+\end{DoxyReturn}
+\Hypertarget{class_proportional_a9150aae72ccfdf979367e9f6e14eae4a}\index{Proportional@{Proportional}!getPlotEndWidth@{getPlotEndWidth}}
+\index{getPlotEndWidth@{getPlotEndWidth}!Proportional@{Proportional}}
+\doxysubsubsection{\texorpdfstring{getPlotEndWidth()}{getPlotEndWidth()}}
+{\footnotesize\ttfamily \label{class_proportional_a9150aae72ccfdf979367e9f6e14eae4a} 
+wx\+Coord Proportional\+::get\+Plot\+End\+Width (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Get the recalculated end width X-\/axis value. This value is recalculated after the figure is drawn. 
+
+\begin{DoxyReturn}{Returns}
+wx\+Coord Recalculated value 
+\end{DoxyReturn}
+\Hypertarget{class_proportional_a3cb76783f802a621cc80eac43aeffb32}\index{Proportional@{Proportional}!getPlotStartHeight@{getPlotStartHeight}}
+\index{getPlotStartHeight@{getPlotStartHeight}!Proportional@{Proportional}}
+\doxysubsubsection{\texorpdfstring{getPlotStartHeight()}{getPlotStartHeight()}}
+{\footnotesize\ttfamily \label{class_proportional_a3cb76783f802a621cc80eac43aeffb32} 
+wx\+Coord Proportional\+::get\+Plot\+Start\+Height (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Get the recalculated start height Y-\/axis value. This value is recalculated after the figure is drawn. 
+
+\begin{DoxyReturn}{Returns}
+wx\+Coord Recalculated value 
+\end{DoxyReturn}
+\Hypertarget{class_proportional_a6016afb3eb59853e4f32a533665d7b9f}\index{Proportional@{Proportional}!getPlotStartWidth@{getPlotStartWidth}}
+\index{getPlotStartWidth@{getPlotStartWidth}!Proportional@{Proportional}}
+\doxysubsubsection{\texorpdfstring{getPlotStartWidth()}{getPlotStartWidth()}}
+{\footnotesize\ttfamily \label{class_proportional_a6016afb3eb59853e4f32a533665d7b9f} 
+wx\+Coord Proportional\+::get\+Plot\+Start\+Width (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Get the recalculated start width X-\/axis value. This value is recalculated after the figure is drawn. 
+
+\begin{DoxyReturn}{Returns}
+wx\+Coord Recalculated value 
+\end{DoxyReturn}
+\Hypertarget{class_proportional_a3b90e4622086694d42b8ccbdc719fd14}\index{Proportional@{Proportional}!gridOn@{gridOn}}
+\index{gridOn@{gridOn}!Proportional@{Proportional}}
+\doxysubsubsection{\texorpdfstring{gridOn()}{gridOn()}}
+{\footnotesize\ttfamily \label{class_proportional_a3b90e4622086694d42b8ccbdc719fd14} 
+void Proportional\+::grid\+On (\begin{DoxyParamCaption}\item[{const bool}]{use\+Grid}{}\end{DoxyParamCaption})}
+
+
+
+Enable grid on the figure. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em use\+Grid} & Set true for enabling grid. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_proportional_a786dcf2ae9ed347bce0bdd2a0be6f18a}\index{Proportional@{Proportional}!legendOn@{legendOn}}
+\index{legendOn@{legendOn}!Proportional@{Proportional}}
+\doxysubsubsection{\texorpdfstring{legendOn()}{legendOn()}}
+{\footnotesize\ttfamily \label{class_proportional_a786dcf2ae9ed347bce0bdd2a0be6f18a} 
+void Proportional\+::legend\+On (\begin{DoxyParamCaption}\item[{const bool}]{use\+Legend}{}\end{DoxyParamCaption})}
+
+
+
+Activate the legend. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em use\+Legend} & Set true to make a little box with labels appear. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_proportional_a10091e6712d65a39c5563a9197fcb596}\index{Proportional@{Proportional}!setData@{setData}}
+\index{setData@{setData}!Proportional@{Proportional}}
+\doxysubsubsection{\texorpdfstring{setData()}{setData()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_proportional_a10091e6712d65a39c5563a9197fcb596} 
+void Proportional\+::set\+Data (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ double $>$ \&}]{data1D}{}\end{DoxyParamCaption})}
+
+
+
+Set 1D data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data1D} & 1D data in form of 1D vector. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_proportional_a7d205ffc0e2c411da21dc5e010ca742e}\index{Proportional@{Proportional}!setData@{setData}}
+\index{setData@{setData}!Proportional@{Proportional}}
+\doxysubsubsection{\texorpdfstring{setData()}{setData()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_proportional_a7d205ffc0e2c411da21dc5e010ca742e} 
+void Proportional\+::set\+Data (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::vector$<$ double $>$ $>$ \&}]{data2D}{}\end{DoxyParamCaption})}
+
+
+
+Set 2D data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data2D} & 2D data in form of 2D vector. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_proportional_a1007efe8dc6a53a6d1847ccda9832bcc}\index{Proportional@{Proportional}!setFontSize@{setFontSize}}
+\index{setFontSize@{setFontSize}!Proportional@{Proportional}}
+\doxysubsubsection{\texorpdfstring{setFontSize()}{setFontSize()}}
+{\footnotesize\ttfamily \label{class_proportional_a1007efe8dc6a53a6d1847ccda9832bcc} 
+void Proportional\+::set\+Font\+Size (\begin{DoxyParamCaption}\item[{const unsigned int}]{font\+Size}{}\end{DoxyParamCaption})}
+
+
+
+Set the size of the fonts. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em font\+Size} & The size of the fonts. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_proportional_ad8810399a877ff475b171fd6aca101b0}\index{Proportional@{Proportional}!setLegend@{setLegend}}
+\index{setLegend@{setLegend}!Proportional@{Proportional}}
+\doxysubsubsection{\texorpdfstring{setLegend()}{setLegend()}}
+{\footnotesize\ttfamily \label{class_proportional_ad8810399a877ff475b171fd6aca101b0} 
+void Proportional\+::set\+Legend (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ wx\+String $>$ \&}]{legend}{, }\item[{const PLACEMENT}]{legend\+Position}{ = {\ttfamily PLACEMENT\+\_\+NORTH\+\_\+EAST}}\end{DoxyParamCaption})}
+
+
+
+Set the labels and placement for the legend. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em legend} & Vector of strings for the legend. \\
+\hline
+{\em legend\+Position} & Position where the legend should be placed. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_proportional_a46c9d0f4897c140f9a728da1665ed790}\index{Proportional@{Proportional}!setPlotEndHeight@{setPlotEndHeight}}
+\index{setPlotEndHeight@{setPlotEndHeight}!Proportional@{Proportional}}
+\doxysubsubsection{\texorpdfstring{setPlotEndHeight()}{setPlotEndHeight()}}
+{\footnotesize\ttfamily \label{class_proportional_a46c9d0f4897c140f9a728da1665ed790} 
+void Proportional\+::set\+Plot\+End\+Height (\begin{DoxyParamCaption}\item[{const wx\+Coord}]{plot\+End\+Height}{}\end{DoxyParamCaption})}
+
+
+
+Set the right bottom corner in Y-\/axis. Inside this rectangle, the plot is drawn. NOTE\+: This value is recalculated since the plot figure is drawn! (plot\+Start\+Width, plot\+Start\+Height) -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/--- (plot\+End\+Width, plot\+Start\+Height) 
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{1}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ }\\\cline{1-1}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ }\\\cline{1-1}
+\endhead
+\\\cline{1-1}
+\\\cline{1-1}
+\\\cline{1-1}
+\\\cline{1-1}
+\\\cline{1-1}
+\\\cline{1-1}
+\\\cline{1-1}
+\\\cline{1-1}
+\\\cline{1-1}
+\end{longtabu}
+(plot\+Start\+Width, plot\+End\+Height) -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/--- (plot\+End\+Width, plot\+End\+Height) 
+\begin{DoxyParams}{Parameters}
+{\em plot\+End\+Height} & End height is at the end of Y-\/axis. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_proportional_aca32dde84c95cf2dc02090edc1465191}\index{Proportional@{Proportional}!setPlotEndWidth@{setPlotEndWidth}}
+\index{setPlotEndWidth@{setPlotEndWidth}!Proportional@{Proportional}}
+\doxysubsubsection{\texorpdfstring{setPlotEndWidth()}{setPlotEndWidth()}}
+{\footnotesize\ttfamily \label{class_proportional_aca32dde84c95cf2dc02090edc1465191} 
+void Proportional\+::set\+Plot\+End\+Width (\begin{DoxyParamCaption}\item[{const wx\+Coord}]{plot\+End\+Width}{}\end{DoxyParamCaption})}
+
+
+
+Set the right upper corner in X-\/axis. Inside this rectangle, the plot is drawn. NOTE\+: This value is recalculated since the plot figure is drawn! (plot\+Start\+Width, plot\+Start\+Height) -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/--- (plot\+End\+Width, plot\+Start\+Height) 
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{1}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ }\\\cline{1-1}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ }\\\cline{1-1}
+\endhead
+\\\cline{1-1}
+\\\cline{1-1}
+\\\cline{1-1}
+\\\cline{1-1}
+\\\cline{1-1}
+\\\cline{1-1}
+\\\cline{1-1}
+\\\cline{1-1}
+\\\cline{1-1}
+\end{longtabu}
+(plot\+Start\+Width, plot\+End\+Height) -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/--- (plot\+End\+Width, plot\+End\+Height) 
+\begin{DoxyParams}{Parameters}
+{\em plot\+End\+Width} & End width is at the end of X-\/axis. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_proportional_af52b3ca174c0ecd3f03bf1fb7e0001d6}\index{Proportional@{Proportional}!setPlotStartHeight@{setPlotStartHeight}}
+\index{setPlotStartHeight@{setPlotStartHeight}!Proportional@{Proportional}}
+\doxysubsubsection{\texorpdfstring{setPlotStartHeight()}{setPlotStartHeight()}}
+{\footnotesize\ttfamily \label{class_proportional_af52b3ca174c0ecd3f03bf1fb7e0001d6} 
+void Proportional\+::set\+Plot\+Start\+Height (\begin{DoxyParamCaption}\item[{const wx\+Coord}]{plot\+Start\+Height}{}\end{DoxyParamCaption})}
+
+
+
+Set the left upper corner in Y-\/axis. Inside this rectangle, the plot is drawn. NOTE\+: This value is recalculated since the plot figure is drawn! (plot\+Start\+Width, plot\+Start\+Height) -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/--- (plot\+End\+Width, plot\+Start\+Height) 
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{1}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ }\\\cline{1-1}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ }\\\cline{1-1}
+\endhead
+\\\cline{1-1}
+\\\cline{1-1}
+\\\cline{1-1}
+\\\cline{1-1}
+\\\cline{1-1}
+\\\cline{1-1}
+\\\cline{1-1}
+\\\cline{1-1}
+\\\cline{1-1}
+\end{longtabu}
+(plot\+Start\+Width, plot\+End\+Height) -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/--- (plot\+End\+Width, plot\+End\+Height) 
+\begin{DoxyParams}{Parameters}
+{\em plot\+Start\+Height} & Start height is at the start of Y-\/axis. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_proportional_abc98284faca3e5816b0696b183bef230}\index{Proportional@{Proportional}!setPlotStartWidth@{setPlotStartWidth}}
+\index{setPlotStartWidth@{setPlotStartWidth}!Proportional@{Proportional}}
+\doxysubsubsection{\texorpdfstring{setPlotStartWidth()}{setPlotStartWidth()}}
+{\footnotesize\ttfamily \label{class_proportional_abc98284faca3e5816b0696b183bef230} 
+void Proportional\+::set\+Plot\+Start\+Width (\begin{DoxyParamCaption}\item[{const wx\+Coord}]{plot\+Start\+Width}{}\end{DoxyParamCaption})}
+
+
+
+Set the left upper corner in X-\/axis. Inside this rectangle, the plot is drawn. NOTE\+: This value is recalculated since the plot figure is drawn! (plot\+Start\+Width, plot\+Start\+Height) -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/--- (plot\+End\+Width, plot\+Start\+Height) 
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{1}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ }\\\cline{1-1}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ }\\\cline{1-1}
+\endhead
+\\\cline{1-1}
+\\\cline{1-1}
+\\\cline{1-1}
+\\\cline{1-1}
+\\\cline{1-1}
+\\\cline{1-1}
+\\\cline{1-1}
+\\\cline{1-1}
+\\\cline{1-1}
+\end{longtabu}
+(plot\+Start\+Width, plot\+End\+Height) -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/--- (plot\+End\+Width, plot\+End\+Height) 
+\begin{DoxyParams}{Parameters}
+{\em plot\+Start\+Width} & Start width is at the start of X-\/axis. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_proportional_a2e443e66e0af535ce00caf87f6122075}\index{Proportional@{Proportional}!setTicks@{setTicks}}
+\index{setTicks@{setTicks}!Proportional@{Proportional}}
+\doxysubsubsection{\texorpdfstring{setTicks()}{setTicks()}}
+{\footnotesize\ttfamily \label{class_proportional_a2e443e66e0af535ce00caf87f6122075} 
+void Proportional\+::set\+Ticks (\begin{DoxyParamCaption}\item[{const unsigned int}]{ticks}{}\end{DoxyParamCaption})}
+
+
+
+Set the number of ticks at the figure in all axis. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ticks} & Number of ticks. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_proportional_a8d9bba5c5f06f5b17525de90674e67b6}\index{Proportional@{Proportional}!setTitle@{setTitle}}
+\index{setTitle@{setTitle}!Proportional@{Proportional}}
+\doxysubsubsection{\texorpdfstring{setTitle()}{setTitle()}}
+{\footnotesize\ttfamily \label{class_proportional_a8d9bba5c5f06f5b17525de90674e67b6} 
+void Proportional\+::set\+Title (\begin{DoxyParamCaption}\item[{const wx\+String \&}]{title}{}\end{DoxyParamCaption})}
+
+
+
+Set the title of the plot. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em title} & Name of the title. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_proportional_a12b7f1873b5e1c1fd9f0609200887869}\index{Proportional@{Proportional}!setWxPlotType@{setWxPlotType}}
+\index{setWxPlotType@{setWxPlotType}!Proportional@{Proportional}}
+\doxysubsubsection{\texorpdfstring{setWxPlotType()}{setWxPlotType()}}
+{\footnotesize\ttfamily \label{class_proportional_a12b7f1873b5e1c1fd9f0609200887869} 
+void Proportional\+::set\+Wx\+Plot\+Type (\begin{DoxyParamCaption}\item[{const WXPLOT\+\_\+\+TYPE}]{wx\+Plot\+Type}{}\end{DoxyParamCaption})}
+
+
+
+Set the plot type selection. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em wx\+Plot\+Type} & Selection of plot type. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_proportional_a6d734ebe613997c7aea77b22932a6a58}\index{Proportional@{Proportional}!setXlabel@{setXlabel}}
+\index{setXlabel@{setXlabel}!Proportional@{Proportional}}
+\doxysubsubsection{\texorpdfstring{setXlabel()}{setXlabel()}}
+{\footnotesize\ttfamily \label{class_proportional_a6d734ebe613997c7aea77b22932a6a58} 
+void Proportional\+::set\+Xlabel (\begin{DoxyParamCaption}\item[{const wx\+String \&}]{x\+Label}{}\end{DoxyParamCaption})}
+
+
+
+Set the name of the X-\/label. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x\+Label} & Name of the X-\/label. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_proportional_a8c64c0a09b2318e117e88d1bcc12d733}\index{Proportional@{Proportional}!setYlabel@{setYlabel}}
+\index{setYlabel@{setYlabel}!Proportional@{Proportional}}
+\doxysubsubsection{\texorpdfstring{setYlabel()}{setYlabel()}}
+{\footnotesize\ttfamily \label{class_proportional_a8c64c0a09b2318e117e88d1bcc12d733} 
+void Proportional\+::set\+Ylabel (\begin{DoxyParamCaption}\item[{const wx\+String \&}]{y\+Label}{}\end{DoxyParamCaption})}
+
+
+
+Set the name of the Y-\/label. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em y\+Label} & Name of the Y-\/label. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_proportional_aa30a0a702b739e1667427207efd13b77}\index{Proportional@{Proportional}!setYlim@{setYlim}}
+\index{setYlim@{setYlim}!Proportional@{Proportional}}
+\doxysubsubsection{\texorpdfstring{setYlim()}{setYlim()}}
+{\footnotesize\ttfamily \label{class_proportional_aa30a0a702b739e1667427207efd13b77} 
+void Proportional\+::set\+Ylim (\begin{DoxyParamCaption}\item[{const double}]{minY}{, }\item[{const double}]{maxY}{}\end{DoxyParamCaption})}
+
+
+
+Set the plot zoom limit in Y-\/axis. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em minY} & Minimum limit in Y-\/axis. \\
+\hline
+{\em maxY} & Maximum limit in Y-\/axis. \\
+\hline
+\end{DoxyParams}
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}

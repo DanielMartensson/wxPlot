@@ -1,5 +1,14 @@
 \doxysection{Spline Class Reference}
 \hypertarget{class_spline}{}\label{class_spline}\index{Spline@{Spline}}
+
+
+\doxylink{class_spline}{Spline} class. Inheritance from class \doxylink{class_line}{Line}.  
+
+
+
+
+{\ttfamily \#include $<$spline.\+hpp$>$}
+
 Inheritance diagram for Spline\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -9,53 +18,71 @@ Inheritance diagram for Spline\+:\begin{figure}[H]
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-bool \mbox{\hyperlink{class_spline_a0508f8e92b3ec34f8db530dbb32d4b92}{draw}} (wx\+DC \&dc, const std\+::vector$<$ double $>$ \&x\+Data, const std\+::vector$<$ double $>$ \&y\+Data, const unsigned int colour\+Index) override
-\end{DoxyCompactItemize}
+void \mbox{\hyperlink{class_spline_ac2fbba99327d1238b38541dca5d38c1b}{draw}} (wx\+DC \&dc, const std\+::vector$<$ double $>$ \&x\+Data, const std\+::vector$<$ double $>$ \&y\+Data, const unsigned int colour\+Index) override
+\begin{DoxyCompactList}\small\item\em Draw the spline plot inside the rectangle. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_line}{Line}}}
 \begin{DoxyCompactItemize}
 \item 
-void {\bfseries set\+Limits} (const double minX, const double maxX, const double minY, const double maxY)
-\item 
-void {\bfseries set\+Plot\+Start\+Width} (const wx\+Coord plot\+Start\+Width)
-\item 
-void {\bfseries set\+Plot\+Start\+Height} (const wx\+Coord plot\+Start\+Height)
-\item 
-void {\bfseries set\+Plot\+End\+Width} (const wx\+Coord plot\+End\+Width)
-\item 
-void {\bfseries set\+Plot\+End\+Height} (const wx\+Coord plot\+End\+Height)
-\end{DoxyCompactItemize}
+void \mbox{\hyperlink{class_line_a281ac8321234db58306b017596eab9a7}{set\+Limits}} (const double \mbox{\hyperlink{class_line_af2aaefd513c665b045e771e812e59bea}{minX}}, const double \mbox{\hyperlink{class_line_a4b2a944fd143204a253ce23968cd9e61}{maxX}}, const double \mbox{\hyperlink{class_line_a174e69897228bfd03c9e98a9283dad9c}{minY}}, const double \mbox{\hyperlink{class_line_a61909563e4694b3ece73a63732724156}{maxY}})
+\begin{DoxyCompactList}\small\item\em Set minimum and maximum limits of the data. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_line_ade7560149deea45afc6e036fdabb2302}{set\+Plot\+Start\+Width}} (const wx\+Coord \mbox{\hyperlink{class_line_af77792fe6c61cdf5651c11b2ee9d4fd9}{plot\+Start\+Width}})
+\begin{DoxyCompactList}\small\item\em Set the left upper corner in X-\/axis. Inside this rectangle, the plot is drawn. NOTE\+: This value is recalculated since the plot figure is drawn! (plot\+Start\+Width, plot\+Start\+Height) -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/--- (plot\+End\+Width, plot\+Start\+Height) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_line_aa1836a393bd60485566f58f6d405782d}{set\+Plot\+Start\+Height}} (const wx\+Coord \mbox{\hyperlink{class_line_a2468b0064fa2026eecaf3f4ac9c138e4}{plot\+Start\+Height}})
+\begin{DoxyCompactList}\small\item\em Set the left upper corner in Y-\/axis. Inside this rectangle, the plot is drawn. NOTE\+: This value is recalculated since the plot figure is drawn! (plot\+Start\+Width, plot\+Start\+Height) -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/--- (plot\+End\+Width, plot\+Start\+Height) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_line_a62eee93e58ee963050d3463cbcae368c}{set\+Plot\+End\+Width}} (const wx\+Coord \mbox{\hyperlink{class_line_adfd37018929fd47cc85aea6b009e6ecd}{plot\+End\+Width}})
+\begin{DoxyCompactList}\small\item\em Set the right upper corner in X-\/axis. Inside this rectangle, the plot is drawn. NOTE\+: This value is recalculated since the plot figure is drawn! (plot\+Start\+Width, plot\+Start\+Height) -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/--- (plot\+End\+Width, plot\+Start\+Height) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_line_a860c64fc275cf8e4d1f841a118baab4f}{set\+Plot\+End\+Height}} (const wx\+Coord \mbox{\hyperlink{class_line_a1198f195b092c608928a8dedd41520d5}{plot\+End\+Height}})
+\begin{DoxyCompactList}\small\item\em Set the right bottom corner in Y-\/axis. Inside this rectangle, the plot is drawn. NOTE\+: This value is recalculated since the plot figure is drawn! (plot\+Start\+Width, plot\+Start\+Height) -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/--- (plot\+End\+Width, plot\+Start\+Height) \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Additional Inherited Members}
 \doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_line}{Line}}}
 \begin{DoxyCompactItemize}
 \item 
 wx\+Coord {\bfseries plot\+End\+Width} = 0
-\item 
+\begin{DoxyCompactList}\small\item\em Location of right upper corner in X-\/axis. \end{DoxyCompactList}\item 
 wx\+Coord {\bfseries plot\+End\+Height} = 0
-\item 
+\begin{DoxyCompactList}\small\item\em Location of right bottom corner in Y-\/axis. \end{DoxyCompactList}\item 
 wx\+Coord {\bfseries plot\+Start\+Width} = 0
-\item 
+\begin{DoxyCompactList}\small\item\em Location of left upper corner in X-\/axis. \end{DoxyCompactList}\item 
 wx\+Coord {\bfseries plot\+Start\+Height} = 0
-\item 
+\begin{DoxyCompactList}\small\item\em Location of left upper corner in Y-\/axis. \end{DoxyCompactList}\item 
 double {\bfseries minX} = 0
-\item 
+\begin{DoxyCompactList}\small\item\em Minimum value of data in X-\/axis. \end{DoxyCompactList}\item 
 double {\bfseries maxX} = 0
-\item 
+\begin{DoxyCompactList}\small\item\em Maximum value of data in X-\/axis. \end{DoxyCompactList}\item 
 double {\bfseries minY} = 0
-\item 
+\begin{DoxyCompactList}\small\item\em Minimum value of data in Y-\/axis. \end{DoxyCompactList}\item 
 double {\bfseries maxY} = 0
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Maximum value of data in Y-\/axis. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
+
+\doxysubsection{Detailed Description}
+\doxylink{class_spline}{Spline} class. Inheritance from class \doxylink{class_line}{Line}. 
 
 \doxysubsection{Member Function Documentation}
-\Hypertarget{class_spline_a0508f8e92b3ec34f8db530dbb32d4b92}\index{Spline@{Spline}!draw@{draw}}
+\Hypertarget{class_spline_ac2fbba99327d1238b38541dca5d38c1b}\index{Spline@{Spline}!draw@{draw}}
 \index{draw@{draw}!Spline@{Spline}}
 \doxysubsubsection{\texorpdfstring{draw()}{draw()}}
-{\footnotesize\ttfamily \label{class_spline_a0508f8e92b3ec34f8db530dbb32d4b92} 
-bool Spline\+::draw (\begin{DoxyParamCaption}\item[{wx\+DC \&}]{dc}{, }\item[{const std\+::vector$<$ double $>$ \&}]{x\+Data}{, }\item[{const std\+::vector$<$ double $>$ \&}]{y\+Data}{, }\item[{const unsigned int}]{colour\+Index}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+{\footnotesize\ttfamily \label{class_spline_ac2fbba99327d1238b38541dca5d38c1b} 
+void Spline\+::draw (\begin{DoxyParamCaption}\item[{wx\+DC \&}]{dc}{, }\item[{const std\+::vector$<$ double $>$ \&}]{x\+Data}{, }\item[{const std\+::vector$<$ double $>$ \&}]{y\+Data}{, }\item[{const unsigned int}]{colour\+Index}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
 
 
-Reimplemented from \mbox{\hyperlink{class_line}{Line}}.
+Draw the spline plot inside the rectangle. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dc} & The wx\+DC object for drawing lines, polygons etc. \\
+\hline
+{\em x\+Data} & Data in X-\/axis. \\
+\hline
+{\em y\+Data} & Data in Y-\/axis. \\
+\hline
+{\em colour\+Index} & Selection index of the colour. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_line_a66e47d8474d26db5ec512dbd6c3a64d4}{Line}}.
 
 
 

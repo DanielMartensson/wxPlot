@@ -10,44 +10,48 @@
 \DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}bar/bar.hpp"{}}}
 \DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}../../plottools/plottools.hpp"{}}}
 \DoxyCodeLine{00008\ }
-\DoxyCodeLine{00009\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class__2_d_type}{\_2DType}}\ \{}
-\DoxyCodeLine{00010\ }
-\DoxyCodeLine{00011\ \textcolor{keyword}{private}:}
-\DoxyCodeLine{00012\ \ \ \ \ \textcolor{comment}{//\ Type\ select}}
-\DoxyCodeLine{00013\ \ \ \ \ WXPLOT\_TYPE\ wxPlotType\ =\ WXPLOT\_TYPE\_LINE;}
+\DoxyCodeLine{00013\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class__2_d_type}{\_2DType}}\ \{}
 \DoxyCodeLine{00014\ }
-\DoxyCodeLine{00015\ \ \ \ \ \textcolor{comment}{//\ The\ data}}
-\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keywordtype}{double}\ minX\ =\ 0,\ maxX\ =\ 0,\ minY\ =\ 0,\ maxY\ =\ 0;}
-\DoxyCodeLine{00017\ \ \ \ \ std::vector<std::vector<double>>\ data2D;}
-\DoxyCodeLine{00018\ \ \ \ \ std::vector<double>\ data1D;}
-\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordtype}{bool}\ is2Dused\ =\ \textcolor{keyword}{false};}
-\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ binCount\ =\ 10;}
-\DoxyCodeLine{00021\ }
-\DoxyCodeLine{00022\ \ \ \ \ \textcolor{comment}{//\ Charts}}
-\DoxyCodeLine{00023\ \ \ \ \ \mbox{\hyperlink{class_line}{Line}}\ line;}
-\DoxyCodeLine{00024\ \ \ \ \ \mbox{\hyperlink{class_scatter}{Scatter}}\ scatter;}
-\DoxyCodeLine{00025\ \ \ \ \ \mbox{\hyperlink{class_spline}{Spline}}\ spline;}
-\DoxyCodeLine{00026\ \ \ \ \ \mbox{\hyperlink{class_bar}{Bar}}\ bar;}
-\DoxyCodeLine{00027\ }
-\DoxyCodeLine{00028\ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00029\ \ \ \ \ \textcolor{comment}{//\ Constructor}}
-\DoxyCodeLine{00030\ \ \ \ \ \mbox{\hyperlink{class__2_d_type}{\_2DType}}()\ \{\ \}}
+\DoxyCodeLine{00015\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00016\ \ \ \ \ }
+\DoxyCodeLine{00017\ \ \ \ \ WXPLOT\_TYPE\ wxPlotType\ =\ WXPLOT\_TYPE\_LINE;\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordtype}{double}\ minX\ =\ 0,\ maxX\ =\ 0,\ minY\ =\ 0,\ maxY\ =\ 0;\ \ \ \ }
+\DoxyCodeLine{00020\ \ \ \ \ std::vector<std::vector<double>>\ data2D;\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00021\ \ \ \ \ std::vector<double>\ data1D;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordtype}{bool}\ is2Dused\ =\ \textcolor{keyword}{false};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ binCount\ =\ 10;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00024\ \ \ \ \ }
+\DoxyCodeLine{00025\ \ \ \ \ \mbox{\hyperlink{class_line}{Line}}\ line;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00026\ \ \ \ \ \mbox{\hyperlink{class_scatter}{Scatter}}\ scatter;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00027\ \ \ \ \ \mbox{\hyperlink{class_spline}{Spline}}\ spline;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00028\ \ \ \ \ \mbox{\hyperlink{class_bar}{Bar}}\ bar;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \textcolor{keyword}{public}:}
 \DoxyCodeLine{00031\ }
-\DoxyCodeLine{00032\ \ \ \ \ \textcolor{comment}{//\ Setters}}
-\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{void}\ setWxPlotType(\textcolor{keyword}{const}\ WXPLOT\_TYPE\ wxPlotType);}
-\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keywordtype}{void}\ setRadius(\textcolor{keyword}{const}\ wxCoord\ radius);}
-\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{void}\ setBinCount(\textcolor{keyword}{const}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ binCount);}
-\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordtype}{void}\ fillCircles(\textcolor{keyword}{const}\ \textcolor{keywordtype}{bool}\ fillCircle);}
-\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keywordtype}{void}\ setData(\textcolor{keyword}{const}\ std::vector<std::vector<double>>\&\ data2D);}
-\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordtype}{void}\ setData(\textcolor{keyword}{const}\ std::vector<double>\&\ data1D);}
-\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keywordtype}{void}\ setPlotStartWidth(\textcolor{keyword}{const}\ wxCoord\ plotStartWidth);}
-\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keywordtype}{void}\ setPlotStartHeight(\textcolor{keyword}{const}\ wxCoord\ plotStartHeight);}
-\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordtype}{void}\ setPlotEndWidth(\textcolor{keyword}{const}\ wxCoord\ plotEndWidth);}
-\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordtype}{void}\ setPlotEndHeight(\textcolor{keyword}{const}\ wxCoord\ plotEndHeight);}
-\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordtype}{void}\ setYlim(\textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ minY,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ maxY);}
-\DoxyCodeLine{00044\ }
-\DoxyCodeLine{00045\ \ \ \ \ \textcolor{comment}{//\ Functions}}
-\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keywordtype}{bool}\ drawType(wxDC\&\ dc);}
-\DoxyCodeLine{00047\ \};}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class__2_d_type_a7cc4f55c2339692385889b3fe15b1a5f}{setWxPlotType}}(\textcolor{keyword}{const}\ WXPLOT\_TYPE\ wxPlotType);}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class__2_d_type_a625f9124ec31303bbbabaafce1a94edd}{setRadius}}(\textcolor{keyword}{const}\ wxCoord\ radius);}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class__2_d_type_a3bb712d8b890a0023a84644b676673a6}{fillCircles}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{bool}\ fillCircle);}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class__2_d_type_afe30ec1bf5565a14b8a8ed317218014d}{setData}}(\textcolor{keyword}{const}\ std::vector<std::vector<double>>\&\ data2D);}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class__2_d_type_afe30ec1bf5565a14b8a8ed317218014d}{setData}}(\textcolor{keyword}{const}\ std::vector<double>\&\ data1D);}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00080\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class__2_d_type_a3cad969bbc3cb77140b806073f866d98}{setPlotStartWidth}}(\textcolor{keyword}{const}\ wxCoord\ plotStartWidth);}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00100\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class__2_d_type_a08912e3aeaf2fabfeaa1b94f17e5c352}{setPlotStartHeight}}(\textcolor{keyword}{const}\ wxCoord\ plotStartHeight);}
+\DoxyCodeLine{00101\ }
+\DoxyCodeLine{00120\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class__2_d_type_ad7f853ffafe7eb9b9da993dea836e70a}{setPlotEndWidth}}(\textcolor{keyword}{const}\ wxCoord\ plotEndWidth);}
+\DoxyCodeLine{00121\ }
+\DoxyCodeLine{00140\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class__2_d_type_a4543532d75d0058804de5aac49e5b3ec}{setPlotEndHeight}}(\textcolor{keyword}{const}\ wxCoord\ plotEndHeight);}
+\DoxyCodeLine{00141\ }
+\DoxyCodeLine{00146\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class__2_d_type_abb722c8651658e47843ed14c6f094107}{setBinCount}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ binCount);}
+\DoxyCodeLine{00147\ }
+\DoxyCodeLine{00153\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class__2_d_type_ae216967a463bece33c5c6bd728609ddf}{setYlim}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ minY,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ maxY);}
+\DoxyCodeLine{00154\ }
+\DoxyCodeLine{00159\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class__2_d_type_ad940eb679968fd05acb8217ab9ab20ae}{drawType}}(wxDC\&\ dc);}
+\DoxyCodeLine{00160\ \};}
 
 \end{DoxyCode}

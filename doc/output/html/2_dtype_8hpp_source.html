@@ -100,52 +100,67 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;bar/bar.hpp&quot;</span></div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;../../plottools/plottools.hpp&quot;</span></div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
-<div class="foldopen" id="foldopen00009" data-start="{" data-end="};">
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno"><a class="line" href="class__2_d_type.html">    9</a></span><span class="keyword">class </span><a class="code hl_class" href="class__2_d_type.html">_2DType</a> {</div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="keyword">private</span>:</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    <span class="comment">// Type select</span></div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    WXPLOT_TYPE wxPlotType = WXPLOT_TYPE_LINE;</div>
+<div class="foldopen" id="foldopen00013" data-start="{" data-end="};">
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="class__2_d_type.html">   13</a></span><span class="keyword">class </span><a class="code hl_class" href="class__2_d_type.html">_2DType</a> {</div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    <span class="comment">// The data</span></div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    <span class="keywordtype">double</span> minX = 0, maxX = 0, minY = 0, maxY = 0;</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    std::vector&lt;std::vector&lt;double&gt;&gt; data2D;</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    std::vector&lt;double&gt; data1D;</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    <span class="keywordtype">bool</span> is2Dused = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> binCount = 10;</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    <span class="comment">// Charts</span></div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    <a class="code hl_class" href="class_line.html">Line</a> line;</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <a class="code hl_class" href="class_scatter.html">Scatter</a> scatter;</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <a class="code hl_class" href="class_spline.html">Spline</a> spline;</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    <a class="code hl_class" href="class_bar.html">Bar</a> bar;</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <span class="comment">// Constructor</span></div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    <a class="code hl_class" href="class__2_d_type.html">_2DType</a>() { }</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    WXPLOT_TYPE wxPlotType = WXPLOT_TYPE_LINE;        </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    <span class="keywordtype">double</span> minX = 0, maxX = 0, minY = 0, maxY = 0;    </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    std::vector&lt;std::vector&lt;double&gt;&gt; data2D;          </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    std::vector&lt;double&gt; data1D;                       </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    <span class="keywordtype">bool</span> is2Dused = <span class="keyword">false</span>;                            </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> binCount = 10;                       </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <a class="code hl_class" href="class_line.html">Line</a> line;                                        </div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    <a class="code hl_class" href="class_scatter.html">Scatter</a> scatter;                                  </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    <a class="code hl_class" href="class_spline.html">Spline</a> spline;                                    </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    <a class="code hl_class" href="class_bar.html">Bar</a> bar;                                          </div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="keyword">public</span>:</div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <span class="comment">// Setters</span></div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <span class="keywordtype">void</span> setWxPlotType(<span class="keyword">const</span> WXPLOT_TYPE wxPlotType);</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    <span class="keywordtype">void</span> setRadius(<span class="keyword">const</span> wxCoord radius);</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    <span class="keywordtype">void</span> setBinCount(<span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> binCount);</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <span class="keywordtype">void</span> fillCircles(<span class="keyword">const</span> <span class="keywordtype">bool</span> fillCircle);</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    <span class="keywordtype">void</span> setData(<span class="keyword">const</span> std::vector&lt;std::vector&lt;double&gt;&gt;&amp; data2D);</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <span class="keywordtype">void</span> setData(<span class="keyword">const</span> std::vector&lt;double&gt;&amp; data1D);</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <span class="keywordtype">void</span> setPlotStartWidth(<span class="keyword">const</span> wxCoord plotStartWidth);</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    <span class="keywordtype">void</span> setPlotStartHeight(<span class="keyword">const</span> wxCoord plotStartHeight);</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    <span class="keywordtype">void</span> setPlotEndWidth(<span class="keyword">const</span> wxCoord plotEndWidth);</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    <span class="keywordtype">void</span> setPlotEndHeight(<span class="keyword">const</span> wxCoord plotEndHeight);</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    <span class="keywordtype">void</span> setYlim(<span class="keyword">const</span> <span class="keywordtype">double</span> minY, <span class="keyword">const</span> <span class="keywordtype">double</span> maxY);</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <span class="comment">// Functions</span></div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <span class="keywordtype">bool</span> drawType(wxDC&amp; dc);</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>};</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class__2_d_type.html#a7cc4f55c2339692385889b3fe15b1a5f">setWxPlotType</a>(<span class="keyword">const</span> WXPLOT_TYPE wxPlotType);</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class__2_d_type.html#a625f9124ec31303bbbabaafce1a94edd">setRadius</a>(<span class="keyword">const</span> wxCoord radius);</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class__2_d_type.html#a3bb712d8b890a0023a84644b676673a6">fillCircles</a>(<span class="keyword">const</span> <span class="keywordtype">bool</span> fillCircle);</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class__2_d_type.html#afe30ec1bf5565a14b8a8ed317218014d">setData</a>(<span class="keyword">const</span> std::vector&lt;std::vector&lt;double&gt;&gt;&amp; data2D);</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class__2_d_type.html#afe30ec1bf5565a14b8a8ed317218014d">setData</a>(<span class="keyword">const</span> std::vector&lt;double&gt;&amp; data1D);</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class__2_d_type.html#a3cad969bbc3cb77140b806073f866d98">setPlotStartWidth</a>(<span class="keyword">const</span> wxCoord plotStartWidth);</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span> </div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class__2_d_type.html#a08912e3aeaf2fabfeaa1b94f17e5c352">setPlotStartHeight</a>(<span class="keyword">const</span> wxCoord plotStartHeight);</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span> </div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class__2_d_type.html#ad7f853ffafe7eb9b9da993dea836e70a">setPlotEndWidth</a>(<span class="keyword">const</span> wxCoord plotEndWidth);</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span> </div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class__2_d_type.html#a4543532d75d0058804de5aac49e5b3ec">setPlotEndHeight</a>(<span class="keyword">const</span> wxCoord plotEndHeight);</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span> </div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class__2_d_type.html#abb722c8651658e47843ed14c6f094107">setBinCount</a>(<span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> binCount);</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span> </div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class__2_d_type.html#ae216967a463bece33c5c6bd728609ddf">setYlim</a>(<span class="keyword">const</span> <span class="keywordtype">double</span> minY, <span class="keyword">const</span> <span class="keywordtype">double</span> maxY);</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span> </div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class__2_d_type.html#ad940eb679968fd05acb8217ab9ab20ae">drawType</a>(wxDC&amp; dc);</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>};</div>
 </div>
-<div class="ttc" id="aclass__2_d_type_html"><div class="ttname"><a href="class__2_d_type.html">_2DType</a></div><div class="ttdef"><b>Definition</b> 2Dtype.hpp:9</div></div>
-<div class="ttc" id="aclass_bar_html"><div class="ttname"><a href="class_bar.html">Bar</a></div><div class="ttdef"><b>Definition</b> bar.hpp:7</div></div>
-<div class="ttc" id="aclass_line_html"><div class="ttname"><a href="class_line.html">Line</a></div><div class="ttdef"><b>Definition</b> line.hpp:6</div></div>
-<div class="ttc" id="aclass_scatter_html"><div class="ttname"><a href="class_scatter.html">Scatter</a></div><div class="ttdef"><b>Definition</b> scatter.hpp:7</div></div>
-<div class="ttc" id="aclass_spline_html"><div class="ttname"><a href="class_spline.html">Spline</a></div><div class="ttdef"><b>Definition</b> spline.hpp:7</div></div>
+<div class="ttc" id="aclass__2_d_type_html"><div class="ttname"><a href="class__2_d_type.html">_2DType</a></div><div class="ttdoc">Here all the 2D plot types.</div><div class="ttdef"><b>Definition</b> 2Dtype.hpp:13</div></div>
+<div class="ttc" id="aclass__2_d_type_html_a08912e3aeaf2fabfeaa1b94f17e5c352"><div class="ttname"><a href="class__2_d_type.html#a08912e3aeaf2fabfeaa1b94f17e5c352">_2DType::setPlotStartHeight</a></div><div class="ttdeci">void setPlotStartHeight(const wxCoord plotStartHeight)</div><div class="ttdoc">Set the left upper corner in Y-axis. Inside this rectangle, the plot is drawn. NOTE: This value is re...</div><div class="ttdef"><b>Definition</b> 2Dtype.cpp:81</div></div>
+<div class="ttc" id="aclass__2_d_type_html_a3bb712d8b890a0023a84644b676673a6"><div class="ttname"><a href="class__2_d_type.html#a3bb712d8b890a0023a84644b676673a6">_2DType::fillCircles</a></div><div class="ttdeci">void fillCircles(const bool fillCircle)</div><div class="ttdoc">Fill circles if radius is applied if circiles are going to be filled with the same colour as they are...</div><div class="ttdef"><b>Definition</b> 2Dtype.cpp:15</div></div>
+<div class="ttc" id="aclass__2_d_type_html_a3cad969bbc3cb77140b806073f866d98"><div class="ttname"><a href="class__2_d_type.html#a3cad969bbc3cb77140b806073f866d98">_2DType::setPlotStartWidth</a></div><div class="ttdeci">void setPlotStartWidth(const wxCoord plotStartWidth)</div><div class="ttdoc">Set the left upper corner in X-axis. Inside this rectangle, the plot is drawn. NOTE: This value is re...</div><div class="ttdef"><b>Definition</b> 2Dtype.cpp:74</div></div>
+<div class="ttc" id="aclass__2_d_type_html_a4543532d75d0058804de5aac49e5b3ec"><div class="ttname"><a href="class__2_d_type.html#a4543532d75d0058804de5aac49e5b3ec">_2DType::setPlotEndHeight</a></div><div class="ttdeci">void setPlotEndHeight(const wxCoord plotEndHeight)</div><div class="ttdoc">Set the right bottom corner in Y-axis. Inside this rectangle, the plot is drawn. NOTE: This value is ...</div><div class="ttdef"><b>Definition</b> 2Dtype.cpp:95</div></div>
+<div class="ttc" id="aclass__2_d_type_html_a625f9124ec31303bbbabaafce1a94edd"><div class="ttname"><a href="class__2_d_type.html#a625f9124ec31303bbbabaafce1a94edd">_2DType::setRadius</a></div><div class="ttdeci">void setRadius(const wxCoord radius)</div><div class="ttdoc">Set radius. Most used for circles e.g filling scatter plots.</div><div class="ttdef"><b>Definition</b> 2Dtype.cpp:7</div></div>
+<div class="ttc" id="aclass__2_d_type_html_a7cc4f55c2339692385889b3fe15b1a5f"><div class="ttname"><a href="class__2_d_type.html#a7cc4f55c2339692385889b3fe15b1a5f">_2DType::setWxPlotType</a></div><div class="ttdeci">void setWxPlotType(const WXPLOT_TYPE wxPlotType)</div><div class="ttdoc">Set the plot type selection.</div><div class="ttdef"><b>Definition</b> 2Dtype.cpp:3</div></div>
+<div class="ttc" id="aclass__2_d_type_html_abb722c8651658e47843ed14c6f094107"><div class="ttname"><a href="class__2_d_type.html#abb722c8651658e47843ed14c6f094107">_2DType::setBinCount</a></div><div class="ttdeci">void setBinCount(const unsigned int binCount)</div><div class="ttdoc">Set the bin count for e.g. histogram.</div><div class="ttdef"><b>Definition</b> 2Dtype.cpp:11</div></div>
+<div class="ttc" id="aclass__2_d_type_html_ad7f853ffafe7eb9b9da993dea836e70a"><div class="ttname"><a href="class__2_d_type.html#ad7f853ffafe7eb9b9da993dea836e70a">_2DType::setPlotEndWidth</a></div><div class="ttdeci">void setPlotEndWidth(const wxCoord plotEndWidth)</div><div class="ttdoc">Set the right upper corner in X-axis. Inside this rectangle, the plot is drawn. NOTE: This value is r...</div><div class="ttdef"><b>Definition</b> 2Dtype.cpp:88</div></div>
+<div class="ttc" id="aclass__2_d_type_html_ad940eb679968fd05acb8217ab9ab20ae"><div class="ttname"><a href="class__2_d_type.html#ad940eb679968fd05acb8217ab9ab20ae">_2DType::drawType</a></div><div class="ttdeci">void drawType(wxDC &amp;dc)</div><div class="ttdoc">This function draw the plot e.g line, bar, histogram, spline, scatter etc. inside in this rectangle.</div><div class="ttdef"><b>Definition</b> 2Dtype.cpp:102</div></div>
+<div class="ttc" id="aclass__2_d_type_html_ae216967a463bece33c5c6bd728609ddf"><div class="ttname"><a href="class__2_d_type.html#ae216967a463bece33c5c6bd728609ddf">_2DType::setYlim</a></div><div class="ttdeci">void setYlim(const double minY, const double maxY)</div><div class="ttdoc">Set the plot zoom limit in Y-axis.</div><div class="ttdef"><b>Definition</b> 2Dtype.cpp:57</div></div>
+<div class="ttc" id="aclass__2_d_type_html_afe30ec1bf5565a14b8a8ed317218014d"><div class="ttname"><a href="class__2_d_type.html#afe30ec1bf5565a14b8a8ed317218014d">_2DType::setData</a></div><div class="ttdeci">void setData(const std::vector&lt; std::vector&lt; double &gt; &gt; &amp;data2D)</div><div class="ttdoc">Set 2D data.</div><div class="ttdef"><b>Definition</b> 2Dtype.cpp:19</div></div>
+<div class="ttc" id="aclass_bar_html"><div class="ttname"><a href="class_bar.html">Bar</a></div><div class="ttdoc">Bar class. Inheritance from class Line.</div><div class="ttdef"><b>Definition</b> bar.hpp:11</div></div>
+<div class="ttc" id="aclass_line_html"><div class="ttname"><a href="class_line.html">Line</a></div><div class="ttdoc">Line class. Does the most of the things in 2D.</div><div class="ttdef"><b>Definition</b> line.hpp:10</div></div>
+<div class="ttc" id="aclass_scatter_html"><div class="ttname"><a href="class_scatter.html">Scatter</a></div><div class="ttdoc">Scatter class. Inheritance from class Line.</div><div class="ttdef"><b>Definition</b> scatter.hpp:11</div></div>
+<div class="ttc" id="aclass_spline_html"><div class="ttname"><a href="class_spline.html">Spline</a></div><div class="ttdoc">Spline class. Inheritance from class Line.</div><div class="ttdef"><b>Definition</b> spline.hpp:11</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

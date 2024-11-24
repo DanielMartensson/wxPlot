@@ -85,16 +85,7 @@ wxCoord Proportional::getPlotEndHeight() const {
 	return plotEndHeight; 
 }
 
-/*
- * This function will do the following:
- * - Set the font
- * - Draw the title
- * - Draw the y-label
- * - Draw the x-label
- * - Draw the rectangle
- * - Update the rectangle size for correct plotting the plot type
- */
-bool Proportional::drawFigure(wxDC& dc) {
+void Proportional::drawFigure(wxDC& dc) {
 
 	// Set the font, or get the font size
 	if (fontSize) {
@@ -140,22 +131,22 @@ bool Proportional::drawFigure(wxDC& dc) {
 	}
 
 	// Write out in X-axis - Add some 5 and 10 to make a proper distance between rectangle and numbers
-	wxCoord x = plotEndWidth / 2 - titleWidth / 2;												// Compute the centre of the title
-	wxCoord y = 0;																				// Compute the hight placement of the title
-	dc.DrawText(title, x, y);																	// Draw title
-	yStartRectangle += titleHeight + 5;															// Move down the start of the rectangle
-	heightRectangle -= titleHeight;																// Decrease the height of the rectangle
-	heightRectangle -= ticksHeight + xLabelHeight + 10;											// Make room for ticks and X-label						
-	x = plotEndWidth / 2 - xLabelWidth / 2;														// Compute the centre of the X-label
-	y = heightRectangle + (ticksHeight > 0) * xLabelHeight + (titleHeight > 0) * xLabelHeight;	// Compute the hight placement of the X-label
-	dc.DrawText(xLabel, x, y + 5);																// Draw X-label
+	wxCoord x = plotEndWidth / 2 - titleWidth / 2;                                              // Compute the centre of the title
+	wxCoord y = 0;                                                                              // Compute the hight placement of the title
+	dc.DrawText(title, x, y);                                                                   // Draw title
+	yStartRectangle += titleHeight + 5;                                                         // Move down the start of the rectangle
+	heightRectangle -= titleHeight;                                                             // Decrease the height of the rectangle
+	heightRectangle -= ticksHeight + xLabelHeight + 10;                                         // Make room for ticks and X-label						
+	x = plotEndWidth / 2 - xLabelWidth / 2;                                                     // Compute the centre of the X-label
+	y = heightRectangle + (ticksHeight > 0) * xLabelHeight + (titleHeight > 0) * xLabelHeight;  // Compute the hight placement of the X-label
+	dc.DrawText(xLabel, x, y + 5);                                                              // Draw X-label
 
 	// Write out in Y-axis - Add some 5 and 10 to make a proper distance between rectangle and numbers
-	x = 0;																						// Compute the width placement of the Y-label
-	y = plotEndHeight / 2 + yLabelWidth / 2;													// Compute the centre of the title
-	dc.DrawRotatedText(yLabel, x, y, 90);														// Draw Y-label
-	xStartRectangle += yLabelHeight + ticksWidth + 5;											// Strafe left the start of the rectangle
-	widthRectangle -= yLabelHeight + ticksWidth + 10;											// Decrease the width of the rectangle
+	x = 0;                                                                                      // Compute the width placement of the Y-label
+	y = plotEndHeight / 2 + yLabelWidth / 2;                                                    // Compute the centre of the title
+	dc.DrawRotatedText(yLabel, x, y, 90);                                                       // Draw Y-label
+	xStartRectangle += yLabelHeight + ticksWidth + 5;                                           // Strafe left the start of the rectangle
+	widthRectangle -= yLabelHeight + ticksWidth + 10;                                           // Decrease the width of the rectangle
 
 	// Update the size
 	plotStartHeight = yStartRectangle;
@@ -165,15 +156,8 @@ bool Proportional::drawFigure(wxDC& dc) {
 
 	// Draw rectangle frame
 	dc.DrawRectangle(xStartRectangle, yStartRectangle, widthRectangle, heightRectangle);
-
-	// Nothing went wrong
-	return true;
 }
 
-/*
- * This function draw the ticks.
- * Call this function after you have drawn the plot type.
- */
 void Proportional::drawTicks(wxDC& dc) {
 	if (ticks > 0) {
 		const wxCoord yStartRectangle = plotStartHeight;
@@ -223,10 +207,6 @@ void Proportional::drawTicks(wxDC& dc) {
 	}
 }
 
-/*
- * This function draw the grid.
- * Call this function after you have drawn the plot type.
- */
 void Proportional::drawGrid(wxDC& dc) {
 	if (useGrid && ticks > 0) {
 		const wxCoord yStartRectangle = plotStartHeight;
@@ -254,9 +234,6 @@ void Proportional::drawGrid(wxDC& dc) {
 	}
 }
 
-/*
- * This function writes the legend
- */
 void Proportional::drawLegend(wxDC& dc) {
 	if (useLegend) {
 		const wxCoord yStartRectangle = plotStartHeight;

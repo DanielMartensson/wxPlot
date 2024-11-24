@@ -99,13 +99,13 @@ void _2DType::setPlotEndHeight(const wxCoord plotEndHeight) {
 	bar.setPlotEndHeight(plotEndHeight);
 }
 
-bool _2DType::drawType(wxDC& dc) {
+void _2DType::drawType(wxDC& dc) {
 
 	// We must have at least double(2). One for X-axis and one for Y-axis
 	if (is2Dused) {
 		// Check
 		if (!check2DdataSize(data2D)) {
-			return false;
+			return;
 		}
 
 		// Create counter for colour
@@ -169,7 +169,5 @@ bool _2DType::drawType(wxDC& dc) {
 			}
 		}
 	}
-
-	return true;
 }
 

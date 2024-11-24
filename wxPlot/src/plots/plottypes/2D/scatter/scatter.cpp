@@ -9,7 +9,7 @@ void Scatter::fillCircles(const bool fillCircle) {
 	this->fillCircle = fillCircle; 
 }
 
-bool Scatter::draw(wxDC& dc, const std::vector<double>& xData, const std::vector<double>& yData, const unsigned int colourIndex) {
+void Scatter::draw(wxDC& dc, const std::vector<double>& xData, const std::vector<double>& yData, const unsigned int colourIndex) {
 	// Fill circles
 	if (fillCircle) {
 		setColourBrush(dc, colourIndex);
@@ -35,7 +35,4 @@ bool Scatter::draw(wxDC& dc, const std::vector<double>& xData, const std::vector
 
 		dc.DrawCircle(x, y, radius);
 	}
-
-	// Nothing went wrong
-	return true;
 }
