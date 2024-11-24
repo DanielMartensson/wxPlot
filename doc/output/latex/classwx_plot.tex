@@ -57,7 +57,7 @@ void \mbox{\hyperlink{classwx_plot_af968425f34a659e446639e89ee58d9a5}{set\+Bin\+
 void \mbox{\hyperlink{classwx_plot_a782f9a4d482f3f4eb4a958a0fd518da0}{set\+Ylim}} (const double minY, const double maxY)
 \begin{DoxyCompactList}\small\item\em Set the plot zoom limit in Y-\/axis. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classwx_plot_a2b8a01aceae754fcf8bef9adcd1a411c}{draw\+Plot}} (wx\+Paint\+Event \&event)
-\begin{DoxyCompactList}\small\item\em Important event function for draw the whole plot. Add things here, that you want to appear inside the plot for every iteration. NOTE\+: When this function is called, it first draw the figure, then it recalculate the start and end of the rectangle and then draw the plot type. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Important event function for draw the whole plot. Add things here, that you want to appear inside the plot for every iteration. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -94,11 +94,25 @@ void wx\+Plot\+::draw\+Plot (\begin{DoxyParamCaption}\item[{wx\+Paint\+Event \&}
 
 
 
-Important event function for draw the whole plot. Add things here, that you want to appear inside the plot for every iteration. NOTE\+: When this function is called, it first draw the figure, then it recalculate the start and end of the rectangle and then draw the plot type. 
+Important event function for draw the whole plot. Add things here, that you want to appear inside the plot for every iteration. 
+
+
+\begin{DoxyItemize}
+\item Step 1\+: Create the DC object.
+\item Step 2\+: Draw the figure.
+\item Step 3\+: Get the recalculated plot\+Start\+Width, plot\+Start\+Height, plot\+End\+Width and plot\+End\+Height from plot figure.
+\item Step 4\+: Set the recalculated plot\+Start\+Width, plot\+Start\+Height, plot\+End\+Width and plot\+End\+Height to plot type.
+\item Step 5\+: Draw plot type.
+\item Step 6\+: Draw grid if enabled.
+\item Step 7\+: Draw ticks if enabled.
+\item Step 8\+: Draw legend if enabled.
+\end{DoxyItemize}
+
+For real time plotting, this function must be repeated all the time.
 
 
 \begin{DoxyParams}{Parameters}
-{\em event} & This even parameter is not used. \\
+{\em event} & This event parameter is not used. \\
 \hline
 \end{DoxyParams}
 \Hypertarget{classwx_plot_a51c25ee1952cb3fc1bf130f303020f0d}\index{wxPlot@{wxPlot}!fillCircles@{fillCircles}}

@@ -163,7 +163,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a782f9a4d482f3f4eb4a958a0fd518da0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the plot zoom limit in Y-axis.  <br /></td></tr>
 <tr class="separator:a782f9a4d482f3f4eb4a958a0fd518da0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2b8a01aceae754fcf8bef9adcd1a411c" id="r_a2b8a01aceae754fcf8bef9adcd1a411c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2b8a01aceae754fcf8bef9adcd1a411c">drawPlot</a> (wxPaintEvent &amp;event)</td></tr>
-<tr class="memdesc:a2b8a01aceae754fcf8bef9adcd1a411c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Important event function for draw the whole plot. Add things here, that you want to appear inside the plot for every iteration. NOTE: When this function is called, it first draw the figure, then it recalculate the start and end of the rectangle and then draw the plot type.  <br /></td></tr>
+<tr class="memdesc:a2b8a01aceae754fcf8bef9adcd1a411c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Important event function for draw the whole plot. Add things here, that you want to appear inside the plot for every iteration.  <br /></td></tr>
 <tr class="separator:a2b8a01aceae754fcf8bef9adcd1a411c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -221,10 +221,21 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Important event function for draw the whole plot. Add things here, that you want to appear inside the plot for every iteration. NOTE: When this function is called, it first draw the figure, then it recalculate the start and end of the rectangle and then draw the plot type. </p>
+<p>Important event function for draw the whole plot. Add things here, that you want to appear inside the plot for every iteration. </p>
+<ul>
+<li>Step 1: Create the DC object.</li>
+<li>Step 2: Draw the figure.</li>
+<li>Step 3: Get the recalculated plotStartWidth, plotStartHeight, plotEndWidth and plotEndHeight from plot figure.</li>
+<li>Step 4: Set the recalculated plotStartWidth, plotStartHeight, plotEndWidth and plotEndHeight to plot type.</li>
+<li>Step 5: Draw plot type.</li>
+<li>Step 6: Draw grid if enabled.</li>
+<li>Step 7: Draw ticks if enabled.</li>
+<li>Step 8: Draw legend if enabled.</li>
+</ul>
+<p>For real time plotting, this function must be repeated all the time.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">event</td><td>This even parameter is not used. </td></tr>
+    <tr><td class="paramname">event</td><td>This event parameter is not used. </td></tr>
   </table>
   </dd>
 </dl>
