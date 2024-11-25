@@ -129,6 +129,17 @@ Histogram plot
 
 ![a](https://github.com/DanielMartensson/wxPlot/blob/main/pictures/histogram.png?raw=true)
 
+# Build & Installation
+Example on building with CMake and Ninja.
+Before building make sure wxWidgets is installed and can be found on the system. Navigate to the folder wxPlot and run the following to build the project:
+```
+> pwd
+(your path to repo)/wxPlot/wxPlot
+> mkdir build
+> cmake -DCMAKE_BUILD_TYPE=Release -G Ninja -S . -B ./build
+> ninja -C ./build
+> ./build/wxPlot
+```
 
 # TODO
 
