@@ -1,0 +1,1 @@
+target_sources(wxPlot PRIVATE "proportional.cpp" "proportional.hpp")
