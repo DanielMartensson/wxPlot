@@ -1,0 +1,1 @@
+target_sources(wxPlot PRIVATE "line.cpp" "line.hpp")

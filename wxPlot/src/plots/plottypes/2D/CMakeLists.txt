@@ -1,0 +1,5 @@
+target_sources(wxPlot PRIVATE "2Dtype.cpp" "2Dtype.hpp")
+add_subdirectory("bar")
+add_subdirectory("line")
+add_subdirectory("scatter")
+add_subdirectory("spline")

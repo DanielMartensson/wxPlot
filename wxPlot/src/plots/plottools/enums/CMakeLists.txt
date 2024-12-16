@@ -1,0 +1,1 @@
+target_sources(wxPlot PRIVATE "placements.hpp" "plotfigures.hpp" "plottypes.hpp")
