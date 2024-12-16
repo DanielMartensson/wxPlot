@@ -11,11 +11,14 @@
  */
 class Proportional {
 protected:
-	// General plot information
-	wxCoord plotEndWidth = 0;                              ///< Location of right upper corner in X-axis.
-	wxCoord plotEndHeight = 0;                             ///< Location of right bottom corner in Y-axis.
-	wxCoord plotStartWidth = 0;                            ///< Location of left upper corner in X-axis.
-	wxCoord plotStartHeight = 0;                           ///< Location of left upper corner in Y-axis.
+	wxCoord plotEndWidthInitial = 0;                       ///< Location of right upper corner in X-axis.
+	wxCoord plotEndHeightInitial = 0;                      ///< Location of right bottom corner in Y-axis.
+	wxCoord plotStartWidthInitial = 0;                     ///< Location of left upper corner in X-axis.
+	wxCoord plotStartHeightInitial = 0;                    ///< Location of left upper corner in Y-axis.
+	wxCoord plotEndWidthComputed = 0;                      ///< Location of right upper corner in X-axis.
+	wxCoord plotEndHeightComputed = 0;                     ///< Location of right bottom corner in Y-axis.
+	wxCoord plotStartWidthComputed = 0;                    ///< Location of left upper corner in X-axis.
+	wxCoord plotStartHeightComputed = 0;                   ///< Location of left upper corner in Y-axis.
 
 	double minX = 0;                                       ///< Minimum value of data in X-axis
 	double maxX = 0;                                       ///< Maximum value of data in X-axis.

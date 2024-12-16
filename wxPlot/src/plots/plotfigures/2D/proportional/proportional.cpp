@@ -2,19 +2,19 @@
 #include <cmath>
 
 void Proportional::setPlotStartWidth(const wxCoord plotStartWidth) { 
-	this->plotStartWidth = plotStartWidth;
+	this->plotStartWidthInitial = plotStartWidth;
 }
 
 void Proportional::setPlotStartHeight(const wxCoord plotStartHeight) { 
-	this->plotStartHeight = plotStartHeight; 
+	this->plotStartHeightInitial = plotStartHeight;
 }
 
 void Proportional::setPlotEndWidth(const wxCoord plotEndWidth) { 
-	this->plotEndWidth = plotEndWidth; 
+	this->plotEndWidthInitial = plotEndWidth;
 }
 
 void Proportional::setPlotEndHeight(const wxCoord plotEndHeight) { 
-	this->plotEndHeight = plotEndHeight; 
+	this->plotEndHeightInitial = plotEndHeight;
 }
 
 void Proportional:: setFontSize(const unsigned int fontSize) { 
@@ -70,19 +70,19 @@ void Proportional::setYlim(const double minY, const double maxY) {
 }
 
 wxCoord Proportional::getPlotStartWidth() const {
-	return plotStartWidth; 
+	return plotStartWidthComputed; 
 }
 
 wxCoord Proportional::getPlotStartHeight() const { 
-	return plotStartHeight; 
+	return plotStartHeightComputed; 
 }
 
 wxCoord Proportional::getPlotEndWidth() const { 
-	return plotEndWidth; 
+	return plotEndWidthComputed; 
 }
 
 wxCoord Proportional::getPlotEndHeight() const { 
-	return plotEndHeight; 
+	return plotEndHeightComputed; 
 }
 
 void Proportional::drawFigure(wxDC& dc) {
@@ -96,10 +96,10 @@ void Proportional::drawFigure(wxDC& dc) {
 	}
 
 	// Set default size on the rectangle
-	wxCoord yStartRectangle = plotStartHeight;
-	wxCoord xStartRectangle = plotStartWidth;
-	wxCoord heightRectangle = plotEndHeight;
-	wxCoord widthRectangle = plotEndWidth;
+	wxCoord yStartRectangle = plotStartHeightInitial;
+	wxCoord xStartRectangle = plotStartWidthInitial;
+	wxCoord heightRectangle = plotEndHeightInitial;
+	wxCoord widthRectangle = plotEndWidthInitial;
 
 	// Set color
 	setColourPen(dc, PLOT_COLOUR_BLACK);
@@ -131,28 +131,28 @@ void Proportional::drawFigure(wxDC& dc) {
 	}
 
 	// Write out in X-axis - Add some 5 and 10 to make a proper distance between rectangle and numbers
-	wxCoord x = plotEndWidth / 2 - titleWidth / 2;                                              // Compute the centre of the title
+	wxCoord x = plotEndWidthInitial / 2 - titleWidth / 2;                                       // Compute the centre of the title
 	wxCoord y = 0;                                                                              // Compute the hight placement of the title
 	dc.DrawText(title, x, y);                                                                   // Draw title
 	yStartRectangle += titleHeight + 5;                                                         // Move down the start of the rectangle
 	heightRectangle -= titleHeight;                                                             // Decrease the height of the rectangle
 	heightRectangle -= ticksHeight + xLabelHeight + 10;                                         // Make room for ticks and X-label						
-	x = plotEndWidth / 2 - xLabelWidth / 2;                                                     // Compute the centre of the X-label
+	x = plotEndWidthInitial / 2 - xLabelWidth / 2;                                              // Compute the centre of the X-label
 	y = heightRectangle + (ticksHeight > 0) * xLabelHeight + (titleHeight > 0) * xLabelHeight;  // Compute the hight placement of the X-label
 	dc.DrawText(xLabel, x, y + 5);                                                              // Draw X-label
 
 	// Write out in Y-axis - Add some 5 and 10 to make a proper distance between rectangle and numbers
 	x = 0;                                                                                      // Compute the width placement of the Y-label
-	y = plotEndHeight / 2 + yLabelWidth / 2;                                                    // Compute the centre of the title
+	y = plotEndHeightInitial / 2 + yLabelWidth / 2;                                             // Compute the centre of the title
 	dc.DrawRotatedText(yLabel, x, y, 90);                                                       // Draw Y-label
 	xStartRectangle += yLabelHeight + ticksWidth + 5;                                           // Strafe left the start of the rectangle
 	widthRectangle -= yLabelHeight + ticksWidth + 10;                                           // Decrease the width of the rectangle
 
 	// Update the size
-	plotStartHeight = yStartRectangle;
-	plotStartWidth = xStartRectangle;
-	plotEndHeight = heightRectangle + yStartRectangle;
-	plotEndWidth = widthRectangle + xStartRectangle;
+	plotStartHeightComputed = yStartRectangle;
+	plotStartWidthComputed = xStartRectangle;
+	plotEndHeightComputed = heightRectangle + yStartRectangle;
+	plotEndWidthComputed = widthRectangle + xStartRectangle;
 
 	// Draw rectangle frame
 	dc.DrawRectangle(xStartRectangle, yStartRectangle, widthRectangle, heightRectangle);
@@ -160,10 +160,10 @@ void Proportional::drawFigure(wxDC& dc) {
 
 void Proportional::drawTicks(wxDC& dc) {
 	if (ticks > 0) {
-		const wxCoord yStartRectangle = plotStartHeight;
-		const wxCoord xStartRectangle = plotStartWidth;
-		const wxCoord heightRectangle = plotEndHeight - plotStartHeight;
-		const wxCoord widthRectangle = plotEndWidth - plotStartWidth;
+		const wxCoord yStartRectangle = plotStartHeightComputed;
+		const wxCoord xStartRectangle = plotStartWidthComputed;
+		const wxCoord heightRectangle = plotEndHeightComputed - plotStartHeightComputed;
+		const wxCoord widthRectangle = plotEndWidthComputed - plotStartWidthComputed;
 
 		// Set color - Black
 		wxPen pen(plotColours.at(PLOT_COLOUR_BLACK));
@@ -209,10 +209,10 @@ void Proportional::drawTicks(wxDC& dc) {
 
 void Proportional::drawGrid(wxDC& dc) {
 	if (useGrid && ticks > 0) {
-		const wxCoord yStartRectangle = plotStartHeight;
-		const wxCoord xStartRectangle = plotStartWidth;
-		const wxCoord heightRectangle = plotEndHeight - plotStartHeight;
-		const wxCoord widthRectangle = plotEndWidth - plotStartWidth;
+		const wxCoord yStartRectangle = plotStartHeightComputed;
+		const wxCoord xStartRectangle = plotStartWidthComputed;
+		const wxCoord heightRectangle = plotEndHeightComputed - plotStartHeightComputed;
+		const wxCoord widthRectangle = plotEndWidthComputed - plotStartWidthComputed;
 
 		// Set color - Black
 		wxPen pen(plotColours.at(PLOT_COLOUR_BLACK));
@@ -236,10 +236,10 @@ void Proportional::drawGrid(wxDC& dc) {
 
 void Proportional::drawLegend(wxDC& dc) {
 	if (useLegend) {
-		const wxCoord yStartRectangle = plotStartHeight;
-		const wxCoord xStartRectangle = plotStartWidth;
-		const wxCoord heightRectangle = plotEndHeight - plotStartHeight;
-		const wxCoord widthRectangle = plotEndWidth - plotStartWidth;
+		const wxCoord yStartRectangle = plotStartHeightComputed;
+		const wxCoord xStartRectangle = plotStartWidthComputed;
+		const wxCoord heightRectangle = plotEndHeightComputed - plotStartHeightComputed;
+		const wxCoord widthRectangle = plotEndWidthComputed - plotStartWidthComputed;
 
 		// Get the size of the legend
 		const size_t legendSize = legend.size();
@@ -267,20 +267,20 @@ void Proportional::drawLegend(wxDC& dc) {
 		wxCoord x = 0, y = 0;
 		switch (legendPosition) {
 		case PLACEMENT_NORTH_WEST:
-			x = plotStartWidth + 5;
-			y = plotStartHeight + 5;
+			x = plotStartWidthComputed + 5;
+			y = plotStartHeightComputed + 5;
 			break;
 		case PLACEMENT_NORTH_EAST:
-			x = plotEndWidth - largestTextWidth - 15;
-			y = plotStartHeight + 5;
+			x = plotEndWidthComputed - largestTextWidth - 15;
+			y = plotStartHeightComputed + 5;
 			break;
 		case PLACEMENT_SOUTH_WEST:
-			x = plotStartWidth + 5;
-			y = plotEndHeight - largestTextHeight * legendSize - 10;
+			x = plotStartWidthComputed + 5;
+			y = plotEndHeightComputed - largestTextHeight * legendSize - 10;
 			break;
 		case PLACEMENT_SOUTH_EAST:
-			x = plotEndWidth - largestTextWidth - 15;
-			y = plotEndHeight - largestTextHeight * legendSize - 10;
+			x = plotEndWidthComputed - largestTextWidth - 15;
+			y = plotEndHeightComputed - largestTextHeight * legendSize - 10;
 			break;
 		case PLACEMENT_CENTRE:
 			x = widthRectangle / 2 + xStartRectangle - largestTextWidth / 2 - 5;
