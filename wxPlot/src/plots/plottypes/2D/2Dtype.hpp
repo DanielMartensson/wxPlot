@@ -17,6 +17,7 @@ private:
 	WXPLOT_TYPE wxPlotType = WXPLOT_TYPE_LINE;        ///< Type plot selection
 
 	double minX = 0, maxX = 0, minY = 0, maxY = 0;    ///< Minimum and maximum value of the 1D or 2D data
+	const unsigned int colorStart = 0;
 	std::vector<std::vector<double>> data2D;          ///< The 2D data
 	std::vector<double> data1D;                       ///< The 1D data
 	bool is2Dused = false;                            ///< Flag if 2D data us used
@@ -52,6 +53,7 @@ public:
 	 * @param data2D 2D data in form of 2D vector.
 	 */
 	void setData(const std::vector<std::vector<double>>& data2D);
+
 
 	/**
 	 * @brief Set 1D data.
@@ -152,6 +154,11 @@ public:
 	 */
 	void setYlim(const double minY, const double maxY);
 
+	//must be called AFTER setData
+	void getYlim(double& minY1, double& maxY1);
+	void setColour(const unsigned int colorIndex);
+
+	
 	/**
 	 * @brief This function draw the plot e.g line, bar, histogram, spline, scatter etc. inside in this rectangle.
 	 * @param dc The wxDC object for drawing lines, polygons etc.

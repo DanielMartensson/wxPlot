@@ -53,7 +53,7 @@ public:
 	 * @brief Set the number of ticks at the figure in all axis.
 	 * @param ticks Number of ticks.
 	 */
-	void setTicks(const unsigned int ticks);
+	void setTicks(const unsigned int ticksX, const unsigned int ticksY=0);
 
 	/**
 	 * @brief Enable grid on the figure.
@@ -178,6 +178,11 @@ public:
 	 * @param maxY Maximum limit in Y-axis.
 	 */
 	void setYlim(const double minY, const double maxY);
+
+	//SPH 08142025
+	void getYlim(double& minY, double& maxY);
+	void setColour(const unsigned int index);
+
 
 	/**
 	 * @brief Get the recalculated start width X-axis value.

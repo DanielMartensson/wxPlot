@@ -43,7 +43,7 @@ MainFrame::MainFrame() : wxFrame(nullptr, wxID_ANY, "wxPlot")
     plot->setTitle("Measurement");
     plot->setYlabel("Placement for units e.g [m/s]");
     plot->setXlabel("Time e.g [s] or [h]");
-    plot->setTicks(5);
+    plot->setTicks(5,5);
     plot->legendOn(true);
     plot->gridOn(true);
     plot->setRadius(5);

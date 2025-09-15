@@ -18,8 +18,8 @@ void PlotFigure::setYlabel(const wxString& yLabel) {
 	_2d.setYlabel(yLabel);
 }
 
-void PlotFigure::setTicks(const unsigned int ticks) {
-	_2d.setTicks(ticks);
+void PlotFigure::setTicks(const unsigned int ticksX, const unsigned int ticksY) {
+	_2d.setTicks(ticksX, ticksY);
 }
 
 void PlotFigure::gridOn(const bool useGrid) {
@@ -64,6 +64,14 @@ void PlotFigure::setFontSize(const unsigned int fontSize) {
 
 void PlotFigure::setYlim(const double minY, const double maxY) {
 	_2d.setYlim(minY, maxY);
+}
+
+void PlotFigure::getYlim(double& minY, double& maxY) {
+	_2d.getYlim(minY, maxY);
+}
+
+void PlotFigure::setColour(const unsigned int colorIndex) {
+	_2d.setColour(colorIndex);
 }
 
 void PlotFigure::setBinCount(const unsigned int binCount) {

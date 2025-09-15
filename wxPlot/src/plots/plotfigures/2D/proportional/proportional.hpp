@@ -24,9 +24,10 @@ protected:
 	double maxX = 0;                                       ///< Maximum value of data in X-axis.
 	double minY = 0;                                       ///< Minimum value of data in Y-axis.
 	double maxY = 0;                                       ///< Maximum value of data in Y-axis.
+	unsigned int colorStart = 0;                     ///< Use default color index (SPH)
 
 	unsigned int fontSize = 0;                             ///< The size of the all fonts.
-	unsigned int ticks = 0;                                ///< The number of ticks at the figure in all axis.
+	unsigned int ticksX, ticksY = 0;                       ///< The number of ticks at the figure in all axis.
 	bool useGrid = false;                                  ///< Flag for using grid or not.
 	bool useLegend = false;                                ///< Flag for using legend or not.
 	wxString title;                                        ///< Title of the plot type.
@@ -72,7 +73,7 @@ public:
 	 * @brief Set the number of ticks at the figure in all axis.
 	 * @param ticks Number of ticks.
 	 */
-	void setTicks(const unsigned int ticks);
+	void setTicks(const unsigned int ticksX, const unsigned int ticksY=0);
 
 	/**
 	 * @brief Enable grid on the figure.
@@ -191,6 +192,9 @@ public:
 	 * @param maxY Maximum limit in Y-axis.
 	 */
 	void setYlim(const double minY, const double maxY);
+
+	void getYlim(double& minY, double& maxY);
+	void setColour(const unsigned int colorIndex);
 
 	/**
 	 * @brief Get the recalculated start width X-axis value.

@@ -20,7 +20,10 @@ protected:
 	double minY = 0;                ///< Minimum value of data in Y-axis.
 	double maxY = 0;                ///< Maximum value of data in Y-axis.
 
+
 public:
+
+	unsigned int colorStart = 0;    //   starting color index
 
 	/**
 	 * @brief Set minimum and maximum limits of the data.
@@ -30,6 +33,14 @@ public:
 	 * @param maxY Maximum limit in Y-axis.
 	 */
 	void setLimits(const double minX, const double maxX, const double minY, const double maxY);
+
+	void setColour(const unsigned int colorIndex) {
+		colorStart = colorIndex;
+	}
+
+	void getYlim(double& minY1, double& maxY1) {
+		minY1 = minY; maxY1 = maxY;
+	}
 
 	/**
 	 * @brief Set the left upper corner in X-axis. Inside this rectangle, the plot is drawn.

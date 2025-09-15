@@ -21,9 +21,9 @@ void _2DFigure::setYlabel(const wxString& yLabel) {
 	histogram.setYlabel(yLabel);
 }
 
-void _2DFigure::setTicks(const unsigned int ticks) {
-	proportional.setTicks(ticks);
-	histogram.setTicks(ticks);
+void _2DFigure::setTicks(const unsigned int ticksX, const unsigned int ticksY) {
+	proportional.setTicks(ticksX, ticksY);
+	histogram.setTicks(ticksX, ticksY);
 }
 
 void _2DFigure::gridOn(const bool useGrid) {
@@ -101,6 +101,16 @@ void _2DFigure::setFontSize(const unsigned int fontSize) {
 void _2DFigure::setYlim(const double minY, const double maxY) {
 	proportional.setYlim(minY, maxY);
 	histogram.setYlim(minY, maxY);
+}
+
+void _2DFigure::getYlim(double& minY, double& maxY) {
+	proportional.getYlim(minY, maxY);
+	histogram.getYlim(minY, maxY);
+}
+
+void _2DFigure::setColour(const unsigned int colorIndex) {
+	proportional.setColour(colorIndex);
+	histogram.setColour(colorIndex);
 }
 
 void _2DFigure::setBinCount(const unsigned int binCount) {

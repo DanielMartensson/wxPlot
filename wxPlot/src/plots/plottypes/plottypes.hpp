@@ -23,6 +23,7 @@ public:
 	 */
 	void setWxPlotFigureType(const WXPLOT_FIGURE wxPlotFigure, const WXPLOT_TYPE wxPlotType);
 
+
 	/**
 	 * @brief Set radius. Most used for circles e.g filling scatter plots.
 	 * @param radius The radius of the circle.
@@ -129,7 +130,7 @@ public:
 
 	/**
 	 * @brief Set the bin count for e.g. histogram.
-	 * @param binCount Bin count is total columns inside a e.g historam chart.
+	 * @param binCount Bin count is total columns inside a e.g histogram chart.
 	 */
 	void setBinCount(const unsigned int binCount);
 
@@ -139,6 +140,10 @@ public:
 	 * @param maxY Maximum limit in Y-axis.
 	 */
 	void setYlim(const double minY, const double maxY);
+
+	void getYlim(double& minY, double& maxY);
+	void setColour(const unsigned int colorIndex);
+
 
 	/**
 	 * @brief This function draw the plot e.g line, bar, histogram, spline, scatter etc. inside in this rectangle.
