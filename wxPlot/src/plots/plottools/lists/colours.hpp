@@ -10,7 +10,6 @@
  * pastel shades, earthy tones, modern colors, neutrals, and muted shades.
  */
 typedef enum {
-    // Grundläggande färger
     PLOT_COLOUR_RED,          ///< Red: A basic and vibrant primary color.
     PLOT_COLOUR_GREEN,        ///< Green: A basic primary color.
     PLOT_COLOUR_BLUE,         ///< Blue: A basic primary color.
@@ -20,19 +19,16 @@ typedef enum {
     PLOT_COLOUR_BLACK,        ///< Black: A neutral and strong color.
     PLOT_COLOUR_WHITE,        ///< White: A neutral and bright color.
 
-    // Pastellfärger
     PLOT_COLOUR_LIGHT_PINK,   ///< Light Pink: A pastel tone for soft designs.
     PLOT_COLOUR_LIGHT_BLUE,   ///< Light Blue: A pastel tone for calm visuals.
     PLOT_COLOUR_LIGHT_GREEN,  ///< Light Green: A pastel tone for fresh visuals.
     PLOT_COLOUR_LIGHT_YELLOW, ///< Light Yellow: A pastel tone for cheerful visuals.
 
-    // Jordnära färger
     PLOT_COLOUR_BROWN,        ///< Brown: An earthy and natural color.
     PLOT_COLOUR_SIENNA,       ///< Sienna: An earthy and warm color.
     PLOT_COLOUR_PERU,         ///< Peru: An earthy and muted tone.
     PLOT_COLOUR_SADDLE_BROWN, ///< Saddle Brown: A rich earthy tone.
 
-    // Moderna färger
     PLOT_COLOUR_TOMATO,       ///< Tomato Red: A vibrant and trendy color.
     PLOT_COLOUR_LIME,         ///< Lime Green: A vibrant and trendy green.
     PLOT_COLOUR_VIOLET,       ///< Violet: A trendy and modern purple.
@@ -43,7 +39,6 @@ typedef enum {
     PLOT_COLOUR_LIGHT_GRAY,   ///< Light Gray: A neutral and soft shade.
     PLOT_COLOUR_GRAY,         ///< Gray: A balanced neutral shade.
 
-    // Dämpade färger
     PLOT_COLOUR_DARK_SLATE_GRAY, ///< Dark Slate Gray: A subdued and earthy shade.
     PLOT_COLOUR_DARK_SLATE_BLUE, ///< Dark Slate Blue: A rich and muted blue.
     PLOT_COLOUR_TEAL,            ///< Teal: A balanced mix of blue and green.

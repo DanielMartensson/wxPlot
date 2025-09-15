@@ -8,11 +8,11 @@
  * @class wxPlot
  * @brief Main class for wxPlot. This is the only class the user going to work with.
  */
-class wxPlot : public wxPanel {
+class wxPlot : public wxWindow {   //originally wxPanel
 private:
 	Plots plots; ///< Holds all information about plot type and figure plot.
-public:
 
+public:
 	/**
 	 * @brief Constructor of wxPlot.
 	 * @param parent The frame which holds the plot.
@@ -20,6 +20,11 @@ public:
 	 * @param wxPlotType Selection of plot type e.g line, bar, histogram, scatter, spline etc. 
 	 */
 	wxPlot(wxWindow* parent, const WXPLOT_FIGURE wxPlotFigure = WXPLOT_FIGURE_2D, const WXPLOT_TYPE wxPlotType = WXPLOT_TYPE_LINE);
+
+	/**
+	* @brief: SPH added this so plot could be printed
+	*/
+	void Draw(wxDC& dc);
 
 	/**
 	 * @brief Set the size of the fonts.
@@ -49,7 +54,7 @@ public:
 	 * @brief Set the number of ticks at the figure in all axis.
 	 * @param ticks Number of ticks.
 	 */
-	void setTicks(const unsigned int ticks);
+	void setTicks(const unsigned int ticksX, const unsigned int ticksY);
 
 	/**
 	 * @brief Enable grid on the figure.
@@ -137,6 +142,8 @@ public:
 	 */
 	void setPlotEndHeight(const wxCoord plotEndHeight);
 
+	void getYlim(double& y1, double& y2);
+
 	/**
 	 * @brief Set 2D data.
 	 * @param data2D 2D data in form of 2D vector.
@@ -185,6 +192,10 @@ public:
 	 * @param minY Minimum limit in Y-axis.
 	 * @param maxY Maximum limit in Y-axis.
 	 */
+
+	//sph - 081625
+	void setColour(const unsigned int colorIndex);
+
 	void setYlim(const double minY, const double maxY);
 
 	/**

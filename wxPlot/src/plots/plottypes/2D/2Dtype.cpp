@@ -71,6 +71,25 @@ void _2DType::setYlim(const double minY, const double maxY) {
 	}
 }
 
+void _2DType::setColour(const unsigned int colorIndex) {
+	bar.setColour(colorIndex);
+	line.setColour(colorIndex);
+}
+
+
+void _2DType::getYlim(double& minY1, double& maxY1)
+{
+	if (is2Dused) {
+		line.getYlim(minY, maxY);
+		scatter.getYlim(minY, maxY);
+		spline.getYlim(minY, maxY);
+	}
+	else {
+		bar.getYlim(minY, maxY);
+	}
+}
+
+
 void _2DType::setPlotStartWidth(const wxCoord plotStartWidth) {
 	line.setPlotStartWidth(plotStartWidth);
 	scatter.setPlotStartWidth(plotStartWidth);
@@ -109,7 +128,7 @@ void _2DType::drawType(wxDC& dc) {
 		}
 
 		// Create counter for colour
-		unsigned int colourIndex = 0;
+		unsigned int colourIndex = (wxPlotType == WXPLOT_TYPE_LINE) ? line.colorStart : 0;
 
 		// Get the size of the data
 		const size_t dataSize = data2D.size();
@@ -152,7 +171,7 @@ void _2DType::drawType(wxDC& dc) {
 		const size_t dataSize = data1D.size();
 
 		// Create counter for colour
-		unsigned int colourIndex = 0;
+		unsigned int colourIndex = bar.colorStart;  //sph081625
 
 		for (size_t i = 0; i < dataSize; i++) {
 			// Draw type now

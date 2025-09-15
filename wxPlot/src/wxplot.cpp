@@ -1,6 +1,7 @@
 #include "wxplot.hpp"
 
-wxPlot::wxPlot(wxWindow* parent, const WXPLOT_FIGURE wxPlotFigure, const WXPLOT_TYPE wxPlotType) : wxPanel(parent) {
+wxPlot::wxPlot(wxWindow* parent, const WXPLOT_FIGURE wxPlotFigure, const WXPLOT_TYPE wxPlotType) 
+	: wxWindow(parent, wxID_ANY, wxPoint(100, 100), wxSize(400, 300)) {
 	// Set type
 	plots.setWxPlotFigureType(wxPlotFigure, wxPlotType);
 
@@ -24,8 +25,8 @@ void wxPlot::setYlabel(const wxString yLabel) {
 	plots.getPlotFigures().setYlabel(yLabel); 
 }
 
-void wxPlot::setTicks(const unsigned int ticks) { 
-	plots.getPlotFigures().setTicks(ticks); 
+void wxPlot::setTicks(const unsigned int ticksX, const unsigned int ticksY) {
+	plots.getPlotFigures().setTicks(ticksX, ticksY); 
 }
 
 void wxPlot::gridOn(const bool useGrid) { 
@@ -46,6 +47,11 @@ void wxPlot::setPlotEndWidth(const wxCoord plotEndWidth) {
 
 void wxPlot::setPlotEndHeight(const wxCoord plotEndHeight) { 
 	plots.getPlotFigures().setPlotEndHeight(plotEndHeight); 
+}
+
+void wxPlot::getYlim(double& minY, double& maxY) {
+	plots.getPlotTypes().getYlim(minY, maxY);
+	plots.getPlotFigures().getYlim(minY, maxY);
 }
 
 void wxPlot::setData(const std::vector<std::vector<double>>& data2D) { 
@@ -82,10 +88,21 @@ void wxPlot::setYlim(const double minY, const double maxY) {
 	plots.getPlotFigures().setYlim(minY, maxY); 
 }
 
+void wxPlot::setColour(const unsigned int colorIndex) {
+	plots.getPlotTypes().setColour(colorIndex);
+	plots.getPlotFigures().setColour(colorIndex);
+}
+
+//called by refresh
 void wxPlot::drawPlot(wxPaintEvent& event) {
-	// Create DC
 	wxPaintDC dc(this);
 
+	Draw(dc);
+}
+
+//called by refresh AND print
+void wxPlot::Draw(wxDC& dc)
+{
 	// Draw figure - Must be done before drawing the type
 	plots.getPlotFigures().drawFigure(dc);
 

@@ -41,6 +41,15 @@ void PlotTypes::setYlim(const double minY, const double maxY) {
 	_2d.setYlim(minY, maxY);
 }
 
+void PlotTypes::getYlim(double& y1, double& y2) {
+	_2d.getYlim(y1, y2);
+}
+
+void PlotTypes::setColour(const unsigned int colorIndex) {
+	_2d.setColour(colorIndex);
+}
+
+
 void PlotTypes::setBinCount(const unsigned int binCount) {
 	_2d.setBinCount(binCount);
 }

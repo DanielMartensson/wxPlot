@@ -7,6 +7,7 @@ PlotFigure& Plots::getPlotFigures() {
 	return plotFigures; 
 }
 
+
 void Plots::setWxPlotFigureType(const WXPLOT_FIGURE wxPlotFigure, const WXPLOT_TYPE wxPlotType) {
 	plotTypes.setWxPlotFigureType(wxPlotFigure, wxPlotType);
 	plotFigures.setWxPlotFigureType(wxPlotFigure, wxPlotType);

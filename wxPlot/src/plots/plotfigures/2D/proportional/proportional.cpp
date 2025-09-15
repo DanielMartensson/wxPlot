@@ -17,12 +17,13 @@ void Proportional::setPlotEndHeight(const wxCoord plotEndHeight) {
 	this->plotEndHeightInitial = plotEndHeight;
 }
 
-void Proportional:: setFontSize(const unsigned int fontSize) { 
+void Proportional::setFontSize(const unsigned int fontSize) { 
 	this->fontSize = fontSize; 
 }
 
-void Proportional::setTicks(const unsigned int ticks) { 
-	this->ticks = ticks; 
+void Proportional::setTicks(const unsigned int ticksX, const unsigned int ticksY) {
+	this->ticksX = ticksX;
+	this->ticksY = ticksY;
 }
 
 void Proportional::gridOn(const bool useGrid) { 
@@ -69,6 +70,15 @@ void Proportional::setYlim(const double minY, const double maxY) {
 	this->maxY = maxY; 
 }
 
+void Proportional::getYlim(double& minY1, double& maxY1) {
+	minY1 = minY;
+	maxY1 = maxY;
+}
+
+void Proportional::setColour(const unsigned int colorIndex) {
+	this->colorStart = colorIndex;
+}
+
 wxCoord Proportional::getPlotStartWidth() const {
 	return plotStartWidthComputed; 
 }
@@ -106,7 +116,7 @@ void Proportional::drawFigure(wxDC& dc) {
 
 	// Compute the width and height of the ticks
 	wxCoord ticksWidth = 0, ticksHeight = 0;
-	if (ticks > 0) {
+	if (ticksX > 1) {
 		char value[100];
 		std::snprintf(value, sizeof(value), "%0.2f", maxY > std::abs(minY) ? maxY : minY); // Sometimes a negative number can be longer than a positive number
 		dc.GetTextExtent(value, &ticksWidth, &ticksHeight);
@@ -159,7 +169,7 @@ void Proportional::drawFigure(wxDC& dc) {
 }
 
 void Proportional::drawTicks(wxDC& dc) {
-	if (ticks > 0) {
+	if (ticksX > 1 && ticksY > 1) {
 		const wxCoord yStartRectangle = plotStartHeightComputed;
 		const wxCoord xStartRectangle = plotStartWidthComputed;
 		const wxCoord heightRectangle = plotEndHeightComputed - plotStartHeightComputed;
@@ -169,46 +179,64 @@ void Proportional::drawTicks(wxDC& dc) {
 		wxPen pen(plotColours.at(PLOT_COLOUR_BLACK));
 		dc.SetPen(pen);
 
-		// Compute steps
-		const unsigned int stepsX = (xStartRectangle + widthRectangle) / (ticks-1);
-		const unsigned int stepsY = (yStartRectangle + heightRectangle) / (ticks-1);
+		// Compute steps correctly (sph off 091425)
+		const unsigned int stepsX = (widthRectangle) / (ticksX-1);
+		const unsigned int stepsY = (heightRectangle) / (ticksY-1);
+		//const unsigned int stepsX = (xStartRectangle + widthRectangle) / (ticksX - 1);
+		//const unsigned int stepsY = (yStartRectangle + heightRectangle) / (ticksY - 1);
 
 		// Compute scalars
-		const double scalarX = (maxX - minX) / (ticks-1);
-		const double scalarY = (minY - maxY) / (ticks-1);
+		const double scalarX = (maxX - minX) / (ticksX-1);
+		const double scalarY = (minY - maxY) / (ticksY-1);
 
 		// Counter
 		double counter = 0;
 
-		// Vertical ticks
+		//sph091525
+		char label[6];
+		if (abs(scalarX) < 1) strncpy(label, "%0.2f", 6);
+		else if (abs(scalarX) < 10) strncpy(label, "%0.1f", 6);
+		else strncpy(label, "%0.0f", 6);
+
+		// Vertical ticks (on horizontal axis)
 		wxCoord textWidth, textHeight;
 		char value[100];
 		for (wxCoord x = xStartRectangle; x <= xStartRectangle + widthRectangle; x += stepsX) {
-			std::snprintf(value, sizeof(value), "%0.2f", minX + scalarX * counter);
+			std::snprintf(value, sizeof(value), label, minX + scalarX * counter);
 			dc.GetTextExtent(value, &textWidth, &textHeight);
 			dc.DrawText(value, x - textWidth / 2, yStartRectangle + heightRectangle);
 			counter++;
 		}
+
+		/*sph off 091425
 		std::snprintf(value, sizeof(value), "%0.2f", minX + scalarX * counter);
 		dc.GetTextExtent(value, &textWidth, &textHeight);
 		dc.DrawText(value, xStartRectangle + widthRectangle - textWidth, yStartRectangle + heightRectangle);
+		*/
 
-		// Horizontal ticks
+		// Horizontal ticks (on vertical axis)
 		counter = 0;
+		if (abs(scalarY) < 1) strncpy(label, "%0.2f", 6);
+		else if (abs(scalarY) < 10) strncpy(label, "%0.1f", 6);
+		else strncpy(label, "%0.0f", 6);
+
 		for (wxCoord y = yStartRectangle; y <= yStartRectangle + heightRectangle; y += stepsY) {
-			std::snprintf(value, sizeof(value), "%0.2f", maxY + scalarY * counter);
+			std::snprintf(value, sizeof(value), label, maxY + scalarY * counter);
 			dc.GetTextExtent(value, &textWidth, &textHeight);
 			dc.DrawText(value, xStartRectangle - textWidth - 2, y - textHeight);  // 2 is only for make a proper distance from rectangle
 			counter++;
 		}
+
+		/*sph off 091425
 		std::snprintf(value, sizeof(value), "%0.2f", maxY + scalarY * counter);
 		dc.GetTextExtent(value, &textWidth, &textHeight);
 		dc.DrawText(value, xStartRectangle - textWidth - 2 , yStartRectangle + heightRectangle - textHeight); // 2 is only for make a proper distance from rectangle
+		*/
 	}
 }
 
 void Proportional::drawGrid(wxDC& dc) {
-	if (useGrid && ticks > 0) {
+	if (useGrid && ticksX > 1 && ticksY > 1) {
 		const wxCoord yStartRectangle = plotStartHeightComputed;
 		const wxCoord xStartRectangle = plotStartWidthComputed;
 		const wxCoord heightRectangle = plotEndHeightComputed - plotStartHeightComputed;
@@ -219,8 +247,9 @@ void Proportional::drawGrid(wxDC& dc) {
 		dc.SetPen(pen);
 
 		// Compute steps
-		const unsigned int stepsX = (xStartRectangle + widthRectangle) / (ticks-1);
-		const unsigned int stepsY = (yStartRectangle + heightRectangle) / (ticks-1);
+		
+		const unsigned int stepsX = (xStartRectangle + widthRectangle) / (ticksX-1);
+		const unsigned int stepsY = (yStartRectangle + heightRectangle) / (ticksY-1);
 
 		// Vertical lines
 		for (wxCoord x = xStartRectangle; x <= xStartRectangle + widthRectangle; x += stepsX) {

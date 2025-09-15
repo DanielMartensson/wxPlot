@@ -45,7 +45,6 @@ void Bar::draw(wxDC& dc, const double value, const unsigned int dataSize, const 
 	// Create the height
 	const wxCoord height = y0 - y;
 
-	// Set rectangle colour
 	setColourPen(dc, colourIndex);
 	setColourBrush(dc, colourIndex);
 
